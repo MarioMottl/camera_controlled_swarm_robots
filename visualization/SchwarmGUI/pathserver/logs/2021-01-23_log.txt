@@ -1,0 +1,1724 @@
+
+--------------------------------------------------
+[16:27:45] [INFO] Started socket-handler.
+[16:27:45] [INFO] Started server.
+[16:28:03] [INFO] Client connected.
+[16:28:03] [INFO] IP-Address / Hostname: 127.0.0.1:59470
+[16:28:03] [INFO] Received stop command.
+[16:28:03] [INFO] Client disconnected.
+[16:28:03] [INFO] Stopped server.
+[16:28:03] [INFO] Stoppend socket-handler.
+[16:28:03] Exit code 0
+
+--------------------------------------------------
+[16:29:10] [INFO] Started socket-handler.
+[16:29:10] [INFO] Started server.
+[16:29:30] [INFO] Client connected.
+[16:29:30] [INFO] IP-Address / Hostname: 127.0.0.1:59486
+[16:29:30] [INFO] Received stop command.
+[16:29:30] [INFO] Client disconnected.
+[16:29:30] [INFO] Stopped server.
+[16:29:30] [INFO] Stoppend socket-handler.
+[16:29:30] Exit code 0
+
+--------------------------------------------------
+[16:30:34] [INFO] Started socket-handler.
+[16:30:34] [INFO] Started server.
+[16:30:37] [INFO] Client connected.
+[16:30:37] [INFO] IP-Address / Hostname: 127.0.0.1:59499
+[16:30:37] [INFO] Received stop command.
+[16:30:37] [INFO] Client disconnected.
+[16:30:37] [INFO] Stopped server.
+[16:30:37] [INFO] Stoppend socket-handler.
+[16:30:37] Exit code 0
+
+--------------------------------------------------
+[16:31:15] [INFO] Started socket-handler.
+[16:31:15] [INFO] Started server.
+[16:31:26] [INFO] Client connected.
+[16:31:26] [INFO] IP-Address / Hostname: 127.0.0.1:59508
+[16:31:26] [INFO] Received stop command.
+[16:31:26] [INFO] Client disconnected.
+[16:31:26] [INFO] Stopped server.
+[16:31:26] [INFO] Stoppend socket-handler.
+[16:31:26] Exit code 0
+
+--------------------------------------------------
+[16:44:00] [INFO] Started socket-handler.
+[16:44:00] [INFO] Started server.
+[16:44:02] [INFO] Client connected.
+[16:44:02] [INFO] IP-Address / Hostname: 127.0.0.1:51262
+[16:44:02] [INFO] Received stop command.
+[16:44:02] [INFO] Client disconnected.
+[16:44:02] [INFO] Stopped server.
+[16:44:02] [INFO] Stoppend socket-handler.
+[16:44:02] Exit code 0
+
+--------------------------------------------------
+[16:48:01] [INFO] Started socket-handler.
+[16:48:01] [INFO] Started server.
+[16:48:09] [INFO] Client connected.
+[16:48:09] [INFO] IP-Address / Hostname: 127.0.0.1:51304
+[16:48:09] [INFO] Received stop command.
+[16:48:09] [INFO] Client disconnected.
+[16:48:09] [INFO] Stopped server.
+[16:48:09] [INFO] Stoppend socket-handler.
+[16:48:09] Exit code 0
+
+--------------------------------------------------
+[16:49:39] [INFO] Started socket-handler.
+[16:49:39] [INFO] Started server.
+[16:49:45] [INFO] Client connected.
+[16:49:45] [INFO] IP-Address / Hostname: 127.0.0.1:51325
+[16:49:45] [INFO] Received stop command.
+[16:49:45] [INFO] Client disconnected.
+[16:49:45] [INFO] Stopped server.
+[16:49:45] [INFO] Stoppend socket-handler.
+[16:49:45] Exit code 0
+
+--------------------------------------------------
+[16:51:37] [INFO] Started socket-handler.
+[16:51:37] [INFO] Started server.
+[16:51:39] [INFO] Client connected.
+[16:51:39] [INFO] IP-Address / Hostname: 127.0.0.1:51350
+[16:51:39] [INFO] Received stop command.
+[16:51:39] [INFO] Client disconnected.
+[16:51:39] [INFO] Stopped server.
+[16:51:39] [INFO] Stoppend socket-handler.
+[16:51:39] Exit code 0
+
+--------------------------------------------------
+[16:56:11] [INFO] Started socket-handler.
+[16:56:11] [INFO] Started server.
+[16:56:12] [INFO] Client connected.
+[16:56:12] [INFO] IP-Address / Hostname: 127.0.0.1:51425
+[16:56:12] [INFO] Received stop command.
+[16:56:12] [INFO] Client disconnected.
+[16:56:12] [INFO] Stopped server.
+[16:56:12] [INFO] Stoppend socket-handler.
+[16:56:12] Exit code 0
+
+--------------------------------------------------
+[16:57:35] [INFO] Started socket-handler.
+[16:57:35] [INFO] Started server.
+[16:57:38] [INFO] Client connected.
+[16:57:38] [INFO] IP-Address / Hostname: 127.0.0.1:51441
+[16:57:38] [INFO] Received stop command.
+[16:57:38] [INFO] Client disconnected.
+[16:57:38] [INFO] Stopped server.
+[16:57:38] [INFO] Stoppend socket-handler.
+[16:57:38] Exit code 0
+
+--------------------------------------------------
+[17:01:59] [INFO] Started socket-handler.
+[17:01:59] [INFO] Started server.
+[17:02:05] [INFO] Client connected.
+[17:02:05] [INFO] IP-Address / Hostname: 127.0.0.1:51527
+[17:02:05] [INFO] Received stop command.
+[17:02:05] [INFO] Client disconnected.
+[17:02:05] [INFO] Stopped server.
+[17:02:05] [INFO] Stoppend socket-handler.
+[17:02:05] Exit code 0
+
+--------------------------------------------------
+[17:03:57] [INFO] Started socket-handler.
+[17:03:57] [INFO] Started server.
+[17:03:59] [INFO] Client connected.
+[17:03:59] [INFO] IP-Address / Hostname: 127.0.0.1:51544
+[17:03:59] [INFO] Received stop command.
+[17:03:59] [INFO] Client disconnected.
+[17:03:59] [INFO] Stopped server.
+[17:03:59] [INFO] Stoppend socket-handler.
+[17:03:59] Exit code 0
+
+--------------------------------------------------
+[17:04:56] [INFO] Started socket-handler.
+[17:04:56] [INFO] Started server.
+[17:04:58] [INFO] Client connected.
+[17:04:58] [INFO] IP-Address / Hostname: 127.0.0.1:51559
+[17:04:58] [INFO] Received stop command.
+[17:04:58] [INFO] Client disconnected.
+[17:04:58] [INFO] Stopped server.
+[17:04:58] [INFO] Stoppend socket-handler.
+[17:04:58] Exit code 0
+
+--------------------------------------------------
+[17:05:47] [INFO] Started socket-handler.
+[17:05:47] [INFO] Started server.
+[17:06:05] [INFO] Client connected.
+[17:06:05] [INFO] IP-Address / Hostname: 127.0.0.1:51573
+[17:06:05] [INFO] Received stop command.
+[17:06:05] [INFO] Client disconnected.
+[17:06:05] [INFO] Stopped server.
+[17:06:05] [INFO] Stoppend socket-handler.
+[17:06:05] Exit code 0
+
+--------------------------------------------------
+[17:10:17] [INFO] Started socket-handler.
+[17:10:17] [INFO] Started server.
+[17:10:21] [INFO] Client connected.
+[17:10:21] [INFO] IP-Address / Hostname: 127.0.0.1:51610
+[17:10:21] [INFO] Received stop command.
+[17:10:21] [INFO] Client disconnected.
+[17:10:21] [INFO] Stopped server.
+[17:10:21] [INFO] Stoppend socket-handler.
+[17:10:21] Exit code 0
+
+--------------------------------------------------
+[17:12:10] [INFO] Started socket-handler.
+[17:12:10] [INFO] Started server.
+[17:12:14] [INFO] Client connected.
+[17:12:14] [INFO] IP-Address / Hostname: 127.0.0.1:51633
+[17:12:14] [INFO] Received stop command.
+[17:12:14] [INFO] Client disconnected.
+[17:12:14] [INFO] Stopped server.
+[17:12:14] [INFO] Stoppend socket-handler.
+[17:12:14] Exit code 0
+
+--------------------------------------------------
+[17:13:24] [INFO] Started socket-handler.
+[17:13:24] [INFO] Started server.
+[17:13:37] [INFO] Client connected.
+[17:13:37] [INFO] IP-Address / Hostname: 127.0.0.1:51646
+[17:13:37] [INFO] Received stop command.
+[17:13:37] [INFO] Client disconnected.
+[17:13:37] [INFO] Stopped server.
+[17:13:37] [INFO] Stoppend socket-handler.
+[17:13:37] Exit code 0
+
+--------------------------------------------------
+[17:17:25] [INFO] Started socket-handler.
+[17:17:25] [INFO] Started server.
+[17:17:36] [INFO] Client connected.
+[17:17:36] [INFO] IP-Address / Hostname: 127.0.0.1:51689
+[17:17:36] [INFO] Received stop command.
+[17:17:36] [INFO] Client disconnected.
+[17:17:36] [INFO] Stopped server.
+[17:17:36] [INFO] Stoppend socket-handler.
+[17:17:36] Exit code 0
+
+--------------------------------------------------
+[17:19:59] [INFO] Started socket-handler.
+[17:19:59] [INFO] Started server.
+
+--------------------------------------------------
+[17:26:53] [INFO] Started socket-handler.
+[17:26:53] [INFO] Started server.
+[17:26:57] [INFO] Client connected.
+[17:26:57] [INFO] IP-Address / Hostname: 127.0.0.1:51116
+[17:26:57] [INFO] Received stop command.
+[17:26:57] [INFO] Client disconnected.
+[17:26:57] [INFO] Stopped server.
+[17:26:57] [INFO] Stoppend socket-handler.
+[17:26:57] Exit code 0
+
+--------------------------------------------------
+[17:35:19] [INFO] Started socket-handler.
+[17:35:19] [INFO] Started server.
+[17:35:21] [INFO] Client connected.
+[17:35:21] [INFO] IP-Address / Hostname: 127.0.0.1:51230
+[17:35:21] [INFO] Received stop command.
+[17:35:22] [INFO] Client disconnected.
+[17:35:22] [INFO] Stopped server.
+[17:35:22] [INFO] Stoppend socket-handler.
+[17:35:22] Exit code 0
+
+--------------------------------------------------
+[17:37:00] [INFO] Started socket-handler.
+[17:37:00] [INFO] Started server.
+[17:37:02] [INFO] Client connected.
+[17:37:02] [INFO] IP-Address / Hostname: 127.0.0.1:51247
+[17:37:03] [INFO] Received stop command.
+[17:37:03] [INFO] Client disconnected.
+[17:37:03] [INFO] Stopped server.
+[17:37:03] [INFO] Stoppend socket-handler.
+[17:37:03] Exit code 0
+
+--------------------------------------------------
+[17:40:51] [INFO] Started socket-handler.
+[17:40:51] [INFO] Started server.
+[17:40:57] [INFO] Client connected.
+[17:40:57] [INFO] IP-Address / Hostname: 127.0.0.1:51280
+[17:40:57] [INFO] Received stop command.
+[17:40:57] [INFO] Client disconnected.
+[17:40:57] [INFO] Stopped server.
+[17:40:57] [INFO] Stoppend socket-handler.
+[17:40:57] Exit code 0
+
+--------------------------------------------------
+[17:47:15] [INFO] Started socket-handler.
+[17:47:15] [INFO] Started server.
+[17:47:19] [INFO] Client connected.
+[17:47:19] [INFO] IP-Address / Hostname: 127.0.0.1:51327
+[17:47:19] [INFO] Received stop command.
+[17:47:19] [INFO] Client disconnected.
+[17:47:19] [INFO] Stopped server.
+[17:47:19] [INFO] Stoppend socket-handler.
+[17:47:19] Exit code 0
+
+--------------------------------------------------
+[17:49:47] [INFO] Started socket-handler.
+[17:49:47] [INFO] Started server.
+[17:49:52] [INFO] Client connected.
+[17:49:52] [INFO] IP-Address / Hostname: 127.0.0.1:51346
+[17:49:52] [INFO] Received stop command.
+[17:49:52] [INFO] Client disconnected.
+[17:49:52] [INFO] Stopped server.
+[17:49:52] [INFO] Stoppend socket-handler.
+[17:49:52] Exit code 0
+
+--------------------------------------------------
+[17:51:59] [INFO] Started socket-handler.
+[17:51:59] [INFO] Started server.
+[17:52:04] [INFO] Client connected.
+[17:52:04] [INFO] IP-Address / Hostname: 127.0.0.1:51370
+[17:52:04] [INFO] Received stop command.
+[17:52:04] [INFO] Client disconnected.
+[17:52:04] [INFO] Stopped server.
+[17:52:04] [INFO] Stoppend socket-handler.
+[17:52:04] Exit code 0
+
+--------------------------------------------------
+[17:56:50] [INFO] Started socket-handler.
+[17:56:50] [INFO] Started server.
+[17:56:56] [INFO] Client connected.
+[17:56:56] [INFO] IP-Address / Hostname: 127.0.0.1:51428
+[17:56:56] [INFO] Received stop command.
+[17:56:56] [INFO] Client disconnected.
+[17:56:56] [INFO] Stopped server.
+[17:56:56] [INFO] Stoppend socket-handler.
+[17:56:56] Exit code 0
+
+--------------------------------------------------
+[17:57:54] [INFO] Started socket-handler.
+[17:57:54] [INFO] Started server.
+[17:57:57] [INFO] Client connected.
+[17:57:57] [INFO] IP-Address / Hostname: 127.0.0.1:51439
+[17:57:57] [INFO] Received stop command.
+[17:57:57] [INFO] Client disconnected.
+[17:57:57] [INFO] Stopped server.
+[17:57:57] [INFO] Stoppend socket-handler.
+[17:57:57] Exit code 0
+
+--------------------------------------------------
+[17:59:14] [INFO] Started socket-handler.
+[17:59:14] [INFO] Started server.
+[17:59:17] [INFO] Client connected.
+[17:59:17] [INFO] IP-Address / Hostname: 127.0.0.1:51452
+[17:59:17] [INFO] Received stop command.
+[17:59:17] [INFO] Client disconnected.
+[17:59:17] [INFO] Stopped server.
+[17:59:17] [INFO] Stoppend socket-handler.
+[17:59:17] Exit code 0
+
+--------------------------------------------------
+[17:59:22] [INFO] Started socket-handler.
+[17:59:22] [INFO] Started server.
+[17:59:41] [INFO] Client connected.
+[17:59:41] [INFO] IP-Address / Hostname: 127.0.0.1:51457
+[17:59:41] [INFO] Received stop command.
+[17:59:41] [INFO] Client disconnected.
+[17:59:41] [INFO] Stopped server.
+[17:59:41] [INFO] Stoppend socket-handler.
+[17:59:41] Exit code 0
+
+--------------------------------------------------
+[18:07:20] [INFO] Started socket-handler.
+[18:07:20] [INFO] Started server.
+[18:07:24] [INFO] Client connected.
+[18:07:24] [INFO] IP-Address / Hostname: 127.0.0.1:51561
+[18:07:24] [INFO] Received stop command.
+[18:07:25] [INFO] Client disconnected.
+[18:07:25] [INFO] Stopped server.
+[18:07:25] [INFO] Stoppend socket-handler.
+[18:07:25] Exit code 0
+
+--------------------------------------------------
+[18:07:38] [INFO] Started socket-handler.
+[18:07:38] [INFO] Started server.
+[18:07:40] [INFO] Client connected.
+[18:07:40] [INFO] IP-Address / Hostname: 127.0.0.1:51568
+[18:07:40] [INFO] Received stop command.
+[18:07:40] [INFO] Client disconnected.
+[18:07:40] [INFO] Stopped server.
+[18:07:40] [INFO] Stoppend socket-handler.
+[18:07:40] Exit code 0
+
+--------------------------------------------------
+[18:07:47] [INFO] Started socket-handler.
+[18:07:47] [INFO] Started server.
+[18:07:52] [INFO] Client connected.
+[18:07:52] [INFO] IP-Address / Hostname: 127.0.0.1:51572
+[18:07:52] [INFO] Received stop command.
+[18:07:52] [INFO] Client disconnected.
+[18:07:52] [INFO] Stopped server.
+[18:07:52] [INFO] Stoppend socket-handler.
+[18:07:52] Exit code 0
+
+--------------------------------------------------
+[18:10:31] [INFO] Started socket-handler.
+[18:10:31] [INFO] Started server.
+[18:10:35] [INFO] Client connected.
+[18:10:35] [INFO] IP-Address / Hostname: 127.0.0.1:51606
+[18:10:35] [INFO] Received stop command.
+[18:10:35] [INFO] Client disconnected.
+[18:10:35] [INFO] Stopped server.
+[18:10:35] [INFO] Stoppend socket-handler.
+[18:10:35] Exit code 0
+
+--------------------------------------------------
+[18:29:26] [INFO] Started socket-handler.
+[18:29:26] [INFO] Started server.
+[18:29:56] [INFO] Client connected.
+[18:29:56] [INFO] IP-Address / Hostname: 127.0.0.1:51788
+[18:29:56] [INFO] Received stop command.
+[18:29:56] [INFO] Client disconnected.
+[18:29:56] [INFO] Stopped server.
+[18:29:56] [INFO] Stoppend socket-handler.
+[18:29:56] Exit code 0
+
+--------------------------------------------------
+[18:31:30] [INFO] Started socket-handler.
+[18:31:30] [INFO] Started server.
+[18:31:38] [INFO] Client connected.
+[18:31:38] [INFO] IP-Address / Hostname: 127.0.0.1:51811
+[18:31:38] [INFO] Received stop command.
+[18:31:38] [INFO] Client disconnected.
+[18:31:38] [INFO] Stopped server.
+[18:31:38] [INFO] Stoppend socket-handler.
+[18:31:38] Exit code 0
+
+--------------------------------------------------
+[18:31:40] [INFO] Started socket-handler.
+[18:31:40] [INFO] Started server.
+[18:31:54] [INFO] Client connected.
+[18:31:54] [INFO] IP-Address / Hostname: 127.0.0.1:51816
+[18:31:54] [INFO] Received stop command.
+[18:31:54] [INFO] Client disconnected.
+[18:31:54] [INFO] Stopped server.
+[18:31:54] [INFO] Stoppend socket-handler.
+[18:31:54] Exit code 0
+
+--------------------------------------------------
+[18:33:07] [INFO] Started socket-handler.
+[18:33:07] [INFO] Started server.
+[18:33:27] [INFO] Client connected.
+[18:33:27] [INFO] IP-Address / Hostname: 127.0.0.1:51830
+[18:33:27] [INFO] Received stop command.
+[18:33:27] [INFO] Client disconnected.
+[18:33:27] [INFO] Stopped server.
+[18:33:27] [INFO] Stoppend socket-handler.
+[18:33:27] Exit code 0
+
+--------------------------------------------------
+[18:34:51] [INFO] Started socket-handler.
+[18:34:51] [INFO] Started server.
+[18:35:04] [INFO] Client connected.
+[18:35:04] [INFO] IP-Address / Hostname: 127.0.0.1:51848
+[18:35:04] [INFO] Received stop command.
+[18:35:04] [INFO] Client disconnected.
+[18:35:04] [INFO] Stopped server.
+[18:35:04] [INFO] Stoppend socket-handler.
+[18:35:04] Exit code 0
+
+--------------------------------------------------
+[18:35:55] [INFO] Started socket-handler.
+[18:35:55] [INFO] Started server.
+[18:36:15] [INFO] Client connected.
+[18:36:15] [INFO] IP-Address / Hostname: 127.0.0.1:51865
+[18:36:15] [INFO] Received stop command.
+[18:36:15] [INFO] Client disconnected.
+[18:36:15] [INFO] Stopped server.
+[18:36:15] [INFO] Stoppend socket-handler.
+[18:36:15] Exit code 0
+
+--------------------------------------------------
+[18:36:40] [INFO] Started socket-handler.
+[18:36:40] [INFO] Started server.
+[18:37:43] [INFO] Client connected.
+[18:37:43] [INFO] IP-Address / Hostname: 127.0.0.1:51882
+[18:37:43] [INFO] Received stop command.
+[18:37:43] [INFO] Client disconnected.
+[18:37:43] [INFO] Stopped server.
+[18:37:43] [INFO] Stoppend socket-handler.
+[18:37:43] Exit code 0
+
+--------------------------------------------------
+[18:39:11] [INFO] Started socket-handler.
+[18:39:11] [INFO] Started server.
+[18:40:45] [INFO] Client connected.
+[18:40:45] [INFO] IP-Address / Hostname: 127.0.0.1:51911
+[18:40:45] [INFO] Received stop command.
+[18:40:45] [INFO] Client disconnected.
+[18:40:45] [INFO] Stopped server.
+[18:40:45] [INFO] Stoppend socket-handler.
+[18:40:45] Exit code 0
+
+--------------------------------------------------
+[18:44:49] [INFO] Started socket-handler.
+[18:44:49] [INFO] Started server.
+
+--------------------------------------------------
+[18:48:17] [INFO] Started socket-handler.
+[18:48:17] [INFO] Started server.
+[18:48:55] [INFO] Client connected.
+[18:48:55] [INFO] IP-Address / Hostname: 127.0.0.1:52007
+[18:48:55] [INFO] Received stop command.
+[18:48:55] [INFO] Client disconnected.
+[18:48:55] [INFO] Stopped server.
+[18:48:55] [INFO] Stoppend socket-handler.
+[18:48:55] Exit code 0
+
+--------------------------------------------------
+[18:50:03] [INFO] Started socket-handler.
+[18:50:03] [INFO] Started server.
+[18:50:05] [INFO] Client connected.
+[18:50:05] [INFO] IP-Address / Hostname: 127.0.0.1:52020
+[18:50:13] [INFO] Received goal request.
+[18:50:13] [ERROR] Received invalid goal index 0 for vehicle 0 (Maximum index: 4294967295).
+[18:50:25] [INFO] Generating goals for file polygon.png with 100 goals for vehicle 0...
+[18:50:26] [INFO] Reading goals...
+[18:50:26] [INFO] Successfully generated goals for vehicle 0.
+[18:50:31] [INFO] Received goal request.
+[18:50:31] [INFO] Sent goal with index 0 for vehicle 0.
+[18:50:33] [INFO] Received goal request.
+[18:50:33] [INFO] Sent goal with index 1 for vehicle 1.
+[18:50:33] [INFO] Received goal request.
+[18:50:33] [INFO] Sent goal with index 2 for vehicle 2.
+[18:50:33] [INFO] Received goal request.
+[18:50:33] [INFO] Sent goal with index 3 for vehicle 3.
+[18:50:33] [INFO] Received goal request.
+[18:50:33] [INFO] Sent goal with index 4 for vehicle 4.
+[18:50:33] [INFO] Received goal request.
+[18:50:33] [INFO] Sent goal with index 5 for vehicle 5.
+[18:50:33] [INFO] Received goal request.
+[18:50:33] [INFO] Sent goal with index 6 for vehicle 6.
+[18:50:34] [INFO] Received goal request.
+[18:50:34] [INFO] Sent goal with index 7 for vehicle 7.
+[18:50:34] [INFO] Received goal request.
+[18:50:34] [INFO] Sent goal with index 8 for vehicle 8.
+[18:50:34] [INFO] Received goal request.
+[18:50:34] [INFO] Sent goal with index 9 for vehicle 9.
+[18:50:34] [INFO] Received goal request.
+[18:50:34] [INFO] Sent goal with index 10 for vehicle 10.
+[18:50:34] [INFO] Received goal request.
+[18:50:34] [INFO] Sent goal with index 11 for vehicle 11.
+[18:50:34] [INFO] Received goal request.
+[18:50:34] [INFO] Sent goal with index 12 for vehicle 12.
+[18:50:34] [INFO] Received goal request.
+[18:50:34] [INFO] Sent goal with index 13 for vehicle 13.
+[18:50:34] [INFO] Received goal request.
+[18:50:34] [INFO] Sent goal with index 14 for vehicle 14.
+[18:50:34] [INFO] Received goal request.
+[18:50:34] [INFO] Sent goal with index 15 for vehicle 15.
+[18:50:35] [INFO] Received goal request.
+[18:50:35] [INFO] Sent goal with index 16 for vehicle 16.
+[18:50:35] [INFO] Received goal request.
+[18:50:35] [INFO] Sent goal with index 17 for vehicle 17.
+[18:50:35] [INFO] Received goal request.
+[18:50:35] [INFO] Sent goal with index 18 for vehicle 18.
+[18:50:35] [INFO] Received goal request.
+[18:50:35] [INFO] Sent goal with index 19 for vehicle 19.
+[18:50:35] [INFO] Received goal request.
+[18:50:35] [INFO] Sent goal with index 20 for vehicle 20.
+[18:50:35] [INFO] Received goal request.
+[18:50:35] [INFO] Sent goal with index 21 for vehicle 21.
+[18:50:35] [INFO] Received goal request.
+[18:50:35] [INFO] Sent goal with index 22 for vehicle 22.
+[18:50:35] [INFO] Received goal request.
+[18:50:35] [INFO] Sent goal with index 23 for vehicle 23.
+[18:50:35] [INFO] Received goal request.
+[18:50:35] [INFO] Sent goal with index 24 for vehicle 24.
+[18:50:36] [INFO] Received goal request.
+[18:50:36] [INFO] Sent goal with index 25 for vehicle 25.
+[18:50:36] [INFO] Received goal request.
+[18:50:36] [INFO] Sent goal with index 26 for vehicle 26.
+[18:50:36] [INFO] Received goal request.
+[18:50:36] [INFO] Sent goal with index 27 for vehicle 27.
+[18:50:36] [INFO] Received goal request.
+[18:50:36] [INFO] Sent goal with index 28 for vehicle 28.
+[18:50:36] [INFO] Received goal request.
+[18:50:36] [INFO] Sent goal with index 29 for vehicle 29.
+[18:50:36] [INFO] Received goal request.
+[18:50:36] [INFO] Sent goal with index 30 for vehicle 30.
+[18:50:36] [INFO] Received goal request.
+[18:50:36] [INFO] Sent goal with index 31 for vehicle 31.
+[18:50:36] [INFO] Received goal request.
+[18:50:36] [INFO] Sent goal with index 32 for vehicle 32.
+[18:50:36] [INFO] Received goal request.
+[18:50:36] [INFO] Sent goal with index 33 for vehicle 33.
+[18:50:37] [INFO] Received goal request.
+[18:50:37] [INFO] Sent goal with index 34 for vehicle 34.
+[18:50:37] [INFO] Received goal request.
+[18:50:37] [INFO] Sent goal with index 35 for vehicle 35.
+[18:50:37] [INFO] Received goal request.
+[18:50:37] [INFO] Sent goal with index 36 for vehicle 36.
+[18:50:37] [INFO] Received goal request.
+[18:50:37] [INFO] Sent goal with index 37 for vehicle 37.
+[18:50:37] [INFO] Received goal request.
+[18:50:37] [INFO] Sent goal with index 38 for vehicle 38.
+[18:50:37] [INFO] Received goal request.
+[18:50:37] [INFO] Sent goal with index 39 for vehicle 39.
+[18:50:37] [INFO] Received goal request.
+[18:50:37] [INFO] Sent goal with index 40 for vehicle 40.
+[18:50:37] [INFO] Received goal request.
+[18:50:37] [INFO] Sent goal with index 41 for vehicle 41.
+[18:50:37] [INFO] Received goal request.
+[18:50:38] [INFO] Sent goal with index 42 for vehicle 42.
+[18:50:38] [INFO] Received goal request.
+[18:50:38] [INFO] Sent goal with index 43 for vehicle 43.
+[18:50:38] [INFO] Received goal request.
+[18:50:38] [INFO] Sent goal with index 44 for vehicle 44.
+[18:50:38] [INFO] Received goal request.
+[18:50:38] [INFO] Sent goal with index 45 for vehicle 45.
+[18:50:38] [INFO] Received goal request.
+[18:50:38] [INFO] Sent goal with index 46 for vehicle 46.
+[18:50:38] [INFO] Received goal request.
+[18:50:38] [INFO] Sent goal with index 47 for vehicle 47.
+[18:50:38] [INFO] Received goal request.
+[18:50:38] [INFO] Sent goal with index 48 for vehicle 48.
+[18:50:39] [INFO] Received goal request.
+[18:50:39] [INFO] Sent goal with index 49 for vehicle 49.
+[18:50:39] [INFO] Received goal request.
+[18:50:39] [INFO] Sent goal with index 50 for vehicle 50.
+[18:50:39] [INFO] Received goal request.
+[18:50:39] [INFO] Sent goal with index 51 for vehicle 51.
+[18:50:39] [INFO] Received goal request.
+[18:50:39] [INFO] Sent goal with index 52 for vehicle 52.
+[18:50:39] [INFO] Received goal request.
+[18:50:39] [INFO] Sent goal with index 53 for vehicle 53.
+[18:50:39] [INFO] Received goal request.
+[18:50:39] [INFO] Sent goal with index 54 for vehicle 54.
+[18:50:39] [INFO] Received goal request.
+[18:50:39] [INFO] Sent goal with index 55 for vehicle 55.
+[18:50:39] [INFO] Received goal request.
+[18:50:39] [INFO] Sent goal with index 56 for vehicle 56.
+[18:50:40] [INFO] Received goal request.
+[18:50:40] [INFO] Sent goal with index 57 for vehicle 57.
+[18:50:40] [INFO] Received goal request.
+[18:50:40] [INFO] Sent goal with index 58 for vehicle 58.
+[18:50:40] [INFO] Received goal request.
+[18:50:40] [INFO] Sent goal with index 59 for vehicle 59.
+[18:50:40] [INFO] Received goal request.
+[18:50:40] [INFO] Sent goal with index 60 for vehicle 60.
+[18:50:40] [INFO] Received goal request.
+[18:50:40] [INFO] Sent goal with index 61 for vehicle 61.
+[18:50:40] [INFO] Received goal request.
+[18:50:40] [INFO] Sent goal with index 62 for vehicle 62.
+[18:50:40] [INFO] Received goal request.
+[18:50:40] [INFO] Sent goal with index 63 for vehicle 63.
+[18:50:40] [INFO] Received goal request.
+[18:50:40] [INFO] Sent goal with index 64 for vehicle 64.
+[18:50:40] [INFO] Received goal request.
+[18:50:40] [INFO] Sent goal with index 65 for vehicle 65.
+[18:50:41] [INFO] Received goal request.
+[18:50:41] [INFO] Sent goal with index 66 for vehicle 66.
+[18:50:41] [INFO] Received goal request.
+[18:50:41] [INFO] Sent goal with index 67 for vehicle 67.
+[18:50:41] [INFO] Received goal request.
+[18:50:41] [INFO] Sent goal with index 68 for vehicle 68.
+[18:50:41] [INFO] Received goal request.
+[18:50:41] [INFO] Sent goal with index 69 for vehicle 69.
+[18:50:41] [INFO] Received goal request.
+[18:50:41] [INFO] Sent goal with index 70 for vehicle 70.
+[18:50:41] [INFO] Received goal request.
+[18:50:41] [INFO] Sent goal with index 71 for vehicle 71.
+[18:50:41] [INFO] Received goal request.
+[18:50:41] [INFO] Sent goal with index 72 for vehicle 72.
+[18:50:41] [INFO] Received goal request.
+[18:50:41] [INFO] Sent goal with index 73 for vehicle 73.
+[18:50:41] [INFO] Received goal request.
+[18:50:41] [INFO] Sent goal with index 74 for vehicle 74.
+[18:50:42] [INFO] Received goal request.
+[18:50:42] [INFO] Sent goal with index 75 for vehicle 75.
+[18:50:42] [INFO] Received goal request.
+[18:50:42] [INFO] Sent goal with index 76 for vehicle 76.
+[18:50:42] [INFO] Received goal request.
+[18:50:42] [INFO] Sent goal with index 77 for vehicle 77.
+[18:50:42] [INFO] Received goal request.
+[18:50:42] [INFO] Sent goal with index 78 for vehicle 78.
+[18:50:42] [INFO] Received goal request.
+[18:50:42] [INFO] Sent goal with index 79 for vehicle 79.
+[18:50:42] [INFO] Received goal request.
+[18:50:42] [INFO] Sent goal with index 80 for vehicle 80.
+[18:50:42] [INFO] Received goal request.
+[18:50:42] [INFO] Sent goal with index 81 for vehicle 81.
+[18:50:42] [INFO] Received goal request.
+[18:50:42] [INFO] Sent goal with index 82 for vehicle 82.
+[18:50:42] [INFO] Received goal request.
+[18:50:42] [INFO] Sent goal with index 83 for vehicle 83.
+[18:50:43] [INFO] Received goal request.
+[18:50:43] [INFO] Sent goal with index 84 for vehicle 84.
+[18:50:43] [INFO] Received goal request.
+[18:50:43] [INFO] Sent goal with index 85 for vehicle 85.
+[18:50:43] [INFO] Received goal request.
+[18:50:43] [INFO] Sent goal with index 86 for vehicle 86.
+[18:50:43] [INFO] Received goal request.
+[18:50:43] [INFO] Sent goal with index 87 for vehicle 87.
+[18:50:43] [INFO] Received goal request.
+[18:50:43] [INFO] Sent goal with index 88 for vehicle 88.
+[18:50:43] [INFO] Received goal request.
+[18:50:43] [INFO] Sent goal with index 89 for vehicle 89.
+[18:50:43] [INFO] Received goal request.
+[18:50:43] [INFO] Sent goal with index 90 for vehicle 90.
+[18:50:43] [INFO] Received goal request.
+[18:50:43] [INFO] Sent goal with index 91 for vehicle 91.
+[18:50:43] [INFO] Received goal request.
+[18:50:43] [INFO] Sent goal with index 92 for vehicle 92.
+[18:50:44] [INFO] Received goal request.
+[18:50:44] [INFO] Sent goal with index 93 for vehicle 93.
+[18:50:44] [INFO] Received goal request.
+[18:50:44] [INFO] Sent goal with index 94 for vehicle 94.
+[18:50:44] [INFO] Received goal request.
+[18:50:44] [INFO] Sent goal with index 95 for vehicle 95.
+[18:50:44] [INFO] Received goal request.
+[18:50:44] [INFO] Sent goal with index 96 for vehicle 96.
+[18:50:44] [INFO] Received goal request.
+[18:50:44] [INFO] Sent goal with index 97 for vehicle 97.
+[18:50:44] [INFO] Received goal request.
+[18:50:44] [INFO] Sent goal with index 98 for vehicle 98.
+[18:50:44] [INFO] Received goal request.
+[18:50:44] [INFO] Sent goal with index 99 for vehicle 99.
+[18:50:44] [INFO] Received goal request.
+[18:50:44] [INFO] Sent goal with index 100 for vehicle 100.
+[18:50:44] [INFO] Received goal request.
+[18:50:44] [ERROR] Received invalid goal index 101 for vehicle 0 (Maximum index: 100).
+[18:50:56] [INFO] Received goal request.
+[18:50:56] [INFO] Sent goal with index 0 for vehicle 0.
+[18:50:56] [INFO] Received goal request.
+[18:50:56] [INFO] Sent goal with index 1 for vehicle 1.
+[18:50:57] [INFO] Received goal request.
+[18:50:57] [INFO] Sent goal with index 2 for vehicle 2.
+[18:50:57] [INFO] Received goal request.
+[18:50:57] [INFO] Sent goal with index 3 for vehicle 3.
+[18:50:57] [INFO] Received goal request.
+[18:50:57] [INFO] Sent goal with index 4 for vehicle 4.
+[18:50:57] [INFO] Received goal request.
+[18:50:57] [INFO] Sent goal with index 5 for vehicle 5.
+[18:50:57] [INFO] Received goal request.
+[18:50:57] [INFO] Sent goal with index 6 for vehicle 6.
+[18:50:57] [INFO] Received goal request.
+[18:50:57] [INFO] Sent goal with index 7 for vehicle 7.
+[18:50:57] [INFO] Received goal request.
+[18:50:57] [INFO] Sent goal with index 8 for vehicle 8.
+[18:50:57] [INFO] Received goal request.
+[18:50:57] [INFO] Sent goal with index 9 for vehicle 9.
+[18:50:57] [INFO] Received goal request.
+[18:50:57] [INFO] Sent goal with index 10 for vehicle 10.
+[18:50:57] [INFO] Received goal request.
+[18:50:57] [INFO] Sent goal with index 11 for vehicle 11.
+[18:50:58] [INFO] Received goal request.
+[18:50:58] [INFO] Sent goal with index 12 for vehicle 12.
+[18:50:58] [INFO] Received goal request.
+[18:50:58] [INFO] Sent goal with index 13 for vehicle 13.
+[18:50:58] [INFO] Received goal request.
+[18:50:58] [INFO] Sent goal with index 14 for vehicle 14.
+[18:50:58] [INFO] Received goal request.
+[18:50:58] [INFO] Sent goal with index 15 for vehicle 15.
+[18:50:58] [INFO] Received goal request.
+[18:50:58] [INFO] Sent goal with index 16 for vehicle 16.
+[18:50:58] [INFO] Received goal request.
+[18:50:58] [INFO] Sent goal with index 17 for vehicle 17.
+[18:50:58] [INFO] Received goal request.
+[18:50:58] [INFO] Sent goal with index 18 for vehicle 18.
+[18:50:58] [INFO] Received goal request.
+[18:50:58] [INFO] Sent goal with index 19 for vehicle 19.
+[18:50:59] [INFO] Received goal request.
+[18:50:59] [INFO] Sent goal with index 20 for vehicle 20.
+[18:50:59] [INFO] Received goal request.
+[18:50:59] [INFO] Sent goal with index 21 for vehicle 21.
+[18:50:59] [INFO] Received goal request.
+[18:50:59] [INFO] Sent goal with index 22 for vehicle 22.
+[18:50:59] [INFO] Received goal request.
+[18:50:59] [INFO] Sent goal with index 23 for vehicle 23.
+[18:50:59] [INFO] Received goal request.
+[18:50:59] [INFO] Sent goal with index 24 for vehicle 24.
+[18:50:59] [INFO] Received goal request.
+[18:50:59] [INFO] Sent goal with index 25 for vehicle 25.
+[18:50:59] [INFO] Received goal request.
+[18:50:59] [INFO] Sent goal with index 26 for vehicle 26.
+[18:50:59] [INFO] Received goal request.
+[18:50:59] [INFO] Sent goal with index 27 for vehicle 27.
+[18:50:59] [INFO] Received goal request.
+[18:50:59] [INFO] Sent goal with index 28 for vehicle 28.
+[18:50:59] [INFO] Received goal request.
+[18:50:59] [INFO] Sent goal with index 29 for vehicle 29.
+[18:51:00] [INFO] Received goal request.
+[18:51:00] [INFO] Sent goal with index 30 for vehicle 30.
+[18:51:00] [INFO] Received goal request.
+[18:51:00] [INFO] Sent goal with index 31 for vehicle 31.
+[18:51:00] [INFO] Received goal request.
+[18:51:00] [INFO] Sent goal with index 32 for vehicle 32.
+[18:51:00] [INFO] Received goal request.
+[18:51:00] [INFO] Sent goal with index 33 for vehicle 33.
+[18:51:00] [INFO] Received goal request.
+[18:51:00] [INFO] Sent goal with index 34 for vehicle 34.
+[18:51:00] [INFO] Received goal request.
+[18:51:00] [INFO] Sent goal with index 35 for vehicle 35.
+[18:51:00] [INFO] Received goal request.
+[18:51:00] [INFO] Sent goal with index 36 for vehicle 36.
+[18:51:00] [INFO] Received goal request.
+[18:51:00] [INFO] Sent goal with index 37 for vehicle 37.
+[18:51:00] [INFO] Received goal request.
+[18:51:00] [INFO] Sent goal with index 38 for vehicle 38.
+[18:51:01] [INFO] Received goal request.
+[18:51:01] [INFO] Sent goal with index 39 for vehicle 39.
+[18:51:01] [INFO] Received goal request.
+[18:51:01] [INFO] Sent goal with index 40 for vehicle 40.
+[18:51:01] [INFO] Received goal request.
+[18:51:01] [INFO] Sent goal with index 41 for vehicle 41.
+[18:51:01] [INFO] Received goal request.
+[18:51:01] [INFO] Sent goal with index 42 for vehicle 42.
+[18:51:01] [INFO] Received goal request.
+[18:51:01] [INFO] Sent goal with index 43 for vehicle 43.
+[18:51:01] [INFO] Received goal request.
+[18:51:01] [INFO] Sent goal with index 44 for vehicle 44.
+[18:51:01] [INFO] Received goal request.
+[18:51:01] [INFO] Sent goal with index 45 for vehicle 45.
+[18:51:02] [INFO] Received goal request.
+[18:51:02] [INFO] Sent goal with index 46 for vehicle 46.
+[18:51:02] [INFO] Received goal request.
+[18:51:02] [INFO] Sent goal with index 47 for vehicle 47.
+[18:51:02] [INFO] Received goal request.
+[18:51:02] [INFO] Sent goal with index 48 for vehicle 48.
+[18:51:02] [INFO] Received goal request.
+[18:51:02] [INFO] Sent goal with index 49 for vehicle 49.
+[18:51:02] [INFO] Received goal request.
+[18:51:02] [INFO] Sent goal with index 50 for vehicle 50.
+[18:51:02] [INFO] Received goal request.
+[18:51:02] [INFO] Sent goal with index 51 for vehicle 51.
+[18:51:02] [INFO] Received goal request.
+[18:51:02] [INFO] Sent goal with index 52 for vehicle 52.
+[18:51:03] [INFO] Received goal request.
+[18:51:03] [INFO] Sent goal with index 53 for vehicle 53.
+[18:51:03] [INFO] Received goal request.
+[18:51:03] [INFO] Sent goal with index 54 for vehicle 54.
+[18:51:03] [INFO] Received goal request.
+[18:51:03] [INFO] Sent goal with index 55 for vehicle 55.
+[18:51:03] [INFO] Received goal request.
+[18:51:03] [INFO] Sent goal with index 56 for vehicle 56.
+[18:51:03] [INFO] Received goal request.
+[18:51:03] [INFO] Sent goal with index 57 for vehicle 57.
+[18:51:03] [INFO] Received goal request.
+[18:51:03] [INFO] Sent goal with index 58 for vehicle 58.
+[18:51:03] [INFO] Received goal request.
+[18:51:03] [INFO] Sent goal with index 59 for vehicle 59.
+[18:51:03] [INFO] Received goal request.
+[18:51:03] [INFO] Sent goal with index 60 for vehicle 60.
+[18:51:04] [INFO] Received goal request.
+[18:51:04] [INFO] Sent goal with index 61 for vehicle 61.
+[18:51:04] [INFO] Received goal request.
+[18:51:04] [INFO] Sent goal with index 62 for vehicle 62.
+[18:51:04] [INFO] Received goal request.
+[18:51:04] [INFO] Sent goal with index 63 for vehicle 63.
+[18:51:04] [INFO] Received goal request.
+[18:51:04] [INFO] Sent goal with index 64 for vehicle 64.
+[18:51:04] [INFO] Received goal request.
+[18:51:04] [INFO] Sent goal with index 65 for vehicle 65.
+[18:51:04] [INFO] Received goal request.
+[18:51:04] [INFO] Sent goal with index 66 for vehicle 66.
+[18:51:04] [INFO] Received goal request.
+[18:51:04] [INFO] Sent goal with index 67 for vehicle 67.
+[18:51:04] [INFO] Received goal request.
+[18:51:04] [INFO] Sent goal with index 68 for vehicle 68.
+[18:51:04] [INFO] Received goal request.
+[18:51:04] [INFO] Sent goal with index 69 for vehicle 69.
+[18:51:04] [INFO] Received goal request.
+[18:51:04] [INFO] Sent goal with index 70 for vehicle 70.
+[18:51:05] [INFO] Received goal request.
+[18:51:05] [INFO] Sent goal with index 71 for vehicle 71.
+[18:51:05] [INFO] Received goal request.
+[18:51:05] [INFO] Sent goal with index 72 for vehicle 72.
+[18:51:05] [INFO] Received goal request.
+[18:51:05] [INFO] Sent goal with index 73 for vehicle 73.
+[18:51:05] [INFO] Received goal request.
+[18:51:05] [INFO] Sent goal with index 74 for vehicle 74.
+[18:51:05] [INFO] Received goal request.
+[18:51:05] [INFO] Sent goal with index 75 for vehicle 75.
+[18:51:05] [INFO] Received goal request.
+[18:51:05] [INFO] Sent goal with index 76 for vehicle 76.
+[18:51:05] [INFO] Received goal request.
+[18:51:05] [INFO] Sent goal with index 77 for vehicle 77.
+[18:51:05] [INFO] Received goal request.
+[18:51:05] [INFO] Sent goal with index 78 for vehicle 78.
+[18:51:05] [INFO] Received goal request.
+[18:51:05] [INFO] Sent goal with index 79 for vehicle 79.
+[18:51:06] [INFO] Received goal request.
+[18:51:06] [INFO] Sent goal with index 80 for vehicle 80.
+[18:51:06] [INFO] Received goal request.
+[18:51:06] [INFO] Sent goal with index 81 for vehicle 81.
+[18:51:06] [INFO] Received goal request.
+[18:51:06] [INFO] Sent goal with index 82 for vehicle 82.
+[18:51:06] [INFO] Received goal request.
+[18:51:06] [INFO] Sent goal with index 83 for vehicle 83.
+[18:51:06] [INFO] Received goal request.
+[18:51:06] [INFO] Sent goal with index 84 for vehicle 84.
+[18:51:06] [INFO] Received goal request.
+[18:51:06] [INFO] Sent goal with index 85 for vehicle 85.
+[18:51:06] [INFO] Received goal request.
+[18:51:06] [INFO] Sent goal with index 86 for vehicle 86.
+[18:51:06] [INFO] Received goal request.
+[18:51:06] [INFO] Sent goal with index 87 for vehicle 87.
+[18:51:06] [INFO] Received goal request.
+[18:51:06] [INFO] Sent goal with index 88 for vehicle 88.
+[18:51:07] [INFO] Received goal request.
+[18:51:07] [INFO] Sent goal with index 89 for vehicle 89.
+[18:51:07] [INFO] Received goal request.
+[18:51:07] [INFO] Sent goal with index 90 for vehicle 90.
+[18:51:07] [INFO] Received goal request.
+[18:51:07] [INFO] Sent goal with index 91 for vehicle 91.
+[18:51:07] [INFO] Received goal request.
+[18:51:07] [INFO] Sent goal with index 92 for vehicle 92.
+[18:51:07] [INFO] Received goal request.
+[18:51:07] [INFO] Sent goal with index 93 for vehicle 93.
+[18:51:07] [INFO] Received goal request.
+[18:51:07] [INFO] Sent goal with index 94 for vehicle 94.
+[18:51:07] [INFO] Received goal request.
+[18:51:07] [INFO] Sent goal with index 95 for vehicle 95.
+[18:51:07] [INFO] Received goal request.
+[18:51:07] [INFO] Sent goal with index 96 for vehicle 96.
+[18:51:08] [INFO] Received goal request.
+[18:51:08] [INFO] Sent goal with index 97 for vehicle 97.
+[18:51:08] [INFO] Received goal request.
+[18:51:08] [INFO] Sent goal with index 98 for vehicle 98.
+[18:51:08] [INFO] Received goal request.
+[18:51:08] [INFO] Sent goal with index 99 for vehicle 99.
+[18:51:08] [INFO] Received goal request.
+[18:51:08] [INFO] Sent goal with index 100 for vehicle 100.
+[18:51:08] [INFO] Received goal request.
+[18:51:08] [ERROR] Received invalid goal index 101 for vehicle 0 (Maximum index: 100).
+[18:51:12] [INFO] Received goal request.
+[18:51:12] [INFO] Sent goal with index 0 for vehicle 0.
+[18:51:12] [INFO] Received goal request.
+[18:51:13] [INFO] Sent goal with index 1 for vehicle 1.
+[18:51:13] [INFO] Received goal request.
+[18:51:13] [INFO] Sent goal with index 2 for vehicle 2.
+[18:51:13] [INFO] Received goal request.
+[18:51:13] [INFO] Sent goal with index 3 for vehicle 3.
+[18:51:13] [INFO] Received goal request.
+[18:51:13] [INFO] Sent goal with index 4 for vehicle 4.
+[18:51:13] [INFO] Received goal request.
+[18:51:13] [INFO] Sent goal with index 5 for vehicle 5.
+[18:51:13] [INFO] Received goal request.
+[18:51:13] [INFO] Sent goal with index 6 for vehicle 6.
+[18:51:13] [INFO] Received goal request.
+[18:51:13] [INFO] Sent goal with index 7 for vehicle 7.
+[18:51:13] [INFO] Received goal request.
+[18:51:13] [INFO] Sent goal with index 8 for vehicle 8.
+[18:51:13] [INFO] Received goal request.
+[18:51:13] [INFO] Sent goal with index 9 for vehicle 9.
+[18:51:13] [INFO] Received goal request.
+[18:51:13] [INFO] Sent goal with index 10 for vehicle 10.
+[18:51:14] [INFO] Received goal request.
+[18:51:14] [INFO] Sent goal with index 11 for vehicle 11.
+[18:51:14] [INFO] Received goal request.
+[18:51:14] [INFO] Sent goal with index 12 for vehicle 12.
+[18:51:14] [INFO] Received goal request.
+[18:51:14] [INFO] Sent goal with index 13 for vehicle 13.
+[18:51:14] [INFO] Received goal request.
+[18:51:14] [INFO] Sent goal with index 14 for vehicle 14.
+[18:51:14] [INFO] Received goal request.
+[18:51:14] [INFO] Sent goal with index 15 for vehicle 15.
+[18:51:14] [INFO] Received goal request.
+[18:51:14] [INFO] Sent goal with index 16 for vehicle 16.
+[18:51:14] [INFO] Received goal request.
+[18:51:14] [INFO] Sent goal with index 17 for vehicle 17.
+[18:51:14] [INFO] Received goal request.
+[18:51:14] [INFO] Sent goal with index 18 for vehicle 18.
+[18:51:14] [INFO] Received goal request.
+[18:51:15] [INFO] Sent goal with index 19 for vehicle 19.
+[18:51:15] [INFO] Received goal request.
+[18:51:15] [INFO] Sent goal with index 20 for vehicle 20.
+[18:51:15] [INFO] Received goal request.
+[18:51:15] [INFO] Sent goal with index 21 for vehicle 21.
+[18:51:15] [INFO] Received goal request.
+[18:51:15] [INFO] Sent goal with index 22 for vehicle 22.
+[18:51:15] [INFO] Received goal request.
+[18:51:15] [INFO] Sent goal with index 23 for vehicle 23.
+[18:51:15] [INFO] Received goal request.
+[18:51:15] [INFO] Sent goal with index 24 for vehicle 24.
+[18:51:15] [INFO] Received goal request.
+[18:51:15] [INFO] Sent goal with index 25 for vehicle 25.
+[18:51:15] [INFO] Received goal request.
+[18:51:15] [INFO] Sent goal with index 26 for vehicle 26.
+[18:51:15] [INFO] Received goal request.
+[18:51:15] [INFO] Sent goal with index 27 for vehicle 27.
+[18:51:15] [INFO] Received goal request.
+[18:51:15] [INFO] Sent goal with index 28 for vehicle 28.
+[18:51:16] [INFO] Received goal request.
+[18:51:16] [INFO] Sent goal with index 29 for vehicle 29.
+[18:51:16] [INFO] Received goal request.
+[18:51:16] [INFO] Sent goal with index 30 for vehicle 30.
+[18:51:16] [INFO] Received goal request.
+[18:51:16] [INFO] Sent goal with index 31 for vehicle 31.
+[18:51:16] [INFO] Received goal request.
+[18:51:16] [INFO] Sent goal with index 32 for vehicle 32.
+[18:51:16] [INFO] Received goal request.
+[18:51:16] [INFO] Sent goal with index 33 for vehicle 33.
+[18:51:16] [INFO] Received goal request.
+[18:51:16] [INFO] Sent goal with index 34 for vehicle 34.
+[18:51:16] [INFO] Received goal request.
+[18:51:16] [INFO] Sent goal with index 35 for vehicle 35.
+[18:51:16] [INFO] Received goal request.
+[18:51:16] [INFO] Sent goal with index 36 for vehicle 36.
+[18:51:16] [INFO] Received goal request.
+[18:51:16] [INFO] Sent goal with index 37 for vehicle 37.
+[18:51:17] [INFO] Received goal request.
+[18:51:17] [INFO] Sent goal with index 38 for vehicle 38.
+[18:51:17] [INFO] Received goal request.
+[18:51:17] [INFO] Sent goal with index 39 for vehicle 39.
+[18:51:17] [INFO] Received goal request.
+[18:51:17] [INFO] Sent goal with index 40 for vehicle 40.
+[18:51:17] [INFO] Received goal request.
+[18:51:17] [INFO] Sent goal with index 41 for vehicle 41.
+[18:51:17] [INFO] Received goal request.
+[18:51:17] [INFO] Sent goal with index 42 for vehicle 42.
+[18:51:17] [INFO] Received goal request.
+[18:51:17] [INFO] Sent goal with index 43 for vehicle 43.
+[18:51:17] [INFO] Received goal request.
+[18:51:17] [INFO] Sent goal with index 44 for vehicle 44.
+[18:51:18] [INFO] Received goal request.
+[18:51:18] [INFO] Sent goal with index 45 for vehicle 45.
+[18:51:18] [INFO] Received goal request.
+[18:51:18] [INFO] Sent goal with index 46 for vehicle 46.
+[18:51:18] [INFO] Received goal request.
+[18:51:18] [INFO] Sent goal with index 47 for vehicle 47.
+[18:51:18] [INFO] Received goal request.
+[18:51:18] [INFO] Sent goal with index 48 for vehicle 48.
+[18:51:18] [INFO] Received goal request.
+[18:51:18] [INFO] Sent goal with index 49 for vehicle 49.
+[18:51:18] [INFO] Received goal request.
+[18:51:18] [INFO] Sent goal with index 50 for vehicle 50.
+[18:51:18] [INFO] Received goal request.
+[18:51:18] [INFO] Sent goal with index 51 for vehicle 51.
+[18:51:19] [INFO] Received goal request.
+[18:51:19] [INFO] Sent goal with index 52 for vehicle 52.
+[18:51:19] [INFO] Received goal request.
+[18:51:19] [INFO] Sent goal with index 53 for vehicle 53.
+[18:51:19] [INFO] Received goal request.
+[18:51:19] [INFO] Sent goal with index 54 for vehicle 54.
+[18:51:19] [INFO] Received goal request.
+[18:51:19] [INFO] Sent goal with index 55 for vehicle 55.
+[18:51:19] [INFO] Received goal request.
+[18:51:19] [INFO] Sent goal with index 56 for vehicle 56.
+[18:51:19] [INFO] Received goal request.
+[18:51:19] [INFO] Sent goal with index 57 for vehicle 57.
+[18:51:19] [INFO] Received goal request.
+[18:51:19] [INFO] Sent goal with index 58 for vehicle 58.
+[18:51:19] [INFO] Received goal request.
+[18:51:19] [INFO] Sent goal with index 59 for vehicle 59.
+[18:51:20] [INFO] Received goal request.
+[18:51:20] [INFO] Sent goal with index 60 for vehicle 60.
+[18:51:20] [INFO] Received goal request.
+[18:51:20] [INFO] Sent goal with index 61 for vehicle 61.
+[18:51:20] [INFO] Received goal request.
+[18:51:20] [INFO] Sent goal with index 62 for vehicle 62.
+[18:51:20] [INFO] Received goal request.
+[18:51:20] [INFO] Sent goal with index 63 for vehicle 63.
+[18:51:20] [INFO] Received goal request.
+[18:51:20] [INFO] Sent goal with index 64 for vehicle 64.
+[18:51:20] [INFO] Received goal request.
+[18:51:20] [INFO] Sent goal with index 65 for vehicle 65.
+[18:51:20] [INFO] Received goal request.
+[18:51:20] [INFO] Sent goal with index 66 for vehicle 66.
+[18:51:20] [INFO] Received goal request.
+[18:51:20] [INFO] Sent goal with index 67 for vehicle 67.
+[18:51:20] [INFO] Received goal request.
+[18:51:20] [INFO] Sent goal with index 68 for vehicle 68.
+[18:51:20] [INFO] Received goal request.
+[18:51:20] [INFO] Sent goal with index 69 for vehicle 69.
+[18:51:21] [INFO] Received goal request.
+[18:51:21] [INFO] Sent goal with index 70 for vehicle 70.
+[18:51:21] [INFO] Received goal request.
+[18:51:21] [INFO] Sent goal with index 71 for vehicle 71.
+[18:51:21] [INFO] Received goal request.
+[18:51:21] [INFO] Sent goal with index 72 for vehicle 72.
+[18:51:21] [INFO] Received goal request.
+[18:51:21] [INFO] Sent goal with index 73 for vehicle 73.
+[18:51:21] [INFO] Received goal request.
+[18:51:21] [INFO] Sent goal with index 74 for vehicle 74.
+[18:51:21] [INFO] Received goal request.
+[18:51:21] [INFO] Sent goal with index 75 for vehicle 75.
+[18:51:21] [INFO] Received goal request.
+[18:51:21] [INFO] Sent goal with index 76 for vehicle 76.
+[18:51:21] [INFO] Received goal request.
+[18:51:21] [INFO] Sent goal with index 77 for vehicle 77.
+[18:51:21] [INFO] Received goal request.
+[18:51:21] [INFO] Sent goal with index 78 for vehicle 78.
+[18:51:22] [INFO] Received goal request.
+[18:51:22] [INFO] Sent goal with index 79 for vehicle 79.
+[18:51:22] [INFO] Received goal request.
+[18:51:22] [INFO] Sent goal with index 80 for vehicle 80.
+[18:51:22] [INFO] Received goal request.
+[18:51:22] [INFO] Sent goal with index 81 for vehicle 81.
+[18:51:22] [INFO] Received goal request.
+[18:51:22] [INFO] Sent goal with index 82 for vehicle 82.
+[18:51:22] [INFO] Received goal request.
+[18:51:22] [INFO] Sent goal with index 83 for vehicle 83.
+[18:51:22] [INFO] Received goal request.
+[18:51:22] [INFO] Sent goal with index 84 for vehicle 84.
+[18:51:22] [INFO] Received goal request.
+[18:51:22] [INFO] Sent goal with index 85 for vehicle 85.
+[18:51:22] [INFO] Received goal request.
+[18:51:22] [INFO] Sent goal with index 86 for vehicle 86.
+[18:51:22] [INFO] Received goal request.
+[18:51:22] [INFO] Sent goal with index 87 for vehicle 87.
+[18:51:23] [INFO] Received goal request.
+[18:51:23] [INFO] Sent goal with index 88 for vehicle 88.
+[18:51:23] [INFO] Received goal request.
+[18:51:23] [INFO] Sent goal with index 89 for vehicle 89.
+[18:51:23] [INFO] Received goal request.
+[18:51:23] [INFO] Sent goal with index 90 for vehicle 90.
+[18:51:23] [INFO] Received goal request.
+[18:51:23] [INFO] Sent goal with index 91 for vehicle 91.
+[18:51:23] [INFO] Received goal request.
+[18:51:23] [INFO] Sent goal with index 92 for vehicle 92.
+[18:51:23] [INFO] Received goal request.
+[18:51:23] [INFO] Sent goal with index 93 for vehicle 93.
+[18:51:23] [INFO] Received goal request.
+[18:51:23] [INFO] Sent goal with index 94 for vehicle 94.
+[18:51:23] [INFO] Received goal request.
+[18:51:23] [INFO] Sent goal with index 95 for vehicle 95.
+[18:51:24] [INFO] Received goal request.
+[18:51:24] [INFO] Sent goal with index 96 for vehicle 96.
+[18:51:24] [INFO] Received goal request.
+[18:51:24] [INFO] Sent goal with index 97 for vehicle 97.
+[18:51:24] [INFO] Received goal request.
+[18:51:24] [INFO] Sent goal with index 98 for vehicle 98.
+[18:51:24] [INFO] Received goal request.
+[18:51:24] [INFO] Sent goal with index 99 for vehicle 99.
+[18:51:24] [INFO] Received goal request.
+[18:51:24] [INFO] Sent goal with index 100 for vehicle 100.
+[18:51:24] [INFO] Received goal request.
+[18:51:24] [ERROR] Received invalid goal index 101 for vehicle 0 (Maximum index: 100).
+[18:52:21] [INFO] Received goal request.
+[18:52:21] [INFO] Sent goal with index 0 for vehicle 0.
+[18:52:21] [INFO] Received goal request.
+[18:52:21] [INFO] Sent goal with index 1 for vehicle 1.
+[18:52:21] [INFO] Received goal request.
+[18:52:21] [INFO] Sent goal with index 2 for vehicle 2.
+[18:52:21] [INFO] Received goal request.
+[18:52:21] [INFO] Sent goal with index 3 for vehicle 3.
+[18:52:22] [INFO] Received goal request.
+[18:52:22] [INFO] Sent goal with index 4 for vehicle 4.
+[18:52:22] [INFO] Received goal request.
+[18:52:22] [INFO] Sent goal with index 5 for vehicle 5.
+[18:52:22] [INFO] Received goal request.
+[18:52:22] [INFO] Sent goal with index 6 for vehicle 6.
+[18:52:22] [INFO] Received goal request.
+[18:52:22] [INFO] Sent goal with index 7 for vehicle 7.
+[18:52:22] [INFO] Received goal request.
+[18:52:22] [INFO] Sent goal with index 8 for vehicle 8.
+[18:52:22] [INFO] Received goal request.
+[18:52:22] [INFO] Sent goal with index 9 for vehicle 9.
+[18:52:22] [INFO] Received goal request.
+[18:52:22] [INFO] Sent goal with index 10 for vehicle 10.
+[18:52:22] [INFO] Received goal request.
+[18:52:22] [INFO] Sent goal with index 11 for vehicle 11.
+[18:52:22] [INFO] Received goal request.
+[18:52:22] [INFO] Sent goal with index 12 for vehicle 12.
+[18:52:23] [INFO] Received goal request.
+[18:52:23] [INFO] Sent goal with index 13 for vehicle 13.
+[18:52:23] [INFO] Received goal request.
+[18:52:23] [INFO] Sent goal with index 14 for vehicle 14.
+[18:52:23] [INFO] Received goal request.
+[18:52:23] [INFO] Sent goal with index 15 for vehicle 15.
+[18:52:23] [INFO] Received goal request.
+[18:52:23] [INFO] Sent goal with index 16 for vehicle 16.
+[18:52:23] [INFO] Received goal request.
+[18:52:23] [INFO] Sent goal with index 17 for vehicle 17.
+[18:52:23] [INFO] Received goal request.
+[18:52:23] [INFO] Sent goal with index 18 for vehicle 18.
+[18:52:23] [INFO] Received goal request.
+[18:52:23] [INFO] Sent goal with index 19 for vehicle 19.
+[18:52:23] [INFO] Received goal request.
+[18:52:23] [INFO] Sent goal with index 20 for vehicle 20.
+[18:52:23] [INFO] Received goal request.
+[18:52:23] [INFO] Sent goal with index 21 for vehicle 21.
+[18:52:24] [INFO] Received goal request.
+[18:52:24] [INFO] Sent goal with index 22 for vehicle 22.
+[18:52:24] [INFO] Received goal request.
+[18:52:24] [INFO] Sent goal with index 23 for vehicle 23.
+[18:52:24] [INFO] Received goal request.
+[18:52:24] [INFO] Sent goal with index 24 for vehicle 24.
+[18:52:24] [INFO] Received goal request.
+[18:52:24] [INFO] Sent goal with index 25 for vehicle 25.
+[18:52:24] [INFO] Received goal request.
+[18:52:24] [INFO] Sent goal with index 26 for vehicle 26.
+[18:52:24] [INFO] Received goal request.
+[18:52:24] [INFO] Sent goal with index 27 for vehicle 27.
+[18:52:24] [INFO] Received goal request.
+[18:52:24] [INFO] Sent goal with index 28 for vehicle 28.
+[18:52:24] [INFO] Received goal request.
+[18:52:24] [INFO] Sent goal with index 29 for vehicle 29.
+[18:52:24] [INFO] Received goal request.
+[18:52:24] [INFO] Sent goal with index 30 for vehicle 30.
+[18:52:24] [INFO] Received goal request.
+[18:52:24] [INFO] Sent goal with index 31 for vehicle 31.
+[18:52:25] [INFO] Received goal request.
+[18:52:25] [INFO] Sent goal with index 32 for vehicle 32.
+[18:52:25] [INFO] Received goal request.
+[18:52:25] [INFO] Sent goal with index 33 for vehicle 33.
+[18:52:25] [INFO] Received goal request.
+[18:52:25] [INFO] Sent goal with index 34 for vehicle 34.
+[18:52:25] [INFO] Received goal request.
+[18:52:25] [INFO] Sent goal with index 35 for vehicle 35.
+[18:52:25] [INFO] Received goal request.
+[18:52:25] [INFO] Sent goal with index 36 for vehicle 36.
+[18:52:25] [INFO] Received goal request.
+[18:52:25] [INFO] Sent goal with index 37 for vehicle 37.
+[18:52:25] [INFO] Received goal request.
+[18:52:25] [INFO] Sent goal with index 38 for vehicle 38.
+[18:52:25] [INFO] Received goal request.
+[18:52:25] [INFO] Sent goal with index 39 for vehicle 39.
+[18:52:25] [INFO] Received goal request.
+[18:52:25] [INFO] Sent goal with index 40 for vehicle 40.
+[18:52:26] [INFO] Received goal request.
+[18:52:26] [INFO] Sent goal with index 41 for vehicle 41.
+[18:52:26] [INFO] Received goal request.
+[18:52:26] [INFO] Sent goal with index 42 for vehicle 42.
+[18:52:26] [INFO] Received goal request.
+[18:52:26] [INFO] Sent goal with index 43 for vehicle 43.
+[18:52:26] [INFO] Received goal request.
+[18:52:26] [INFO] Sent goal with index 44 for vehicle 44.
+[18:52:26] [INFO] Received goal request.
+[18:52:26] [INFO] Sent goal with index 45 for vehicle 45.
+[18:52:26] [INFO] Received goal request.
+[18:52:26] [INFO] Sent goal with index 46 for vehicle 46.
+[18:52:27] [INFO] Received goal request.
+[18:52:27] [INFO] Sent goal with index 47 for vehicle 47.
+[18:52:27] [INFO] Received goal request.
+[18:52:27] [INFO] Sent goal with index 48 for vehicle 48.
+[18:52:27] [INFO] Received goal request.
+[18:52:27] [INFO] Sent goal with index 49 for vehicle 49.
+[18:52:27] [INFO] Received goal request.
+[18:52:27] [INFO] Sent goal with index 50 for vehicle 50.
+[18:52:27] [INFO] Received goal request.
+[18:52:27] [INFO] Sent goal with index 51 for vehicle 51.
+[18:52:27] [INFO] Received goal request.
+[18:52:27] [INFO] Sent goal with index 52 for vehicle 52.
+[18:52:27] [INFO] Received goal request.
+[18:52:27] [INFO] Sent goal with index 53 for vehicle 53.
+[18:52:28] [INFO] Received goal request.
+[18:52:28] [INFO] Sent goal with index 54 for vehicle 54.
+[18:52:28] [INFO] Received goal request.
+[18:52:28] [INFO] Sent goal with index 55 for vehicle 55.
+[18:52:28] [INFO] Received goal request.
+[18:52:28] [INFO] Sent goal with index 56 for vehicle 56.
+[18:52:28] [INFO] Received goal request.
+[18:52:28] [INFO] Sent goal with index 57 for vehicle 57.
+[18:52:28] [INFO] Received goal request.
+[18:52:28] [INFO] Sent goal with index 58 for vehicle 58.
+[18:52:28] [INFO] Received goal request.
+[18:52:28] [INFO] Sent goal with index 59 for vehicle 59.
+[18:52:28] [INFO] Received goal request.
+[18:52:28] [INFO] Sent goal with index 60 for vehicle 60.
+[18:52:28] [INFO] Received goal request.
+[18:52:28] [INFO] Sent goal with index 61 for vehicle 61.
+[18:52:28] [INFO] Received goal request.
+[18:52:28] [INFO] Sent goal with index 62 for vehicle 62.
+[18:52:29] [INFO] Received goal request.
+[18:52:29] [INFO] Sent goal with index 63 for vehicle 63.
+[18:52:29] [INFO] Received goal request.
+[18:52:29] [INFO] Sent goal with index 64 for vehicle 64.
+[18:52:29] [INFO] Received goal request.
+[18:52:29] [INFO] Sent goal with index 65 for vehicle 65.
+[18:52:29] [INFO] Received goal request.
+[18:52:29] [INFO] Sent goal with index 66 for vehicle 66.
+[18:52:29] [INFO] Received goal request.
+[18:52:29] [INFO] Sent goal with index 67 for vehicle 67.
+[18:52:29] [INFO] Received goal request.
+[18:52:29] [INFO] Sent goal with index 68 for vehicle 68.
+[18:52:29] [INFO] Received goal request.
+[18:52:29] [INFO] Sent goal with index 69 for vehicle 69.
+[18:52:29] [INFO] Received goal request.
+[18:52:29] [INFO] Sent goal with index 70 for vehicle 70.
+[18:52:29] [INFO] Received goal request.
+[18:52:29] [INFO] Sent goal with index 71 for vehicle 71.
+[18:52:29] [INFO] Received goal request.
+[18:52:29] [INFO] Sent goal with index 72 for vehicle 72.
+[18:52:30] [INFO] Received goal request.
+[18:52:30] [INFO] Sent goal with index 73 for vehicle 73.
+[18:52:30] [INFO] Received goal request.
+[18:52:30] [INFO] Sent goal with index 74 for vehicle 74.
+[18:52:30] [INFO] Received goal request.
+[18:52:30] [INFO] Sent goal with index 75 for vehicle 75.
+[18:52:30] [INFO] Received goal request.
+[18:52:30] [INFO] Sent goal with index 76 for vehicle 76.
+[18:52:30] [INFO] Received goal request.
+[18:52:30] [INFO] Sent goal with index 77 for vehicle 77.
+[18:52:30] [INFO] Received goal request.
+[18:52:30] [INFO] Sent goal with index 78 for vehicle 78.
+[18:52:30] [INFO] Received goal request.
+[18:52:30] [INFO] Sent goal with index 79 for vehicle 79.
+[18:52:30] [INFO] Received goal request.
+[18:52:30] [INFO] Sent goal with index 80 for vehicle 80.
+[18:52:30] [INFO] Received goal request.
+[18:52:31] [INFO] Sent goal with index 81 for vehicle 81.
+[18:52:31] [INFO] Received goal request.
+[18:52:31] [INFO] Sent goal with index 82 for vehicle 82.
+[18:52:31] [INFO] Received goal request.
+[18:52:31] [INFO] Sent goal with index 83 for vehicle 83.
+[18:52:31] [INFO] Received goal request.
+[18:52:31] [INFO] Sent goal with index 84 for vehicle 84.
+[18:52:31] [INFO] Received goal request.
+[18:52:31] [INFO] Sent goal with index 85 for vehicle 85.
+[18:52:31] [INFO] Received goal request.
+[18:52:31] [INFO] Sent goal with index 86 for vehicle 86.
+[18:52:31] [INFO] Received goal request.
+[18:52:31] [INFO] Sent goal with index 87 for vehicle 87.
+[18:52:31] [INFO] Received goal request.
+[18:52:31] [INFO] Sent goal with index 88 for vehicle 88.
+[18:52:31] [INFO] Received goal request.
+[18:52:31] [INFO] Sent goal with index 89 for vehicle 89.
+[18:52:32] [INFO] Received goal request.
+[18:52:32] [INFO] Sent goal with index 90 for vehicle 90.
+[18:52:32] [INFO] Received goal request.
+[18:52:32] [INFO] Sent goal with index 91 for vehicle 91.
+[18:52:32] [INFO] Received goal request.
+[18:52:32] [INFO] Sent goal with index 92 for vehicle 92.
+[18:52:32] [INFO] Received goal request.
+[18:52:32] [INFO] Sent goal with index 93 for vehicle 93.
+[18:52:32] [INFO] Received goal request.
+[18:52:32] [INFO] Sent goal with index 94 for vehicle 94.
+[18:52:32] [INFO] Received goal request.
+[18:52:32] [INFO] Sent goal with index 95 for vehicle 95.
+[18:52:32] [INFO] Received goal request.
+[18:52:32] [INFO] Sent goal with index 96 for vehicle 96.
+[18:52:32] [INFO] Received goal request.
+[18:52:32] [INFO] Sent goal with index 97 for vehicle 97.
+[18:52:32] [INFO] Received goal request.
+[18:52:32] [INFO] Sent goal with index 98 for vehicle 98.
+[18:52:33] [INFO] Received goal request.
+[18:52:33] [INFO] Sent goal with index 99 for vehicle 99.
+[18:52:33] [INFO] Received goal request.
+[18:52:33] [INFO] Sent goal with index 100 for vehicle 100.
+[18:52:33] [INFO] Received goal request.
+[18:52:33] [ERROR] Received invalid goal index 101 for vehicle 0 (Maximum index: 100).
+[18:52:36] [INFO] Received stop command.
+[18:52:36] [INFO] Client disconnected.
+[18:52:36] [INFO] Stopped server.
+[18:52:36] [INFO] Stoppend socket-handler.
+[18:52:36] Exit code 0
+
+--------------------------------------------------
+[18:53:01] [INFO] Started socket-handler.
+[18:53:01] [INFO] Started server.
+[18:53:02] [INFO] Client connected.
+[18:53:02] [INFO] IP-Address / Hostname: 127.0.0.1:52051
+[18:53:30] [INFO] Generating goals for file polygon.png with 100 goals for vehicle 0...
+[18:53:31] [INFO] Reading goals...
+[18:53:31] [INFO] Successfully generated goals for vehicle 0.
+[18:53:36] [INFO] Received goal request.
+[18:53:36] [INFO] Sent goal with index 0 for vehicle 0.
+[18:53:38] [INFO] Received goal request.
+[18:53:38] [INFO] Sent goal with index 1 for vehicle 1.
+[18:53:38] [INFO] Received goal request.
+[18:53:38] [INFO] Sent goal with index 2 for vehicle 2.
+[18:53:38] [INFO] Received goal request.
+[18:53:38] [INFO] Sent goal with index 3 for vehicle 3.
+[18:53:38] [INFO] Received goal request.
+[18:53:38] [INFO] Sent goal with index 4 for vehicle 4.
+[18:53:38] [INFO] Received goal request.
+[18:53:38] [INFO] Sent goal with index 5 for vehicle 5.
+[18:53:39] [INFO] Received goal request.
+[18:53:39] [INFO] Sent goal with index 6 for vehicle 6.
+[18:53:39] [INFO] Received goal request.
+[18:53:39] [INFO] Sent goal with index 7 for vehicle 7.
+[18:53:39] [INFO] Received goal request.
+[18:53:39] [INFO] Sent goal with index 8 for vehicle 8.
+[18:53:39] [INFO] Received goal request.
+[18:53:39] [INFO] Sent goal with index 9 for vehicle 9.
+[18:53:39] [INFO] Received goal request.
+[18:53:39] [INFO] Sent goal with index 10 for vehicle 10.
+[18:53:39] [INFO] Received goal request.
+[18:53:39] [INFO] Sent goal with index 11 for vehicle 11.
+[18:53:39] [INFO] Received goal request.
+[18:53:39] [INFO] Sent goal with index 12 for vehicle 12.
+[18:53:39] [INFO] Received goal request.
+[18:53:39] [INFO] Sent goal with index 13 for vehicle 13.
+[18:53:39] [INFO] Received goal request.
+[18:53:39] [INFO] Sent goal with index 14 for vehicle 14.
+[18:53:40] [INFO] Received goal request.
+[18:53:40] [INFO] Sent goal with index 15 for vehicle 15.
+[18:53:40] [INFO] Received goal request.
+[18:53:40] [INFO] Sent goal with index 16 for vehicle 16.
+[18:53:40] [INFO] Received goal request.
+[18:53:40] [INFO] Sent goal with index 17 for vehicle 17.
+[18:53:40] [INFO] Received goal request.
+[18:53:40] [INFO] Sent goal with index 18 for vehicle 18.
+[18:53:40] [INFO] Received goal request.
+[18:53:40] [INFO] Sent goal with index 19 for vehicle 19.
+[18:53:40] [INFO] Received goal request.
+[18:53:40] [INFO] Sent goal with index 20 for vehicle 20.
+[18:53:40] [INFO] Received goal request.
+[18:53:40] [INFO] Sent goal with index 21 for vehicle 21.
+[18:53:40] [INFO] Received goal request.
+[18:53:40] [INFO] Sent goal with index 22 for vehicle 22.
+[18:53:40] [INFO] Received goal request.
+[18:53:40] [INFO] Sent goal with index 23 for vehicle 23.
+[18:53:41] [INFO] Received goal request.
+[18:53:41] [INFO] Sent goal with index 24 for vehicle 24.
+[18:53:41] [INFO] Received goal request.
+[18:53:41] [INFO] Sent goal with index 25 for vehicle 25.
+[18:53:41] [INFO] Received goal request.
+[18:53:41] [INFO] Sent goal with index 26 for vehicle 26.
+[18:53:41] [INFO] Received goal request.
+[18:53:41] [INFO] Sent goal with index 27 for vehicle 27.
+[18:53:41] [INFO] Received goal request.
+[18:53:41] [INFO] Sent goal with index 28 for vehicle 28.
+[18:53:41] [INFO] Received goal request.
+[18:53:41] [INFO] Sent goal with index 29 for vehicle 29.
+[18:53:41] [INFO] Received goal request.
+[18:53:41] [INFO] Sent goal with index 30 for vehicle 30.
+[18:53:41] [INFO] Received goal request.
+[18:53:41] [INFO] Sent goal with index 31 for vehicle 31.
+[18:53:41] [INFO] Received goal request.
+[18:53:41] [INFO] Sent goal with index 32 for vehicle 32.
+[18:53:41] [INFO] Received goal request.
+[18:53:41] [INFO] Sent goal with index 33 for vehicle 33.
+[18:53:42] [INFO] Received goal request.
+[18:53:42] [INFO] Sent goal with index 34 for vehicle 34.
+[18:53:42] [INFO] Received goal request.
+[18:53:42] [INFO] Sent goal with index 35 for vehicle 35.
+[18:53:42] [INFO] Received goal request.
+[18:53:42] [INFO] Sent goal with index 36 for vehicle 36.
+[18:53:42] [INFO] Received goal request.
+[18:53:42] [INFO] Sent goal with index 37 for vehicle 37.
+[18:53:42] [INFO] Received goal request.
+[18:53:42] [INFO] Sent goal with index 38 for vehicle 38.
+[18:53:42] [INFO] Received goal request.
+[18:53:42] [INFO] Sent goal with index 39 for vehicle 39.
+[18:53:42] [INFO] Received goal request.
+[18:53:42] [INFO] Sent goal with index 40 for vehicle 40.
+[18:53:42] [INFO] Received goal request.
+[18:53:42] [INFO] Sent goal with index 41 for vehicle 41.
+[18:53:43] [INFO] Received goal request.
+[18:53:43] [INFO] Sent goal with index 42 for vehicle 42.
+[18:53:43] [INFO] Received goal request.
+[18:53:43] [INFO] Sent goal with index 43 for vehicle 43.
+[18:53:43] [INFO] Received goal request.
+[18:53:43] [INFO] Sent goal with index 44 for vehicle 44.
+[18:53:43] [INFO] Received goal request.
+[18:53:43] [INFO] Sent goal with index 45 for vehicle 45.
+[18:53:43] [INFO] Received goal request.
+[18:53:43] [INFO] Sent goal with index 46 for vehicle 46.
+[18:53:43] [INFO] Received goal request.
+[18:53:43] [INFO] Sent goal with index 47 for vehicle 47.
+[18:53:43] [INFO] Received goal request.
+[18:53:43] [INFO] Sent goal with index 48 for vehicle 48.
+[18:53:44] [INFO] Received goal request.
+[18:53:44] [INFO] Sent goal with index 49 for vehicle 49.
+[18:53:44] [INFO] Received goal request.
+[18:53:44] [INFO] Sent goal with index 50 for vehicle 50.
+[18:53:44] [INFO] Received goal request.
+[18:53:44] [INFO] Sent goal with index 51 for vehicle 51.
+[18:53:44] [INFO] Received goal request.
+[18:53:44] [INFO] Sent goal with index 52 for vehicle 52.
+[18:53:44] [INFO] Received goal request.
+[18:53:44] [INFO] Sent goal with index 53 for vehicle 53.
+[18:53:44] [INFO] Received goal request.
+[18:53:44] [INFO] Sent goal with index 54 for vehicle 54.
+[18:53:44] [INFO] Received goal request.
+[18:53:44] [INFO] Sent goal with index 55 for vehicle 55.
+[18:53:45] [INFO] Received goal request.
+[18:53:45] [INFO] Sent goal with index 56 for vehicle 56.
+[18:53:45] [INFO] Received goal request.
+[18:53:45] [INFO] Sent goal with index 57 for vehicle 57.
+[18:53:45] [INFO] Received goal request.
+[18:53:45] [INFO] Sent goal with index 58 for vehicle 58.
+[18:53:45] [INFO] Received goal request.
+[18:53:45] [INFO] Sent goal with index 59 for vehicle 59.
+[18:53:45] [INFO] Received goal request.
+[18:53:45] [INFO] Sent goal with index 60 for vehicle 60.
+[18:53:45] [INFO] Received goal request.
+[18:53:45] [INFO] Sent goal with index 61 for vehicle 61.
+[18:53:45] [INFO] Received goal request.
+[18:53:45] [INFO] Sent goal with index 62 for vehicle 62.
+[18:53:45] [INFO] Received goal request.
+[18:53:45] [INFO] Sent goal with index 63 for vehicle 63.
+[18:53:45] [INFO] Received goal request.
+[18:53:45] [INFO] Sent goal with index 64 for vehicle 64.
+[18:53:46] [INFO] Received goal request.
+[18:53:46] [INFO] Sent goal with index 65 for vehicle 65.
+[18:53:46] [INFO] Received goal request.
+[18:53:46] [INFO] Sent goal with index 66 for vehicle 66.
+[18:53:46] [INFO] Received goal request.
+[18:53:46] [INFO] Sent goal with index 67 for vehicle 67.
+[18:53:46] [INFO] Received goal request.
+[18:53:46] [INFO] Sent goal with index 68 for vehicle 68.
+[18:53:46] [INFO] Received goal request.
+[18:53:46] [INFO] Sent goal with index 69 for vehicle 69.
+[18:53:46] [INFO] Received goal request.
+[18:53:46] [INFO] Sent goal with index 70 for vehicle 70.
+[18:53:46] [INFO] Received goal request.
+[18:53:46] [INFO] Sent goal with index 71 for vehicle 71.
+[18:53:46] [INFO] Received goal request.
+[18:53:46] [INFO] Sent goal with index 72 for vehicle 72.
+[18:53:46] [INFO] Received goal request.
+[18:53:46] [INFO] Sent goal with index 73 for vehicle 73.
+[18:53:46] [INFO] Received goal request.
+[18:53:46] [INFO] Sent goal with index 74 for vehicle 74.
+[18:53:47] [INFO] Received goal request.
+[18:53:47] [INFO] Sent goal with index 75 for vehicle 75.
+[18:53:47] [INFO] Received goal request.
+[18:53:47] [INFO] Sent goal with index 76 for vehicle 76.
+[18:53:47] [INFO] Received goal request.
+[18:53:47] [INFO] Sent goal with index 77 for vehicle 77.
+[18:53:47] [INFO] Received goal request.
+[18:53:47] [INFO] Sent goal with index 78 for vehicle 78.
+[18:53:47] [INFO] Received goal request.
+[18:53:47] [INFO] Sent goal with index 79 for vehicle 79.
+[18:53:47] [INFO] Received goal request.
+[18:53:47] [INFO] Sent goal with index 80 for vehicle 80.
+[18:53:47] [INFO] Received goal request.
+[18:53:47] [INFO] Sent goal with index 81 for vehicle 81.
+[18:53:47] [INFO] Received goal request.
+[18:53:47] [INFO] Sent goal with index 82 for vehicle 82.
+[18:53:47] [INFO] Received goal request.
+[18:53:48] [INFO] Sent goal with index 83 for vehicle 83.
+[18:53:48] [INFO] Received goal request.
+[18:53:48] [INFO] Sent goal with index 84 for vehicle 84.
+[18:53:48] [INFO] Received goal request.
+[18:53:48] [INFO] Sent goal with index 85 for vehicle 85.
+[18:53:48] [INFO] Received goal request.
+[18:53:48] [INFO] Sent goal with index 86 for vehicle 86.
+[18:53:48] [INFO] Received goal request.
+[18:53:48] [INFO] Sent goal with index 87 for vehicle 87.
+[18:53:48] [INFO] Received goal request.
+[18:53:48] [INFO] Sent goal with index 88 for vehicle 88.
+[18:53:48] [INFO] Received goal request.
+[18:53:48] [INFO] Sent goal with index 89 for vehicle 89.
+[18:53:48] [INFO] Received goal request.
+[18:53:48] [INFO] Sent goal with index 90 for vehicle 90.
+[18:53:48] [INFO] Received goal request.
+[18:53:48] [INFO] Sent goal with index 91 for vehicle 91.
+[18:53:49] [INFO] Received goal request.
+[18:53:49] [INFO] Sent goal with index 92 for vehicle 92.
+[18:53:49] [INFO] Received goal request.
+[18:53:49] [INFO] Sent goal with index 93 for vehicle 93.
+[18:53:49] [INFO] Received goal request.
+[18:53:49] [INFO] Sent goal with index 94 for vehicle 94.
+[18:53:49] [INFO] Received goal request.
+[18:53:49] [INFO] Sent goal with index 95 for vehicle 95.
+[18:53:49] [INFO] Received goal request.
+[18:53:49] [INFO] Sent goal with index 96 for vehicle 96.
+[18:53:49] [INFO] Received goal request.
+[18:53:49] [INFO] Sent goal with index 97 for vehicle 97.
+[18:53:49] [INFO] Received goal request.
+[18:53:49] [INFO] Sent goal with index 98 for vehicle 98.
+[18:53:49] [INFO] Received goal request.
+[18:53:49] [INFO] Sent goal with index 99 for vehicle 99.
+[18:53:49] [INFO] Received goal request.
+[18:53:49] [INFO] Sent goal with index 100 for vehicle 100.
+[18:53:50] [INFO] Received goal request.
+[18:53:50] [ERROR] Received invalid goal index 101 for vehicle 0 (Maximum index: 100).
+[18:53:59] [INFO] Received goal request.
+[18:53:59] [INFO] Sent goal with index 0 for vehicle 0.
+[18:53:59] [INFO] Received goal request.
+[18:53:59] [INFO] Sent goal with index 1 for vehicle 1.
+[18:53:59] [INFO] Received goal request.
+[18:53:59] [INFO] Sent goal with index 2 for vehicle 2.
+[18:53:59] [INFO] Received goal request.
+[18:53:59] [INFO] Sent goal with index 3 for vehicle 3.
+[18:53:59] [INFO] Received goal request.
+[18:53:59] [INFO] Sent goal with index 4 for vehicle 4.
+[18:53:59] [INFO] Received goal request.
+[18:53:59] [INFO] Sent goal with index 5 for vehicle 5.
+[18:53:59] [INFO] Received goal request.
+[18:53:59] [INFO] Sent goal with index 6 for vehicle 6.
+[18:54:00] [INFO] Received goal request.
+[18:54:00] [INFO] Sent goal with index 7 for vehicle 7.
+[18:54:00] [INFO] Received goal request.
+[18:54:00] [INFO] Sent goal with index 8 for vehicle 8.
+[18:54:00] [INFO] Received goal request.
+[18:54:00] [INFO] Sent goal with index 9 for vehicle 9.
+[18:54:00] [INFO] Received goal request.
+[18:54:00] [INFO] Sent goal with index 10 for vehicle 10.
+[18:54:00] [INFO] Received goal request.
+[18:54:00] [INFO] Sent goal with index 11 for vehicle 11.
+[18:54:00] [INFO] Received goal request.
+[18:54:00] [INFO] Sent goal with index 12 for vehicle 12.
+[18:54:00] [INFO] Received goal request.
+[18:54:00] [INFO] Sent goal with index 13 for vehicle 13.
+[18:54:00] [INFO] Received goal request.
+[18:54:00] [INFO] Sent goal with index 14 for vehicle 14.
+[18:54:00] [INFO] Received goal request.
+[18:54:00] [INFO] Sent goal with index 15 for vehicle 15.
+[18:54:01] [INFO] Received goal request.
+[18:54:01] [INFO] Sent goal with index 16 for vehicle 16.
+[18:54:01] [INFO] Received goal request.
+[18:54:01] [INFO] Sent goal with index 17 for vehicle 17.
+[18:54:01] [INFO] Received goal request.
+[18:54:01] [INFO] Sent goal with index 18 for vehicle 18.
+[18:54:01] [INFO] Received goal request.
+[18:54:01] [INFO] Sent goal with index 19 for vehicle 19.
+[18:54:01] [INFO] Received goal request.
+[18:54:01] [INFO] Sent goal with index 20 for vehicle 20.
+[18:54:01] [INFO] Received goal request.
+[18:54:01] [INFO] Sent goal with index 21 for vehicle 21.
+[18:54:01] [INFO] Received goal request.
+[18:54:01] [INFO] Sent goal with index 22 for vehicle 22.
+[18:54:01] [INFO] Received goal request.
+[18:54:01] [INFO] Sent goal with index 23 for vehicle 23.
+[18:54:01] [INFO] Received goal request.
+[18:54:01] [INFO] Sent goal with index 24 for vehicle 24.
+[18:54:02] [INFO] Received goal request.
+[18:54:02] [INFO] Sent goal with index 25 for vehicle 25.
+[18:54:02] [INFO] Received goal request.
+[18:54:02] [INFO] Sent goal with index 26 for vehicle 26.
+[18:54:02] [INFO] Received goal request.
+[18:54:02] [INFO] Sent goal with index 27 for vehicle 27.
+[18:54:02] [INFO] Received goal request.
+[18:54:02] [INFO] Sent goal with index 28 for vehicle 28.
+[18:54:02] [INFO] Received goal request.
+[18:54:02] [INFO] Sent goal with index 29 for vehicle 29.
+[18:54:02] [INFO] Received goal request.
+[18:54:02] [INFO] Sent goal with index 30 for vehicle 30.
+[18:54:02] [INFO] Received goal request.
+[18:54:02] [INFO] Sent goal with index 31 for vehicle 31.
+[18:54:02] [INFO] Received goal request.
+[18:54:02] [INFO] Sent goal with index 32 for vehicle 32.
+[18:54:02] [INFO] Received goal request.
+[18:54:02] [INFO] Sent goal with index 33 for vehicle 33.
+[18:54:02] [INFO] Received goal request.
+[18:54:02] [INFO] Sent goal with index 34 for vehicle 34.
+[18:54:03] [INFO] Received goal request.
+[18:54:03] [INFO] Sent goal with index 35 for vehicle 35.
+[18:54:03] [INFO] Received goal request.
+[18:54:03] [INFO] Sent goal with index 36 for vehicle 36.
+[18:54:03] [INFO] Received goal request.
+[18:54:03] [INFO] Sent goal with index 37 for vehicle 37.
+[18:54:03] [INFO] Received goal request.
+[18:54:03] [INFO] Sent goal with index 38 for vehicle 38.
+[18:54:03] [INFO] Received goal request.
+[18:54:03] [INFO] Sent goal with index 39 for vehicle 39.
+[18:54:03] [INFO] Received goal request.
+[18:54:03] [INFO] Sent goal with index 40 for vehicle 40.
+[18:54:03] [INFO] Received goal request.
+[18:54:03] [INFO] Sent goal with index 41 for vehicle 41.
+[18:54:03] [INFO] Received goal request.
+[18:54:03] [INFO] Sent goal with index 42 for vehicle 42.
+[18:54:04] [INFO] Received goal request.
+[18:54:04] [INFO] Sent goal with index 43 for vehicle 43.
+[18:54:04] [INFO] Received goal request.
+[18:54:04] [INFO] Sent goal with index 44 for vehicle 44.
+[18:54:04] [INFO] Received goal request.
+[18:54:04] [INFO] Sent goal with index 45 for vehicle 45.
+[18:54:04] [INFO] Received goal request.
+[18:54:04] [INFO] Sent goal with index 46 for vehicle 46.
+[18:54:04] [INFO] Received goal request.
+[18:54:04] [INFO] Sent goal with index 47 for vehicle 47.
+[18:54:04] [INFO] Received goal request.
+[18:54:04] [INFO] Sent goal with index 48 for vehicle 48.
+[18:54:04] [INFO] Received goal request.
+[18:54:04] [INFO] Sent goal with index 49 for vehicle 49.
+[18:54:05] [INFO] Received goal request.
+[18:54:05] [INFO] Sent goal with index 50 for vehicle 50.
+[18:54:05] [INFO] Received goal request.
+[18:54:05] [INFO] Sent goal with index 51 for vehicle 51.
+[18:54:05] [INFO] Received goal request.
+[18:54:05] [INFO] Sent goal with index 52 for vehicle 52.
+[18:54:05] [INFO] Received goal request.
+[18:54:05] [INFO] Sent goal with index 53 for vehicle 53.
+[18:54:05] [INFO] Received goal request.
+[18:54:05] [INFO] Sent goal with index 54 for vehicle 54.
+[18:54:05] [INFO] Received goal request.
+[18:54:05] [INFO] Sent goal with index 55 for vehicle 55.
+[18:54:05] [INFO] Received goal request.
+[18:54:05] [INFO] Sent goal with index 56 for vehicle 56.
+[18:54:06] [INFO] Received goal request.
+[18:54:06] [INFO] Sent goal with index 57 for vehicle 57.
+[18:54:06] [INFO] Received goal request.
+[18:54:06] [INFO] Sent goal with index 58 for vehicle 58.
+[18:54:06] [INFO] Received goal request.
+[18:54:06] [INFO] Sent goal with index 59 for vehicle 59.
+[18:54:06] [INFO] Received goal request.
+[18:54:06] [INFO] Sent goal with index 60 for vehicle 60.
+[18:54:06] [INFO] Received goal request.
+[18:54:06] [INFO] Sent goal with index 61 for vehicle 61.
+[18:54:06] [INFO] Received goal request.
+[18:54:06] [INFO] Sent goal with index 62 for vehicle 62.
+[18:54:06] [INFO] Received goal request.
+[18:54:06] [INFO] Sent goal with index 63 for vehicle 63.
+[18:54:06] [INFO] Received goal request.
+[18:54:06] [INFO] Sent goal with index 64 for vehicle 64.
+[18:54:06] [INFO] Received goal request.
+[18:54:06] [INFO] Sent goal with index 65 for vehicle 65.
+[18:54:07] [INFO] Received goal request.
+[18:54:07] [INFO] Sent goal with index 66 for vehicle 66.
+[18:54:07] [INFO] Received goal request.
+[18:54:07] [INFO] Sent goal with index 67 for vehicle 67.
+[18:54:07] [INFO] Received goal request.
+[18:54:07] [INFO] Sent goal with index 68 for vehicle 68.
+[18:54:07] [INFO] Received goal request.
+[18:54:07] [INFO] Sent goal with index 69 for vehicle 69.
+[18:54:07] [INFO] Received goal request.
+[18:54:07] [INFO] Sent goal with index 70 for vehicle 70.
+[18:54:07] [INFO] Received goal request.
+[18:54:07] [INFO] Sent goal with index 71 for vehicle 71.
+[18:54:07] [INFO] Received goal request.
+[18:54:07] [INFO] Sent goal with index 72 for vehicle 72.
+[18:54:07] [INFO] Received goal request.
+[18:54:07] [INFO] Sent goal with index 73 for vehicle 73.
+[18:54:07] [INFO] Received goal request.
+[18:54:07] [INFO] Sent goal with index 74 for vehicle 74.
+[18:54:07] [INFO] Received goal request.
+[18:54:07] [INFO] Sent goal with index 75 for vehicle 75.
+[18:54:08] [INFO] Received goal request.
+[18:54:08] [INFO] Sent goal with index 76 for vehicle 76.
+[18:54:08] [INFO] Received goal request.
+[18:54:08] [INFO] Sent goal with index 77 for vehicle 77.
+[18:54:08] [INFO] Received goal request.
+[18:54:08] [INFO] Sent goal with index 78 for vehicle 78.
+[18:54:08] [INFO] Received goal request.
+[18:54:08] [INFO] Sent goal with index 79 for vehicle 79.
+[18:54:08] [INFO] Received goal request.
+[18:54:08] [INFO] Sent goal with index 80 for vehicle 80.
+[18:54:08] [INFO] Received goal request.
+[18:54:08] [INFO] Sent goal with index 81 for vehicle 81.
+[18:54:08] [INFO] Received goal request.
+[18:54:08] [INFO] Sent goal with index 82 for vehicle 82.
+[18:54:08] [INFO] Received goal request.
+[18:54:08] [INFO] Sent goal with index 83 for vehicle 83.
+[18:54:08] [INFO] Received goal request.
+[18:54:09] [INFO] Sent goal with index 84 for vehicle 84.
+[18:54:09] [INFO] Received goal request.
+[18:54:09] [INFO] Sent goal with index 85 for vehicle 85.
+[18:54:09] [INFO] Received goal request.
+[18:54:09] [INFO] Sent goal with index 86 for vehicle 86.
+[18:54:09] [INFO] Received goal request.
+[18:54:09] [INFO] Sent goal with index 87 for vehicle 87.
+[18:54:09] [INFO] Received goal request.
+[18:54:09] [INFO] Sent goal with index 88 for vehicle 88.
+[18:54:09] [INFO] Received goal request.
+[18:54:09] [INFO] Sent goal with index 89 for vehicle 89.
+[18:54:09] [INFO] Received goal request.
+[18:54:09] [INFO] Sent goal with index 90 for vehicle 90.
+[18:54:09] [INFO] Received goal request.
+[18:54:09] [INFO] Sent goal with index 91 for vehicle 91.
+[18:54:09] [INFO] Received goal request.
+[18:54:09] [INFO] Sent goal with index 92 for vehicle 92.
+[18:54:10] [INFO] Received goal request.
+[18:54:10] [INFO] Sent goal with index 93 for vehicle 93.
+[18:54:10] [INFO] Received goal request.
+[18:54:10] [INFO] Sent goal with index 94 for vehicle 94.
+[18:54:10] [INFO] Received goal request.
+[18:54:10] [INFO] Sent goal with index 95 for vehicle 95.
+[18:54:10] [INFO] Received goal request.
+[18:54:10] [INFO] Sent goal with index 96 for vehicle 96.
+[18:54:10] [INFO] Received goal request.
+[18:54:10] [INFO] Sent goal with index 97 for vehicle 97.
+[18:54:10] [INFO] Received goal request.
+[18:54:10] [INFO] Sent goal with index 98 for vehicle 98.
+[18:54:10] [INFO] Received goal request.
+[18:54:10] [INFO] Sent goal with index 99 for vehicle 99.
+[18:54:10] [INFO] Received goal request.
+[18:54:10] [INFO] Sent goal with index 100 for vehicle 100.
+[18:54:10] [INFO] Received goal request.
+[18:54:10] [ERROR] Received invalid goal index 101 for vehicle 0 (Maximum index: 100).
+[18:54:27] [INFO] Received stop command.
+[18:54:27] [INFO] Client disconnected.
+[18:54:27] [INFO] Stopped server.
+[18:54:27] [INFO] Stoppend socket-handler.
+[18:54:27] Exit code 0

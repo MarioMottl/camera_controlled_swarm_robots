@@ -1,0 +1,42 @@
+
+-----------------------------------------------
+[17:37:37] [INFO] Reading image: images/path.h...
+[17:37:37] [ERROR] Failed to read image: images/path.h
+
+-----------------------------------------------
+[17:37:48] [INFO] Reading image: images/path.png...
+[17:37:48] [INFO] Successfully loaded image: images/path.png
+[17:37:48] [INFO] Converting to grayscale...
+[17:37:48] [INFO] Successfully converted to grayscale.
+[17:37:48] [INFO] Generating path...
+[17:37:48] [INFO] Generated path.
+[17:37:48] [INFO] Generating goals...
+[17:37:48] [INFO] Generated goals.
+[17:37:48] [INFO] Printing goals to: output.txt...
+[17:37:48] [INFO] Successfully printed goals to: output.txt
+
+[17:37:48] [INFO] Reading image time: 38.223000ms
+[17:37:48] [INFO] Converting to grayscale time: 0.000000ms
+[17:37:48] [INFO] Gnerating path time: 31.242000ms
+[17:37:48] [INFO] Generating goals time: 0.000000ms
+[17:37:48] [INFO] Printing goals time: 0.000000ms
+[17:37:48] [INFO] Execution time: 194.459000ms
+
+-----------------------------------------------
+[17:38:34] [INFO] Reading image: images/path.png...
+[17:38:34] [INFO] Successfully loaded image: images/path.png
+[17:38:34] [INFO] Converting to grayscale...
+[17:38:34] [INFO] Successfully converted to grayscale.
+[17:38:34] [INFO] Generating path...
+[17:38:34] [INFO] Generated path.
+[17:38:34] [INFO] Generating goals...
+[17:38:34] [INFO] Generated goals.
+[17:38:34] [INFO] Printing goals to: output.txt...
+[17:38:34] [INFO] Successfully printed goals to: output.txt
+
+[17:38:34] [INFO] Reading image time: 15.623000ms
+[17:38:34] [INFO] Converting to grayscale time: 0.000000ms
+[17:38:34] [INFO] Gnerating path time: 31.243000ms
+[17:38:34] [INFO] Generating goals time: 0.000000ms
+[17:38:34] [INFO] Printing goals time: 0.000000ms
+[17:38:34] [INFO] Execution time: 157.436000ms

@@ -1,0 +1,6 @@
+./SockenHandler_client.exe
+./SockenHandler_server.exe
+./SockenHandler.exe
+./libsockethandler.a
+./versions
+./obj
