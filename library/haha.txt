@@ -1,0 +1,3 @@
+mingwstdthread
+stb
+glm
