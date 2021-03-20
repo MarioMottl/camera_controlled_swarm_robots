@@ -1,0 +1,391 @@
+
+--------------------------------------------------
+[14:51:40] [INFO] Started socket-handler.
+[14:51:40] [INFO] Started server.
+[14:51:40] [INFO] Client connected.
+[14:51:40] [INFO] IP-Address / Hostname: 127.0.0.1:65460
+[14:51:40] [INFO] Generating goals for file 1000 with 0 goals...
+[14:51:40] [INFO] Received goal request.
+[14:51:40] [ERROR] Received invalid goal index: 100
+[14:51:40] [INFO] Received goal request.
+[14:51:40] [ERROR] Received invalid goal index: 100
+[14:51:40] [INFO] Received goal request.
+[14:51:40] [ERROR] Received invalid goal index: 100
+[14:51:40] [INFO] Received goal request.
+[14:51:40] [ERROR] Received invalid goal index: 100
+[14:51:40] [INFO] Received stop command.
+[14:51:40] [INFO] Client disconnected.
+[14:51:40] [INFO] Stopped server.
+[14:51:40] [INFO] Stoppend socket-handler.
+[14:51:40] Exit code 0
+
+--------------------------------------------------
+[15:02:34] [INFO] Started socket-handler.
+[15:02:34] [INFO] Started server.
+[15:02:34] [INFO] Client connected.
+[15:02:34] [INFO] IP-Address / Hostname: 127.0.0.1:49185
+[15:02:34] [INFO] Client disconnected.
+
+--------------------------------------------------
+[15:04:05] [INFO] Started socket-handler.
+[15:04:05] [INFO] Started server.
+[15:04:05] [INFO] Client connected.
+[15:04:05] [INFO] IP-Address / Hostname: 127.0.0.1:49202
+[15:04:05] [INFO] Generating goals for file arsch.png with 1000 goals for vehicle 0...
+[15:04:05] [ERROR] Failed to generate goals.
+[15:04:05] [INFO] Generating goals for file testimg.png with 1000 goals for vehicle 0...
+[15:04:05] [INFO] Reading goals...
+[15:04:05] [INFO] Successfully generated goals for vehicle 0.
+[15:04:05] [INFO] Generating goals for file testimg2.png with 1000 goals for vehicle 1...
+[15:04:05] [INFO] Reading goals...
+[15:04:05] [INFO] Successfully generated goals for vehicle 1.
+[15:04:05] [INFO] Generating goals for file testimg3.png with 1000 goals for vehicle 5...
+[15:04:05] [ERROR] Failed to generate goals.
+[15:04:05] [INFO] Generating goals for file testimg1.png with 1000 goals for vehicle 5...
+[15:04:05] [ERROR] Failed to generate goals.
+[15:04:05] [INFO] Generating goals for file testimg.png with 1000 goals for vehicle 0...
+[15:04:05] [INFO] Reading goals...
+[15:04:05] [INFO] Successfully generated goals for vehicle 0.
+[15:04:05] [INFO] Generating goals for file testimg2.png with 1000 goals for vehicle 1...
+[15:04:05] [INFO] Reading goals...
+[15:04:05] [INFO] Successfully generated goals for vehicle 1.
+[15:04:05] [INFO] Generating goals for file testimg2.png with 1000 goals for vehicle 5...
+[15:04:05] [INFO] Reading goals...
+[15:04:05] [INFO] Successfully generated goals for vehicle 5.
+[15:04:05] [INFO] Generating goals for file testimg3.png with 1000 goals for vehicle 5...
+[15:04:05] [ERROR] Failed to generate goals.
+[15:04:05] [INFO] Generating goals for file testimg2.png with 1000 goals for vehicle 5...
+[15:04:05] [INFO] Reading goals...
+[15:04:05] [INFO] Successfully generated goals for vehicle 5.
+[15:04:05] [INFO] Generating goals for file testimg.png with 1000 goals for vehicle 4...
+[15:04:05] [INFO] Reading goals...
+[15:04:05] [INFO] Successfully generated goals for vehicle 4.
+[15:04:05] [INFO] Generating goals for file testimg3.png with 1000 goals for vehicle 3...
+[15:04:05] [ERROR] Failed to generate goals.
+[15:04:05] [INFO] Generating goals for file testimg2.png with 1000 goals for vehicle 3...
+[15:04:05] [INFO] Reading goals...
+[15:04:05] [INFO] Successfully generated goals for vehicle 3.
+[15:04:05] [INFO] Generating goals for file testimp.png with 100 goals for vehicle 0...
+[15:04:05] [ERROR] Failed to generate goals.
+[15:04:05] [INFO] Generating goals for file testimg.png with 100 goals for vehicle 0...
+[15:04:05] [INFO] Reading goals...
+[15:04:05] [INFO] Successfully generated goals for vehicle 0.
+[15:04:05] [INFO] Generating goals for file testimg2.png with 100 goals for vehicle 1...
+[15:04:05] [INFO] Reading goals...
+[15:04:05] [INFO] Successfully generated goals for vehicle 1.
+[15:04:05] [INFO] Generating goals for file testimg3.png with 100 goals for vehicle 2...
+[15:04:05] [INFO] Reading goals...
+[15:04:05] [INFO] Successfully generated goals for vehicle 2.
+[15:04:05] [INFO] Generating goals for file testimg2.png with 100 goals for vehicle 3...
+[15:04:05] [INFO] Reading goals...
+[15:04:05] [INFO] Successfully generated goals for vehicle 3.
+[15:04:05] [INFO] Generating goals for file testimg.png with 100 goals for vehicle 4...
+[15:04:05] [INFO] Reading goals...
+[15:04:05] [INFO] Successfully generated goals for vehicle 4.
+[15:04:05] [INFO] Generating goals for file testimg3.png with 100 goals for vehicle 5...
+[15:04:05] [INFO] Reading goals...
+[15:04:05] [INFO] Successfully generated goals for vehicle 5.
+[15:04:05] [INFO] Received goal request.
+[15:04:05] [INFO] Sent goal with index 0 for vehicle 5.
+[15:04:05] [INFO] Received stop command.
+[15:04:05] [INFO] Client disconnected.
+[15:04:05] [INFO] Stopped server.
+[15:04:05] [INFO] Stoppend socket-handler.
+[15:04:05] Exit code 0
+
+--------------------------------------------------
+[15:11:51] [INFO] Started socket-handler.
+[15:11:51] [INFO] Started server.
+[15:11:51] [INFO] Client connected.
+[15:11:51] [INFO] IP-Address / Hostname: 127.0.0.1:49281
+[15:11:51] [INFO] Generating goals for file testimg.png with 100 goals for vehicle 0...
+[15:11:51] [INFO] Reading goals...
+[15:11:51] [INFO] Successfully generated goals for vehicle 0.
+[15:11:51] [INFO] Generating goals for file testimg2.png with 100 goals for vehicle 1...
+[15:11:51] [INFO] Reading goals...
+[15:11:51] [INFO] Successfully generated goals for vehicle 1.
+[15:11:51] [INFO] Generating goals for file testimg3.png with 100 goals for vehicle 2...
+[15:11:51] [INFO] Reading goals...
+[15:11:51] [INFO] Successfully generated goals for vehicle 2.
+[15:11:51] [INFO] Generating goals for file testimg2.png with 100 goals for vehicle 3...
+[15:11:51] [INFO] Reading goals...
+[15:11:51] [INFO] Successfully generated goals for vehicle 3.
+[15:11:51] [INFO] Generating goals for file testimg.png with 100 goals for vehicle 4...
+[15:11:51] [INFO] Reading goals...
+[15:11:51] [INFO] Successfully generated goals for vehicle 4.
+[15:11:51] [INFO] Generating goals for file testimg3.png with 100 goals for vehicle 5...
+[15:11:51] [INFO] Reading goals...
+[15:11:51] [INFO] Successfully generated goals for vehicle 5.
+[15:11:51] [INFO] Received goal request.
+
+--------------------------------------------------
+[15:13:30] [INFO] Started socket-handler.
+[15:13:30] [INFO] Started server.
+[15:13:30] [INFO] Client connected.
+[15:13:30] [INFO] IP-Address / Hostname: 127.0.0.1:49299
+[15:13:30] [INFO] Generating goals for file testimg.png with 100 goals for vehicle 0...
+[15:13:30] [INFO] Reading goals...
+[15:13:30] [INFO] Successfully generated goals for vehicle 0.
+[15:13:30] [INFO] Generating goals for file testimg2.png with 100 goals for vehicle 1...
+[15:13:30] [INFO] Reading goals...
+[15:13:30] [INFO] Successfully generated goals for vehicle 1.
+[15:13:30] [INFO] Generating goals for file testimg3.png with 100 goals for vehicle 2...
+[15:13:30] [INFO] Reading goals...
+[15:13:30] [INFO] Successfully generated goals for vehicle 2.
+[15:13:30] [INFO] Generating goals for file testimg2.png with 100 goals for vehicle 3...
+[15:13:30] [INFO] Reading goals...
+[15:13:30] [INFO] Successfully generated goals for vehicle 3.
+[15:13:30] [INFO] Generating goals for file testimg.png with 100 goals for vehicle 4...
+[15:13:30] [INFO] Reading goals...
+[15:13:30] [INFO] Successfully generated goals for vehicle 4.
+[15:13:30] [INFO] Generating goals for file testimg3.png with 100 goals for vehicle 5...
+[15:13:30] [INFO] Reading goals...
+[15:13:30] [INFO] Successfully generated goals for vehicle 5.
+[15:13:30] [INFO] Received goal request.
+[15:13:30] [INFO] Sent goal with index 0 for vehicle 0.
+[15:13:30] [INFO] Received goal request.
+[15:13:30] [INFO] Sent goal with index 0 for vehicle 0.
+[15:13:30] [INFO] Received goal request.
+[15:13:30] [INFO] Sent goal with index 0 for vehicle 1.
+[15:13:30] [INFO] Received goal request.
+[15:13:30] [INFO] Sent goal with index 0 for vehicle 2.
+[15:13:30] [INFO] Received goal request.
+[15:13:30] [INFO] Sent goal with index 0 for vehicle 3.
+[15:13:30] [INFO] Received goal request.
+[15:13:30] [INFO] Sent goal with index 0 for vehicle 4.
+[15:13:30] [INFO] Received goal request.
+[15:13:30] [INFO] Sent goal with index 0 for vehicle 5.
+[15:13:30] [INFO] Received goal request.
+[15:13:30] [ERROR] Received invalid goal index 50 for vehicle 0.
+[15:13:30] [INFO] Received goal request.
+
+--------------------------------------------------
+[15:18:11] [INFO] Started socket-handler.
+[15:18:11] [INFO] Started server.
+[15:18:11] [INFO] Client connected.
+[15:18:11] [INFO] IP-Address / Hostname: 127.0.0.1:49346
+[15:18:11] [INFO] Generating goals for file testimg.png with 100 goals for vehicle 0...
+[15:18:11] [INFO] Reading goals...
+[15:18:11] [INFO] Successfully generated goals for vehicle 0.
+[15:18:11] [INFO] Generating goals for file testimg2.png with 100 goals for vehicle 1...
+[15:18:11] [INFO] Reading goals...
+[15:18:11] [INFO] Successfully generated goals for vehicle 1.
+[15:18:11] [INFO] Generating goals for file testimg3.png with 100 goals for vehicle 2...
+[15:18:11] [INFO] Reading goals...
+[15:18:11] [INFO] Successfully generated goals for vehicle 2.
+[15:18:11] [INFO] Generating goals for file testimg2.png with 100 goals for vehicle 3...
+[15:18:11] [INFO] Reading goals...
+[15:18:11] [INFO] Successfully generated goals for vehicle 3.
+[15:18:11] [INFO] Generating goals for file testimg.png with 100 goals for vehicle 4...
+[15:18:11] [INFO] Reading goals...
+[15:18:11] [INFO] Successfully generated goals for vehicle 4.
+[15:18:11] [INFO] Generating goals for file testimg3.png with 100 goals for vehicle 5...
+[15:18:11] [INFO] Reading goals...
+[15:18:11] [INFO] Successfully generated goals for vehicle 5.
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [INFO] Sent goal with index 0 for vehicle 0.
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [INFO] Sent goal with index 0 for vehicle 1.
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [INFO] Sent goal with index 0 for vehicle 2.
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [INFO] Sent goal with index 0 for vehicle 3.
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [INFO] Sent goal with index 0 for vehicle 4.
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [INFO] Sent goal with index 0 for vehicle 5.
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [INFO] Sent goal with index 50 for vehicle 0.
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [INFO] Sent goal with index 50 for vehicle 0.
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [INFO] Sent goal with index 50 for vehicle 0.
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [INFO] Sent goal with index 50 for vehicle 0.
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [INFO] Sent goal with index 100 for vehicle 0.
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [ERROR] Received invalid goal index 101 for vehicle 0 (Maximum index: 100).
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [INFO] Sent goal with index 100 for vehicle 0.
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [INFO] Sent goal with index 100 for vehicle 3.
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [INFO] Sent goal with index 100 for vehicle 4.
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [INFO] Sent goal with index 100 for vehicle 5.
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [INFO] Sent goal with index 50 for vehicle 5.
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [INFO] Sent goal with index 50 for vehicle 0.
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [INFO] Sent goal with index 50 for vehicle 1.
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [INFO] Sent goal with index 50 for vehicle 2.
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [INFO] Sent goal with index 50 for vehicle 3.
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [INFO] Sent goal with index 50 for vehicle 4.
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [INFO] Sent goal with index 50 for vehicle 5.
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [ERROR] Received invalid goal index 50 for vehicle 6 (Maximum index: 4294967295).
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [ERROR] Received invalid goal index 50 for vehicle 6 (Maximum index: 4294967295).
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [ERROR] Received invalid goal index 0 for vehicle 6 (Maximum index: 4294967295).
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [ERROR] Received invalid goal index 0 for vehicle 6 (Maximum index: 4294967295).
+[15:18:11] [INFO] Received goal request.
+[15:18:11] [ERROR] Received invalid goal index 0 for vehicle 6 (Maximum index: 4294967295).
+[15:18:11] [INFO] Received stop command.
+[15:18:11] [INFO] Client disconnected.
+[15:18:11] [INFO] Stopped server.
+[15:18:11] [INFO] Stoppend socket-handler.
+[15:18:11] Exit code 0
+
+--------------------------------------------------
+[21-50-56] [INFO] Started socket-handler.
+[21-50-56] [INFO] Started server.
+[21-51-02] [INFO] Client connected.
+[21-51-02] [INFO] IP-Address / Hostname: 127.0.0.1:53870
+[21-51-12] [INFO] Generating goals for file testimg.png with 100 goals for vehicle 0...
+[21-51-12] [INFO] Reading goals...
+[21-51-12] [INFO] Successfully generated goals for vehicle 0.
+[21-51-14] [INFO] Generating goals for file testimg2.png with 100 goals for vehicle 1...
+[21-51-14] [INFO] Reading goals...
+[21-51-14] [INFO] Successfully generated goals for vehicle 1.
+[21-51-15] [INFO] Generating goals for file testimg3.png with 100 goals for vehicle 2...
+[21-51-16] [INFO] Reading goals...
+[21-51-16] [INFO] Successfully generated goals for vehicle 2.
+[21-51-16] [INFO] Generating goals for file testimg2.png with 100 goals for vehicle 3...
+[21-51-16] [INFO] Reading goals...
+[21-51-16] [INFO] Successfully generated goals for vehicle 3.
+[21-51-18] [INFO] Generating goals for file testimg.png with 100 goals for vehicle 4...
+[21-51-18] [INFO] Reading goals...
+[21-51-18] [INFO] Successfully generated goals for vehicle 4.
+[21-51-19] [INFO] Generating goals for file testimg3.png with 100 goals for vehicle 5...
+[21-51-19] [INFO] Reading goals...
+[21-51-19] [INFO] Successfully generated goals for vehicle 5.
+[21-51-20] [INFO] Received goal request.
+[21-51-20] [INFO] Sent goal with index 0 for vehicle 0.
+[21-51-21] [INFO] Received goal request.
+[21-51-21] [INFO] Sent goal with index 0 for vehicle 0.
+[21-51-22] [INFO] Received goal request.
+[21-51-22] [INFO] Sent goal with index 0 for vehicle 0.
+[21-51-23] [INFO] Received goal request.
+[21-51-23] [INFO] Sent goal with index 0 for vehicle 0.
+[21-51-24] [INFO] Received goal request.
+[21-51-24] [INFO] Sent goal with index 0 for vehicle 0.
+[21-51-25] [INFO] Received goal request.
+[21-51-25] [INFO] Sent goal with index 0 for vehicle 0.
+[21-51-26] [INFO] Received goal request.
+[21-51-26] [INFO] Sent goal with index 50 for vehicle 50.
+[21-51-27] [INFO] Received goal request.
+[21-51-27] [INFO] Sent goal with index 100 for vehicle 100.
+[21-51-28] [INFO] Received goal request.
+[21-51-28] [ERROR] Received invalid goal index 101 for vehicle 0 (Maximum index: 100).
+[21-51-28] [INFO] Received goal request.
+[21-51-28] [INFO] Sent goal with index 100 for vehicle 100.
+[21-51-29] [INFO] Received goal request.
+[21-51-29] [INFO] Sent goal with index 100 for vehicle 100.
+[21-51-31] [INFO] Received goal request.
+[21-51-31] [INFO] Sent goal with index 100 for vehicle 100.
+[21-51-32] [INFO] Received goal request.
+[21-51-32] [INFO] Sent goal with index 100 for vehicle 100.
+[21-51-32] [INFO] Received goal request.
+[21-51-32] [INFO] Sent goal with index 50 for vehicle 50.
+[21-51-33] [INFO] Received goal request.
+[21-51-33] [INFO] Sent goal with index 50 for vehicle 50.
+[21-51-34] [INFO] Received goal request.
+[21-51-34] [INFO] Sent goal with index 50 for vehicle 50.
+[21-51-35] [INFO] Received goal request.
+[21-51-35] [INFO] Sent goal with index 50 for vehicle 50.
+[21-51-37] [INFO] Received goal request.
+[21-51-37] [INFO] Sent goal with index 50 for vehicle 50.
+[21-51-38] [INFO] Received goal request.
+[21-51-38] [INFO] Sent goal with index 50 for vehicle 50.
+[21-51-39] [INFO] Received goal request.
+[21-51-39] [INFO] Sent goal with index 50 for vehicle 50.
+[21-51-40] [INFO] Received goal request.
+[21-51-40] [ERROR] Received invalid goal index 50 for vehicle 6 (Maximum index: 4294967295).
+[21-51-42] [INFO] Received goal request.
+[21-51-42] [ERROR] Received invalid goal index 0 for vehicle 6 (Maximum index: 4294967295).
+[21-51-43] [INFO] Received stop command.
+[21-51-43] [INFO] Client disconnected.
+[21-51-43] [INFO] Stopped server.
+[21-51-43] [INFO] Stoppend socket-handler.
+[21-51-43] Exit code 0
+
+--------------------------------------------------
+[21:57:21] [INFO] Started socket-handler.
+[21:57:21] [INFO] Started server.
+[21:57:26] [INFO] Client connected.
+[21:57:26] [INFO] IP-Address / Hostname: 127.0.0.1:53941
+[21:57:38] [INFO] Generating goals for file testimg.png with 100 goals for vehicle 0...
+[21:57:39] [INFO] Reading goals...
+[21:57:39] [INFO] Successfully generated goals for vehicle 0.
+[21:57:40] [INFO] Generating goals for file testimg2.png with 100 goals for vehicle 1...
+[21:57:40] [INFO] Reading goals...
+[21:57:40] [INFO] Successfully generated goals for vehicle 1.
+[21:57:40] [INFO] Generating goals for file testimg3.png with 100 goals for vehicle 2...
+[21:57:40] [INFO] Reading goals...
+[21:57:40] [INFO] Successfully generated goals for vehicle 2.
+[21:57:41] [INFO] Generating goals for file testimg2.png with 100 goals for vehicle 3...
+[21:57:41] [INFO] Reading goals...
+[21:57:41] [INFO] Successfully generated goals for vehicle 3.
+[21:57:41] [INFO] Generating goals for file testimg.png with 100 goals for vehicle 4...
+[21:57:41] [INFO] Reading goals...
+[21:57:41] [INFO] Successfully generated goals for vehicle 4.
+[21:57:41] [INFO] Generating goals for file testimg3.png with 100 goals for vehicle 5...
+[21:57:42] [INFO] Reading goals...
+[21:57:42] [INFO] Successfully generated goals for vehicle 5.
+[21:57:44] [INFO] Received goal request.
+[21:57:44] [INFO] Sent goal with index 0 for vehicle 0.
+[21:57:45] [INFO] Received goal request.
+[21:57:45] [INFO] Sent goal with index 0 for vehicle 0.
+[21:57:45] [INFO] Received goal request.
+[21:57:45] [INFO] Sent goal with index 0 for vehicle 0.
+[21:57:46] [INFO] Received goal request.
+[21:57:46] [INFO] Sent goal with index 0 for vehicle 0.
+[21:57:47] [INFO] Received goal request.
+[21:57:47] [INFO] Sent goal with index 0 for vehicle 0.
+[21:57:48] [INFO] Received goal request.
+[21:57:48] [INFO] Sent goal with index 0 for vehicle 0.
+[21:57:48] [INFO] Received goal request.
+[21:57:48] [INFO] Sent goal with index 50 for vehicle 50.
+[21:57:49] [INFO] Received goal request.
+[21:57:49] [INFO] Sent goal with index 100 for vehicle 100.
+[21:57:49] [INFO] Received goal request.
+[21:57:49] [ERROR] Received invalid goal index 101 for vehicle 0 (Maximum index: 100).
+[21:57:50] [INFO] Received goal request.
+[21:57:50] [INFO] Sent goal with index 100 for vehicle 100.
+[21:57:50] [INFO] Received goal request.
+[21:57:50] [INFO] Sent goal with index 100 for vehicle 100.
+[21:57:51] [INFO] Received goal request.
+[21:57:51] [INFO] Sent goal with index 100 for vehicle 100.
+[21:57:51] [INFO] Received goal request.
+[21:57:51] [INFO] Sent goal with index 100 for vehicle 100.
+[21:57:52] [INFO] Received goal request.
+[21:57:52] [INFO] Sent goal with index 50 for vehicle 50.
+[21:57:52] [INFO] Received goal request.
+[21:57:52] [INFO] Sent goal with index 50 for vehicle 50.
+[21:57:54] [INFO] Received goal request.
+[21:57:54] [INFO] Sent goal with index 50 for vehicle 50.
+[21:57:56] [INFO] Received goal request.
+[21:57:56] [INFO] Sent goal with index 50 for vehicle 50.
+[21:57:57] [INFO] Received goal request.
+[21:57:57] [INFO] Sent goal with index 50 for vehicle 50.
+[21:57:57] [INFO] Received goal request.
+[21:57:57] [INFO] Sent goal with index 50 for vehicle 50.
+[21:57:58] [INFO] Received goal request.
+[21:57:58] [INFO] Sent goal with index 50 for vehicle 50.
+[21:57:58] [INFO] Received goal request.
+[21:57:58] [ERROR] Received invalid goal index 50 for vehicle 6 (Maximum index: 4294967295).
+[21:58:00] [INFO] Received goal request.
+[21:58:00] [ERROR] Received invalid goal index 0 for vehicle 6 (Maximum index: 4294967295).
+[21:58:00] [INFO] Received stop command.
+[21:58:00] [INFO] Client disconnected.
+[21:58:00] [INFO] Stopped server.
+[21:58:00] [INFO] Stoppend socket-handler.
+[21:58:00] Exit code 0

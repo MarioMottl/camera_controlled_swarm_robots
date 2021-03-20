@@ -1,0 +1,21 @@
+
+-----------------------------------------------
+[12:01:12] [INFO] Reading image: images/path2.png...
+[12:01:12] [INFO] Successfully loaded image: images/path2.png
+[12:01:12] [INFO] Converting to grayscale...
+[12:01:12] [INFO] Successfully converted to grayscale.
+[12:01:12] [INFO] Invert image...
+[12:01:12] [INFO] Successfully inverted the image.
+[12:01:12] [INFO] Generating path...
+[12:01:12] [INFO] Generated path.
+[12:01:12] [INFO] Generating goals...
+[12:01:12] [INFO] Generated goals.
+[12:01:12] [INFO] Printing goals to: output.txt...
+[12:01:12] [INFO] Successfully printed goals to: output.txt
+
+[12:01:12] [INFO] Reading image time: 21.997000ms
+[12:01:12] [INFO] Converting to grayscale time: 4.987000ms
+[12:01:12] [INFO] Gnerating path time: 34.884000ms
+[12:01:12] [INFO] Generating goals time: 0.000000ms
+[12:01:12] [INFO] Printing goals time: 11.967000ms
+[12:01:12] [INFO] Execution time: 252.044000ms

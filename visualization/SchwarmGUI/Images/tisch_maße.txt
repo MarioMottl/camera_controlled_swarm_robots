@@ -1,0 +1,22 @@
+länge: 200cm
+breite: 105cm
+höhe: 8cm
+wandstärke: 2cm
+bodenstärke: 1.5cm
+
+200*105*8
+
+73°
+163.5
+163.5 - 7 / 24 / 2 = 163.5 - 12 = 151.5
+	    |
+	    |--> 12 (120 px)
+
+l1 = 163.5 / sin(73) = 170.1 (1701 px)
+l2 = 151.5 / sin(73) = 158.4 (1584 px)
+1368px
+
+Fahrzeugmaße
+l: 7.5cm
+b: 7.5cm
+h: 4.5cm
