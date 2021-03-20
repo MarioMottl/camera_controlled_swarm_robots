@@ -12,10 +12,10 @@
                 "../../library/glc-1.0.0",
                 "../../library/model_loader-1.0.0/include",
                 "../../library/event_handler-1.1.0/include",
-                "../../library/mingw-std-threads-master",
+                "../../library/mingw-std-threads",
                 "../../library/stb",
                 "../../library/sockethandler-1.0.0/include",
-                "../../library/cppsock",
+                "../../library/cppsock_old",
                 "../../library/OpenCL/NVIDIA GPU Computing SDK/OpenCL/common/inc",
                 "../../library/high_resolution_timer"
             ],

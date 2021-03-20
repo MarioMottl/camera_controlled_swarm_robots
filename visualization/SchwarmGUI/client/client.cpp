@@ -46,14 +46,8 @@ void Client::on_pathsimu_receive(cppsock::socket* socket, void** persistent, SH:
     */
     socket->recv(buff2, sizeof(buff2), channel);
 
-    GoalPacket packet;
-    packet.allocate(*packet_size);
-    packet.set(buff2);
-    packet.decode();
-    std::cout << "X: " << packet.get_goal_x() << "  Y: " << packet.get_goal_y() << std::endl;
-
     // Process the packet...
-    //process_packet(buff2, persistent);
+    process_packet(buff2, persistent);
 }
 
 void Client::process_packet(uint8_t* buff, void** persistent)
@@ -98,6 +92,7 @@ void Client::run_pathserver(std::atomic_bool* running, const std::string* imgfol
     *running = true;
     char cmd[256];
     sprintf(cmd, "path_server.exe.lnk %s", imgfolder->c_str());  // Generate command to call the server.
+    std::cout << get_msg("INFO / SERVER") << "Starting pathserver: " << cmd << std::endl;
     int ret = 0;
     if((ret = std::system(cmd)) < 0)    // Start server
     {

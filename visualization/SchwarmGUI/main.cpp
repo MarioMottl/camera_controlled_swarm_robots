@@ -635,15 +635,12 @@ int main()  // its showtime
     sharedsimumem.client = &client;
 
     // start simulation server
-    const std::string imagefolder("E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images");
+    const std::string imagefolder("D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images");
     Schwarm::Client::start_pathserver(&simu_running, &imagefolder);
     std::cout << get_msg("INFO / SERVER") << "Started simulation server." << std::endl;
     sharedsimumem.start = false;
-    sharedsimumem.client->connect("10.212.134.6", 10005);
+    sharedsimumem.client->connect("localhost", 10000);
     std::cout << get_msg("INFO / SERVER") << "Connected to simulation server (Address: " << Schwarm::SIMU_SERVER_ADDR << " Port: " << Schwarm::SIMU_SERVER_PORT << ")" << std::endl;
-
-    // for test send verification code
-    client.get_socket().send("Michi\0", 6, 0);
 
     /* -----------------------------------------------------------------------------
      * INIT OpenGL
@@ -664,11 +661,11 @@ int main()  // its showtime
     Main::camera_location() = {0.0, 0.5, 0.0, 0.0, 0.0};
     Main::set_fov(70.0f);
 
-    Main::set_sensetivity(0.002f);
+    Main::set_sensetivity(0.0005f);
     Main::set_move_speed(0.5f);
 
     Main::set_gamma(2.2f);
-    Main::auto_gamma() = false;
+    Main::auto_gamma() = true;
     Main::reload_colors();
 
     glm::vec3 wl_pos(1.59, 2.981, 1.193);
