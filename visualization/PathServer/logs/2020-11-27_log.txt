@@ -1,0 +1,185 @@
+
+--------------------------------------------------
+[11:14:31] [INFO] Started socket-handler.
+[11:14:31] [INFO] Started server.
+[11:14:31] [INFO] Client connected.
+[11:14:31] [INFO] IP-Address / Hostname: 127.0.0.1:52473
+[11:14:31] [INFO] Received stop command.
+[11:14:31] [INFO] Client disconnected.
+[11:14:31] [INFO] Stopped server.
+[11:14:31] [INFO] Stoppend socket-handler.
+[11:14:31] Exit code 0
+
+--------------------------------------------------
+[11:15:32] [INFO] Started socket-handler.
+[11:15:32] [INFO] Started server.
+[11:15:32] [INFO] Client connected.
+[11:15:32] [INFO] IP-Address / Hostname: 127.0.0.1:52501
+[11:15:32] [INFO] Generating goals for file testimg.png with 1000 goals...
+[11:15:32] [ERROR] Failed to generate goals.
+[11:15:32] [INFO] Received goal request.
+[11:15:32] [ERROR] Received invalid goal index.
+[11:15:32] [INFO] Received goal request.
+[11:15:32] [ERROR] Received invalid goal index.
+[11:15:32] [INFO] Received goal request.
+[11:15:32] [ERROR] Received invalid goal index.
+[11:15:32] [INFO] Received stop command.
+[11:15:32] [INFO] Client disconnected.
+[11:15:32] [INFO] Stopped server.
+[11:15:32] [INFO] Stoppend socket-handler.
+[11:15:32] Exit code 0
+
+--------------------------------------------------
+[11:23:33] [INFO] Started socket-handler.
+[11:23:33] [INFO] Started server.
+[11:23:33] [INFO] Client connected.
+[11:23:33] [INFO] IP-Address / Hostname: 127.0.0.1:52548
+[11:23:33] [INFO] Generating goals for file testimg.png with 100 goals...
+[11:23:33] [ERROR] Failed to generate goals.
+[11:23:33] [INFO] Received stop command.
+[11:23:33] [INFO] Client disconnected.
+[11:23:33] [INFO] Stopped server.
+[11:23:33] [INFO] Stoppend socket-handler.
+[11:23:33] Exit code 0
+
+--------------------------------------------------
+[11:25:16] [INFO] Started socket-handler.
+[11:25:16] [INFO] Started server.
+[11:25:16] [INFO] Client connected.
+[11:25:16] [INFO] IP-Address / Hostname: 127.0.0.1:52566
+[11:25:16] [INFO] Generating goals for file testimg.png with 100 goals...
+[11:25:16] [ERROR] Failed to generate goals.
+[11:25:16] [INFO] Received stop command.
+[11:25:16] [INFO] Client disconnected.
+[11:25:16] [INFO] Stopped server.
+[11:25:16] [INFO] Stoppend socket-handler.
+[11:25:16] Exit code 0
+
+--------------------------------------------------
+[11:30:19] [INFO] Started socket-handler.
+[11:30:19] [INFO] Started server.
+[11:30:19] [INFO] Client connected.
+[11:30:19] [INFO] IP-Address / Hostname: 127.0.0.1:52638
+[11:30:19] [INFO] Generating goals for file testimg.png with 100 goals...
+[11:30:19] [ERROR] Failed to generate goals.
+[11:30:19] [INFO] Received stop command.
+[11:30:19] [INFO] Client disconnected.
+[11:30:19] [INFO] Stopped server.
+[11:30:19] [INFO] Stoppend socket-handler.
+[11:30:19] Exit code 0
+
+--------------------------------------------------
+[11:34:44] [INFO] Started socket-handler.
+[11:34:44] [INFO] Started server.
+[11:34:44] [INFO] Client connected.
+[11:34:44] [INFO] IP-Address / Hostname: 127.0.0.1:52683
+[11:34:44] [INFO] Generating goals for file testimg.png with 100 goals...
+[11:34:44] [ERROR] Failed to generate goals.
+[11:34:44] [INFO] Generating goals for file testimg.png with 100 goals...
+[11:34:44] [ERROR] Failed to generate goals.
+[11:34:44] [INFO] Generating goals for file testimg.png with 100 goals...
+[11:34:44] [ERROR] Failed to generate goals.
+[11:34:44] [INFO] Generating goals for file testimg.png with 100 goals...
+[11:34:44] [ERROR] Failed to generate goals.
+[11:34:44] [INFO] Received stop command.
+[11:34:44] [INFO] Client disconnected.
+[11:34:44] [INFO] Stopped server.
+[11:34:44] [INFO] Stoppend socket-handler.
+[11:34:44] Exit code 0
+
+--------------------------------------------------
+[11:46:40] [INFO] Started socket-handler.
+[11:46:40] [INFO] Started server.
+[11:46:40] [INFO] Client connected.
+[11:46:40] [INFO] IP-Address / Hostname: 127.0.0.1:52829
+[11:46:40] [INFO] Generating goals for file testimg.png with 100 goals...
+[11:46:40] [ERROR] Could not find path to path-image file or to goal-output file.
+[11:46:40] [INFO] Generating goals for file testimg.png with 100 goals...
+[11:46:40] [ERROR] Could not find path to path-image file or to goal-output file.
+[11:46:40] [INFO] Generating goals for file testimg.png with 100 goals...
+[11:46:40] [ERROR] Could not find path to path-image file or to goal-output file.
+[11:46:40] [INFO] Generating goals for file testimg.png with 100 goals...
+[11:46:40] [ERROR] Could not find path to path-image file or to goal-output file.
+[11:46:40] [INFO] Received stop command.
+[11:46:40] [INFO] Client disconnected.
+[11:46:40] [INFO] Stopped server.
+[11:46:40] [INFO] Stoppend socket-handler.
+[11:46:40] Exit code 0
+
+--------------------------------------------------
+[11:48:42] [INFO] Started socket-handler.
+[11:48:42] [INFO] Started server.
+[11:48:42] [INFO] Client connected.
+[11:48:42] [INFO] IP-Address / Hostname: 127.0.0.1:52842
+[11:48:42] [INFO] Generating goals for file testimg.png with 100 goals...
+[11:48:42] [ERROR] Could not find path to path-image file or to goal-output file.
+[11:48:42] [INFO] Received stop command.
+[11:48:42] [INFO] Client disconnected.
+[11:48:42] [INFO] Stopped server.
+[11:48:42] [INFO] Stoppend socket-handler.
+[11:48:42] Exit code 0
+
+--------------------------------------------------
+[11:51:17] [INFO] Started socket-handler.
+[11:51:17] [INFO] Started server.
+[11:51:17] [INFO] Client connected.
+[11:51:17] [INFO] IP-Address / Hostname: 127.0.0.1:52869
+[11:51:17] [INFO] Generating goals for file testimg.png with 100 goals...
+[11:51:17] [INFO] Reading goals...
+[11:51:17] [INFO] Successfully generated goals.
+[11:51:17] [INFO] Generating goals for file testimg.png with 100 goals...
+[11:51:17] [INFO] Reading goals...
+[11:51:17] [INFO] Successfully generated goals.
+[11:51:17] [INFO] Received goal request.
+[11:51:17] [INFO] Sent goal with index: 50
+[11:51:17] [INFO] Received goal request.
+[11:51:17] [INFO] Sent goal with index: 0
+[11:51:17] [INFO] Received goal request.
+[11:51:17] [INFO] Sent goal with index: 100
+[11:51:17] [INFO] Received goal request.
+[11:51:17] [ERROR] Received invalid goal index: 101
+[11:51:17] [INFO] Received goal request.
+[11:51:17] [INFO] Sent goal with index: 100
+[11:51:17] [INFO] Received goal request.
+[11:51:17] [INFO] Sent goal with index: 0
+[11:51:17] [INFO] Received goal request.
+[11:51:17] [INFO] Sent goal with index: 1
+[11:51:17] [INFO] Received goal request.
+[11:51:17] [INFO] Sent goal with index: 0
+[11:51:17] [INFO] Received goal request.
+[11:51:17] [INFO] Sent goal with index: 100
+[11:51:17] [INFO] Received goal request.
+[11:51:17] [INFO] Sent goal with index: 50
+[11:51:17] [INFO] Received goal request.
+[11:51:17] [ERROR] Received invalid goal index: -1
+[11:51:17] [INFO] Received stop command.
+[11:51:17] [INFO] Client disconnected.
+[11:51:17] [INFO] Stopped server.
+[11:51:17] [INFO] Stoppend socket-handler.
+[11:51:17] Exit code 0
+
+--------------------------------------------------
+[11:58:06] [INFO] Started socket-handler.
+[11:58:06] [INFO] Started server.
+
+--------------------------------------------------
+[11:58:23] [INFO] Started socket-handler.
+[11:58:23] [INFO] Started server.
+[11:58:23] [INFO] Client connected.
+[11:58:23] [INFO] IP-Address / Hostname: 127.0.0.1:52942
+[11:58:23] [INFO] Generating goals for file testimg.png with 100 goals...
+[11:58:23] [INFO] Reading goals...
+[11:58:23] [INFO] Successfully generated goals.
+[11:58:23] [INFO] Received goal request.
+[11:58:23] [ERROR] Received invalid goal index: 4294967295
+[11:58:23] [INFO] Received goal request.
+[11:58:23] [ERROR] Received invalid goal index: 4294967294
+[11:58:23] [INFO] Received goal request.
+[11:58:23] [INFO] Sent goal with index: 0
+[11:58:23] [INFO] Received goal request.
+[11:58:23] [INFO] Sent goal with index: 100
+[11:58:23] [INFO] Received stop command.
+[11:58:23] [INFO] Client disconnected.
+[11:58:23] [INFO] Stopped server.
+[11:58:23] [INFO] Stoppend socket-handler.
+[11:58:23] Exit code 0

@@ -1,0 +1,34 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "../../library/glew-2.1.0/include",
+                "../../library/GLFW-2.7/include",
+                "../../library/gl_shader-1.0.2/include",
+                "../../library/glstr-2.1.0/include",
+                "../../library/glm",
+                "../../library/glc-1.0.0",
+                "../../library/model_loader-1.0.0/include",
+                "../../library/event_handler-1.1.0/include",
+                "../../library/mingw-std-threads-master",
+                "../../library/stb",
+                "../../library/sockethandler-1.0.0/include",
+                "../../library/cppsock",
+                "../../library/OpenCL/NVIDIA GPU Computing SDK/OpenCL/common/inc",
+                "../../library/high_resolution_timer"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C://CodeBlocks//gcc-8.2-32//bin//gcc.exe",
+            "cStandard": "c11",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "clang-x86"
+        }
+    ],
+    "version": 4
+}

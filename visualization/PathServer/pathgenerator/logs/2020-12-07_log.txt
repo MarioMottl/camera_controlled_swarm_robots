@@ -1,0 +1,878 @@
+
+-----------------------------------------------
+[15:04:23] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/arsch.png...
+[15:04:23] [ERROR] Failed to read image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/arsch.png
+
+-----------------------------------------------
+[15:04:57] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png...
+[15:04:57] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png
+[15:04:57] [INFO] Converting to grayscale...
+[15:04:57] [INFO] Successfully converted to grayscale.
+[15:04:57] [INFO] Generating path...
+[15:04:57] [INFO] Generated path.
+[15:04:57] [INFO] Generating goals...
+[15:04:57] [INFO] Generated goals.
+[15:04:57] [INFO] Printing goals to: goals.gol...
+[15:04:57] [INFO] Successfully printed goals to: goals.gol
+
+[15:04:57] [INFO] Reading image time: 6.521000ms
+[15:04:57] [INFO] Converting to grayscale time: 0.000000ms
+[15:04:57] [INFO] Gnerating path time: 15.624000ms
+[15:04:57] [INFO] Generating goals time: 0.000000ms
+[15:04:57] [INFO] Printing goals time: 15.649000ms
+[15:04:57] [INFO] Execution time: 37.794000ms
+
+-----------------------------------------------
+[15:05:15] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png...
+[15:05:15] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png
+[15:05:15] [INFO] Converting to grayscale...
+[15:05:15] [INFO] Successfully converted to grayscale.
+[15:05:15] [INFO] Generating path...
+[15:05:15] [INFO] Generated path.
+[15:05:15] [INFO] Generating goals...
+[15:05:15] [INFO] Generated goals.
+[15:05:15] [INFO] Printing goals to: goals.gol...
+[15:05:15] [INFO] Successfully printed goals to: goals.gol
+
+[15:05:15] [INFO] Reading image time: 15.605000ms
+[15:05:15] [INFO] Converting to grayscale time: 0.000000ms
+[15:05:15] [INFO] Gnerating path time: 0.000000ms
+[15:05:15] [INFO] Generating goals time: 0.000000ms
+[15:05:15] [INFO] Printing goals time: 15.638000ms
+[15:05:15] [INFO] Execution time: 31.243000ms
+
+-----------------------------------------------
+[15:05:21] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png...
+[15:05:21] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png
+[15:05:21] [INFO] Converting to grayscale...
+[15:05:21] [INFO] Successfully converted to grayscale.
+[15:05:21] [INFO] Generating path...
+[15:05:21] [INFO] Generated path.
+[15:05:21] [INFO] Generating goals...
+[15:05:21] [ERROR] Failed to generate goals: too many goals given.
+
+-----------------------------------------------
+[15:05:31] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg1.png...
+[15:05:31] [ERROR] Failed to read image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg1.png
+
+-----------------------------------------------
+[15:05:51] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png...
+[15:05:51] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png
+[15:05:51] [INFO] Converting to grayscale...
+[15:05:51] [INFO] Successfully converted to grayscale.
+[15:05:51] [INFO] Generating path...
+[15:05:51] [INFO] Generated path.
+[15:05:51] [INFO] Generating goals...
+[15:05:51] [INFO] Generated goals.
+[15:05:51] [INFO] Printing goals to: goals.gol...
+[15:05:51] [INFO] Successfully printed goals to: goals.gol
+
+[15:05:51] [INFO] Reading image time: 0.000000ms
+[15:05:51] [INFO] Converting to grayscale time: 15.638000ms
+[15:05:51] [INFO] Gnerating path time: 0.000000ms
+[15:05:51] [INFO] Generating goals time: 0.000000ms
+[15:05:51] [INFO] Printing goals time: 15.625000ms
+[15:05:51] [INFO] Execution time: 31.263000ms
+
+-----------------------------------------------
+[15:05:56] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png...
+[15:05:56] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png
+[15:05:56] [INFO] Converting to grayscale...
+[15:05:56] [INFO] Successfully converted to grayscale.
+[15:05:56] [INFO] Generating path...
+[15:05:56] [INFO] Generated path.
+[15:05:56] [INFO] Generating goals...
+[15:05:56] [INFO] Generated goals.
+[15:05:56] [INFO] Printing goals to: goals.gol...
+[15:05:56] [INFO] Successfully printed goals to: goals.gol
+
+[15:05:56] [INFO] Reading image time: 15.622000ms
+[15:05:56] [INFO] Converting to grayscale time: 0.000000ms
+[15:05:56] [INFO] Gnerating path time: 0.000000ms
+[15:05:56] [INFO] Generating goals time: 0.000000ms
+[15:05:56] [INFO] Printing goals time: 6.504000ms
+[15:05:56] [INFO] Execution time: 22.126000ms
+
+-----------------------------------------------
+[15:06:02] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png...
+[15:06:02] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png
+[15:06:02] [INFO] Converting to grayscale...
+[15:06:02] [INFO] Successfully converted to grayscale.
+[15:06:02] [INFO] Generating path...
+[15:06:02] [INFO] Generated path.
+[15:06:02] [INFO] Generating goals...
+[15:06:02] [INFO] Generated goals.
+[15:06:02] [INFO] Printing goals to: goals.gol...
+[15:06:02] [INFO] Successfully printed goals to: goals.gol
+
+[15:06:02] [INFO] Reading image time: 15.622000ms
+[15:06:02] [INFO] Converting to grayscale time: 0.000000ms
+[15:06:02] [INFO] Gnerating path time: 0.000000ms
+[15:06:02] [INFO] Generating goals time: 0.000000ms
+[15:06:02] [INFO] Printing goals time: 15.620000ms
+[15:06:02] [INFO] Execution time: 31.242000ms
+
+-----------------------------------------------
+[15:06:07] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png...
+[15:06:07] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png
+[15:06:07] [INFO] Converting to grayscale...
+[15:06:07] [INFO] Successfully converted to grayscale.
+[15:06:07] [INFO] Generating path...
+[15:06:07] [INFO] Generated path.
+[15:06:07] [INFO] Generating goals...
+[15:06:07] [ERROR] Failed to generate goals: too many goals given.
+
+-----------------------------------------------
+[15:06:16] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png...
+[15:06:16] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png
+[15:06:16] [INFO] Converting to grayscale...
+[15:06:16] [INFO] Successfully converted to grayscale.
+[15:06:16] [INFO] Generating path...
+[15:06:16] [INFO] Generated path.
+[15:06:16] [INFO] Generating goals...
+[15:06:16] [INFO] Generated goals.
+[15:06:16] [INFO] Printing goals to: goals.gol...
+[15:06:16] [INFO] Successfully printed goals to: goals.gol
+
+[15:06:16] [INFO] Reading image time: 15.620000ms
+[15:06:16] [INFO] Converting to grayscale time: 6.504000ms
+[15:06:16] [INFO] Gnerating path time: 0.000000ms
+[15:06:16] [INFO] Generating goals time: 0.000000ms
+[15:06:16] [INFO] Printing goals time: 0.000000ms
+[15:06:16] [INFO] Execution time: 22.124000ms
+
+-----------------------------------------------
+[15:06:34] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png...
+[15:06:34] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png
+[15:06:34] [INFO] Converting to grayscale...
+[15:06:34] [INFO] Successfully converted to grayscale.
+[15:06:34] [INFO] Generating path...
+[15:06:34] [INFO] Generated path.
+[15:06:34] [INFO] Generating goals...
+[15:06:34] [INFO] Generated goals.
+[15:06:34] [INFO] Printing goals to: goals.gol...
+[15:06:34] [INFO] Successfully printed goals to: goals.gol
+
+[15:06:34] [INFO] Reading image time: 0.000000ms
+[15:06:34] [INFO] Converting to grayscale time: 15.620000ms
+[15:06:34] [INFO] Gnerating path time: 6.504000ms
+[15:06:34] [INFO] Generating goals time: 0.000000ms
+[15:06:34] [INFO] Printing goals time: 0.000000ms
+[15:06:34] [INFO] Execution time: 22.124000ms
+
+-----------------------------------------------
+[15:06:44] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png...
+[15:06:44] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png
+[15:06:44] [INFO] Converting to grayscale...
+[15:06:44] [INFO] Successfully converted to grayscale.
+[15:06:44] [INFO] Generating path...
+[15:06:44] [INFO] Generated path.
+[15:06:44] [INFO] Generating goals...
+[15:06:44] [ERROR] Failed to generate goals: too many goals given.
+
+-----------------------------------------------
+[15:06:48] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png...
+[15:06:48] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png
+[15:06:48] [INFO] Converting to grayscale...
+[15:06:48] [INFO] Successfully converted to grayscale.
+[15:06:48] [INFO] Generating path...
+[15:06:48] [INFO] Generated path.
+[15:06:48] [INFO] Generating goals...
+[15:06:48] [INFO] Generated goals.
+[15:06:48] [INFO] Printing goals to: goals.gol...
+[15:06:48] [INFO] Successfully printed goals to: goals.gol
+
+[15:06:48] [INFO] Reading image time: 15.621000ms
+[15:06:48] [INFO] Converting to grayscale time: 6.504000ms
+[15:06:48] [INFO] Gnerating path time: 0.000000ms
+[15:06:48] [INFO] Generating goals time: 0.000000ms
+[15:06:48] [INFO] Printing goals time: 0.000000ms
+[15:06:48] [INFO] Execution time: 22.125000ms
+
+-----------------------------------------------
+[15:09:06] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimp.png...
+[15:09:06] [ERROR] Failed to read image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimp.png
+
+-----------------------------------------------
+[15:09:11] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png...
+[15:09:11] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png
+[15:09:11] [INFO] Converting to grayscale...
+[15:09:11] [INFO] Successfully converted to grayscale.
+[15:09:11] [INFO] Generating path...
+[15:09:11] [INFO] Generated path.
+[15:09:11] [INFO] Generating goals...
+[15:09:11] [INFO] Generated goals.
+[15:09:11] [INFO] Printing goals to: goals.gol...
+[15:09:11] [INFO] Successfully printed goals to: goals.gol
+
+[15:09:11] [INFO] Reading image time: 0.000000ms
+[15:09:11] [INFO] Converting to grayscale time: 15.622000ms
+[15:09:11] [INFO] Gnerating path time: 0.000000ms
+[15:09:11] [INFO] Generating goals time: 0.000000ms
+[15:09:11] [INFO] Printing goals time: 15.621000ms
+[15:09:11] [INFO] Execution time: 31.243000ms
+
+-----------------------------------------------
+[15:09:18] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png...
+[15:09:18] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png
+[15:09:18] [INFO] Converting to grayscale...
+[15:09:18] [INFO] Successfully converted to grayscale.
+[15:09:18] [INFO] Generating path...
+[15:09:18] [INFO] Generated path.
+[15:09:18] [INFO] Generating goals...
+[15:09:18] [INFO] Generated goals.
+[15:09:18] [INFO] Printing goals to: goals.gol...
+[15:09:18] [INFO] Successfully printed goals to: goals.gol
+
+[15:09:18] [INFO] Reading image time: 0.000000ms
+[15:09:18] [INFO] Converting to grayscale time: 15.641000ms
+[15:09:18] [INFO] Gnerating path time: 0.000000ms
+[15:09:18] [INFO] Generating goals time: 0.000000ms
+[15:09:18] [INFO] Printing goals time: 0.000000ms
+[15:09:18] [INFO] Execution time: 15.641000ms
+
+-----------------------------------------------
+[15:09:23] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png...
+[15:09:23] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png
+[15:09:23] [INFO] Converting to grayscale...
+[15:09:23] [INFO] Successfully converted to grayscale.
+[15:09:23] [INFO] Generating path...
+[15:09:23] [INFO] Generated path.
+[15:09:23] [INFO] Generating goals...
+[15:09:23] [INFO] Generated goals.
+[15:09:23] [INFO] Printing goals to: goals.gol...
+[15:09:23] [INFO] Successfully printed goals to: goals.gol
+
+[15:09:23] [INFO] Reading image time: 15.624000ms
+[15:09:23] [INFO] Converting to grayscale time: 0.000000ms
+[15:09:23] [INFO] Gnerating path time: 62.484000ms
+[15:09:23] [INFO] Generating goals time: 0.000000ms
+[15:09:23] [INFO] Printing goals time: 15.622000ms
+[15:09:23] [INFO] Execution time: 93.730000ms
+
+-----------------------------------------------
+[15:09:27] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png...
+[15:09:27] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png
+[15:09:27] [INFO] Converting to grayscale...
+[15:09:27] [INFO] Successfully converted to grayscale.
+[15:09:27] [INFO] Generating path...
+[15:09:27] [INFO] Generated path.
+[15:09:27] [INFO] Generating goals...
+[15:09:27] [INFO] Generated goals.
+[15:09:27] [INFO] Printing goals to: goals.gol...
+[15:09:27] [INFO] Successfully printed goals to: goals.gol
+
+[15:09:27] [INFO] Reading image time: 15.605000ms
+[15:09:27] [INFO] Converting to grayscale time: 0.000000ms
+[15:09:27] [INFO] Gnerating path time: 0.000000ms
+[15:09:27] [INFO] Generating goals time: 0.000000ms
+[15:09:27] [INFO] Printing goals time: 0.000000ms
+[15:09:27] [INFO] Execution time: 15.605000ms
+
+-----------------------------------------------
+[15:09:34] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png...
+[15:09:34] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png
+[15:09:34] [INFO] Converting to grayscale...
+[15:09:34] [INFO] Successfully converted to grayscale.
+[15:09:34] [INFO] Generating path...
+[15:09:34] [INFO] Generated path.
+[15:09:34] [INFO] Generating goals...
+[15:09:34] [INFO] Generated goals.
+[15:09:34] [INFO] Printing goals to: goals.gol...
+[15:09:34] [INFO] Successfully printed goals to: goals.gol
+
+[15:09:34] [INFO] Reading image time: 0.000000ms
+[15:09:34] [INFO] Converting to grayscale time: 0.000000ms
+[15:09:34] [INFO] Gnerating path time: 15.624000ms
+[15:09:34] [INFO] Generating goals time: 0.000000ms
+[15:09:34] [INFO] Printing goals time: 0.000000ms
+[15:09:34] [INFO] Execution time: 15.624000ms
+
+-----------------------------------------------
+[15:09:39] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png...
+[15:09:39] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png
+[15:09:39] [INFO] Converting to grayscale...
+[15:09:39] [INFO] Successfully converted to grayscale.
+[15:09:39] [INFO] Generating path...
+[15:09:39] [INFO] Generated path.
+[15:09:39] [INFO] Generating goals...
+[15:09:39] [INFO] Generated goals.
+[15:09:39] [INFO] Printing goals to: goals.gol...
+[15:09:39] [INFO] Successfully printed goals to: goals.gol
+
+[15:09:39] [INFO] Reading image time: 15.625000ms
+[15:09:39] [INFO] Converting to grayscale time: 0.000000ms
+[15:09:39] [INFO] Gnerating path time: 62.484000ms
+[15:09:39] [INFO] Generating goals time: 0.000000ms
+[15:09:39] [INFO] Printing goals time: 0.000000ms
+[15:09:39] [INFO] Execution time: 78.109000ms
+
+-----------------------------------------------
+[15:12:00] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png...
+[15:12:00] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png
+[15:12:00] [INFO] Converting to grayscale...
+[15:12:00] [INFO] Successfully converted to grayscale.
+[15:12:00] [INFO] Generating path...
+[15:12:00] [INFO] Generated path.
+[15:12:00] [INFO] Generating goals...
+[15:12:00] [INFO] Generated goals.
+[15:12:00] [INFO] Printing goals to: goals.gol...
+[15:12:00] [INFO] Successfully printed goals to: goals.gol
+
+[15:12:00] [INFO] Reading image time: 15.622000ms
+[15:12:00] [INFO] Converting to grayscale time: 0.000000ms
+[15:12:00] [INFO] Gnerating path time: 15.620000ms
+[15:12:00] [INFO] Generating goals time: 0.000000ms
+[15:12:00] [INFO] Printing goals time: 0.000000ms
+[15:12:00] [INFO] Execution time: 31.242000ms
+
+-----------------------------------------------
+[15:12:06] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png...
+[15:12:06] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png
+[15:12:06] [INFO] Converting to grayscale...
+[15:12:06] [INFO] Successfully converted to grayscale.
+[15:12:06] [INFO] Generating path...
+[15:12:06] [INFO] Generated path.
+[15:12:06] [INFO] Generating goals...
+[15:12:06] [INFO] Generated goals.
+[15:12:06] [INFO] Printing goals to: goals.gol...
+[15:12:06] [INFO] Successfully printed goals to: goals.gol
+
+[15:12:06] [INFO] Reading image time: 15.622000ms
+[15:12:06] [INFO] Converting to grayscale time: 0.000000ms
+[15:12:06] [INFO] Gnerating path time: 0.000000ms
+[15:12:06] [INFO] Generating goals time: 0.000000ms
+[15:12:06] [INFO] Printing goals time: 15.621000ms
+[15:12:06] [INFO] Execution time: 31.243000ms
+
+-----------------------------------------------
+[15:12:08] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png...
+[15:12:08] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png
+[15:12:08] [INFO] Converting to grayscale...
+[15:12:08] [INFO] Successfully converted to grayscale.
+[15:12:08] [INFO] Generating path...
+[15:12:08] [INFO] Generated path.
+[15:12:08] [INFO] Generating goals...
+[15:12:08] [INFO] Generated goals.
+[15:12:08] [INFO] Printing goals to: goals.gol...
+[15:12:08] [INFO] Successfully printed goals to: goals.gol
+
+[15:12:08] [INFO] Reading image time: 0.000000ms
+[15:12:08] [INFO] Converting to grayscale time: 0.000000ms
+[15:12:08] [INFO] Gnerating path time: 68.988000ms
+[15:12:08] [INFO] Generating goals time: 0.000000ms
+[15:12:08] [INFO] Printing goals time: 0.000000ms
+[15:12:08] [INFO] Execution time: 68.988000ms
+
+-----------------------------------------------
+[15:12:09] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png...
+[15:12:09] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png
+[15:12:09] [INFO] Converting to grayscale...
+[15:12:09] [INFO] Successfully converted to grayscale.
+[15:12:09] [INFO] Generating path...
+[15:12:09] [INFO] Generated path.
+[15:12:09] [INFO] Generating goals...
+[15:12:09] [INFO] Generated goals.
+[15:12:09] [INFO] Printing goals to: goals.gol...
+[15:12:09] [INFO] Successfully printed goals to: goals.gol
+
+[15:12:09] [INFO] Reading image time: 15.606000ms
+[15:12:09] [INFO] Converting to grayscale time: 0.000000ms
+[15:12:09] [INFO] Gnerating path time: 0.000000ms
+[15:12:09] [INFO] Generating goals time: 0.000000ms
+[15:12:09] [INFO] Printing goals time: 0.000000ms
+[15:12:09] [INFO] Execution time: 15.606000ms
+
+-----------------------------------------------
+[15:12:10] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png...
+[15:12:10] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png
+[15:12:10] [INFO] Converting to grayscale...
+[15:12:10] [INFO] Successfully converted to grayscale.
+[15:12:10] [INFO] Generating path...
+[15:12:10] [INFO] Generated path.
+[15:12:10] [INFO] Generating goals...
+[15:12:10] [INFO] Generated goals.
+[15:12:10] [INFO] Printing goals to: goals.gol...
+[15:12:10] [INFO] Successfully printed goals to: goals.gol
+
+[15:12:10] [INFO] Reading image time: 15.623000ms
+[15:12:10] [INFO] Converting to grayscale time: 0.000000ms
+[15:12:10] [INFO] Gnerating path time: 19.812000ms
+[15:12:10] [INFO] Generating goals time: 0.000000ms
+[15:12:10] [INFO] Printing goals time: 0.000000ms
+[15:12:10] [INFO] Execution time: 35.435000ms
+
+-----------------------------------------------
+[15:12:11] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png...
+[15:12:11] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png
+[15:12:11] [INFO] Converting to grayscale...
+[15:12:11] [INFO] Successfully converted to grayscale.
+[15:12:11] [INFO] Generating path...
+[15:12:11] [INFO] Generated path.
+[15:12:11] [INFO] Generating goals...
+[15:12:11] [INFO] Generated goals.
+[15:12:11] [INFO] Printing goals to: goals.gol...
+[15:12:11] [INFO] Successfully printed goals to: goals.gol
+
+[15:12:11] [INFO] Reading image time: 0.000000ms
+[15:12:11] [INFO] Converting to grayscale time: 0.000000ms
+[15:12:11] [INFO] Gnerating path time: 68.990000ms
+[15:12:11] [INFO] Generating goals time: 0.000000ms
+[15:12:11] [INFO] Printing goals time: 0.000000ms
+[15:12:11] [INFO] Execution time: 68.990000ms
+
+-----------------------------------------------
+[15:13:44] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png...
+[15:13:44] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png
+[15:13:44] [INFO] Converting to grayscale...
+[15:13:44] [INFO] Successfully converted to grayscale.
+[15:13:44] [INFO] Generating path...
+[15:13:44] [INFO] Generated path.
+[15:13:44] [INFO] Generating goals...
+[15:13:44] [INFO] Generated goals.
+[15:13:44] [INFO] Printing goals to: goals.gol...
+[15:13:44] [INFO] Successfully printed goals to: goals.gol
+
+[15:13:44] [INFO] Reading image time: 6.504000ms
+[15:13:44] [INFO] Converting to grayscale time: 0.000000ms
+[15:13:44] [INFO] Gnerating path time: 15.625000ms
+[15:13:44] [INFO] Generating goals time: 0.000000ms
+[15:13:44] [INFO] Printing goals time: 0.000000ms
+[15:13:44] [INFO] Execution time: 22.129000ms
+
+-----------------------------------------------
+[15:13:46] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png...
+[15:13:46] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png
+[15:13:46] [INFO] Converting to grayscale...
+[15:13:46] [INFO] Successfully converted to grayscale.
+[15:13:46] [INFO] Generating path...
+[15:13:46] [INFO] Generated path.
+[15:13:46] [INFO] Generating goals...
+[15:13:46] [INFO] Generated goals.
+[15:13:46] [INFO] Printing goals to: goals.gol...
+[15:13:46] [INFO] Successfully printed goals to: goals.gol
+
+[15:13:46] [INFO] Reading image time: 0.000000ms
+[15:13:46] [INFO] Converting to grayscale time: 15.618000ms
+[15:13:46] [INFO] Gnerating path time: 0.000000ms
+[15:13:46] [INFO] Generating goals time: 0.000000ms
+[15:13:46] [INFO] Printing goals time: 0.000000ms
+[15:13:46] [INFO] Execution time: 15.618000ms
+
+-----------------------------------------------
+[15:13:47] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png...
+[15:13:47] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png
+[15:13:47] [INFO] Converting to grayscale...
+[15:13:47] [INFO] Successfully converted to grayscale.
+[15:13:47] [INFO] Generating path...
+[15:13:47] [INFO] Generated path.
+[15:13:47] [INFO] Generating goals...
+[15:13:47] [INFO] Generated goals.
+[15:13:47] [INFO] Printing goals to: goals.gol...
+[15:13:47] [INFO] Successfully printed goals to: goals.gol
+
+[15:13:47] [INFO] Reading image time: 0.000000ms
+[15:13:47] [INFO] Converting to grayscale time: 0.000000ms
+[15:13:47] [INFO] Gnerating path time: 84.611000ms
+[15:13:47] [INFO] Generating goals time: 0.000000ms
+[15:13:47] [INFO] Printing goals time: 0.000000ms
+[15:13:47] [INFO] Execution time: 84.611000ms
+
+-----------------------------------------------
+[15:13:47] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png...
+[15:13:47] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png
+[15:13:47] [INFO] Converting to grayscale...
+[15:13:47] [INFO] Successfully converted to grayscale.
+[15:13:47] [INFO] Generating path...
+[15:13:47] [INFO] Generated path.
+[15:13:47] [INFO] Generating goals...
+[15:13:47] [INFO] Generated goals.
+[15:13:47] [INFO] Printing goals to: goals.gol...
+[15:13:47] [INFO] Successfully printed goals to: goals.gol
+
+[15:13:47] [INFO] Reading image time: 15.605000ms
+[15:13:47] [INFO] Converting to grayscale time: 6.504000ms
+[15:13:47] [INFO] Gnerating path time: 0.000000ms
+[15:13:47] [INFO] Generating goals time: 0.000000ms
+[15:13:47] [INFO] Printing goals time: 0.000000ms
+[15:13:47] [INFO] Execution time: 22.109000ms
+
+-----------------------------------------------
+[15:13:48] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png...
+[15:13:48] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png
+[15:13:48] [INFO] Converting to grayscale...
+[15:13:48] [INFO] Successfully converted to grayscale.
+[15:13:48] [INFO] Generating path...
+[15:13:48] [INFO] Generated path.
+[15:13:48] [INFO] Generating goals...
+[15:13:48] [INFO] Generated goals.
+[15:13:48] [INFO] Printing goals to: goals.gol...
+[15:13:48] [INFO] Successfully printed goals to: goals.gol
+
+[15:13:48] [INFO] Reading image time: 15.621000ms
+[15:13:48] [INFO] Converting to grayscale time: 0.000000ms
+[15:13:48] [INFO] Gnerating path time: 15.621000ms
+[15:13:48] [INFO] Generating goals time: 0.000000ms
+[15:13:48] [INFO] Printing goals time: 0.000000ms
+[15:13:48] [INFO] Execution time: 31.242000ms
+
+-----------------------------------------------
+[15:13:49] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png...
+[15:13:49] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png
+[15:13:49] [INFO] Converting to grayscale...
+[15:13:49] [INFO] Successfully converted to grayscale.
+[15:13:49] [INFO] Generating path...
+[15:13:49] [INFO] Generated path.
+[15:13:49] [INFO] Generating goals...
+[15:13:49] [INFO] Generated goals.
+[15:13:49] [INFO] Printing goals to: goals.gol...
+[15:13:49] [INFO] Successfully printed goals to: goals.gol
+
+[15:13:49] [INFO] Reading image time: 0.000000ms
+[15:13:49] [INFO] Converting to grayscale time: 0.000000ms
+[15:13:49] [INFO] Gnerating path time: 79.165000ms
+[15:13:49] [INFO] Generating goals time: 0.000000ms
+[15:13:49] [INFO] Printing goals time: 0.000000ms
+[15:13:49] [INFO] Execution time: 79.165000ms
+
+-----------------------------------------------
+[15:18:26] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png...
+[15:18:26] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png
+[15:18:26] [INFO] Converting to grayscale...
+[15:18:26] [INFO] Successfully converted to grayscale.
+[15:18:26] [INFO] Generating path...
+[15:18:26] [INFO] Generated path.
+[15:18:26] [INFO] Generating goals...
+[15:18:26] [INFO] Generated goals.
+[15:18:26] [INFO] Printing goals to: goals.gol...
+[15:18:26] [INFO] Successfully printed goals to: goals.gol
+
+[15:18:26] [INFO] Reading image time: 15.621000ms
+[15:18:26] [INFO] Converting to grayscale time: 0.000000ms
+[15:18:26] [INFO] Gnerating path time: 15.621000ms
+[15:18:26] [INFO] Generating goals time: 0.000000ms
+[15:18:26] [INFO] Printing goals time: 0.000000ms
+[15:18:26] [INFO] Execution time: 31.242000ms
+
+-----------------------------------------------
+[15:18:29] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png...
+[15:18:29] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png
+[15:18:29] [INFO] Converting to grayscale...
+[15:18:29] [INFO] Successfully converted to grayscale.
+[15:18:29] [INFO] Generating path...
+[15:18:29] [INFO] Generated path.
+[15:18:29] [INFO] Generating goals...
+[15:18:29] [INFO] Generated goals.
+[15:18:29] [INFO] Printing goals to: goals.gol...
+[15:18:29] [INFO] Successfully printed goals to: goals.gol
+
+[15:18:29] [INFO] Reading image time: 15.599000ms
+[15:18:29] [INFO] Converting to grayscale time: 0.000000ms
+[15:18:29] [INFO] Gnerating path time: 0.000000ms
+[15:18:29] [INFO] Generating goals time: 0.000000ms
+[15:18:29] [INFO] Printing goals time: 0.000000ms
+[15:18:29] [INFO] Execution time: 15.599000ms
+
+-----------------------------------------------
+[15:18:34] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png...
+[15:18:34] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png
+[15:18:34] [INFO] Converting to grayscale...
+[15:18:34] [INFO] Successfully converted to grayscale.
+[15:18:34] [INFO] Generating path...
+[15:18:34] [INFO] Generated path.
+[15:18:34] [INFO] Generating goals...
+[15:18:34] [INFO] Generated goals.
+[15:18:34] [INFO] Printing goals to: goals.gol...
+[15:18:34] [INFO] Successfully printed goals to: goals.gol
+
+[15:18:34] [INFO] Reading image time: 0.000000ms
+[15:18:34] [INFO] Converting to grayscale time: 15.605000ms
+[15:18:34] [INFO] Gnerating path time: 70.221000ms
+[15:18:34] [INFO] Generating goals time: 0.000000ms
+[15:18:34] [INFO] Printing goals time: 0.000000ms
+[15:18:34] [INFO] Execution time: 85.826000ms
+
+-----------------------------------------------
+[15:18:36] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png...
+[15:18:36] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png
+[15:18:36] [INFO] Converting to grayscale...
+[15:18:36] [INFO] Successfully converted to grayscale.
+[15:18:36] [INFO] Generating path...
+[15:18:36] [INFO] Generated path.
+[15:18:36] [INFO] Generating goals...
+[15:18:36] [INFO] Generated goals.
+[15:18:36] [INFO] Printing goals to: goals.gol...
+[15:18:36] [INFO] Successfully printed goals to: goals.gol
+
+[15:18:36] [INFO] Reading image time: 0.000000ms
+[15:18:36] [INFO] Converting to grayscale time: 15.622000ms
+[15:18:36] [INFO] Gnerating path time: 0.000000ms
+[15:18:36] [INFO] Generating goals time: 0.000000ms
+[15:18:36] [INFO] Printing goals time: 0.000000ms
+[15:18:36] [INFO] Execution time: 15.622000ms
+
+-----------------------------------------------
+[15:18:37] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png...
+[15:18:37] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png
+[15:18:37] [INFO] Converting to grayscale...
+[15:18:37] [INFO] Successfully converted to grayscale.
+[15:18:37] [INFO] Generating path...
+[15:18:37] [INFO] Generated path.
+[15:18:37] [INFO] Generating goals...
+[15:18:37] [INFO] Generated goals.
+[15:18:37] [INFO] Printing goals to: goals.gol...
+[15:18:37] [INFO] Successfully printed goals to: goals.gol
+
+[15:18:37] [INFO] Reading image time: 5.506000ms
+[15:18:37] [INFO] Converting to grayscale time: 0.000000ms
+[15:18:37] [INFO] Gnerating path time: 15.624000ms
+[15:18:37] [INFO] Generating goals time: 0.000000ms
+[15:18:37] [INFO] Printing goals time: 0.000000ms
+[15:18:37] [INFO] Execution time: 21.130000ms
+
+-----------------------------------------------
+[15:18:37] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png...
+[15:18:37] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png
+[15:18:37] [INFO] Converting to grayscale...
+[15:18:37] [INFO] Successfully converted to grayscale.
+[15:18:37] [INFO] Generating path...
+[15:18:37] [INFO] Generated path.
+[15:18:37] [INFO] Generating goals...
+[15:18:37] [INFO] Generated goals.
+[15:18:37] [INFO] Printing goals to: goals.gol...
+[15:18:37] [INFO] Successfully printed goals to: goals.gol
+
+[15:18:37] [INFO] Reading image time: 0.000000ms
+[15:18:37] [INFO] Converting to grayscale time: 0.000000ms
+[15:18:37] [INFO] Gnerating path time: 84.605000ms
+[15:18:37] [INFO] Generating goals time: 0.000000ms
+[15:18:37] [INFO] Printing goals time: 0.000000ms
+[15:18:37] [INFO] Execution time: 84.605000ms
+
+-----------------------------------------------
+[21:51:12] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png...
+[21:51:12] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png
+[21:51:12] [INFO] Converting to grayscale...
+[21:51:12] [INFO] Successfully converted to grayscale.
+[21:51:12] [INFO] Generating path...
+[21:51:12] [INFO] Generated path.
+[21:51:12] [INFO] Generating goals...
+[21:51:12] [INFO] Generated goals.
+[21:51:12] [INFO] Printing goals to: goals.gol...
+[21:51:12] [INFO] Successfully printed goals to: goals.gol
+
+[21:51:12] [INFO] Reading image time: 11.976000ms
+[21:51:12] [INFO] Converting to grayscale time: 4.966000ms
+[21:51:12] [INFO] Gnerating path time: 11.984000ms
+[21:51:12] [INFO] Generating goals time: 0.000000ms
+[21:51:12] [INFO] Printing goals time: 13.951000ms
+[21:51:12] [INFO] Execution time: 43.875000ms
+
+-----------------------------------------------
+[21:51:14] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png...
+[21:51:14] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png
+[21:51:14] [INFO] Converting to grayscale...
+[21:51:14] [INFO] Successfully converted to grayscale.
+[21:51:14] [INFO] Generating path...
+[21:51:14] [INFO] Generated path.
+[21:51:14] [INFO] Generating goals...
+[21:51:14] [INFO] Generated goals.
+[21:51:14] [INFO] Printing goals to: goals.gol...
+[21:51:14] [INFO] Successfully printed goals to: goals.gol
+
+[21:51:14] [INFO] Reading image time: 14.226000ms
+[21:51:14] [INFO] Converting to grayscale time: 4.987000ms
+[21:51:14] [INFO] Gnerating path time: 0.000000ms
+[21:51:14] [INFO] Generating goals time: 0.000000ms
+[21:51:14] [INFO] Printing goals time: 4.061000ms
+[21:51:14] [INFO] Execution time: 23.274000ms
+
+-----------------------------------------------
+[21:51:16] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png...
+[21:51:16] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png
+[21:51:16] [INFO] Converting to grayscale...
+[21:51:16] [INFO] Successfully converted to grayscale.
+[21:51:16] [INFO] Generating path...
+[21:51:16] [INFO] Generated path.
+[21:51:16] [INFO] Generating goals...
+[21:51:16] [INFO] Generated goals.
+[21:51:16] [INFO] Printing goals to: goals.gol...
+[21:51:16] [INFO] Successfully printed goals to: goals.gol
+
+[21:51:16] [INFO] Reading image time: 6.981000ms
+[21:51:16] [INFO] Converting to grayscale time: 4.986000ms
+[21:51:16] [INFO] Gnerating path time: 74.800000ms
+[21:51:16] [INFO] Generating goals time: 0.000000ms
+[21:51:16] [INFO] Printing goals time: 3.727000ms
+[21:51:16] [INFO] Execution time: 90.494000ms
+
+-----------------------------------------------
+[21:51:16] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png...
+[21:51:16] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png
+[21:51:16] [INFO] Converting to grayscale...
+[21:51:16] [INFO] Successfully converted to grayscale.
+[21:51:16] [INFO] Generating path...
+[21:51:16] [INFO] Generated path.
+[21:51:16] [INFO] Generating goals...
+[21:51:16] [INFO] Generated goals.
+[21:51:16] [INFO] Printing goals to: goals.gol...
+[21:51:16] [INFO] Successfully printed goals to: goals.gol
+
+[21:51:16] [INFO] Reading image time: 10.988000ms
+[21:51:16] [INFO] Converting to grayscale time: 4.986000ms
+[21:51:16] [INFO] Gnerating path time: 0.000000ms
+[21:51:16] [INFO] Generating goals time: 0.000000ms
+[21:51:16] [INFO] Printing goals time: 0.997000ms
+[21:51:16] [INFO] Execution time: 16.971000ms
+
+-----------------------------------------------
+[21:51:18] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png...
+[21:51:18] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png
+[21:51:18] [INFO] Converting to grayscale...
+[21:51:18] [INFO] Successfully converted to grayscale.
+[21:51:18] [INFO] Generating path...
+[21:51:18] [INFO] Generated path.
+[21:51:18] [INFO] Generating goals...
+[21:51:18] [INFO] Generated goals.
+[21:51:18] [INFO] Printing goals to: goals.gol...
+[21:51:18] [INFO] Successfully printed goals to: goals.gol
+
+[21:51:18] [INFO] Reading image time: 8.976000ms
+[21:51:18] [INFO] Converting to grayscale time: 4.987000ms
+[21:51:18] [INFO] Gnerating path time: 11.968000ms
+[21:51:18] [INFO] Generating goals time: 0.000000ms
+[21:51:18] [INFO] Printing goals time: 0.997000ms
+[21:51:18] [INFO] Execution time: 26.928000ms
+
+-----------------------------------------------
+[21:51:19] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png...
+[21:51:19] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png
+[21:51:19] [INFO] Converting to grayscale...
+[21:51:19] [INFO] Successfully converted to grayscale.
+[21:51:19] [INFO] Generating path...
+[21:51:19] [INFO] Generated path.
+[21:51:19] [INFO] Generating goals...
+[21:51:19] [INFO] Generated goals.
+[21:51:19] [INFO] Printing goals to: goals.gol...
+[21:51:19] [INFO] Successfully printed goals to: goals.gol
+
+[21:51:19] [INFO] Reading image time: 3.989000ms
+[21:51:19] [INFO] Converting to grayscale time: 3.990000ms
+[21:51:19] [INFO] Gnerating path time: 71.808000ms
+[21:51:19] [INFO] Generating goals time: 0.000000ms
+[21:51:19] [INFO] Printing goals time: 0.999000ms
+[21:51:19] [INFO] Execution time: 81.783000ms
+
+-----------------------------------------------
+[21:57:39] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png...
+[21:57:39] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png
+[21:57:39] [INFO] Converting to grayscale...
+[21:57:39] [INFO] Successfully converted to grayscale.
+[21:57:39] [INFO] Generating path...
+[21:57:39] [INFO] Generated path.
+[21:57:39] [INFO] Generating goals...
+[21:57:39] [INFO] Generated goals.
+[21:57:39] [INFO] Printing goals to: goals.gol...
+[21:57:39] [INFO] Successfully printed goals to: goals.gol
+
+[21:57:39] [INFO] Reading image time: 7.978000ms
+[21:57:39] [INFO] Converting to grayscale time: 4.987000ms
+[21:57:39] [INFO] Gnerating path time: 11.968000ms
+[21:57:39] [INFO] Generating goals time: 0.000000ms
+[21:57:39] [INFO] Printing goals time: 0.998000ms
+[21:57:39] [INFO] Execution time: 25.931000ms
+
+-----------------------------------------------
+[21:57:40] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png...
+[21:57:40] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png
+[21:57:40] [INFO] Converting to grayscale...
+[21:57:40] [INFO] Successfully converted to grayscale.
+[21:57:40] [INFO] Generating path...
+[21:57:40] [INFO] Generated path.
+[21:57:40] [INFO] Generating goals...
+[21:57:40] [INFO] Generated goals.
+[21:57:40] [INFO] Printing goals to: goals.gol...
+[21:57:40] [INFO] Successfully printed goals to: goals.gol
+
+[21:57:40] [INFO] Reading image time: 9.975000ms
+[21:57:40] [INFO] Converting to grayscale time: 4.985000ms
+[21:57:40] [INFO] Gnerating path time: 0.000000ms
+[21:57:40] [INFO] Generating goals time: 0.000000ms
+[21:57:40] [INFO] Printing goals time: 0.981000ms
+[21:57:40] [INFO] Execution time: 15.941000ms
+
+-----------------------------------------------
+[21:57:40] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png...
+[21:57:40] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png
+[21:57:40] [INFO] Converting to grayscale...
+[21:57:40] [INFO] Successfully converted to grayscale.
+[21:57:40] [INFO] Generating path...
+[21:57:40] [INFO] Generated path.
+[21:57:40] [INFO] Generating goals...
+[21:57:40] [INFO] Generated goals.
+[21:57:40] [INFO] Printing goals to: goals.gol...
+[21:57:40] [INFO] Successfully printed goals to: goals.gol
+
+[21:57:40] [INFO] Reading image time: 3.989000ms
+[21:57:40] [INFO] Converting to grayscale time: 3.989000ms
+[21:57:40] [INFO] Gnerating path time: 72.829000ms
+[21:57:40] [INFO] Generating goals time: 0.000000ms
+[21:57:40] [INFO] Printing goals time: 2.017000ms
+[21:57:40] [INFO] Execution time: 83.822000ms
+
+-----------------------------------------------
+[21:57:41] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png...
+[21:57:41] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg2.png
+[21:57:41] [INFO] Converting to grayscale...
+[21:57:41] [INFO] Successfully converted to grayscale.
+[21:57:41] [INFO] Generating path...
+[21:57:41] [INFO] Generated path.
+[21:57:41] [INFO] Generating goals...
+[21:57:41] [INFO] Generated goals.
+[21:57:41] [INFO] Printing goals to: goals.gol...
+[21:57:41] [INFO] Successfully printed goals to: goals.gol
+
+[21:57:41] [INFO] Reading image time: 9.974000ms
+[21:57:41] [INFO] Converting to grayscale time: 4.986000ms
+[21:57:41] [INFO] Gnerating path time: 0.998000ms
+[21:57:41] [INFO] Generating goals time: 0.000000ms
+[21:57:41] [INFO] Printing goals time: 0.997000ms
+[21:57:41] [INFO] Execution time: 16.955000ms
+
+-----------------------------------------------
+[21:57:41] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png...
+[21:57:41] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg.png
+[21:57:41] [INFO] Converting to grayscale...
+[21:57:41] [INFO] Successfully converted to grayscale.
+[21:57:41] [INFO] Generating path...
+[21:57:41] [INFO] Generated path.
+[21:57:41] [INFO] Generating goals...
+[21:57:41] [INFO] Generated goals.
+[21:57:41] [INFO] Printing goals to: goals.gol...
+[21:57:41] [INFO] Successfully printed goals to: goals.gol
+
+[21:57:41] [INFO] Reading image time: 8.976000ms
+[21:57:41] [INFO] Converting to grayscale time: 4.986000ms
+[21:57:41] [INFO] Gnerating path time: 11.968000ms
+[21:57:41] [INFO] Generating goals time: 0.000000ms
+[21:57:41] [INFO] Printing goals time: 0.998000ms
+[21:57:41] [INFO] Execution time: 26.928000ms
+
+-----------------------------------------------
+[21:57:42] [INFO] Reading image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png...
+[21:57:42] [INFO] Successfully loaded image: D:\Michi\Programmieren\Diplomarbeit\PathServer\images/testimg3.png
+[21:57:42] [INFO] Converting to grayscale...
+[21:57:42] [INFO] Successfully converted to grayscale.
+[21:57:42] [INFO] Generating path...
+[21:57:42] [INFO] Generated path.
+[21:57:42] [INFO] Generating goals...
+[21:57:42] [INFO] Generated goals.
+[21:57:42] [INFO] Printing goals to: goals.gol...
+[21:57:42] [INFO] Successfully printed goals to: goals.gol
+
+[21:57:42] [INFO] Reading image time: 3.989000ms
+[21:57:42] [INFO] Converting to grayscale time: 4.987000ms
+[21:57:42] [INFO] Gnerating path time: 71.808000ms
+[21:57:42] [INFO] Generating goals time: 0.000000ms
+[21:57:42] [INFO] Printing goals time: 0.998000ms
+[21:57:42] [INFO] Execution time: 81.782000ms

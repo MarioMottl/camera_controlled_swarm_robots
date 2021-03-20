@@ -1,0 +1,13 @@
+#version 450 core
+
+layout (location = 0) in vec3 aPos;
+
+out vec4 frag_color;
+
+uniform vec4 obj_color;
+
+void main()
+{
+    gl_Position = vec4(aPos, 1.0f);
+    frag_color = obj_color;
+}
