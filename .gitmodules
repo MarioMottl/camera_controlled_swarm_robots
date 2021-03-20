@@ -7,3 +7,6 @@
 [submodule "library/mingw-std-threads"]
 	path = library/mingw-std-threads
 	url = https://github.com/meganz/mingw-std-threads
+[submodule "library/cppsock"]
+	path = library/cppsock
+	url = https://github.com/PrugClem/cppsock.git
