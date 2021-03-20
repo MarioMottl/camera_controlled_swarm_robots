@@ -84,7 +84,7 @@ namespace Schwarm
                     packet.allocate(packet.min_size() + packet.filepath_size());    // Allocate memory for packet.
                     packet.encode();    // Encode packet.
 
-                    std::cout << get_msg("ERROR / CLIENT") << "Generating path from file \"" << args[2] << "\"..." << std::endl;
+                    std::cout << get_msg("INFO / CLIENT") << "Generating path from file \"" << args[2] << "\"..." << std::endl;
                     sharedsimumem->client->get_socket().send(packet.rawdata(), packet.size(), 0);   // Send packet.
                 }
                 else if(args[1] == "start")
