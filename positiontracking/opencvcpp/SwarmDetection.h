@@ -42,7 +42,7 @@ public:
     /**
      * @brief Sets up the VideoCapture
      * @param deviceID -> Hardware ID of the camera thats going to be used.
-     * @return -> returns 0 for success -1 if an error occoured
+     * @return -> returns 0 for success -1 if an error occurred
      */
     int setupVideCapture(int deviceID);
 
@@ -53,39 +53,39 @@ public:
     cv::Mat readFromCamera();
 
     /**
-    * @brief Displays the frame provided with the provided windowname
+    * @brief Displays the frame provided with the provided window name
     * @param windowName -> name of the Window thats being displayed
     * @param frame -> frame thats going to be displayed
     */
     static void showFrame(std::string windowName, cv::Mat frame);
 
     /**
-    * @brief Creates a Trackbar for the lower and upper values of the pixels that need to be tracked
+    * @brief Creates a Track bar for the lower and upper values of the pixels that need to be tracked
     */
     void createTBar();
 
     /**
-    * @brief Reads out the Trackbar positions and returns it.
-    * @return @param hvalues -> struct of values of Trackbar
+    * @brief Reads out the Track bar positions and returns it.
+    * @return @param hvalues -> struct of values of Track bar
     */
     void getTBarPos(HueValues& hvalues);
 
     /**
-    * @brief Debug Output: Prints out the Hue values of the Trackbar
+    * @brief Debug Output: Prints out the Hue values of the Track bar
     */
     void printHueValues(HueValues& hvalues);
 
     /**
-    * @brief Sets all the parametes for the Blobdetection that is needed to extract all cars from the frame.
-    * @param minThreshold -> minimum Threshhold for conversion into binary file
-    * @param maxThreshold -> maximum Threshhold for conversion into binary file
+    * @brief Sets all the parameters for the Blob detection that is needed to extract all cars from the frame.
+    * @param minThreshold -> minimum Threshold for conversion into binary file
+    * @param maxThreshold -> maximum Threshold for conversion into binary file
     * @param filterByArea -> only by area filtered pixels
     * @param minArea -> minimum area that should be considered
     * @param filterByCircularity -> only circular shapes should be considered
     * @param minCircularity -> minimum circularity that should be considered
-    * @param filterByConvexity -> extracted blobs have to have convecity (convex hull algorithm)
-    * @param minConvexity -> miminum convexity
-    * @param filterByInertia -> extracted blob have to have inertioa between min / max inertia
+    * @param filterByConvexity -> extracted blobs have to have convexity (convex hull algorithm)
+    * @param minConvexity -> minimum convexity
+    * @param filterByInertia -> extracted blob have to have inertia between min / max inertia
     * @param minInertiaRatio -> minimum inertia
     * @return @param params -> Returns the parameter values at once for easier setup
     */
@@ -93,26 +93,28 @@ public:
     
     /**
     * @brief Looks for valid cars indication points in the keyPoints vector
-    * @param keyPoints -> keypoints that have been etracted from the frame
+    * @param keyPoints -> keypoints that have been retracted from the frame
     */
     static void carDetection(std::vector <cv::KeyPoint> *keyPoints);
     
     /**
     * @brief Returns the distance between to KeyPoints
-    * @param p1 -> Keypoint 1
-    * @param p2 -> Keypoint 2
+    * @param p1 -> Keypoints 1
+    * @param p2 -> Keypoints 2
     * @return returns the distance between the two points
     */
     static float getDistance(cv::KeyPoint p1, cv::KeyPoint p2);
 
     /**
-    * @brief Loops the video stream. Starts Trackbar. Detects all Keypoints.
+    * @brief Loops the video stream. Starts Track bar. Detects all Keypoints.
     */
     void Detector();
 
     /**
-    * 
-    * 
+    * @brief Draws Keypoints onto an frame.
+    * @param xframe -> frame where Keypoints are gonna be drawn on
+    * @param keyPoints -> Pointer to the Keypoint Vector 
+    * @param p -> this pointer
     */
     static void drawKeyPoints(cv::Mat xframe, std::vector <cv::KeyPoint>* keyPoints,SwarmDetection *p);
 };
