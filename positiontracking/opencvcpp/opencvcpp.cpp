@@ -8,18 +8,20 @@ void SwarmDetection::Detector()
     cv::Mat hsvFrame;
     cv::Mat mask;
 
+    std::thread t1;
+    std::thread t2;
+
     setBlobParams(0, 256, true, 30, true, 0.1f, true, 0.5f, true, 0.5f, params);
 
     for (;;)
     {
-        frame = readFromCamera();
+        cv::Mat xframe = readFromCamera();
 
         cv::Mat imWithKeypoints;
-        cv::drawKeypoints(frame, keyPoints, imWithKeypoints, cv::Scalar(0, 0, 255),cv::DrawMatchesFlags::DRAW_RICH_KEYPOINTS);
 
         getTBarPos(hvalues);
 
-        cv::cvtColor(frame, hsvFrame, cv::COLOR_BGR2HSV);
+        cv::cvtColor(xframe, hsvFrame, cv::COLOR_BGR2HSV);
         cv::inRange(hsvFrame, cv::Scalar(hvalues.l_h,hvalues.l_s,hvalues.l_v),cv::Scalar(hvalues.u_h,hvalues.u_s,hvalues.u_v),mask);
 
         //Detect all Keypoints
@@ -31,11 +33,16 @@ void SwarmDetection::Detector()
             detector->detect(mask,keyPoints);
         #endif
 
-        showFrame("Keypoints", imWithKeypoints);
-        showFrame("Picture",frame);
+        showFrame("Picture",xframe);
 
         //Detection
-        carDetection(keyPoints);       
+        t1 = std::thread(carDetection,&keyPoints);
+        t1.detach();
+
+        t2 = std::thread(drawKeyPoints, frame, &keyPoints,this);
+        t2.detach();
+
+        showFrame("Keypoints", frame);
 
         if (cv::waitKey(10) == 27)
         {
@@ -45,22 +52,28 @@ void SwarmDetection::Detector()
     }
 }
 
-void SwarmDetection::carDetection(std::vector<cv::KeyPoint> keyPoints)
+void SwarmDetection::drawKeyPoints(cv::Mat xframe, std::vector<cv::KeyPoint>* keyPoints,SwarmDetection *p)
 {
-    if (keyPoints.size() > 2)
+    cv::drawKeypoints(xframe, *keyPoints, xframe, cv::Scalar(0, 0, 255), cv::DrawMatchesFlags::DRAW_RICH_KEYPOINTS);
+    p->frame = xframe;
+}
+
+void SwarmDetection::carDetection(std::vector<cv::KeyPoint> *keyPoints)
+{
+    if (keyPoints->size() > 2)
     {
-        for (size_t i = 0; i < keyPoints.size()-1; i++)
+        for (size_t i = 0; i < keyPoints->size()-1; i++)
         {
-            for (size_t j = 0; j < keyPoints.size(); j++)
+            for (size_t j = 0; j < keyPoints->size(); j++)
             {
-                if (getDistance(keyPoints.at(i), keyPoints.at(j)) <= 100.0f && getDistance(keyPoints.at(i), keyPoints.at(j)) >= 90.0f)
+                if (getDistance(keyPoints->at(i), keyPoints->at(j)) <= 100.0f && getDistance(keyPoints->at(i), keyPoints->at(j)) >= 90.0f)
                 {
-                    for (size_t k = 0; k < keyPoints.size(); k++)
+                    for (size_t k = 0; k < keyPoints->size(); k++)
                     {
                         if (k != (i) &&  k!= (j))
                         {
-                            if(getDistance(keyPoints.at(k), keyPoints.at(i)) && getDistance(keyPoints.at(j), keyPoints.at(k)) <=400.0f)
-                                if (getDistance(keyPoints.at(k), keyPoints.at(i)) && getDistance(keyPoints.at(k), keyPoints.at(j)) >= 370.0f)
+                            if(getDistance(keyPoints->at(k), keyPoints->at(i)) && getDistance(keyPoints->at(j), keyPoints->at(k)) <=400.0f)
+                                if (getDistance(keyPoints->at(k), keyPoints->at(i)) && getDistance(keyPoints->at(k), keyPoints->at(j)) >= 370.0f)
                                 {
                                     std::cout << "Car Found";
                                 }
@@ -152,20 +165,4 @@ void SwarmDetection::setBlobParams(float minThreshhold, float maxThreshhold, boo
     params.minConvexity = minConvexity;
     params.filterByInertia = filterByInertia;
     params.minInertiaRatio = minInertiaRatio;
-}
-
-
-int main()
-{
-    SwarmDetection swarm;
-
-    if (swarm.setupVideCapture(0) == -1)
-    {
-        return -1;
-    }
-
-    swarm.createTBar();
-    swarm.Detector();
-
-    return 0;
 }
