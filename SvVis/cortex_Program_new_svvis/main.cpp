@@ -61,8 +61,6 @@ void main_thread_func(void *arg)
     LED_triangle_l(false, false, true);osDelay(200);
     LED_triangle_l(true, true, true);
     //usart1.put('A', osWaitForever);
-    usart1.put_blocking("\nhello\0", 7);
-    tar->daplink.send_str("hello");
 
     for(;;)
     {

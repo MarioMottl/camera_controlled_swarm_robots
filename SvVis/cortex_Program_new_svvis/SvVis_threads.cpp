@@ -17,12 +17,6 @@ namespace SvVis
     }
 } // namespace SvVis
 
-/**
- * @brief 
- * 
- * @param this_void 
- * @return __NO_RETURN 
- */
 __NO_RETURN void SvVis::SvVis::func_recv(void *this_void)
 {
     ::SvVis::SvVis *tar = (::SvVis::SvVis*)this_void;
