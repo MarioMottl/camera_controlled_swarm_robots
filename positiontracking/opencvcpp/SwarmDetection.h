@@ -3,6 +3,7 @@
 #include <iostream>
 #include <cmath>
 #include <thread>
+#include "../../visualization/external/SchwarmPacket/packet.h"
 
 #define N_CARS 1        //max amount of cars in frame
 
@@ -28,12 +29,21 @@ struct Car
     float rotation;
 };
 
+struct PicData
+{
+    cv::Mat frame;
+    cv::Mat rFrame;
+    int width;
+    int height;
+};
+
 class SwarmDetection
 {
 private:
-    cv::Mat frame;
+    PicData pic;
     cv::VideoCapture cap;
     std::vector <Car> cars[N_CARS];
+    Schwarm::GoalPacket packet;
 
 public:
     SwarmDetection() = default;
@@ -117,4 +127,28 @@ public:
     * @param p -> this pointer
     */
     static void drawKeyPoints(cv::Mat xframe, std::vector <cv::KeyPoint>* keyPoints,SwarmDetection *p);
+
+    /**
+    * @brief A simpler much faster version of the carDetection 
+    *        currently only works with one car
+    * @param keyPoints -> Pointer to the keypoint vector
+    */
+    void simpleCarDetection(std::vector<cv::KeyPoint> keyPoints);
+
+
+    /**
+    * @brief Gets the dimensions of the frame
+    */
+    void getDimensions();
+
+    /**
+    * @brief Prints the dimensions of the frame into the console
+    */
+    void printDimensions();
+
+    void makePacket(float x, float y);
+
+    void startServer();
+
+    void sendPacket();
 };

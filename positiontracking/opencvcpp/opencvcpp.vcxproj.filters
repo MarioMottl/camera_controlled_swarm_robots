@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="opencvcpp.cpp">
+    <ClCompile Include="SwarmDetection.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">

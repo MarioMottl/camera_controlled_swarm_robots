@@ -9,7 +9,6 @@ void SwarmDetection::Detector()
     cv::Mat mask;
 
     std::thread t1;
-    std::thread t2;
 
     setBlobParams(0, 256, true, 30, true, 0.1f, true, 0.5f, true, 0.5f, params);
 
@@ -33,16 +32,10 @@ void SwarmDetection::Detector()
             detector->detect(mask,keyPoints);
         #endif
 
-        showFrame("Picture",xframe);
-
-        //Detection
-        t1 = std::thread(carDetection,&keyPoints);
+        simpleCarDetection(keyPoints);
+        t1 = std::thread(drawKeyPoints,pic.frame, &keyPoints, this);
         t1.detach();
-
-        t2 = std::thread(drawKeyPoints, frame, &keyPoints,this);
-        t2.detach();
-
-        showFrame("Keypoints", frame);
+        showFrame("Keypoints", pic.frame);
 
         if (cv::waitKey(10) == 27)
         {
@@ -55,8 +48,49 @@ void SwarmDetection::Detector()
 void SwarmDetection::drawKeyPoints(cv::Mat xframe, std::vector<cv::KeyPoint>* keyPoints,SwarmDetection *p)
 {
     cv::drawKeypoints(xframe, *keyPoints, xframe, cv::Scalar(0, 0, 255), cv::DrawMatchesFlags::DRAW_RICH_KEYPOINTS);
-    p->frame = xframe;
+    p->pic.frame = xframe;
 }
+
+void SwarmDetection::simpleCarDetection(std::vector<cv::KeyPoint> keyPoints)
+{
+    if (keyPoints.size() > 2)
+    {
+        std::vector<cv::KeyPoint>::const_iterator it = keyPoints.begin(), end = keyPoints.end();
+        std::cout << "Number of keypoints: " << keyPoints.size() << std::endl;
+        float x = 0, y = 0;
+        for (; it != end; ++it)
+        {
+            std::cout << "X: " << it->pt.x << " Y: " << it->pt.y << std::endl;
+            x += it->pt.x;
+            y += it->pt.y;
+        }
+        x = x / keyPoints.size() / pic.width;
+        y = y / keyPoints.size() / pic.height;
+        std::cout << "Median Xrel: " << x << " Median Yrel: " << y << std::endl;
+        makePacket(x, y);
+    }
+}
+
+void SwarmDetection::getDimensions()
+{
+    pic.width = pic.frame.size().width;
+    pic.height = pic.frame.size().height;
+}
+
+void SwarmDetection::printDimensions()
+{
+    getDimensions();
+    std::cout << "Height: " << pic.height << " Width: " << pic.width << std::endl;
+}
+
+void SwarmDetection::makePacket(float x, float y)
+{
+    packet.set_goal(x, y);
+    packet.set_vehicle_id(1);
+    packet.allocate(packet.min_size());
+    packet.encode();
+}
+
 
 void SwarmDetection::carDetection(std::vector<cv::KeyPoint> *keyPoints)
 {
@@ -108,11 +142,11 @@ int SwarmDetection::setupVideCapture(int deviceID)
 
 cv::Mat SwarmDetection::readFromCamera()
 {
-    cap.read(frame);
-    if (frame.empty()) {
+    cap.read(pic.frame);
+    if (pic.frame.empty()) {
         std::cerr << "ERROR! blank frame grabbed\n";
     }
-    return frame;
+    return pic.frame;
 }
 
 void SwarmDetection::showFrame(std::string windowName, cv::Mat xframe)

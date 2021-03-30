@@ -152,7 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="opencvcpp.cpp" />
+    <ClCompile Include="SwarmDetection.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SwarmDetection.h" />

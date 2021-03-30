@@ -10,6 +10,7 @@ int main()
     }
 
     swarm.createTBar();
+
     swarm.Detector();
 
     return 0;
