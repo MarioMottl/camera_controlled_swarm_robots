@@ -1,6 +1,5 @@
 #include "../gui_includes/button.h"
 #include "../gui_includes/gui_events.h"
-#include <GL/glfw.h>
 #include <GL/glc.h>
 
 using namespace GUI;
@@ -76,11 +75,12 @@ const float* Button::generate_text_mesh(void)
 }
 
 Button::Button(void)
-: Button(nullptr, nullptr, nullptr) {}
+: Button(nullptr, nullptr, nullptr, nullptr) {}
 
-Button::Button(std::atomic_int* width_ptr, std::atomic_int* height_ptr, atomic_float* aspect_ptr)
+Button::Button(GLFWwindow* window, std::atomic_int* width_ptr, std::atomic_int* height_ptr, atomic_float* aspect_ptr)
 : Element(width_ptr, height_ptr, aspect_ptr)
 {
+    this->window = window;
     // init button
     this->pos_x = 0.0f;
     this->pos_y = 0.0f;
@@ -195,9 +195,9 @@ void Button::set_font_size(float size) noexcept
 
 void Button::handle(void)
 {
-    int mouse_x, mouse_y;
-    if(glfwGetWindowParam(GLFW_OPENED))
-        glfwGetMousePos(&mouse_x, &mouse_y);
+    double mouse_x, mouse_y;
+    if(!glfwWindowShouldClose(window))
+        glfwGetCursorPos(window, &mouse_x, &mouse_y);
 
     float float_mouse_x = gl::convert::from_pixels_pos_x(mouse_x, this->width_value());
     float float_mouse_y = gl::convert::from_pixels_pos_y(mouse_y, this->height_value());
@@ -235,25 +235,25 @@ void Button::handle(void)
             this->__is_right_clicked = false;
         }
     }
-    if(on_button && !this->__is_left_clicked && glfwGetMouseButton(GLFW_MOUSE_BUTTON_LEFT))    // left click down event
+    if(on_button && !this->__is_left_clicked && glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT))    // left click down event
     {
         ButtonActionEvent::push({float_mouse_x, float_mouse_y});
         ElementActionEvent::push({this, ButtonAction::CLICK_LEFT_DOWN});
         this->__is_left_clicked = true;
     }
-    if(on_button && this->__is_left_clicked && !glfwGetMouseButton(GLFW_MOUSE_BUTTON_LEFT))    // left click up event
+    if(on_button && this->__is_left_clicked && !glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT))    // left click up event
     {
         ButtonActionEvent::push({float_mouse_x, float_mouse_y});
         ElementActionEvent::push({this, ButtonAction::CLICK_LEFT_UP});
         this->__is_left_clicked = false;
     }
-    if(on_button && !this->__is_right_clicked && glfwGetMouseButton(GLFW_MOUSE_BUTTON_RIGHT))  // right click down event
+    if(on_button && !this->__is_right_clicked && glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_RIGHT))  // right click down event
     {
         ButtonActionEvent::push({float_mouse_x, float_mouse_y});
         ElementActionEvent::push({this, ButtonAction::CLICK_RIGHT_DOWN});
         this->__is_right_clicked = true;
     }
-    if(on_button && this->__is_right_clicked && !glfwGetMouseButton(GLFW_MOUSE_BUTTON_RIGHT))  // right click up event
+    if(on_button && this->__is_right_clicked && !glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_RIGHT))  // right click up event
     {
         ButtonActionEvent::push({float_mouse_x, float_mouse_y});
         ElementActionEvent::push({this, ButtonAction::CLICK_RIGHT_UP});

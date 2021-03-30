@@ -1,17 +1,11 @@
 #ifndef __schwarm_client_h__
 #define __schwarm_client_h__
 
-#include <atomic>
 #include "my_msh.h"
 #include "../SchwarmPacket/packet.h"
-
-#if defined(_GLIBCXX_HAS_GTHREADS) && defined(_GLIBCXX_USE_C99_STDINT_TR1)
-    #include <thread>
-    #include <mutex>
-#else
-    #include <mingw.thread.h>
-    #include <mingw.mutex.h>
-#endif
+#include <atomic>
+#include <thread>
+#include <mutex>
 
 namespace Schwarm
 {
@@ -20,11 +14,7 @@ namespace Schwarm
         struct SharedSimulationMemory
         {
             SH::Client* client{nullptr};
-#if defined(_GLIBCXX_HAS_GTHREADS) && defined(_GLIBCXX_USE_C99_STDINT_TR1)
             std::mutex sync;
-#else
-            mingw_stdthread::xp::mutex sync;
-#endif
 
             std::atomic_int recv_packed_id{-1};
             std::atomic_bool start{false};

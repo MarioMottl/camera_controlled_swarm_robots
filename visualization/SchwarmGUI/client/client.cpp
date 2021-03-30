@@ -2,6 +2,7 @@
 #include <cstdio>
 #include <iostream>
 #include <system_error>
+#include <sstream>
 #include "../includes/my_msg.h"
 #include "../SchwarmPacket/packet.h"
 
@@ -97,18 +98,15 @@ void Client::run_pathserver(std::atomic_bool* running, const std::string* imgfol
     if((ret = std::system(cmd)) < 0)    // Start server
     {
         std::cout << get_msg("ERROR / SERVER") << "Server closed with code: " << ret << " / " << std::hex << ret << std::endl;
-        throw std::system_error();  // System error if server is unable to start.
+        //throw std::system_error("Unfinished");  // System error if server is unable to start.
     }
     *running = false;
 }
 
 void Client::start_pathserver(std::atomic_bool* running, const std::string* imgfolder)
 {
-#if defined(_GLIBCXX_HAS_GTHREADS) && defined(_GLIBCXX_USE_C99_STDINT_TR1)
-    std::thread serverthread = std::thread(Client::run_pathserver, running, imgfolder);
-#else
-    mingw_stdthread::thread serverthread = mingw_stdthread::thread(Client::run_pathserver, running, imgfolder);   
-#endif
+    std::thread serverthread = std::thread(Client::run_pathserver, running, imgfolder);   
+
     serverthread.detach();
     while(!*running);
     std::this_thread::sleep_for(std::chrono::milliseconds(10));

@@ -3,13 +3,7 @@
 
 #include "gui_base.h"
 #include <chrono>
-#if defined(_GLIBCXX_HAS_GTHREADS) && defined(_GLIBCXX_USE_C99_STDINT_TR1)
-    #include <thread>
-    using std::thread;
-#else
-    #include <mingw.thread.h>
-    using mingw_stdthread::thread;
-#endif
+#include <thread>
 
 namespace GUI
 {
@@ -18,14 +12,16 @@ namespace GUI
         friend class ElementRenderer;
 
     private:
-        thread handler_thread;
+        std::thread handler_thread;
         std::atomic_bool running;
         std::vector<Element*> handled_elements;
+        GLFWwindow* window;
 
         static void handler_func(ElementHandler* handler, std::chrono::nanoseconds interval);
 
     public:
-        ElementHandler(void);
+        ElementHandler(void) = delete;
+        ElementHandler(GLFWwindow* window) { this->window = window; }
         ElementHandler(const ElementHandler&) = delete;
         ElementHandler(ElementHandler&&) = delete;
         ElementHandler& operator=(const ElementHandler&) = delete;

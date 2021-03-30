@@ -97,26 +97,66 @@ void init_OpenCL(const std::string& device_name_regex, cl_command_queue& cmd_que
     std::cout << get_msg("INFO / INIT OpenCL") << "OpenCL command queue created." << std::endl;
 }
 
-void init_OpenGL(GLFWvidmode& vid_mode, WindowHandler& main_window_handler, int interval)
+bool init_OpenGL(GLFWwindow** window, const GLFWvidmode** vid_mode, WindowHandler& main_window_handler)
 {
     glfwInit();
-    glfwGetDesktopMode(&vid_mode);
-    main_window_handler.init(vid_mode.Width / 2, vid_mode.Height / 2);
+    glfwWindowHint(GLFW_RED_BITS, 24);              // set red bits
+    glfwWindowHint(GLFW_GREEN_BITS, 24);            // set green bits
+    glfwWindowHint(GLFW_BLUE_BITS, 24);             // set blue bits
+    glfwWindowHint(GLFW_ALPHA_BITS, 24);            // set alpha bits
+    glfwWindowHint(GLFW_DEPTH_BITS, 24);            // set depth bits
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);  // use OpenGL 4.x
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 4);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_COMPAT_PROFILE);
 
+#ifdef __APPLE__
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+#endif
+
+    GLFWmonitor* monitor = glfwGetPrimaryMonitor();
+    *vid_mode = glfwGetVideoMode(monitor);
+    main_window_handler.init((*vid_mode)->width / 2, (*vid_mode)->height / 2);
     std::cout << get_msg("INFO / OpenGL") << "GLEW initialized." << std::endl;
-    if(!glfwOpenWindow(vid_mode.Width / 2, vid_mode.Height / 2, 24, 24, 24, 24, 24, 8, GLFW_WINDOW))
+
+    // create window
+    *window = glfwCreateWindow((*vid_mode)->width / 2, (*vid_mode)->height / 2, "Shading test", NULL, NULL);
+    if (window == NULL)
     {
         std::cout << get_msg("ERROR / OpenGL WINDOW") << "Failed to create OpenGL window." << std::endl;
         glfwTerminate();
         exit(-1);
     }
-
-    glfwSetWindowPos(vid_mode.Width / 4, vid_mode.Height / 4);
-    glfwSetWindowTitle("Scharm GUI und Visualisierung - 0.0.0");
+    glfwSetWindowPos(*window, (*vid_mode)->width / 4, (*vid_mode)->height / 4);
+    glfwSetWindowTitle(*window, "Scharm GUI und Visualisierung - 0.0.0");
+    glfwMakeContextCurrent(*window);
     std::cout << get_msg("INFO / OpenGL WINDOW") << "OpenGL window created." << std::endl;
+
+    glfwSetCursorPos(*window, (*vid_mode)->width / 2 + (*vid_mode)->width / 4, (*vid_mode)->height / 2 + (*vid_mode)->height / 4);      // set mousepos to the center
+    glfwSetInputMode(*window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);   // disable cursor
+
+    glfwSwapInterval(0);
     glewInit();
     std::cout << get_msg("INFO / OpenGL") << "GLFW initialized." << std::endl;
-    glfwSwapInterval(interval);    // limit to 60 fps
+    return true;
+}
+
+void create_text_shader(gl::Shader& shader)
+{
+    gl::ShaderLoadError error = shader.load("Shader/text_vertex_shader.txt", "Shader/text_fragment_shader.txt");
+
+    if (error & gl::ShaderLoadErrorType::INVALID_FILE_PATH)
+        std::cout << "Can not open shader-source-file." << std::endl;
+    if (error & gl::ShaderLoadErrorType::SHADER_ALREADY_LOADED)
+        std::cout << "Shader must be deleted before loading again." << std::endl;
+    if (error & gl::ShaderLoadErrorType::VERTEX_SHADER_ERROR)
+        std::cout << "Vertex-Shader info: " << std::endl << shader.get_last_vertex_msg() << std::endl;
+    if (error & gl::ShaderLoadErrorType::FRAGMENT_SHADER_ERROR)
+        std::cout << "Fragment-Shader info: " << std::endl << shader.get_last_fragment_msg() << std::endl;
+    if (error & gl::ShaderLoadErrorType::SHADER_LINK_ERROR)
+        std::cout << "Shader-Link info: " << std::endl << shader.get_last_link_msg() << std::endl;
+
+    if (error)
+        exit(-1);
 }
 
 void init_event_handler(EventHandler& event_handler, Schwarm::Client::SharedSimulationMemory* mem)
@@ -261,14 +301,14 @@ double avg_time(const std::vector<int>& vec)
     return sum / vec.size();
 }
 
-void update_camera(glm::dmat4& view, glm::dmat4& projection, const WindowHandler& main_window_handler, const WindowHandler& vis_window_handler)
+void update_camera(GLFWwindow* window, glm::dmat4& view, glm::dmat4& projection, const WindowHandler& main_window_handler, const WindowHandler& vis_window_handler)
 {
     /*  The width and height of the main window is used eventhough the 3D render scene is a seperate framebuffer.
     *   The reason for that is the mouse is always locked to the main window and never to a seperate framebuffer. */
    if(Main::get_view_state() == Main::ViewState::OPEN_WORLD)
    {
-        Main::mouse_action(main_window_handler.get_width(), main_window_handler.get_height(), Main::camera_location().rotx, Main::camera_location().roty, Main::get_sensetivity());
-        Main::move_action(Main::camera_location().x, Main::camera_location().y, Main::camera_location().z, Main::camera_location().rotx, Main::get_move_speed());
+        Main::mouse_action(window, main_window_handler.get_width(), main_window_handler.get_height(), Main::camera_location().rotx, Main::camera_location().roty, Main::get_sensetivity());
+        Main::move_action(window, Main::camera_location().x, Main::camera_location().y, Main::camera_location().z, Main::camera_location().rotx, Main::get_move_speed());
    }
 
     view = glm::lookAt(glm::dvec3(Main::camera_location().x, Main::camera_location().y, Main::camera_location().z),
@@ -284,7 +324,7 @@ void update_camera(glm::dmat4& view, glm::dmat4& projection, const WindowHandler
  * GENERATE-BUFFER-FUNCTIONS
  * -----------------------------------------------------------------------------*/
 
-unsigned int gen_scene_fb(const GLFWvidmode& vid_mode, unsigned int& tex)
+unsigned int gen_scene_fb(const GLFWvidmode* vid_mode, unsigned int& tex)
 {
     unsigned int fbo_scene;
     glGenFramebuffers(1, &fbo_scene);
@@ -293,7 +333,7 @@ unsigned int gen_scene_fb(const GLFWvidmode& vid_mode, unsigned int& tex)
     // create color attachment
     glGenTextures(1, &tex);
     glBindTexture(GL_TEXTURE_2D, tex);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, vid_mode.Width, vid_mode.Height, 0, GL_RGBA, GL_UNSIGNED_BYTE, NULL);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, vid_mode->width, vid_mode->height, 0, GL_RGBA, GL_UNSIGNED_BYTE, NULL);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glBindTexture(GL_TEXTURE_2D, 0);
@@ -305,7 +345,7 @@ unsigned int gen_scene_fb(const GLFWvidmode& vid_mode, unsigned int& tex)
     return fbo_scene;
 }
 
-unsigned int gen_vis_fb(const GLFWvidmode& vid_mode, unsigned int& tex, unsigned int& rb)
+unsigned int gen_vis_fb(const GLFWvidmode* vid_mode, unsigned int& tex, unsigned int& rb)
 {
     unsigned int fbo_vis;
     glGenFramebuffers(1, &fbo_vis);
@@ -314,7 +354,7 @@ unsigned int gen_vis_fb(const GLFWvidmode& vid_mode, unsigned int& tex, unsigned
     // create color attachment (texture)
     glGenTextures(1, &tex);
     glBindTexture(GL_TEXTURE_2D, tex);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, vid_mode.Width, vid_mode.Height, 0, GL_RGBA, GL_UNSIGNED_BYTE, NULL);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, vid_mode->width, vid_mode->height, 0, GL_RGBA, GL_UNSIGNED_BYTE, NULL);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glBindTexture(GL_TEXTURE_2D, 0);
@@ -323,7 +363,7 @@ unsigned int gen_vis_fb(const GLFWvidmode& vid_mode, unsigned int& tex, unsigned
     // create depth and stencil attachment (renderbuffer)
     glGenRenderbuffers(1, &rb);
     glBindRenderbuffer(GL_RENDERBUFFER, rb);
-    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, vid_mode.Width, vid_mode.Height);
+    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, vid_mode->width, vid_mode->height);
     glBindRenderbuffer(GL_RENDERBUFFER, 0);
     glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, rb);
 
@@ -585,12 +625,7 @@ int main()  // its showtime
     const std::string scene_vs("scene.vert");
     const std::string scene_fs("scene.frag");
     const std::string sds_vs("simple_depth.vert");
-    const std::string sds_fs("simple_depth.frag");
-
-    /* -----------------------------------------------------------------------------
-     * DECLARE WINDOW HANDLERS
-     * -----------------------------------------------------------------------------*/
-    WindowHandler main_window_handler, vis_window_handler;
+    const std::string sds_fs("simple_depth.frag")
     
     /* -----------------------------------------------------------------------------
      * INIT EVENT-HANDLER
@@ -645,8 +680,14 @@ int main()  // its showtime
     /* -----------------------------------------------------------------------------
      * INIT OpenGL
      * ----------------------------------------------------------------------------*/
-    GLFWvidmode vid_mode;
-    init_OpenGL(vid_mode, main_window_handler, 1);
+    GLFWwindow* main_window;
+    GLFWvidmode* vid_mode;
+    init_OpenGL(&main_window, &vid_mode, main_window_handler);
+
+    /* -----------------------------------------------------------------------------
+     * DECLARE WINDOW HANDLERS
+     * -----------------------------------------------------------------------------*/
+    WindowHandler main_window_handler(window), vis_window_handler(window);
 
     /* -----------------------------------------------------------------------------
      * INIT OpenCL
@@ -701,7 +742,7 @@ int main()  // its showtime
     /* -----------------------------------------------------------------------------
      * LOAD SHADERS
      * -----------------------------------------------------------------------------*/
-    gl::Shader element_shader(256), text_shader(256), fb_scene_shader(256), vis_shader(256), scene_shader(256), simple_depth_shader(256);
+    gl::Shader element_shader, text_shader, fb_scene_shader, vis_shader, scene_shader, simple_depth_shader;
     load_shader(element_shader,         element_vs,     element_fs);
     load_shader(text_shader,            text_vs,        text_fs);
     load_shader(fb_scene_shader,        fb_scene_vs,    fb_scene_fs);

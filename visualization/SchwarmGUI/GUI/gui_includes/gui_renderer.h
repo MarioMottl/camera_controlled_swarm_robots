@@ -2,16 +2,8 @@
 #define GUI_RENDERER_H_INCLUDED
 
 #include "gui_handler.h"
-#include <GL/glew.h>
 #include <CL/opencl.h>
-
-#if defined(_GLIBCXX_HAS_GTHREADS) && defined(_GLIBCXX_USE_C99_STDINT_TR1)
-    #include <thread>
-    using std::thread;
-#else
-    #include <mingw.thread.h>
-    using mingw_stdthread::thread;
-#endif
+#include <thread>
 
 namespace GUI
 {
@@ -26,7 +18,7 @@ namespace GUI
             unsigned int base_instance;
         };
 
-        thread renderer_thread;
+        std::thread renderer_thread;
         std::atomic_bool running, resize_request;
         std::vector<ElementHandler*> handlers;
         cl_context* context;

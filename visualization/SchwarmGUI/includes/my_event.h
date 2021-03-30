@@ -1,8 +1,9 @@
 #ifndef MY_EVENT_H_INCLUDED
 #define MY_EVENT_H_INCLUDED
 
+#define _CRT_SECURE_NO_WARNINGS
 #include <chrono>
-#include <Event.h>
+#include <event.h>
 #include <cstdio>
 #include <vector>
 #include "../client/client.h"
@@ -19,7 +20,6 @@ protected:
     virtual void init(void)
     {
         this->register_event(textboxenter, reinterpret_cast<EventFunc>(on_textenter));
-        this->set_interval(std::chrono::milliseconds(5));
     }
 
 public:

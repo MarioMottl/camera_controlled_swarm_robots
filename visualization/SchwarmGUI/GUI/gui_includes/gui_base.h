@@ -4,6 +4,8 @@
 #include <GL/glstr.h>
 #include <atomic>
 #include <vector>
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
 
 namespace GUI
 {

@@ -1,15 +1,15 @@
 #include "../gui_includes/textbox.h"
 #include "../gui_includes/gui_events.h"
 
-#include <GL/glfw.h>
 #include <GL/glc.h>
 #include <conio.h>
 
 using namespace GUI;
 
-TextBox::TextBox(std::atomic_int* width_ptr, std::atomic_int* height_ptr, atomic_float* aspect_ptr)
+TextBox::TextBox(GLFWwindow* window, std::atomic_int* width_ptr, std::atomic_int* height_ptr, atomic_float* aspect_ptr)
 : Element(width_ptr, height_ptr, aspect_ptr)
 {
+    this->window = window;
     this->is_active = false;
     this->cursor_active = false;
     this->is_clicked = false;
@@ -188,7 +188,7 @@ void TextBox::process_key_input(int key)
     }
     else
     {
-        char c = __decode_key_code(key);
+        char c = __decode_key_code(this->window, key);
         if(c != 0 && c != '\t' && c != '\n')
         {
             // force activate cursor if chars get inserted
@@ -206,14 +206,14 @@ void TextBox::process_key_input(int key)
     }
 }
 
-int TextBox::__get_key_code(void) noexcept
+int TextBox::__get_key_code(GLFWwindow* window) noexcept
 {
     static int cur_key = 0;
     static std::vector<int> already_pressed_keys;
     std::vector<int> keys;
     for(int i=0; i < GLFW_KEY_LAST; i++)
     {
-        if(glfwGetKey(i) == GLFW_PRESS)
+        if(glfwGetKey(window, i) == GLFW_PRESS)
             keys.push_back(i);
     }
 
@@ -241,12 +241,12 @@ int TextBox::__get_key_code(void) noexcept
     return cur_key;
 }
 
-char TextBox::__decode_key_code(int key) noexcept
+char TextBox::__decode_key_code(GLFWwindow* window, int key) noexcept
 {
-    const bool shift_state = (glfwGetKey(GLFW_KEY_LSHIFT) || glfwGetKey(GLFW_KEY_RSHIFT));
-    const bool ctrl_state = (glfwGetKey(GLFW_KEY_LCTRL) || glfwGetKey(GLFW_KEY_RCTRL));
-    const bool alt_state = glfwGetKey(GLFW_KEY_LALT);
-    const bool gltgr_state = glfwGetKey(GLFW_KEY_RALT);
+    const bool shift_state = (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) || glfwGetKey(window, GLFW_KEY_RIGHT_SHIFT));
+    const bool ctrl_state = (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) || glfwGetKey(window, GLFW_KEY_RIGHT_CONTROL));
+    const bool alt_state = glfwGetKey(window, GLFW_KEY_LEFT_ALT);
+    const bool gltgr_state = glfwGetKey(window, GLFW_KEY_RIGHT_ALT);
 
     // letters
     if(key >= 'A' && key <= 'Z')
@@ -333,7 +333,7 @@ char TextBox::__decode_key_code(int key) noexcept
 
 bool TextBox::key_blacklisted(int key) noexcept
 {
-    static constexpr int key_blacklist[7] = {0, GLFW_KEY_LSHIFT, GLFW_KEY_RSHIFT, GLFW_KEY_LCTRL, GLFW_KEY_RCTRL, GLFW_KEY_LALT, GLFW_KEY_LALT};
+    static constexpr int key_blacklist[7] = {0, GLFW_KEY_LEFT_SHIFT, GLFW_KEY_RIGHT_SHIFT, GLFW_KEY_LEFT_CONTROL, GLFW_KEY_RIGHT_CONTROL, GLFW_KEY_LEFT_ALT, GLFW_KEY_RIGHT_ALT};
     for(int i=0; i<7; i++)
     {
         if(key == key_blacklist[i])
@@ -344,9 +344,9 @@ bool TextBox::key_blacklisted(int key) noexcept
 
 void TextBox::handle(void)
 {
-    int mouse_x, mouse_y;
-    if(glfwGetWindowParam(GLFW_OPENED))
-        glfwGetMousePos(&mouse_x, &mouse_y);
+    double mouse_x, mouse_y;
+    if(!glfwWindowShouldClose(window))
+        glfwGetCursorPos(window, &mouse_x, &mouse_y);
 
     float float_mouse_x = gl::convert::from_pixels_pos_x(mouse_x, this->width_value());
     float float_mouse_y = gl::convert::from_pixels_pos_y(mouse_y, this->height_value());
@@ -360,13 +360,13 @@ void TextBox::handle(void)
                             float_mouse_y <= (this->get_pos_y() + this->get_size_y());
 
     // activate and deactivate textbox
-    if(!this->is_active && on_box && glfwGetMouseButton(GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS)
+    if(!this->is_active && on_box && glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS)
     {
         this->is_active = true;
         TextBoxActionEvent::push({0, 0});
         ElementActionEvent::push({this, TextBoxAction::TEXT_BOX_ACTIVATE});
     }
-    else if(this->is_active && !on_box && glfwGetMouseButton(GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS)
+    else if(this->is_active && !on_box && glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS)
     {
         this->is_active = false;
         this->activate_cursor(false);
@@ -375,7 +375,7 @@ void TextBox::handle(void)
         ElementActionEvent::push({this, TextBoxAction::TEXT_BOX_DEACTIVATE});
     }
     // set cursor per click
-    if(this->is_active && !this->is_clicked && glfwGetMouseButton(GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS)
+    if(this->is_active && !this->is_clicked && glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS)
     {
         char c;
         this->is_clicked = true;
@@ -385,7 +385,7 @@ void TextBox::handle(void)
         TextBoxActionEvent::push({c, this->cursor_index});
         ElementActionEvent::push({this, TextBoxAction::TEXT_BOX_CLICK});
     }
-    else if(this->is_active && this->is_clicked && glfwGetMouseButton(GLFW_MOUSE_BUTTON_LEFT) != GLFW_PRESS)
+    else if(this->is_active && this->is_clicked && glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) != GLFW_PRESS)
     {
         this->is_clicked = false;
     }
@@ -396,7 +396,7 @@ void TextBox::handle(void)
     time_point_t t1_cursor_repeat = std::chrono::high_resolution_clock::now();
     time_point_t t1_cursor_idle = std::chrono::high_resolution_clock::now();
 
-    int key = this->__get_key_code();
+    int key = this->__get_key_code(this->window);
     bool key_not_blacklisted = !this->key_blacklisted(key);
 
     // process first key input async. from 50ms tick
@@ -441,7 +441,7 @@ void TextBox::handle(void)
 
     // blink mechanic only operates if textbox is active
     // blink if none of both keys are pressed or if cursor is at the borders
-    if(this->is_active && ((glfwGetKey(GLFW_KEY_LEFT) != GLFW_PRESS && glfwGetKey(GLFW_KEY_RIGHT) != GLFW_PRESS) || (this->cursor_index == 0 || this->cursor_index >= this->text.size())))
+    if(this->is_active && ((glfwGetKey(window, GLFW_KEY_LEFT) != GLFW_PRESS && glfwGetKey(window, GLFW_KEY_RIGHT) != GLFW_PRESS) || (this->cursor_index == 0 || this->cursor_index >= this->text.size())))
     {
         // make cursor blink
         time_point_t t1_cursor = std::chrono::high_resolution_clock::now();

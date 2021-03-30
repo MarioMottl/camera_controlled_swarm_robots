@@ -5,7 +5,7 @@
 #include <glm/gtc/matrix_transform.hpp> // for matrix transformations (translate, rotate)
 #include <glm/gtc/type_ptr.hpp>         // for type pointer for matrices
 #include <CL/opencl.h>                  // for OpenCL video-RAM-memory
-#include <Model.h>                      // for custom models for the vehicles
+#include <model.h>                      // for custom models for the vehicles
 #include <vector>                       // for vector container
 #include <atomic>                       // for atomic variables
 #include <exception>                    // for exception handling
@@ -143,13 +143,10 @@ namespace Schwarm
         atomic_float tablesize_x, tablesize_y;
         atomic_float tableorigin_x, tableorigin_y;
 
-        thread processor_thread;
+        std::thread processor_thread;
         std::atomic_bool running;
-#if defined(_GLIBCXX_HAS_GTHREADS) && defined(_GLIBCXX_USE_C99_STDINT_TR1)
         std::mutex processor_mutex;
-#else
-        mingw_stdthread::xp::mutex processor_mutex;
-#endif
+
         Schwarm::Client::SharedSimulationMemory* sharedsimumem;
         std::chrono::milliseconds tickspeed;
 

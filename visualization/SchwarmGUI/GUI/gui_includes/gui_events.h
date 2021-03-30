@@ -5,16 +5,9 @@
 #include "gui_handler.h"
 #include "button.h"
 #include "textbox.h"
-#include <Event.h>
+#include <event.h>
 #include <deque>
-
-#if defined(_GLIBCXX_HAS_GTHREADS) && defined(_GLIBCXX_USE_C99_STDINT_TR1)
-    #include <mutex>
-    using std::mutex;
-#else
-    #include <mingw.mutex.h>
-    using mingw_stdthread::mutex;
-#endif
+#include <mutex>
 
 using namespace GUI;
 
@@ -26,7 +19,7 @@ class ElementActionEvent : public Event<ElementActionEvent>
     friend class GUI::TextBox;
 
 private:
-    mutex event_mutex;
+    std::mutex event_mutex;
 
     static void push(GUI::ElementEventInfo info)
     {
@@ -45,7 +38,7 @@ protected:
     std::deque<GUI::ElementEventInfo> event_queue;
     int event_id;
 
-    virtual bool event_trigger(void)    {return this->event_queue.size() > 0;}
+    virtual bool trigger(void)    {return this->event_queue.size() > 0;}
     virtual void reset(void)
     {
         if(this->event_queue.size() > 0)
@@ -70,7 +63,7 @@ class ButtonActionEvent : public ElementActionEvent
     friend class GUI::Button;
 
 private:
-    mutex event_mutex;
+    std::mutex event_mutex;
 
     static void push(GUI::ButtonEventInfo info)
     {
@@ -89,7 +82,7 @@ private:
 protected:
     std::deque<GUI::ButtonEventInfo> buttononly_event_queue;
 
-    virtual bool event_trigger(void)
+    virtual bool trigger(void)
     {
         return (this->event_queue.size() > 0 && this->buttononly_event_queue.size() > 0) ? true : false;
     }
@@ -119,7 +112,7 @@ public:
 class ButtonInteractEvent : public ButtonActionEvent
 {
 protected:
-    virtual bool event_trigger(void)
+    virtual bool trigger(void)
     {
         if(this->event_queue.size() > 0 && this->buttononly_event_queue.size() > 0)
         {
@@ -144,7 +137,7 @@ protected:
 class ButtonHoverEvent : public ButtonInteractEvent
 {
 protected:
-    virtual bool event_trigger(void)
+    virtual bool trigger(void)
     {
         if(this->event_queue.size() > 0 && this->buttononly_event_queue.size() > 0)
         {
@@ -165,7 +158,7 @@ protected:
 class ButtonClickEvent : public ButtonInteractEvent
 {
 protected:
-    virtual bool event_trigger(void)
+    virtual bool trigger(void)
     {
         if(this->event_queue.size() > 0 && this->buttononly_event_queue.size() > 0)
         {
@@ -192,7 +185,7 @@ class TextBoxActionEvent : public ElementActionEvent
     friend class GUI::TextBox;
 
 private:
-    mutex event_mutex;
+    std::mutex event_mutex;
 
     static void push(GUI::TextBoxEventInfo info)
     {
@@ -211,7 +204,7 @@ private:
 protected:
     std::deque<GUI::TextBoxEventInfo> tionly_event_queue;
 
-    virtual bool event_trigger(void)
+    virtual bool trigger(void)
     {
         return (this->event_queue.size() > 0 && this->tionly_event_queue.size() > 0) ? true : false;
     }
@@ -240,7 +233,7 @@ public:
 class TextBoxEditEvent : public TextBoxActionEvent
 {
 protected:
-    virtual bool event_trigger(void)
+    virtual bool trigger(void)
     {
         if(this->event_queue.size() > 0 && this->tionly_event_queue.size() > 0)
         {
@@ -261,7 +254,7 @@ protected:
 class TextBoxEnterEvent : public TextBoxActionEvent
 {
 protected:
-    virtual bool event_trigger(void)
+    virtual bool trigger(void)
     {
         if(this->event_queue.size() > 0 && this->tionly_event_queue.size() > 0)
         {
@@ -284,7 +277,7 @@ public:
 class TextBoxActivateEvent : public TextBoxActionEvent
 {
 protected:
-    virtual bool event_trigger(void)
+    virtual bool trigger(void)
     {
         if(this->event_queue.size() > 0 && this->tionly_event_queue.size() > 0)
         {
@@ -305,7 +298,7 @@ protected:
 class TextBoxInteractEvent : public TextBoxActionEvent
 {
 protected:
-    virtual bool event_trigger(void)
+    virtual bool trigger(void)
     {
         if(this->event_queue.size() > 0)
         {
