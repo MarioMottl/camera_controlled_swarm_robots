@@ -1,0 +1,21 @@
+Model flags:
+    IGNORE_VT:              Model loader will not read texture coordinates from the model file.
+    IGNORE_VN:              Model loader will not read notmal vectors from the model file.
+    TEXTURE_FLIP_UV:        Texture coordinates will be flipped.
+    GEN_NORMALS_FLAT:       Model loader will calculate normal vectors per plane.
+                            Normal vectors can not be calculated per vertex because the object file does only contain informtion about the vertices
+                            of the current plane. It does not contain information about the surrounding geometry but this is
+                            requiered for calculating normal vectors per vertex.
+                            Note that the automatic calculation of normal vectors only works if the model file does not contain normal vectors.
+    GEN_TBN:                Model loader will calculate tangent and betangent vectors. These vectors are used for normal mapping. Note that you will not get any
+                            normal vectors from the mesh anymore. Since every normal vector points in the same direction you can pass it to your 
+                            shaders via uniform.
+    NORMAL_X:               Normal vectors will be set to the positive X direction.
+    NORMAL_Y:               Normal vectors will be set to the positive Y direction.
+    NORMAL_Z:               Normal vectors will be set to the positive Z direction.
+                            Note if more than one flag is set, the first BIT of the three will be taken.
+    DATA_COMBINED:          Model data will be saved in one huge buffer.
+                            Note that one model can consist of multiple meshes. The data of all meshes will be stored in one buffer and can be accessed by
+                            begin and count of the current mesh. Every mesh is defined by its start vertex and vertex count; for texture coordinates, normals,... its the same.
+    CMP_PRIMITIVE_MODEL:    The whole model must have the same primitive. If this bit is not set, it allows different meshes to have different primitives.
+                            If there are two different primitives either in one mesh or in the whole model, a MESH_PRIMITIVE_ERROR will be returned.
