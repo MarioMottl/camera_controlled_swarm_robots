@@ -1,0 +1,10 @@
+MODEL_ERROR_NONE:       No error occured.
+OBJECT_INVALID_PATH:    The path of the object file could not be found.
+MATERIAL_INVALID_PATH:  The path of the material file could not be found.
+MESH_PRIMITIVE_ERROR:   Either the a mesh contains multiple different primitives or the whole model contains multiple different
+                        primitives if the CMP_PRIMITIVE_MODEL bit is set.
+                        Note that OpenGL can only render one primitive with one render call. This model loader is designed 
+                        to draw at least one mesh with one render call, or the whole model.
+MODEL_DATASET_ERROR:    It is not allowed that the object file (a model) contains multiple data sets for faces. A dataset is next to the "f" command in the object file.
+                        Multiple different data sets will lead to inconsistent begin numbers and counts for different types of data such as: vertices,
+                        texture coordinates, normal vectors, etc. For rendering, OpenGL requieres for all types of data the same begin number and count.

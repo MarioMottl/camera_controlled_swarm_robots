@@ -2,12 +2,9 @@
 * Title:        Shader-library
 * Author:       Michael Reim
 * Date:         29.07.2020
-* Description:  Library for simple and easy vertex- and fragment-shader implementation for OpenGL.
-* Features:     Loading (GLSL) shader-source-code from files.
-*               Simple implementation.
-*               Easy error management.
+* Description:  Library to create OpenGL shader from a file.
 *
-* @version release 1.0.1
+* @version release 1.0.2
 * @copyright (C) Michael Reim, distribution without my consent is prohibited.
 *
 * If there are any bugs, contact me!
