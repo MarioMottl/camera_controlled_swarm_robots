@@ -21,9 +21,18 @@
     <ClCompile Include="main.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\visualization\external\SchwarmPacket\otherpacket.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\visualization\external\SchwarmPacket\packet.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SwarmDetection.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\visualization\external\SchwarmPacket\packet.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

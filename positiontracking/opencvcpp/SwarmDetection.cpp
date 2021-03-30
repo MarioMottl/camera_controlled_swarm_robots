@@ -9,6 +9,10 @@ void SwarmDetection::Detector()
     cv::Mat mask;
 
     std::thread t1;
+    std::thread server;
+
+    server = std::thread(startServer,this);
+    server.detach();
 
     setBlobParams(0, 256, true, 30, true, 0.1f, true, 0.5f, true, 0.5f, params);
 
@@ -68,6 +72,7 @@ void SwarmDetection::simpleCarDetection(std::vector<cv::KeyPoint> keyPoints)
         y = y / keyPoints.size() / pic.height;
         std::cout << "Median Xrel: " << x << " Median Yrel: " << y << std::endl;
         makePacket(x, y);
+        pkgReady = true;
     }
 }
 
@@ -91,6 +96,33 @@ void SwarmDetection::makePacket(float x, float y)
     packet.encode();
 }
 
+void SwarmDetection::startServer(SwarmDetection* p)
+{
+    std::cout << "Huan" << std::endl;
+    cppsock::utility_error_t err = p->listener.setup(cppsock::make_any<cppsock::IPv4>(PORT), 1);
+    std::cout << "server status: " << cppsock::utility_strerror(err) << ", server address: " << p->listener.sock().getsockname() << std::endl;
+    if(err < 0)
+    {
+        throw std::logic_error("unable to setup server");
+    }
+    p->listener.accept(p->connection);
+
+    //p->connection.send("Connected", 10, 0);
+
+    for(;;)
+    {
+        p->sendPacket(p);
+    }
+}
+
+void SwarmDetection::sendPacket(SwarmDetection* p)
+{
+    if (p->pkgReady)
+    {
+        p->connection.send(p->packet.rawdata(), p->packet.min_size(), 0);
+        std::this_thread::sleep_for(std::chrono::milliseconds(10));
+    }
+}
 
 void SwarmDetection::carDetection(std::vector<cv::KeyPoint> *keyPoints)
 {

@@ -3,9 +3,14 @@
 #include <iostream>
 #include <cmath>
 #include <thread>
-#include "../../visualization/external/SchwarmPacket/packet.h"
+#include <chrono>
+#include <atomic>
+#include <packet.h>
+#include <exception>
+#include "../../library/cppsock/cppsock.hpp"
 
-#define N_CARS 1        //max amount of cars in frame
+#define PORT 10001
+#define N_CARS 1        //max amount of cars in frame       
 
 /**
 * @brief Hue values for the detection of keypoints
@@ -37,6 +42,10 @@ struct PicData
     int height;
 };
 
+
+//cppsock::tcp::socket_collection sc(Swarmserver::on_insert, Swarmserver::on_recv, Swarmserver::on_disconnect);
+
+
 class SwarmDetection
 {
 private:
@@ -44,7 +53,9 @@ private:
     cv::VideoCapture cap;
     std::vector <Car> cars[N_CARS];
     Schwarm::GoalPacket packet;
-
+    cppsock::tcp::listener listener;
+    cppsock::tcp::socket connection;
+    std::atomic_bool pkgReady = false;
 public:
     SwarmDetection() = default;
     ~SwarmDetection() = default;
@@ -148,7 +159,7 @@ public:
 
     void makePacket(float x, float y);
 
-    void startServer();
+    static void startServer(SwarmDetection *p);
 
-    void sendPacket();
+    static void sendPacket(SwarmDetection *p);
 };
