@@ -3,14 +3,8 @@
 
 #include "gui_base.h"
 #include <chrono>
-
-#if defined(_GLIBCXX_HAS_GTHREADS) && defined(_GLIBCXX_USE_C99_STDINT_TR1)
-    #include <mutex>
-    using std::mutex;
-#else
-    #include <mingw.mutex.h>
-    using mingw_stdthread::mutex;
-#endif
+#include <thread>
+#include <mutex>
 
 namespace GUI
 {
@@ -23,6 +17,8 @@ namespace GUI
         inline static constexpr size_t  TEXT_BOX_VERTEX_COUNT = 4,
                                         CURSOR_VERTEX_COUNT = 4;
 
+        GLFWwindow* window;
+
         std::atomic_bool is_active,                 // textbox active status
                          cursor_active;             // cursor active status
         atomic_float pos_x, pos_y,                  // screen position of the textbox
@@ -34,7 +30,7 @@ namespace GUI
         gl::string text;                            // graphic string (the string that is redndered)
         std::chrono::milliseconds cursor_interval;  // blink interval of cursor
         float* mesh_buff;                           // buffer for GPU data
-        mutex text_box_mutex;                     // mutex because of multiple threads
+        std::mutex text_box_mutex;                  // mutex because of multiple threads
 
         // help variables
         time_point_t t0_cursor,         // help value for time measurement for cursor blinking
@@ -52,8 +48,8 @@ namespace GUI
         void activate_cursor(bool b) noexcept;
         void process_key_input(int key);
 
-        static int __get_key_code(void) noexcept;
-        static char __decode_key_code(int key) noexcept;
+        static int __get_key_code(GLFWwindow* window) noexcept;
+        static char __decode_key_code(GLFWwindow* window, int key) noexcept;
         static bool key_blacklisted(int key) noexcept;
 
     protected:
@@ -73,8 +69,8 @@ namespace GUI
         virtual void handle(void);
 
     public:
-        TextBox(void) : TextBox(nullptr, nullptr, nullptr) {}
-        TextBox(std::atomic_int* width_ptr, std::atomic_int* height_ptr, atomic_float* aspect_ptr);
+        TextBox(void) : TextBox(nullptr, nullptr, nullptr, nullptr) {}
+        TextBox(GLFWwindow* window, std::atomic_int* width_ptr, std::atomic_int* height_ptr, atomic_float* aspect_ptr);
         TextBox(const TextBox& text_input) = delete;
         virtual ~TextBox(void) {this->__destruct();}
 

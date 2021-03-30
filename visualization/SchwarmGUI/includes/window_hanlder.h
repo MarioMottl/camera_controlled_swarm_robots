@@ -1,7 +1,7 @@
 #ifndef WINDOW_HANLDER_H_INCLUDED
 #define WINDOW_HANLDER_H_INCLUDED
 
-#include <GL/glfw.h>
+#include <GLFW/glfw3.h>
 #include <atomic>
 
 class WindowHandler
@@ -9,12 +9,22 @@ class WindowHandler
     using atomic_float = std::atomic<float>;
 
 private:
+    GLFWwindow* window;
     std::atomic_int win_width = 0, win_height = 1, start_height = 1;
     atomic_float win_aspect = 1.0f, size_aspect = 1.0f;
 
 public:
-    WindowHandler(void)                     {this->init(0, 1);}
-    WindowHandler(int width, int height)    {this->init(width, height);}
+    WindowHandler(void) = delete;
+    WindowHandler(GLFWwindow* window)                           
+    { 
+        this->init(0, 1); 
+        this->window = window; 
+    }
+
+    WindowHandler(GLFWwindow* window, int width, int height) : WindowHandler(window)
+    {
+        this->init(width, height);
+    }
     virtual ~WindowHandler(void)    {/*dtor*/}
 
     void init(int width, int height) noexcept
@@ -46,7 +56,7 @@ public:
             this->win_width = width;
             this->win_height = height;
             if(set_window_size)
-                glfwSetWindowSize(width, height);
+                glfwSetWindowSize(window, width, height);
         }
     }
 };

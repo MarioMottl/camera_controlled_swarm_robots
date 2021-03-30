@@ -1,7 +1,6 @@
 #include "../vehicle.h"
 #include <iostream>
 #include <cmath>
-#include <timer.h>  // for a high resolution timer also for crossplatform
 #include "../../includes/my_msg.h"
 
 #ifndef M_PI
@@ -55,21 +54,11 @@ void VehicleProcessor::process(VehicleProcessor* processor)
             for(size_t i=0; i < vehicle_buffer->get_num_vehicles(); i++)
                 goal_indices[i] = 0;
 
-#if defined(_WIN32)
-                uint64_t tstart = timer::ns();
-#else
-                std::chrono::time_point tstart = std::chrono::high_resolution_clock::now();
-#endif
+            std::chrono::time_point tstart = std::chrono::high_resolution_clock::now();
             do
             {
-                // get deltatime and update start time
-#if defined(_WIN32)
-                uint64_t deltatime = timer::ns() - tstart;
-                tstart = timer::ns();
-#else
                 uint64_t deltatime = std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::high_resolution_clock::now() - tstart).count();
                 tstart = std::chrono::high_resolution_clock::now();
-#endif
                 for(size_t i=0; i < vehicle_buffer->get_num_vehicles(); i++)
                 {
                     Vehicle* cur_vehicle = vehicle_buffer->get_vehicle(i);
@@ -203,8 +192,8 @@ void VehicleProcessor::process(VehicleProcessor* processor)
                 std::cout << get_msg("INFO / SIMU") << "Simulation finished." << std::endl;
             else
                 std::cout << get_msg("INFO / SIMU") << "Simulation interrupted." << std::endl;
-            delete(simu_states);
-            delete(goal_indices);
+            delete[](simu_states);
+            delete[](goal_indices);
             processor->sharedsimumem->start = false;
         }
         // While waiting for simulation to start, sleep 5 milliseconds for low CPU-usage.
@@ -262,11 +251,7 @@ void VehicleProcessor::start(void)
         if(this->sharedsimumem == nullptr)
             throw Schwarm::shared_memory_null();
 
-#if defined(_GLIBCXX_HAS_GTHREADS) && defined(_GLIBCXX_USE_C99_STDINT_TR1)
-            this->processor_thread = std::thread(process, this);
-#else
-            this->processor_thread = mingw_stdthread::thread(process, this);
-#endif
+        this->processor_thread = std::thread(process, this);
         this->running = true;
     }
 }

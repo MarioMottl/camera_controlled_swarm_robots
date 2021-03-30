@@ -16,13 +16,7 @@ void ElementRenderer::renderer_func(ElementRenderer* renderer, std::chrono::nano
             renderer->text_max_length = cur_text_maxlength;
             renderer->resize_request = true;    // make resize request to OpenGL content thread
             while(renderer->resize_request)     // wait until content thread has finished
-            {
-                #if defined(_GLIBCXX_HAS_GTHREADS) && defined(_GLIBCXX_USE_C99_STDINT_TR1)
-                    std::this_thread::yield();
-                #else
-                    mingw_stdthread::this_thread::yield();
-                #endif
-            }
+                std::this_thread::yield();
 
             renderer->load_text_buffer();           // load data into background buffer
             renderer->load_text_command_buffer();   // update text command buffer
@@ -55,11 +49,7 @@ void ElementRenderer::renderer_func(ElementRenderer* renderer, std::chrono::nano
 
         clEnqueueReleaseGLObjects(*renderer->queue, 1, &renderer->element_vertex_buffer, 0, NULL, NULL);
         clEnqueueReleaseGLObjects(*renderer->queue, 1, &renderer->text_vertex_buffer, 0, NULL, NULL);
-        #if defined(_GLIBCXX_HAS_GTHREADS) && defined(_GLIBCXX_USE_C99_STDINT_TR1)
-            std::this_thread::sleep_for(interval);
-        #else
-            mingw_stdthread::this_thread::sleep_for(interval);
-        #endif
+        std::this_thread::sleep_for(interval);
     }
 }
 
@@ -276,7 +266,7 @@ void ElementRenderer::start(std::chrono::nanoseconds interval)
     if(!this->running)
     {
         this->running = true;
-        this->renderer_thread = thread(renderer_func, this, std::chrono::nanoseconds(interval.count()));
+        this->renderer_thread = std::thread(renderer_func, this, std::chrono::nanoseconds(interval.count()));
     }
 }
 

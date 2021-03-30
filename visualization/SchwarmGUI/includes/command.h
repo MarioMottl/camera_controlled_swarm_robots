@@ -1,6 +1,7 @@
 #ifndef __command_h__
 #define __command_h__
 
+#define _CRT_SECURE_NO_WARNINGS
 #include <vector>
 #include <string>
 #include <string.h>

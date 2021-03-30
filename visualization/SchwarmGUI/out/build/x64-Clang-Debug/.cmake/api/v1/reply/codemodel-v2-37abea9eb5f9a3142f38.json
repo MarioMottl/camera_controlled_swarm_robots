@@ -1,0 +1,68 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "SchwarmGUI",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "SchwarmGUI::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SchwarmGUI-Debug-52adef8aa2bd7e2f7469.json",
+					"name" : "SchwarmGUI",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "object_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-object_module-Debug-15d113491af0ec32a3c0.json",
+					"name" : "object_module",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/out/build/x64-Clang-Debug",
+		"source" : "D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 2
+	}
+}

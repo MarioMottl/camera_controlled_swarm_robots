@@ -2,14 +2,7 @@
 #define BUTTON_H_INCLUDED
 
 #include "gui_base.h"
-
-#if defined(_GLIBCXX_HAS_GTHREADS) && defined(_GLIBCXX_USE_C99_STDINT_TR1)
-    #include <mutex>
-    using std::mutex;
-#else
-    #include <mingw.mutex.h>
-    using mingw_stdthread::mutex;
-#endif
+#include <mutex>
 
 namespace GUI
 {
@@ -17,13 +10,14 @@ namespace GUI
     {
         using atomic_float = std::atomic<float>;
     private:
+        GLFWwindow* window;
 
         atomic_float pos_x, pos_y, size_x, size_y;
         float color[16];        // 4 vertices * 4 color components
         float text_color[4];    // 4 color components
         gl::string button_text;
         float* mesh_buff;
-        mutex button_mutex;
+        std::mutex button_mutex;
 
         std::atomic_bool __is_hovered,
                         __is_left_clicked,
@@ -53,7 +47,7 @@ namespace GUI
     public:
 
         Button(void);
-        Button(std::atomic_int* width_ptr, std::atomic_int* height_ptr, atomic_float* aspect_ptr);
+        Button(GLFWwindow* window, std::atomic_int* width_ptr, std::atomic_int* height_ptr, atomic_float* aspect_ptr);
         Button(const Button& button) = delete;
         virtual ~Button(void) {__destruct();}
 

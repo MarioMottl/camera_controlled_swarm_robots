@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\GUI\\gui_includes",
+    "\\GUI\\gui_source",
+    "\\out\\build",
+    "\\Vehicle\\source"
+  ],
+  "SelectedNode": "\\main.cpp",
+  "PreviewInSolutionExplorer": false
+}
