@@ -1,0 +1,92 @@
+
+--------------------------------------------------
+[08:33:40] [INFO] Started socket-handler.
+[08:33:40] [INFO] Started server.
+[08:33:44] [INFO] Client connected.
+[08:33:44] [INFO] IP-Address / Hostname: 127.0.0.1:63039
+[08:33:44] [INFO] Received stop command.
+[08:33:44] [INFO] Client disconnected.
+[08:33:44] [INFO] Stopped server.
+[08:33:44] [INFO] Stoppend socket-handler.
+[08:33:44] Exit code 0
+
+--------------------------------------------------
+[08:49:30] [INFO] Started socket-handler.
+[08:49:30] [INFO] Started server.
+[08:50:54] [INFO] Client connected.
+[08:50:54] [INFO] IP-Address / Hostname: 127.0.0.1:59974
+[08:50:54] [INFO] Received stop command.
+[08:50:54] [INFO] Client disconnected.
+[08:50:54] [INFO] Stopped server.
+[08:50:54] [INFO] Stoppend socket-handler.
+[08:50:54] Exit code 0
+
+--------------------------------------------------
+[08:51:52] [INFO] Started socket-handler.
+[08:51:52] [INFO] Started server.
+[08:52:20] [INFO] Client connected.
+[08:52:20] [INFO] IP-Address / Hostname: 127.0.0.1:59986
+[08:52:20] [INFO] Received stop command.
+[08:52:20] [INFO] Client disconnected.
+[08:52:20] [INFO] Stopped server.
+[08:52:20] [INFO] Stoppend socket-handler.
+[08:52:20] Exit code 0
+
+--------------------------------------------------
+[08:56:03] [INFO] Started socket-handler.
+[08:56:03] [INFO] Started server.
+[09:02:42] [INFO] Client connected.
+[09:02:42] [INFO] IP-Address / Hostname: 127.0.0.1:60110
+[09:02:42] [INFO] Received stop command.
+[09:02:42] [INFO] Client disconnected.
+[09:02:42] [INFO] Stopped server.
+[09:02:42] [INFO] Stoppend socket-handler.
+[09:02:42] Exit code 0
+
+--------------------------------------------------
+[09:02:49] [INFO] Started socket-handler.
+[09:02:49] [INFO] Started server.
+[09:03:14] [INFO] Client connected.
+[09:03:14] [INFO] IP-Address / Hostname: 127.0.0.1:60113
+[09:03:14] [INFO] Received stop command.
+[09:03:14] [INFO] Client disconnected.
+[09:03:14] [INFO] Stopped server.
+[09:03:14] [INFO] Stoppend socket-handler.
+[09:03:14] Exit code 0
+
+--------------------------------------------------
+[09:03:24] [INFO] Started socket-handler.
+[09:03:24] [INFO] Started server.
+[09:03:44] [INFO] Client connected.
+[09:03:44] [INFO] IP-Address / Hostname: 127.0.0.1:60121
+[09:03:44] [INFO] Received stop command.
+[09:03:44] [INFO] Client disconnected.
+[09:03:44] [INFO] Stopped server.
+[09:03:44] [INFO] Stoppend socket-handler.
+[09:03:44] Exit code 0
+
+--------------------------------------------------
+[09:16:10] [INFO] Started socket-handler.
+[09:16:10] [INFO] Started server.
+[09:16:30] [INFO] Client connected.
+[09:16:30] [INFO] IP-Address / Hostname: 127.0.0.1:60245
+[09:16:36] [INFO] Generating goals for file test.png with 10 goals for vehicle 0...
+[09:16:36] [INFO] Reading goals...
+[09:16:36] [INFO] Successfully generated goals for vehicle 0.
+[09:16:39] [INFO] Received goal request.
+[09:16:39] [INFO] Sent goal with index 0 for vehicle 0.
+[09:16:39] [INFO] Received goal request.
+[09:16:39] [ERROR] Received invalid goal index 0 for vehicle 1 (Maximum index: 4294967295).
+[09:16:39] [INFO] Received goal request.
+[09:16:39] [ERROR] Received invalid goal index 0 for vehicle 2 (Maximum index: 4294967295).
+[09:16:45] [INFO] Received goal request.
+[09:16:45] [INFO] Sent goal with index 1 for vehicle 1.
+[09:16:49] [INFO] Received goal request.
+[09:16:49] [INFO] Sent goal with index 2 for vehicle 2.
+[09:16:53] [INFO] Received goal request.
+[09:16:53] [INFO] Sent goal with index 3 for vehicle 3.
+[09:17:57] [INFO] Received stop command.
+[09:17:57] [INFO] Client disconnected.
+[09:17:57] [INFO] Stopped server.
+[09:17:57] [INFO] Stoppend socket-handler.
+[09:17:57] Exit code 0

@@ -15,37 +15,38 @@ void GUI::ElementHandler::handler_func(ElementHandler* handler, std::chrono::nan
     }
 }
 
-    GUI::ElementHandler::ElementHandler(void)
+GUI::ElementHandler::ElementHandler(GLFWwindow* window)
+{
+    this->window = window;
+    this->running = false;
+}
+
+GUI::ElementHandler::~ElementHandler(void)
+{
+    this->stop();
+    this->handled_elements.clear();
+}
+
+void GUI::ElementHandler::attach_element(Element& element)
+{
+    if(!this->running)
+        this->handled_elements.push_back(&element);
+}
+
+void GUI::ElementHandler::start(std::chrono::nanoseconds interval)
+{
+    if(!this->running)
+    {
+        this->running = true;
+        this->handler_thread = std::thread(handler_func, this, std::chrono::nanoseconds(interval.count()));
+    }
+}
+
+void GUI::ElementHandler::stop(void)
+{
+    if(this->running)
     {
         this->running = false;
+        this->handler_thread.join();
     }
-
-    GUI::ElementHandler::~ElementHandler(void)
-    {
-        this->stop();
-        this->handled_elements.clear();
-    }
-
-    void GUI::ElementHandler::attach_element(Element& element)
-    {
-        if(!this->running)
-            this->handled_elements.push_back(&element);
-    }
-
-    void GUI::ElementHandler::start(std::chrono::nanoseconds interval)
-    {
-        if(!this->running)
-        {
-            this->running = true;
-            this->handler_thread = std::thread(handler_func, this, std::chrono::nanoseconds(interval.count()));
-        }
-    }
-
-    void GUI::ElementHandler::stop(void)
-    {
-        if(this->running)
-        {
-            this->running = false;
-            this->handler_thread.join();
-        }
-    }
+}

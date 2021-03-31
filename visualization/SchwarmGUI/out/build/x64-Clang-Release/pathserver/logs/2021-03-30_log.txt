@@ -1,0 +1,22 @@
+
+--------------------------------------------------
+[12:56:07] [INFO] Started socket-handler.
+[12:56:07] [INFO] Started server.
+[12:56:09] [INFO] Client connected.
+[12:56:09] [INFO] IP-Address / Hostname: 127.0.0.1:59009
+[13:23:36] [INFO] Received stop command.
+[13:23:36] [INFO] Client disconnected.
+[13:23:36] [INFO] Stopped server.
+[13:23:36] [INFO] Stoppend socket-handler.
+[13:23:36] Exit code 0
+
+--------------------------------------------------
+[13:23:47] [INFO] Started socket-handler.
+[13:23:47] [INFO] Started server.
+[13:23:49] [INFO] Client connected.
+[13:23:49] [INFO] IP-Address / Hostname: 127.0.0.1:59215
+[13:30:21] [INFO] Received stop command.
+[13:30:21] [INFO] Client disconnected.
+[13:30:21] [INFO] Stopped server.
+[13:30:21] [INFO] Stoppend socket-handler.
+[13:30:21] Exit code 0

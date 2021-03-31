@@ -53,11 +53,13 @@ target_link_libraries(SchwarmGUI
 					  "-llibevent_handler"
 					  "-lgl_shader"
 					  "-lgl_string"
-					  "-lglew32s"
-					  "-lglfw3"
 					  "-lglm_static"
 					  "-lmodel_loader"
-					  "-lOpenCL")
+					  "-lOpenCL"
+					  "-lglfw3"
+					  "-lglew32s"
+					  "-lopengl32"
+					  )
 
 # additional work
 set(CMAKE_EXPORT_COMPILE_COMMANDS on)

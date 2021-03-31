@@ -14,7 +14,7 @@ class TextInpListener : public Listener
 {
 private:
     TextBoxEnterEvent textboxenter;
-    inline static Schwarm::Client::SharedSimulationMemory* sharedsimumem;
+    inline static Schwarm::Client::SharedMemory* sharedsimumem;
 
 protected:
     virtual void init(void)
@@ -28,7 +28,7 @@ public:
         this->init();
     }
 
-    static void set_sharedsimumem(Schwarm::Client::SharedSimulationMemory* mem) 
+    static void set_sharedsimumem(Schwarm::Client::SharedMemory* mem) 
     {
         sharedsimumem = mem;
     }

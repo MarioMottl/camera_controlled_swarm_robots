@@ -1,11 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\GUI\\gui_includes",
     "\\GUI\\gui_source",
-    "\\out\\build",
-    "\\Vehicle\\source"
+    "\\out\\build"
   ],
-  "SelectedNode": "\\main.cpp",
+  "SelectedNode": "\\client",
   "PreviewInSolutionExplorer": false
 }

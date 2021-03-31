@@ -14,14 +14,13 @@
     {
       "name": "x64-Clang-Debug",
       "generator": "Ninja",
-      "configurationType": "Debug",
+      "configurationType": "RelWithDebInfo",
       "buildRoot": "${projectDir}\\out\\build\\${name}",
       "installRoot": "${projectDir}\\out\\install\\${name}",
       "cmakeCommandArgs": "",
       "buildCommandArgs": "",
       "ctestCommandArgs": "",
-      "inheritEnvironments": [ "clang_x64_x64" ],
-      "variables": []
+      "inheritEnvironments": [ "clang_x64_x64" ]
     }
   ]
 }

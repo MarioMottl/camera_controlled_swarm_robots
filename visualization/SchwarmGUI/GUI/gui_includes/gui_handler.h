@@ -21,7 +21,7 @@ namespace GUI
 
     public:
         ElementHandler(void) = delete;
-        ElementHandler(GLFWwindow* window) { this->window = window; }
+        ElementHandler(GLFWwindow* window);
         ElementHandler(const ElementHandler&) = delete;
         ElementHandler(ElementHandler&&) = delete;
         ElementHandler& operator=(const ElementHandler&) = delete;

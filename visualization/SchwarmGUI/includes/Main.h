@@ -2,6 +2,7 @@
 #define MAIN_H_INCLUDED
 
 #define _CRT_SECURE_NO_WARNINGS
+#define GLEW_STATIC
 #include <GL/glew.h>
 #include <GL/wglew.h>
 #include <GLFW/glfw3.h>
@@ -218,10 +219,10 @@ namespace Main
      * SET-DATA-FUNCTIONS FOR FRAMEBUFFERS
      * -----------------------------------------------------------------------------*/
 
-    void vis_scene_data(float* map_fb_data, const WindowHandler& vis_window_handler, const GLFWvidmode& vid_mode)
+    void vis_scene_data(float* map_fb_data, const WindowHandler& vis_window_handler, const GLFWvidmode* vid_mode)
     {
-        const float rel_width = (float)vis_window_handler.get_width() / (float)vid_mode.width;
-        const float rel_height = (float)vis_window_handler.get_height() / (float)vid_mode.height;
+        const float rel_width = (float)vis_window_handler.get_width() / (float)vid_mode->width;
+        const float rel_height = (float)vis_window_handler.get_height() / (float)vid_mode->height;
         
         float temp_fbd[16] = {vis_scene_pos_x - vis_scene_width, vis_scene_pos_y,                       0.0f, rel_height,
                               vis_scene_pos_x - vis_scene_width, vis_scene_pos_y - vis_scene_height,    0.0f, 0.0f,
@@ -230,10 +231,10 @@ namespace Main
         memmove(map_fb_data, temp_fbd, sizeof(float[16]));
     }
 
-    void render_scene_data(float* map_fb_data, const WindowHandler& main_window_handler, const GLFWvidmode& vid_mode)
+    void render_scene_data(float* map_fb_data, const WindowHandler& main_window_handler, const GLFWvidmode* vid_mode)
     {
-        const float rel_width = (float)main_window_handler.get_width() / (float)vid_mode.width;
-        const float rel_height = (float)main_window_handler.get_height() / (float)vid_mode.height;
+        const float rel_width = (float)main_window_handler.get_width() / (float)vid_mode->width;
+        const float rel_height = (float)main_window_handler.get_height() / (float)vid_mode->height;
 
         float temp_fbd[16] = {-1.0f, 1.0f,  0.0f, rel_height,
                               -1.0f, -1.0f, 0.0f, 0.0f,

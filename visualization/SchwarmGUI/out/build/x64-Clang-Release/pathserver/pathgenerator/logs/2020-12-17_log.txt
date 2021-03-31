@@ -1,0 +1,810 @@
+
+-----------------------------------------------
+[08:16:44] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[08:16:44] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[08:16:44] [INFO] Converting to grayscale...
+[08:16:44] [INFO] Successfully converted to grayscale.
+[08:16:44] [INFO] Generating path...
+[08:16:44] [INFO] Generated path.
+[08:16:44] [INFO] Generating goals...
+[08:16:44] [INFO] Generated goals.
+[08:16:44] [INFO] Printing goals to: goals.gol...
+[08:16:44] [INFO] Successfully printed goals to: goals.gol
+
+[08:16:44] [INFO] Reading image time: 15.622000ms
+[08:16:44] [INFO] Converting to grayscale time: 0.000000ms
+[08:16:44] [INFO] Gnerating path time: 15.663000ms
+[08:16:44] [INFO] Generating goals time: 0.000000ms
+[08:16:44] [INFO] Printing goals time: 15.619000ms
+[08:16:44] [INFO] Execution time: 46.904000ms
+
+-----------------------------------------------
+[08:18:16] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[08:18:16] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[08:18:16] [INFO] Converting to grayscale...
+[08:18:16] [INFO] Successfully converted to grayscale.
+[08:18:16] [INFO] Generating path...
+[08:18:16] [INFO] Generated path.
+[08:18:16] [INFO] Generating goals...
+[08:18:16] [INFO] Generated goals.
+[08:18:16] [INFO] Printing goals to: goals.gol...
+[08:18:16] [INFO] Successfully printed goals to: goals.gol
+
+[08:18:16] [INFO] Reading image time: 15.621000ms
+[08:18:16] [INFO] Converting to grayscale time: 0.000000ms
+[08:18:16] [INFO] Gnerating path time: 31.277000ms
+[08:18:16] [INFO] Generating goals time: 0.000000ms
+[08:18:16] [INFO] Printing goals time: 0.000000ms
+[08:18:16] [INFO] Execution time: 46.898000ms
+
+-----------------------------------------------
+[11:28:43] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[11:28:43] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[11:28:43] [INFO] Converting to grayscale...
+[11:28:43] [INFO] Successfully converted to grayscale.
+[11:28:43] [INFO] Generating path...
+[11:28:43] [INFO] Generated path.
+[11:28:43] [INFO] Generating goals...
+[11:28:43] [INFO] Generated goals.
+[11:28:43] [INFO] Printing goals to: goals.gol...
+[11:28:43] [INFO] Successfully printed goals to: goals.gol
+
+[11:28:43] [INFO] Reading image time: 14.960000ms
+[11:28:43] [INFO] Converting to grayscale time: 6.944000ms
+[11:28:43] [INFO] Gnerating path time: 20.944000ms
+[11:28:43] [INFO] Generating goals time: 0.000000ms
+[11:28:43] [INFO] Printing goals time: 5.986000ms
+[11:28:43] [INFO] Execution time: 48.834000ms
+
+-----------------------------------------------
+[11:33:18] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[11:33:18] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[11:33:18] [INFO] Converting to grayscale...
+[11:33:18] [INFO] Successfully converted to grayscale.
+[11:33:18] [INFO] Generating path...
+[11:33:18] [INFO] Generated path.
+[11:33:18] [INFO] Generating goals...
+[11:33:18] [INFO] Generated goals.
+[11:33:18] [INFO] Printing goals to: goals.gol...
+[11:33:18] [INFO] Successfully printed goals to: goals.gol
+
+[11:33:18] [INFO] Reading image time: 27.921000ms
+[11:33:18] [INFO] Converting to grayscale time: 13.963000ms
+[11:33:18] [INFO] Gnerating path time: 43.884000ms
+[11:33:18] [INFO] Generating goals time: 0.000000ms
+[11:33:18] [INFO] Printing goals time: 14.961000ms
+[11:33:18] [INFO] Execution time: 100.729000ms
+
+-----------------------------------------------
+[11:46:57] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[11:46:57] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[11:46:57] [INFO] Converting to grayscale...
+[11:46:57] [INFO] Successfully converted to grayscale.
+[11:46:57] [INFO] Generating path...
+[11:46:57] [INFO] Generated path.
+[11:46:57] [INFO] Generating goals...
+[11:46:57] [INFO] Generated goals.
+[11:46:57] [INFO] Printing goals to: goals.gol...
+[11:46:57] [INFO] Successfully printed goals to: goals.gol
+
+[11:46:57] [INFO] Reading image time: 22.938000ms
+[11:46:57] [INFO] Converting to grayscale time: 8.976000ms
+[11:46:57] [INFO] Gnerating path time: 19.947000ms
+[11:46:57] [INFO] Generating goals time: 0.000000ms
+[11:46:57] [INFO] Printing goals time: 6.024000ms
+[11:46:57] [INFO] Execution time: 57.885000ms
+
+-----------------------------------------------
+[11:50:01] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[11:50:01] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[11:50:01] [INFO] Converting to grayscale...
+[11:50:01] [INFO] Successfully converted to grayscale.
+[11:50:01] [INFO] Generating path...
+[11:50:01] [INFO] Generated path.
+[11:50:01] [INFO] Generating goals...
+[11:50:01] [INFO] Generated goals.
+[11:50:01] [INFO] Printing goals to: goals.gol...
+[11:50:01] [INFO] Successfully printed goals to: goals.gol
+
+[11:50:01] [INFO] Reading image time: 12.965000ms
+[11:50:01] [INFO] Converting to grayscale time: 5.990000ms
+[11:50:01] [INFO] Gnerating path time: 19.907000ms
+[11:50:01] [INFO] Generating goals time: 0.000000ms
+[11:50:01] [INFO] Printing goals time: 4.987000ms
+[11:50:01] [INFO] Execution time: 44.843000ms
+
+-----------------------------------------------
+[11:53:03] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[11:53:03] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[11:53:03] [INFO] Converting to grayscale...
+[11:53:03] [INFO] Successfully converted to grayscale.
+[11:53:03] [INFO] Generating path...
+[11:53:03] [INFO] Generated path.
+[11:53:03] [INFO] Generating goals...
+[11:53:03] [INFO] Generated goals.
+[11:53:03] [INFO] Printing goals to: goals.gol...
+[11:53:03] [INFO] Successfully printed goals to: goals.gol
+
+[11:53:03] [INFO] Reading image time: 13.970000ms
+[11:53:03] [INFO] Converting to grayscale time: 5.984000ms
+[11:53:03] [INFO] Gnerating path time: 19.907000ms
+[11:53:03] [INFO] Generating goals time: 0.000000ms
+[11:53:03] [INFO] Printing goals time: 2.031000ms
+[11:53:03] [INFO] Execution time: 42.892000ms
+
+-----------------------------------------------
+[11:54:31] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[11:54:31] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[11:54:31] [INFO] Converting to grayscale...
+[11:54:31] [INFO] Successfully converted to grayscale.
+[11:54:31] [INFO] Generating path...
+[11:54:31] [INFO] Generated path.
+[11:54:31] [INFO] Generating goals...
+[11:54:31] [INFO] Generated goals.
+[11:54:31] [INFO] Printing goals to: goals.gol...
+[11:54:31] [INFO] Successfully printed goals to: goals.gol
+
+[11:54:31] [INFO] Reading image time: 12.933000ms
+[11:54:31] [INFO] Converting to grayscale time: 7.017000ms
+[11:54:31] [INFO] Gnerating path time: 25.939000ms
+[11:54:31] [INFO] Generating goals time: 0.000000ms
+[11:54:31] [INFO] Printing goals time: 1.950000ms
+[11:54:31] [INFO] Execution time: 47.839000ms
+
+-----------------------------------------------
+[12:16:12] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[12:16:12] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[12:16:12] [INFO] Converting to grayscale...
+[12:16:12] [INFO] Successfully converted to grayscale.
+[12:16:12] [INFO] Generating path...
+[12:16:12] [INFO] Generated path.
+[12:16:12] [INFO] Generating goals...
+[12:16:12] [INFO] Generated goals.
+[12:16:12] [INFO] Printing goals to: goals.gol...
+[12:16:12] [INFO] Successfully printed goals to: goals.gol
+
+[12:16:12] [INFO] Reading image time: 15.001000ms
+[12:16:12] [INFO] Converting to grayscale time: 6.980000ms
+[12:16:12] [INFO] Gnerating path time: 19.905000ms
+[12:16:12] [INFO] Generating goals time: 0.000000ms
+[12:16:12] [INFO] Printing goals time: 2.034000ms
+[12:16:12] [INFO] Execution time: 43.920000ms
+
+-----------------------------------------------
+[13:38:26] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[13:38:26] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[13:38:26] [INFO] Converting to grayscale...
+[13:38:26] [INFO] Successfully converted to grayscale.
+[13:38:26] [INFO] Generating path...
+[13:38:26] [INFO] Generated path.
+[13:38:26] [INFO] Generating goals...
+[13:38:26] [INFO] Generated goals.
+[13:38:26] [INFO] Printing goals to: goals.gol...
+[13:38:26] [INFO] Successfully printed goals to: goals.gol
+
+[13:38:26] [INFO] Reading image time: 18.948000ms
+[13:38:26] [INFO] Converting to grayscale time: 6.023000ms
+[13:38:26] [INFO] Gnerating path time: 20.904000ms
+[13:38:26] [INFO] Generating goals time: 0.000000ms
+[13:38:26] [INFO] Printing goals time: 5.024000ms
+[13:38:26] [INFO] Execution time: 50.899000ms
+
+-----------------------------------------------
+[13:40:54] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[13:40:54] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[13:40:54] [INFO] Converting to grayscale...
+[13:40:54] [INFO] Successfully converted to grayscale.
+[13:40:54] [INFO] Generating path...
+[13:40:54] [INFO] Generated path.
+[13:40:54] [INFO] Generating goals...
+[13:40:54] [INFO] Generated goals.
+[13:40:54] [INFO] Printing goals to: goals.gol...
+[13:40:54] [INFO] Successfully printed goals to: goals.gol
+
+[13:40:54] [INFO] Reading image time: 12.925000ms
+[13:40:54] [INFO] Converting to grayscale time: 6.982000ms
+[13:40:54] [INFO] Gnerating path time: 19.985000ms
+[13:40:54] [INFO] Generating goals time: 0.000000ms
+[13:40:54] [INFO] Printing goals time: 1.955000ms
+[13:40:54] [INFO] Execution time: 41.847000ms
+
+-----------------------------------------------
+[13:45:09] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[13:45:09] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[13:45:09] [INFO] Converting to grayscale...
+[13:45:09] [INFO] Successfully converted to grayscale.
+[13:45:09] [INFO] Generating path...
+[13:45:09] [INFO] Generated path.
+[13:45:09] [INFO] Generating goals...
+[13:45:09] [INFO] Generated goals.
+[13:45:09] [INFO] Printing goals to: goals.gol...
+[13:45:09] [INFO] Successfully printed goals to: goals.gol
+
+[13:45:09] [INFO] Reading image time: 17.990000ms
+[13:45:09] [INFO] Converting to grayscale time: 11.930000ms
+[13:45:09] [INFO] Gnerating path time: 19.948000ms
+[13:45:09] [INFO] Generating goals time: 0.000000ms
+[13:45:09] [INFO] Printing goals time: 1.994000ms
+[13:45:09] [INFO] Execution time: 51.862000ms
+
+-----------------------------------------------
+[13:52:53] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[13:52:53] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[13:52:53] [INFO] Converting to grayscale...
+[13:52:53] [INFO] Successfully converted to grayscale.
+[13:52:53] [INFO] Generating path...
+[13:52:53] [INFO] Generated path.
+[13:52:53] [INFO] Generating goals...
+[13:52:53] [INFO] Generated goals.
+[13:52:53] [INFO] Printing goals to: goals.gol...
+[13:52:53] [INFO] Successfully printed goals to: goals.gol
+
+[13:52:53] [INFO] Reading image time: 13.926000ms
+[13:52:53] [INFO] Converting to grayscale time: 5.984000ms
+[13:52:53] [INFO] Gnerating path time: 19.946000ms
+[13:52:53] [INFO] Generating goals time: 0.000000ms
+[13:52:53] [INFO] Printing goals time: 1.994000ms
+[13:52:53] [INFO] Execution time: 41.850000ms
+
+-----------------------------------------------
+[13:55:20] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[13:55:20] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[13:55:20] [INFO] Converting to grayscale...
+[13:55:20] [INFO] Successfully converted to grayscale.
+[13:55:20] [INFO] Generating path...
+[13:55:20] [INFO] Generated path.
+[13:55:20] [INFO] Generating goals...
+[13:55:20] [INFO] Generated goals.
+[13:55:20] [INFO] Printing goals to: goals.gol...
+[13:55:20] [INFO] Successfully printed goals to: goals.gol
+
+[13:55:20] [INFO] Reading image time: 22.940000ms
+[13:55:20] [INFO] Converting to grayscale time: 5.984000ms
+[13:55:20] [INFO] Gnerating path time: 19.947000ms
+[13:55:20] [INFO] Generating goals time: 0.000000ms
+[13:55:20] [INFO] Printing goals time: 8.021000ms
+[13:55:20] [INFO] Execution time: 56.892000ms
+
+-----------------------------------------------
+[13:57:49] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[13:57:49] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[13:57:49] [INFO] Converting to grayscale...
+[13:57:49] [INFO] Successfully converted to grayscale.
+[13:57:49] [INFO] Generating path...
+[13:57:49] [INFO] Generated path.
+[13:57:49] [INFO] Generating goals...
+[13:57:49] [INFO] Generated goals.
+[13:57:49] [INFO] Printing goals to: goals.gol...
+[13:57:49] [INFO] Successfully printed goals to: goals.gol
+
+[13:57:49] [INFO] Reading image time: 14.959000ms
+[13:57:49] [INFO] Converting to grayscale time: 5.985000ms
+[13:57:49] [INFO] Gnerating path time: 20.953000ms
+[13:57:49] [INFO] Generating goals time: 0.000000ms
+[13:57:49] [INFO] Printing goals time: 1.956000ms
+[13:57:49] [INFO] Execution time: 43.853000ms
+
+-----------------------------------------------
+[14:01:53] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[14:01:53] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[14:01:53] [INFO] Converting to grayscale...
+[14:01:53] [INFO] Successfully converted to grayscale.
+[14:01:53] [INFO] Generating path...
+[14:01:53] [INFO] Generated path.
+[14:01:53] [INFO] Generating goals...
+[14:01:53] [INFO] Generated goals.
+[14:01:53] [INFO] Printing goals to: goals.gol...
+[14:01:53] [INFO] Successfully printed goals to: goals.gol
+
+[14:01:53] [INFO] Reading image time: 12.970000ms
+[14:01:53] [INFO] Converting to grayscale time: 6.982000ms
+[14:01:53] [INFO] Gnerating path time: 23.956000ms
+[14:01:53] [INFO] Generating goals time: 0.000000ms
+[14:01:53] [INFO] Printing goals time: 2.931000ms
+[14:01:53] [INFO] Execution time: 46.839000ms
+
+-----------------------------------------------
+[14:04:22] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[14:04:22] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[14:04:22] [INFO] Converting to grayscale...
+[14:04:22] [INFO] Successfully converted to grayscale.
+[14:04:22] [INFO] Generating path...
+[14:04:22] [INFO] Generated path.
+[14:04:22] [INFO] Generating goals...
+[14:04:22] [INFO] Generated goals.
+[14:04:22] [INFO] Printing goals to: goals.gol...
+[14:04:22] [INFO] Successfully printed goals to: goals.gol
+
+[14:04:22] [INFO] Reading image time: 13.005000ms
+[14:04:22] [INFO] Converting to grayscale time: 6.989000ms
+[14:04:22] [INFO] Gnerating path time: 19.899000ms
+[14:04:22] [INFO] Generating goals time: 0.000000ms
+[14:04:22] [INFO] Printing goals time: 1.997000ms
+[14:04:22] [INFO] Execution time: 41.890000ms
+
+-----------------------------------------------
+[14:05:32] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test2.png...
+[14:05:32] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test2.png
+[14:05:32] [INFO] Converting to grayscale...
+[14:05:32] [INFO] Successfully converted to grayscale.
+[14:05:32] [INFO] Generating path...
+[14:05:32] [INFO] Generated path.
+[14:05:32] [INFO] Generating goals...
+[14:05:32] [INFO] Generated goals.
+[14:05:32] [INFO] Printing goals to: goals.gol...
+[14:05:32] [INFO] Successfully printed goals to: goals.gol
+
+[14:05:32] [INFO] Reading image time: 412.933000ms
+[14:05:32] [INFO] Converting to grayscale time: 23.941000ms
+[14:05:32] [INFO] Gnerating path time: 83.730000ms
+[14:05:32] [INFO] Generating goals time: 0.000000ms
+[14:05:32] [INFO] Printing goals time: 11.013000ms
+[14:05:32] [INFO] Execution time: 532.614000ms
+
+-----------------------------------------------
+[14:05:52] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test3.png...
+[14:05:52] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test3.png
+[14:05:52] [INFO] Converting to grayscale...
+[14:05:52] [INFO] Successfully converted to grayscale.
+[14:05:52] [INFO] Generating path...
+[14:05:52] [INFO] Generated path.
+[14:05:52] [INFO] Generating goals...
+[14:05:52] [INFO] Generated goals.
+[14:05:52] [INFO] Printing goals to: goals.gol...
+[14:05:52] [INFO] Successfully printed goals to: goals.gol
+
+[14:05:52] [INFO] Reading image time: 57.847000ms
+[14:05:52] [INFO] Converting to grayscale time: 6.980000ms
+[14:05:52] [INFO] Gnerating path time: 17.987000ms
+[14:05:52] [INFO] Generating goals time: 0.000000ms
+[14:05:52] [INFO] Printing goals time: 5.983000ms
+[14:05:52] [INFO] Execution time: 88.797000ms
+
+-----------------------------------------------
+[14:15:40] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[14:15:40] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[14:15:40] [INFO] Converting to grayscale...
+[14:15:40] [INFO] Successfully converted to grayscale.
+[14:15:40] [INFO] Generating path...
+[14:15:40] [INFO] Generated path.
+[14:15:40] [INFO] Generating goals...
+[14:15:40] [INFO] Generated goals.
+[14:15:40] [INFO] Printing goals to: goals.gol...
+[14:15:40] [INFO] Successfully printed goals to: goals.gol
+
+[14:15:40] [INFO] Reading image time: 16.989000ms
+[14:15:40] [INFO] Converting to grayscale time: 11.971000ms
+[14:15:40] [INFO] Gnerating path time: 20.908000ms
+[14:15:40] [INFO] Generating goals time: 0.000000ms
+[14:15:40] [INFO] Printing goals time: 1.995000ms
+[14:15:40] [INFO] Execution time: 51.863000ms
+
+-----------------------------------------------
+[14:15:53] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test2.png...
+[14:15:53] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test2.png
+[14:15:53] [INFO] Converting to grayscale...
+[14:15:53] [INFO] Successfully converted to grayscale.
+[14:15:53] [INFO] Generating path...
+[14:15:53] [INFO] Generated path.
+[14:15:53] [INFO] Generating goals...
+[14:15:53] [INFO] Generated goals.
+[14:15:53] [INFO] Printing goals to: goals.gol...
+[14:15:53] [INFO] Successfully printed goals to: goals.gol
+
+[14:15:53] [INFO] Reading image time: 20.903000ms
+[14:15:53] [INFO] Converting to grayscale time: 6.982000ms
+[14:15:53] [INFO] Gnerating path time: 34.974000ms
+[14:15:53] [INFO] Generating goals time: 0.000000ms
+[14:15:53] [INFO] Printing goals time: 1.968000ms
+[14:15:53] [INFO] Execution time: 65.784000ms
+
+-----------------------------------------------
+[14:16:25] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[14:16:25] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[14:16:25] [INFO] Converting to grayscale...
+[14:16:25] [INFO] Successfully converted to grayscale.
+[14:16:25] [INFO] Generating path...
+[14:16:25] [INFO] Generated path.
+[14:16:25] [INFO] Generating goals...
+[14:16:25] [INFO] Generated goals.
+[14:16:25] [INFO] Printing goals to: goals.gol...
+[14:16:25] [INFO] Successfully printed goals to: goals.gol
+
+[14:16:25] [INFO] Reading image time: 13.924000ms
+[14:16:25] [INFO] Converting to grayscale time: 6.981000ms
+[14:16:25] [INFO] Gnerating path time: 26.929000ms
+[14:16:25] [INFO] Generating goals time: 0.000000ms
+[14:16:25] [INFO] Printing goals time: 1.994000ms
+[14:16:25] [INFO] Execution time: 49.828000ms
+
+-----------------------------------------------
+[14:16:33] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test1.png...
+[14:16:33] [ERROR] Failed to read image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test1.png
+
+-----------------------------------------------
+[14:16:42] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test2.png...
+[14:16:42] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test2.png
+[14:16:42] [INFO] Converting to grayscale...
+[14:16:42] [INFO] Successfully converted to grayscale.
+[14:16:42] [INFO] Generating path...
+[14:16:42] [INFO] Generated path.
+[14:16:42] [INFO] Generating goals...
+[14:16:42] [INFO] Generated goals.
+[14:16:42] [INFO] Printing goals to: goals.gol...
+[14:16:42] [INFO] Successfully printed goals to: goals.gol
+
+[14:16:42] [INFO] Reading image time: 28.886000ms
+[14:16:42] [INFO] Converting to grayscale time: 7.018000ms
+[14:16:42] [INFO] Gnerating path time: 31.917000ms
+[14:16:42] [INFO] Generating goals time: 0.000000ms
+[14:16:42] [INFO] Printing goals time: 1.955000ms
+[14:16:42] [INFO] Execution time: 69.776000ms
+
+-----------------------------------------------
+[14:17:02] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[14:17:02] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[14:17:02] [INFO] Converting to grayscale...
+[14:17:02] [INFO] Successfully converted to grayscale.
+[14:17:02] [INFO] Generating path...
+[14:17:02] [INFO] Generated path.
+[14:17:02] [INFO] Generating goals...
+[14:17:02] [INFO] Generated goals.
+[14:17:02] [INFO] Printing goals to: goals.gol...
+[14:17:02] [INFO] Successfully printed goals to: goals.gol
+
+[14:17:02] [INFO] Reading image time: 28.883000ms
+[14:17:02] [INFO] Converting to grayscale time: 20.948000ms
+[14:17:02] [INFO] Gnerating path time: 46.911000ms
+[14:17:02] [INFO] Generating goals time: 0.000000ms
+[14:17:02] [INFO] Printing goals time: 3.950000ms
+[14:17:02] [INFO] Execution time: 100.692000ms
+
+-----------------------------------------------
+[14:19:17] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[14:19:17] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[14:19:17] [INFO] Converting to grayscale...
+[14:19:17] [INFO] Successfully converted to grayscale.
+[14:19:17] [INFO] Generating path...
+[14:19:17] [INFO] Generated path.
+[14:19:17] [INFO] Generating goals...
+[14:19:17] [INFO] Generated goals.
+[14:19:17] [INFO] Printing goals to: goals.gol...
+[14:19:17] [INFO] Successfully printed goals to: goals.gol
+
+[14:19:17] [INFO] Reading image time: 14.993000ms
+[14:19:17] [INFO] Converting to grayscale time: 6.986000ms
+[14:19:17] [INFO] Gnerating path time: 19.907000ms
+[14:19:17] [INFO] Generating goals time: 0.000000ms
+[14:19:17] [INFO] Printing goals time: 5.984000ms
+[14:19:17] [INFO] Execution time: 47.870000ms
+
+-----------------------------------------------
+[14:19:22] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[14:19:22] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[14:19:22] [INFO] Converting to grayscale...
+[14:19:22] [INFO] Successfully converted to grayscale.
+[14:19:22] [INFO] Generating path...
+[14:19:22] [INFO] Generated path.
+[14:19:22] [INFO] Generating goals...
+[14:19:22] [INFO] Generated goals.
+[14:19:22] [INFO] Printing goals to: goals.gol...
+[14:19:22] [INFO] Successfully printed goals to: goals.gol
+
+[14:19:22] [INFO] Reading image time: 13.965000ms
+[14:19:22] [INFO] Converting to grayscale time: 7.019000ms
+[14:19:22] [INFO] Gnerating path time: 20.944000ms
+[14:19:22] [INFO] Generating goals time: 0.000000ms
+[14:19:22] [INFO] Printing goals time: 0.958000ms
+[14:19:22] [INFO] Execution time: 43.884000ms
+
+-----------------------------------------------
+[14:19:30] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[14:19:30] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[14:19:30] [INFO] Converting to grayscale...
+[14:19:30] [INFO] Successfully converted to grayscale.
+[14:19:30] [INFO] Generating path...
+[14:19:30] [INFO] Generated path.
+[14:19:30] [INFO] Generating goals...
+[14:19:30] [INFO] Generated goals.
+[14:19:30] [INFO] Printing goals to: goals.gol...
+[14:19:30] [INFO] Successfully printed goals to: goals.gol
+
+[14:19:30] [INFO] Reading image time: 31.878000ms
+[14:19:30] [INFO] Converting to grayscale time: 13.998000ms
+[14:19:30] [INFO] Gnerating path time: 49.891000ms
+[14:19:30] [INFO] Generating goals time: 0.000000ms
+[14:19:30] [INFO] Printing goals time: 3.969000ms
+[14:19:30] [INFO] Execution time: 99.736000ms
+
+-----------------------------------------------
+[14:19:47] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[14:19:47] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[14:19:47] [INFO] Converting to grayscale...
+[14:19:47] [INFO] Successfully converted to grayscale.
+[14:19:47] [INFO] Generating path...
+[14:19:47] [INFO] Generated path.
+[14:19:47] [INFO] Generating goals...
+[14:19:47] [INFO] Generated goals.
+[14:19:47] [INFO] Printing goals to: goals.gol...
+[14:19:47] [INFO] Successfully printed goals to: goals.gol
+
+[14:19:47] [INFO] Reading image time: 36.898000ms
+[14:19:47] [INFO] Converting to grayscale time: 14.004000ms
+[14:19:47] [INFO] Gnerating path time: 54.877000ms
+[14:19:47] [INFO] Generating goals time: 0.000000ms
+[14:19:47] [INFO] Printing goals time: 2.987000ms
+[14:19:47] [INFO] Execution time: 108.766000ms
+
+-----------------------------------------------
+[14:19:54] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test1.png...
+[14:19:54] [ERROR] Failed to read image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test1.png
+
+-----------------------------------------------
+[14:20:27] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test2,png...
+[14:20:27] [ERROR] Failed to read image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test2,png
+
+-----------------------------------------------
+[14:20:41] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test3.png...
+[14:20:41] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test3.png
+[14:20:41] [INFO] Converting to grayscale...
+[14:20:41] [INFO] Successfully converted to grayscale.
+[14:20:41] [INFO] Generating path...
+[14:20:41] [INFO] Generated path.
+[14:20:41] [INFO] Generating goals...
+[14:20:41] [INFO] Generated goals.
+[14:20:41] [INFO] Printing goals to: goals.gol...
+[14:20:41] [INFO] Successfully printed goals to: goals.gol
+
+[14:20:41] [INFO] Reading image time: 51.860000ms
+[14:20:41] [INFO] Converting to grayscale time: 13.004000ms
+[14:20:41] [INFO] Gnerating path time: 29.885000ms
+[14:20:41] [INFO] Generating goals time: 0.000000ms
+[14:20:41] [INFO] Printing goals time: 2.993000ms
+[14:20:41] [INFO] Execution time: 98.739000ms
+
+-----------------------------------------------
+[14:21:11] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[14:21:11] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[14:21:11] [INFO] Converting to grayscale...
+[14:21:11] [INFO] Successfully converted to grayscale.
+[14:21:11] [INFO] Generating path...
+[14:21:11] [INFO] Generated path.
+[14:21:11] [INFO] Generating goals...
+[14:21:11] [INFO] Generated goals.
+[14:21:11] [INFO] Printing goals to: goals.gol...
+[14:21:11] [INFO] Successfully printed goals to: goals.gol
+
+[14:21:11] [INFO] Reading image time: 13.962000ms
+[14:21:11] [INFO] Converting to grayscale time: 6.982000ms
+[14:21:11] [INFO] Gnerating path time: 19.946000ms
+[14:21:11] [INFO] Generating goals time: 0.000000ms
+[14:21:11] [INFO] Printing goals time: 1.996000ms
+[14:21:11] [INFO] Execution time: 42.886000ms
+
+-----------------------------------------------
+[14:21:37] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[14:21:37] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[14:21:37] [INFO] Converting to grayscale...
+[14:21:37] [INFO] Successfully converted to grayscale.
+[14:21:37] [INFO] Generating path...
+[14:21:37] [INFO] Generated path.
+[14:21:37] [INFO] Generating goals...
+[14:21:37] [INFO] Generated goals.
+[14:21:37] [INFO] Printing goals to: goals.gol...
+[14:21:37] [INFO] Successfully printed goals to: goals.gol
+
+[14:21:37] [INFO] Reading image time: 28.885000ms
+[14:21:37] [INFO] Converting to grayscale time: 13.962000ms
+[14:21:37] [INFO] Gnerating path time: 49.902000ms
+[14:21:37] [INFO] Generating goals time: 0.000000ms
+[14:21:37] [INFO] Printing goals time: 2.992000ms
+[14:21:37] [INFO] Execution time: 95.741000ms
+
+-----------------------------------------------
+[14:21:43] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[14:21:43] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[14:21:43] [INFO] Converting to grayscale...
+[14:21:43] [INFO] Successfully converted to grayscale.
+[14:21:43] [INFO] Generating path...
+[14:21:43] [INFO] Generated path.
+[14:21:43] [INFO] Generating goals...
+[14:21:43] [INFO] Generated goals.
+[14:21:43] [INFO] Printing goals to: goals.gol...
+[14:21:43] [INFO] Successfully printed goals to: goals.gol
+
+[14:21:43] [INFO] Reading image time: 28.920000ms
+[14:21:43] [INFO] Converting to grayscale time: 13.962000ms
+[14:21:43] [INFO] Gnerating path time: 51.822000ms
+[14:21:43] [INFO] Generating goals time: 0.000000ms
+[14:21:43] [INFO] Printing goals time: 3.047000ms
+[14:21:43] [INFO] Execution time: 98.752000ms
+
+-----------------------------------------------
+[14:23:06] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[14:23:06] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[14:23:06] [INFO] Converting to grayscale...
+[14:23:06] [INFO] Successfully converted to grayscale.
+[14:23:06] [INFO] Generating path...
+[14:23:06] [INFO] Generated path.
+[14:23:06] [INFO] Generating goals...
+[14:23:06] [INFO] Generated goals.
+[14:23:06] [INFO] Printing goals to: goals.gol...
+[14:23:06] [INFO] Successfully printed goals to: goals.gol
+
+[14:23:06] [INFO] Reading image time: 29.855000ms
+[14:23:06] [INFO] Converting to grayscale time: 13.000000ms
+[14:23:06] [INFO] Gnerating path time: 50.825000ms
+[14:23:06] [INFO] Generating goals time: 0.000000ms
+[14:23:06] [INFO] Printing goals time: 3.029000ms
+[14:23:06] [INFO] Execution time: 96.709000ms
+
+-----------------------------------------------
+[14:24:29] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[14:24:29] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[14:24:29] [INFO] Converting to grayscale...
+[14:24:29] [INFO] Successfully converted to grayscale.
+[14:24:29] [INFO] Generating path...
+[14:24:29] [INFO] Generated path.
+[14:24:29] [INFO] Generating goals...
+[14:24:29] [INFO] Generated goals.
+[14:24:29] [INFO] Printing goals to: goals.gol...
+[14:24:29] [INFO] Successfully printed goals to: goals.gol
+
+[14:24:29] [INFO] Reading image time: 32.869000ms
+[14:24:29] [INFO] Converting to grayscale time: 13.961000ms
+[14:24:29] [INFO] Gnerating path time: 42.889000ms
+[14:24:29] [INFO] Generating goals time: 0.000000ms
+[14:24:29] [INFO] Printing goals time: 2.988000ms
+[14:24:29] [INFO] Execution time: 92.707000ms
+
+-----------------------------------------------
+[14:41:54] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[14:41:54] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[14:41:54] [INFO] Converting to grayscale...
+[14:41:54] [INFO] Successfully converted to grayscale.
+[14:41:54] [INFO] Generating path...
+[14:41:54] [INFO] Generated path.
+[14:41:54] [INFO] Generating goals...
+[14:41:54] [INFO] Generated goals.
+[14:41:54] [INFO] Printing goals to: goals.gol...
+[14:41:54] [INFO] Successfully printed goals to: goals.gol
+
+[14:41:54] [INFO] Reading image time: 14.000000ms
+[14:41:54] [INFO] Converting to grayscale time: 5.981000ms
+[14:41:54] [INFO] Gnerating path time: 20.907000ms
+[14:41:54] [INFO] Generating goals time: 0.000000ms
+[14:41:54] [INFO] Printing goals time: 0.997000ms
+[14:41:54] [INFO] Execution time: 42.883000ms
+
+-----------------------------------------------
+[14:43:32] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[14:43:32] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[14:43:32] [INFO] Converting to grayscale...
+[14:43:32] [INFO] Successfully converted to grayscale.
+[14:43:32] [INFO] Generating path...
+[14:43:32] [INFO] Generated path.
+[14:43:32] [INFO] Generating goals...
+[14:43:32] [INFO] Generated goals.
+[14:43:32] [INFO] Printing goals to: goals.gol...
+[14:43:32] [INFO] Successfully printed goals to: goals.gol
+
+[14:43:32] [INFO] Reading image time: 13.965000ms
+[14:43:32] [INFO] Converting to grayscale time: 7.977000ms
+[14:43:32] [INFO] Gnerating path time: 23.937000ms
+[14:43:32] [INFO] Generating goals time: 0.000000ms
+[14:43:32] [INFO] Printing goals time: 1.998000ms
+[14:43:32] [INFO] Execution time: 47.877000ms
+
+-----------------------------------------------
+[14:46:38] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[14:46:38] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[14:46:38] [INFO] Converting to grayscale...
+[14:46:38] [INFO] Successfully converted to grayscale.
+[14:46:38] [INFO] Generating path...
+[14:46:38] [INFO] Generated path.
+[14:46:38] [INFO] Generating goals...
+[14:46:38] [INFO] Generated goals.
+[14:46:38] [INFO] Printing goals to: goals.gol...
+[14:46:38] [INFO] Successfully printed goals to: goals.gol
+
+[14:46:38] [INFO] Reading image time: 27.926000ms
+[14:46:38] [INFO] Converting to grayscale time: 6.982000ms
+[14:46:38] [INFO] Gnerating path time: 26.926000ms
+[14:46:38] [INFO] Generating goals time: 0.000000ms
+[14:46:38] [INFO] Printing goals time: 1.998000ms
+[14:46:38] [INFO] Execution time: 64.830000ms
+
+-----------------------------------------------
+[14:48:07] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test3.png...
+[14:48:07] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test3.png
+[14:48:07] [INFO] Converting to grayscale...
+[14:48:07] [INFO] Successfully converted to grayscale.
+[14:48:07] [INFO] Generating path...
+[14:48:07] [INFO] Generated path.
+[14:48:07] [INFO] Generating goals...
+[14:48:07] [INFO] Generated goals.
+[14:48:07] [INFO] Printing goals to: goals.gol...
+[14:48:07] [INFO] Successfully printed goals to: goals.gol
+
+[14:48:07] [INFO] Reading image time: 19.909000ms
+[14:48:07] [INFO] Converting to grayscale time: 7.022000ms
+[14:48:07] [INFO] Gnerating path time: 13.923000ms
+[14:48:07] [INFO] Generating goals time: 0.000000ms
+[14:48:07] [INFO] Printing goals time: 1.995000ms
+[14:48:07] [INFO] Execution time: 42.849000ms
+
+-----------------------------------------------
+[14:56:00] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[14:56:00] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[14:56:00] [INFO] Converting to grayscale...
+[14:56:00] [INFO] Successfully converted to grayscale.
+[14:56:00] [INFO] Generating path...
+[14:56:00] [INFO] Generated path.
+[14:56:00] [INFO] Generating goals...
+[14:56:00] [INFO] Generated goals.
+[14:56:00] [INFO] Printing goals to: goals.gol...
+[14:56:00] [INFO] Successfully printed goals to: goals.gol
+
+[14:56:00] [INFO] Reading image time: 15.958000ms
+[14:56:00] [INFO] Converting to grayscale time: 5.983000ms
+[14:56:00] [INFO] Gnerating path time: 20.942000ms
+[14:56:00] [INFO] Generating goals time: 0.000000ms
+[14:56:00] [INFO] Printing goals time: 1.995000ms
+[14:56:00] [INFO] Execution time: 44.878000ms
+
+-----------------------------------------------
+[14:56:11] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[14:56:11] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[14:56:11] [INFO] Converting to grayscale...
+[14:56:11] [INFO] Successfully converted to grayscale.
+[14:56:11] [INFO] Generating path...
+[14:56:11] [INFO] Generated path.
+[14:56:11] [INFO] Generating goals...
+[14:56:11] [INFO] Generated goals.
+[14:56:11] [INFO] Printing goals to: goals.gol...
+[14:56:11] [INFO] Successfully printed goals to: goals.gol
+
+[14:56:11] [INFO] Reading image time: 12.917000ms
+[14:56:11] [INFO] Converting to grayscale time: 6.982000ms
+[14:56:11] [INFO] Gnerating path time: 20.944000ms
+[14:56:11] [INFO] Generating goals time: 0.000000ms
+[14:56:11] [INFO] Printing goals time: 0.998000ms
+[14:56:11] [INFO] Execution time: 42.838000ms
+
+-----------------------------------------------
+[14:56:18] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png...
+[14:56:18] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test.png
+[14:56:18] [INFO] Converting to grayscale...
+[14:56:18] [INFO] Successfully converted to grayscale.
+[14:56:18] [INFO] Generating path...
+[14:56:18] [INFO] Generated path.
+[14:56:18] [INFO] Generating goals...
+[14:56:18] [INFO] Generated goals.
+[14:56:18] [INFO] Printing goals to: goals.gol...
+[14:56:18] [INFO] Successfully printed goals to: goals.gol
+
+[14:56:18] [INFO] Reading image time: 13.997000ms
+[14:56:18] [INFO] Converting to grayscale time: 6.990000ms
+[14:56:18] [INFO] Gnerating path time: 22.896000ms
+[14:56:18] [INFO] Generating goals time: 0.000000ms
+[14:56:18] [INFO] Printing goals time: 1.997000ms
+[14:56:18] [INFO] Execution time: 45.880000ms
+
+-----------------------------------------------
+[15:17:48] [INFO] Reading image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test3.png...
+[15:17:48] [INFO] Successfully loaded image: E:/Privat/Programmieren/Diplomarbeit/SchwarmGUI/Images/test3.png
+[15:17:48] [INFO] Converting to grayscale...
+[15:17:48] [INFO] Successfully converted to grayscale.
+[15:17:48] [INFO] Generating path...
+[15:17:48] [INFO] Generated path.
+[15:17:48] [INFO] Generating goals...
+[15:17:48] [INFO] Generated goals.
+[15:17:48] [INFO] Printing goals to: goals.gol...
+[15:17:48] [INFO] Successfully printed goals to: goals.gol
+
+[15:17:48] [INFO] Reading image time: 31.000000ms
+[15:17:48] [INFO] Converting to grayscale time: 13.923000ms
+[15:17:48] [INFO] Gnerating path time: 13.965000ms
+[15:17:48] [INFO] Generating goals time: 0.000000ms
+[15:17:48] [INFO] Printing goals time: 2.029000ms
+[15:17:48] [INFO] Execution time: 60.917000ms

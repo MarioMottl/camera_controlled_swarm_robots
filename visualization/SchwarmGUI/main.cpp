@@ -115,7 +115,6 @@ bool init_OpenGL(GLFWwindow** window, const GLFWvidmode** vid_mode, WindowHandle
 
     GLFWmonitor* monitor = glfwGetPrimaryMonitor();
     *vid_mode = glfwGetVideoMode(monitor);
-    main_window_handler.init((*vid_mode)->width / 2, (*vid_mode)->height / 2);
     std::cout << get_msg("INFO / OpenGL") << "GLEW initialized." << std::endl;
 
     // create window
@@ -133,6 +132,7 @@ bool init_OpenGL(GLFWwindow** window, const GLFWvidmode** vid_mode, WindowHandle
 
     glfwSetCursorPos(*window, (*vid_mode)->width / 2 + (*vid_mode)->width / 4, (*vid_mode)->height / 2 + (*vid_mode)->height / 4);      // set mousepos to the center
     glfwSetInputMode(*window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);   // disable cursor
+    main_window_handler.init(*window, (*vid_mode)->width / 2, (*vid_mode)->height / 2);
 
     glfwSwapInterval(0);
     glewInit();
@@ -159,7 +159,7 @@ void create_text_shader(gl::Shader& shader)
         exit(-1);
 }
 
-void init_event_handler(EventHandler& event_handler, Schwarm::Client::SharedSimulationMemory* mem)
+void init_event_handler(EventHandler& event_handler, Schwarm::Client::SharedMemory* mem)
 {
     TextInpListener* button_listener = new TextInpListener();
     button_listener->set_sharedsimumem(mem);
@@ -169,8 +169,8 @@ void init_event_handler(EventHandler& event_handler, Schwarm::Client::SharedSimu
 
 void load_button_font(gl::Font& font)
 {
-    constexpr char path_font[32] = "Font/arial.png";
-    constexpr char path_offset[32] = "Font/arial_offset.txt";
+    constexpr char path_font[32] = "../../../Font/arial.png";
+    constexpr char path_offset[32] = "../../../Font/arial_offset.txt";
 
     std::cout << get_msg("INFO / LOADING FONT") << "Loading font offsets \"" << path_offset << "\"." << std::endl;
     std::fstream font_offset(path_offset, std::ios::in);
@@ -237,7 +237,7 @@ void load_texture(unsigned int& texture, const std::string path, bool use_gamma)
 
 void load_shader(gl::Shader& shader, const std::string& vertex_fname, const std::string& fragment_fname)
 {
-    static const std::string path("Shaders/");
+    static const std::string path("../../../Shaders/");
     std::cout << get_msg("INFO / LOADING SHADER") << "Loading shader \"" << path + vertex_fname << "\" and \"" << path + fragment_fname << "\"..." << std::endl;
     gl::ShaderLoadError err = shader.load(path + vertex_fname, path + fragment_fname);
     if(err & gl::ShaderLoadErrorType::INVALID_FILE_PATH)
@@ -394,9 +394,11 @@ unsigned int gen_buffer_fb_scene(float** map, size_t data_size, unsigned int& vb
     return vao_fb;
 }
 
-unsigned int gen_table_buffer(gl::Model& model, unsigned int* vbos)
+unsigned int gen_table_buffer(const gl::Mesh& mesh, unsigned int* vbos)
 {
-    static const size_t MODEL_STRIDE = sizeof(float) * (gl::Model::vertex_size() + gl::Model::texture_coord_size() + gl::Model::normal_size());
+    constexpr size_t MODEL_STRIDE = gl::Model::vertex_stride() + gl::Model::texcoord_stride() + gl::Model::normal_stride();
+    constexpr size_t TEXCOORD_STRIDE = gl::Model::vertex_stride();
+    constexpr size_t NORMAL_STRIDE = gl::Model::vertex_stride() + gl::Model::texcoord_stride();
 
     unsigned int vao;
     glGenVertexArrays(1, &vao);
@@ -404,13 +406,13 @@ unsigned int gen_table_buffer(gl::Model& model, unsigned int* vbos)
 
     glGenBuffers(2, vbos);
     glBindBuffer(GL_ARRAY_BUFFER, vbos[0]);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(float) * model.vertex_data().size(), model.vertex_data().data(), GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, MODEL_STRIDE * mesh.count(), mesh.get_data(), GL_STATIC_DRAW);
     glEnableVertexAttribArray(0);
     glEnableVertexAttribArray(1);
     glEnableVertexAttribArray(2);
-    glVertexAttribPointer(0, gl::Model::vertex_size(),          GL_FLOAT, false, MODEL_STRIDE, (void*)(gl::Model::vertex_offset()));
-    glVertexAttribPointer(1, gl::Model::texture_coord_size(),   GL_FLOAT, false, MODEL_STRIDE, (void*)(gl::Model::texture_coord_offset()));
-    glVertexAttribPointer(2, gl::Model::normal_size(),          GL_FLOAT, false, MODEL_STRIDE, (void*)(gl::Model::normal_offset()));
+    glVertexAttribPointer(0, gl::Model::vertex_component(),     GL_FLOAT, false, MODEL_STRIDE, (const void*)0);
+    glVertexAttribPointer(1, gl::Model::texcoord_component(),   GL_FLOAT, false, MODEL_STRIDE, (const void*)(TEXCOORD_STRIDE));
+    glVertexAttribPointer(2, gl::Model::normal_component(),     GL_FLOAT, false, MODEL_STRIDE, (const void*)(NORMAL_STRIDE));
 
     glBindBuffer(GL_ARRAY_BUFFER, vbos[1]);
     glBufferData(GL_ARRAY_BUFFER, sizeof(glm::mat4), glm::value_ptr(glm::mat4(1.0f)), GL_STATIC_DRAW);
@@ -428,7 +430,6 @@ unsigned int gen_table_buffer(gl::Model& model, unsigned int* vbos)
     glVertexAttribDivisor(6, 1);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
-    model.clear();
     return vao;
 }
 
@@ -462,7 +463,7 @@ unsigned int gen_depth_map_fb(unsigned int& shadow_map, unsigned int resolution)
 * UPDATE-FUNCTIONS
 * -----------------------------------------------------------------------------*/
 
-void update_scenes(unsigned int vbo, float* fb_data, const GLFWvidmode& vid_mode, const WindowHandler& main_wh, const WindowHandler& vis_wh)
+void update_scenes(unsigned int vbo, float* fb_data, const GLFWvidmode* vid_mode, const WindowHandler& main_wh, const WindowHandler& vis_wh)
 {
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
     Main::vis_scene_data(fb_data, vis_wh, vid_mode);
@@ -511,7 +512,7 @@ void set_light_values(gl::Shader& shader)
     #endif
 }
 
-void draw_table(gl::Shader& shader, const gl::MeshMatierial& table_mtl, unsigned int vao_table, unsigned int diffuse_map, unsigned int specular_map, unsigned int* shadow_maps)
+void draw_table(gl::Shader& shader, const gl::Mesh& mesh, unsigned int vao_table, unsigned int diffuse_map, unsigned int specular_map, unsigned int* shadow_maps)
 {
     // material values for table
     shader.use();
@@ -527,7 +528,7 @@ void draw_table(gl::Shader& shader, const gl::MeshMatierial& table_mtl, unsigned
     glActiveTexture(GL_TEXTURE2);
     glBindTexture(GL_TEXTURE_2D, specular_map);
 
-    glDrawArrays(GL_QUADS, table_mtl.vertex_offset, table_mtl.vertex_count);
+    glDrawArrays(GL_QUADS, mesh.begin(), mesh.count());
 
     glBindTexture(GL_TEXTURE_2D, 0);    // unbind texture 2 (spacular map)
     glActiveTexture(GL_TEXTURE1);
@@ -537,7 +538,7 @@ void draw_table(gl::Shader& shader, const gl::MeshMatierial& table_mtl, unsigned
     glBindVertexArray(0);
 }
 
-void draw_vehicles(gl::Shader& shader, const gl::MeshMatierial& mtl, unsigned int vao_vehicle, unsigned int n, unsigned int diffuse_map, unsigned int specular_map, unsigned int* shadow_maps)
+void draw_vehicles(gl::Shader& shader, const gl::Mesh& mesh, unsigned int vao_vehicle, unsigned int n, unsigned int diffuse_map, unsigned int specular_map, unsigned int* shadow_maps)
 {
     shader.use();
     // use the same material properties as for table
@@ -550,7 +551,7 @@ void draw_vehicles(gl::Shader& shader, const gl::MeshMatierial& mtl, unsigned in
     glActiveTexture(GL_TEXTURE2);
     glBindTexture(GL_TEXTURE_2D, specular_map);
 
-    glDrawArraysInstanced(GL_QUADS, mtl.vertex_offset, mtl.vertex_count, n);
+    glDrawArraysInstanced(GL_QUADS, mesh.begin(), mesh.count(), n);
     
     glBindTexture(GL_TEXTURE_2D, 0);    // unbind texture 2 (spacular map)
     glActiveTexture(GL_TEXTURE1);
@@ -607,9 +608,8 @@ int main()  // its showtime
 {
     constexpr unsigned int WORLDLIGHT_SHADOW_RESOLUTION = 2048;
     bool main_running = true;
-    std::atomic_bool simu_running = false;
 
-    Schwarm::Client::SharedSimulationMemory sharedsimumem;
+    Schwarm::Client::SharedMemory shared_memory;
 
     /* -----------------------------------------------------------------------------
      * SHADER FILENAMES
@@ -625,69 +625,70 @@ int main()  // its showtime
     const std::string scene_vs("scene.vert");
     const std::string scene_fs("scene.frag");
     const std::string sds_vs("simple_depth.vert");
-    const std::string sds_fs("simple_depth.frag")
+    const std::string sds_fs("simple_depth.frag");
     
     /* -----------------------------------------------------------------------------
      * INIT EVENT-HANDLER
      * -----------------------------------------------------------------------------*/
     EventHandler event_handler(ListenerType::DYNAMIC_LISTENER);
-    init_event_handler(event_handler, &sharedsimumem);
+    init_event_handler(event_handler, &shared_memory);
     event_handler.start();
     std::cout << get_msg("INFO / EVENT-HANDLER") << "Started Event-Handler." << std::endl;
 
     /* -----------------------------------------------------------------------------
      * LOAD MODELS
      * -----------------------------------------------------------------------------*/
-    gl::Model table;
-    gl::model_error_t model_error = table.load("Models/", "table.obj", gl::Model::MESH_COMBINED | gl::Model::INVERT_T);
-    gl::Model vehicle;
-    model_error = vehicle.load("Models/", "vehicle.obj", gl::Model::MESH_COMBINED | gl::Model::INVERT_T);
-
-    const gl::MeshMatierial table_mtl = table.get_materials().begin()->second;         // there is only one material
-    const gl::MeshMatierial vehicle_mtl = vehicle.get_materials().begin()->second;
-
-    if(model_error != gl::model_error_t::MODEL_ERROR_NONE)
+    gl::Model table("../../../Models/table.obj");
+    gl::model_error_t model_error = table.load(gl::Model::CMP_PRIMITIVE_MODEL | gl::Model::DATA_COMBINED);
+    if (model_error != gl::model_error_t::MODEL_ERROR_NONE)
     {
+        std::cout << get_msg("INFO / MODEL") << "Failed to load table." << std::endl;
+        return -1;
+     }
+
+    gl::Model vehicle("../../../Models/vehicle.obj");
+    model_error = vehicle.load(gl::Model::CMP_PRIMITIVE_MODEL | gl::Model::DATA_COMBINED | gl::Model::TEXTURE_FLIP_UV);
+    if (model_error != gl::model_error_t::MODEL_ERROR_NONE)
+    {
+        std::cout << get_msg("INFO / MODEL") << "Failed to load vehicle." << std::endl;
         return -1;
     }
+
+    gl::Mesh table_mesh = table.meshes().at(0);
+    gl::Mesh vehicle_mesh = vehicle.meshes().at(0);
 
     /* -----------------------------------------------------------------------------
      * Start server and client.
      * ----------------------------------------------------------------------------*/
 
-    // setup scoket handler
-    SH::SocketHandler sockethandler;
-    sockethandler.start();
-    std::cout << get_msg("INFO / CLIENT") << "Started socket-handler." << std::endl;
-
-    // setup client
-    SH::Client client;
-    client.set_callbacks(Schwarm::Client::on_pathsimu_connect, Schwarm::Client::on_pathsimu_disconnect, Schwarm::Client::on_pathsimu_receive);
-    client.set_sockethandler(sockethandler);
-    *client.ersist_ptr() = &sharedsimumem;
-
-    // set client to shared simulation memory
-    sharedsimumem.client = &client;
+    // setup socket collections
+    cppsock::tcp::socket_collection path_server_collection(Schwarm::Client::on_path_connect, Schwarm::Client::on_path_disconnect, Schwarm::Client::on_path_receive);
 
     // start simulation server
-    const std::string imagefolder("D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images");
-    Schwarm::Client::start_pathserver(&simu_running, &imagefolder);
     std::cout << get_msg("INFO / SERVER") << "Started simulation server." << std::endl;
-    sharedsimumem.start = false;
-    sharedsimumem.client->connect("localhost", 10000);
-    std::cout << get_msg("INFO / SERVER") << "Connected to simulation server (Address: " << Schwarm::SIMU_SERVER_ADDR << " Port: " << Schwarm::SIMU_SERVER_PORT << ")" << std::endl;
+
+    cppsock::utility_error_t err;
+    if ((err = shared_memory.client.connect(Schwarm::PATH_SERVER_ADDR, Schwarm::PATH_SERVER_PORT)) < 0)
+    {
+        std::cout << get_msg("ERROR / PATH-SERVER") << "Failed to connect (Address: " << Schwarm::PATH_SERVER_ADDR << " Port : " << Schwarm::PATH_SERVER_PORT << ")" << std::endl;
+        std::cout << get_msg("ERROR / PATH-SERVER") << "Path server may not be running!" << std::endl;
+        return -1;
+    }
+    std::cout << "connect return: " << cppsock::utility_strerror(err) << std::endl;
+    path_server_collection.insert(shared_memory.client);
+    std::cout << get_msg("INFO / PATH-SERVER") << "Connected to simulation server (Address: " << shared_memory.client.sock().getpeername().get_addr() << " Port: " << shared_memory.client.sock().getpeername().get_port() << ")" << std::endl;
+
+    /* -----------------------------------------------------------------------------
+     * DECLARE WINDOW HANDLERS
+     * -----------------------------------------------------------------------------*/
+    WindowHandler main_window_handler, vis_window_handler;
 
     /* -----------------------------------------------------------------------------
      * INIT OpenGL
      * ----------------------------------------------------------------------------*/
     GLFWwindow* main_window;
-    GLFWvidmode* vid_mode;
+    const GLFWvidmode* vid_mode;
     init_OpenGL(&main_window, &vid_mode, main_window_handler);
-
-    /* -----------------------------------------------------------------------------
-     * DECLARE WINDOW HANDLERS
-     * -----------------------------------------------------------------------------*/
-    WindowHandler main_window_handler(window), vis_window_handler(window);
 
     /* -----------------------------------------------------------------------------
      * INIT OpenCL
@@ -706,7 +707,7 @@ int main()  // its showtime
     Main::set_move_speed(0.5f);
 
     Main::set_gamma(2.2f);
-    Main::auto_gamma() = true;
+    Main::auto_gamma() = false;
     Main::reload_colors();
 
     glm::vec3 wl_pos(1.59, 2.981, 1.193);
@@ -716,8 +717,8 @@ int main()  // its showtime
     Main::set_vis_pos(1.0f, 0.85f);
     Main::set_vis_width(2.0f);
     Main::set_vis_height(1.75f);
-    vis_window_handler.init(gl::convert::to_pixels_size(Main::get_vis_width(), main_window_handler.get_width()), 
-                            gl::convert::to_pixels_size(Main::get_vis_height(), main_window_handler.get_height()));
+    vis_window_handler.init(main_window, gl::convert::to_pixels_size(Main::get_vis_width(), main_window_handler.get_width()), 
+                                    gl::convert::to_pixels_size(Main::get_vis_height(), main_window_handler.get_height()));
 
     Main::set_table_size(1.84f, 0.89f);
     Main::set_table_origin(-0.92, -0.445);
@@ -731,13 +732,13 @@ int main()  // its showtime
 
     // load texture for table (ambient / diffuse and specular map)
     unsigned int table_diffuse_map;
-    load_texture(table_diffuse_map, "Textures/table_diffuse_ambient_map.png", true);
+    load_texture(table_diffuse_map, "../../../Textures/table_diffuse_ambient_map.png", true);
     unsigned int table_specular_map;
-    load_texture(table_specular_map, "Textures/table_specular_map.png", false);
+    load_texture(table_specular_map, "../../../Textures/table_specular_map.png", false);
     unsigned int vehicle_diffuse_map;
-    load_texture(vehicle_diffuse_map, "Textures/vehicle_diffuse_ambient_map.png", true);
+    load_texture(vehicle_diffuse_map, "../../../Textures/vehicle_diffuse_ambient_map.png", true);
     unsigned int vehicle_specular_map;
-    load_texture(vehicle_specular_map, "Textures/vehicle_specular_map.png", false);
+    load_texture(vehicle_specular_map, "../../../Textures/vehicle_specular_map.png", false);
 
     /* -----------------------------------------------------------------------------
      * LOAD SHADERS
@@ -785,7 +786,7 @@ int main()  // its showtime
      * CREATE BUFFER FOR TABLE
      * -----------------------------------------------------------------------------*/
     unsigned int vbo_table[2];
-    unsigned int vao_table = gen_table_buffer(table, vbo_table);
+    unsigned int vao_table = gen_table_buffer(table_mesh, vbo_table);
     std::cout << get_msg("INFO / OpenGL") << "Table created and loaded." << std::endl;
 
     /* -----------------------------------------------------------------------------
@@ -797,7 +798,7 @@ int main()  // its showtime
 
     /* CREATE BUTTONS */
     std::cout << get_msg("INFO / GUI") << "Creating buttons..." << std::endl;
-    GUI::Button stop_button(main_window_handler.get_width_ptr(), main_window_handler.get_height_ptr(), main_window_handler.get_aspect_ptr());
+    GUI::Button stop_button(main_window, main_window_handler.get_width_ptr(), main_window_handler.get_height_ptr(), main_window_handler.get_aspect_ptr());
     stop_button.set_pos(-0.975f, 0.875f);
     stop_button.set_size(0.2f, 0.1f);
     stop_button.set_button_color(Main::BUTTON_STD_COLOR);
@@ -808,7 +809,7 @@ int main()  // its showtime
     
     /* CREATE TEXTBOXES */
     std::cout << get_msg("INFO / GUI") << "Creating textboxes..." << std::endl;
-    GUI::TextBox cmd_line(main_window_handler.get_width_ptr(), main_window_handler.get_height_ptr(), main_window_handler.get_aspect_ptr());
+    GUI::TextBox cmd_line(main_window, main_window_handler.get_width_ptr(), main_window_handler.get_height_ptr(), main_window_handler.get_aspect_ptr());
     cmd_line.set_pos(-0.975f, -1.0f);
     cmd_line.set_size(1.95f, 0.1f);
     cmd_line.set_textinput_color(Main::TEXTBOX_ACTIVE_COLOR);
@@ -820,7 +821,7 @@ int main()  // its showtime
     /* -----------------------------------------------------------------------------
      * INIT ELEMENT HANDLER
      * -----------------------------------------------------------------------------*/
-    GUI::ElementHandler element_handler;
+    GUI::ElementHandler element_handler(main_window);
     element_handler.attach_element(stop_button);
     element_handler.attach_element(cmd_line);
     element_handler.start(std::chrono::milliseconds(5));
@@ -867,7 +868,7 @@ int main()  // its showtime
     std::cout << get_msg("INFO / OpenGL") << "Vehicles loaded." << std::endl;
 
     // Start vehicle-processor.
-    Schwarm::VehicleProcessor vehicle_processor(&sharedsimumem);
+    Schwarm::VehicleProcessor vehicle_processor(&shared_memory);
     vehicle_processor.set_tablesize(Main::get_table_size_x(), Main::get_table_size_y());
     vehicle_processor.set_tableorigin(Main::get_table_origin_x(), Main::get_table_origin_y());
     vehicle_processor.set_buffer(&vehicle_buffer);
@@ -911,7 +912,7 @@ int main()  // its showtime
 
         /* UPDATE WINDOW-HANDLERS */
         int main_width, main_height;
-        glfwGetWindowSize(&main_width, &main_height);
+        glfwGetFramebufferSize(main_window, &main_width, &main_height);
         main_window_handler.update(main_width, main_height, true);
         vis_window_handler.update(gl::convert::to_pixels_size(Main::get_vis_width(), main_window_handler.get_width()), 
                                   gl::convert::to_pixels_size(Main::get_vis_height(), main_window_handler.get_height()), false);
@@ -920,9 +921,9 @@ int main()  // its showtime
         update_scenes(vbo_fb, map_fb_data, vid_mode, main_window_handler, vis_window_handler);
 
         /* UPDATE MATRICES & KEY EVENTS*/
-        Main::process_key_events();
+        Main::process_key_events(main_window);
         update_GUI_matrices(projection2D, text_shader, main_window_handler);
-        update_camera(vis_view, vis_projection, main_window_handler, vis_window_handler);
+        update_camera(main_window, vis_view, vis_projection, main_window_handler, vis_window_handler);
 
         /* -----------------------------------------------------------------------------
          * VISUALIZATION SCENE
@@ -941,12 +942,12 @@ int main()  // its showtime
 
         // draw table to depth map
         glBindVertexArray(vao_table);
-        glDrawArrays(GL_QUADS, table_mtl.vertex_offset, table_mtl.vertex_count);
+        glDrawArrays(GL_QUADS, table_mesh.begin(), table_mesh.count());
         glBindVertexArray(0);
 
         // draw vehicles to shadow map
         glBindVertexArray(vehicle_buffer.get_vao());
-        glDrawArraysInstanced(GL_QUADS, vehicle_mtl.vertex_offset, vehicle_mtl.vertex_count, vehicle_buffer.get_num_vehicles());
+        glDrawArraysInstanced(GL_QUADS, vehicle_mesh.begin(), vehicle_mesh.count(), vehicle_buffer.get_num_vehicles());
         glBindVertexArray(0);
 
         /* DRAW OBJECTS */
@@ -969,10 +970,10 @@ int main()  // its showtime
         vis_shader.uniform_matrix_4x4f("lightSpaceMat", 1, false, glm::value_ptr(light_space_transform));
 
         /* DRAW TABLE */
-        draw_table(vis_shader, table_mtl, vao_table, table_diffuse_map, table_specular_map, shadow_maps);
+        draw_table(vis_shader, table_mesh, vao_table, table_diffuse_map, table_specular_map, shadow_maps);
 
         /* DRAW VEHICLES */
-        draw_vehicles(vis_shader, vehicle_mtl, vehicle_buffer.get_vao(), vehicle_buffer.get_num_vehicles(), vehicle_diffuse_map, vehicle_specular_map, shadow_maps);
+        draw_vehicles(vis_shader, vehicle_mesh, vehicle_buffer.get_vao(), vehicle_buffer.get_num_vehicles(), vehicle_diffuse_map, vehicle_specular_map, shadow_maps);
 
        /* -----------------------------------------------------------------------------
         * SCENE (GUI + VISUALIZATION)
@@ -1013,8 +1014,10 @@ int main()  // its showtime
         glDisable(GL_TEXTURE_2D);
         glUseProgram(0);    // unuse shader
 
-        glfwSwapBuffers();
-        main_running = !glfwGetKey(GLFW_KEY_ESC) && glfwGetWindowParam(GLFW_OPENED);
+        glfwSwapBuffers(main_window);
+        glfwPollEvents();
+
+        main_running = !glfwGetKey(main_window, GLFW_KEY_ESCAPE) && !glfwWindowShouldClose(main_window);
 
         glEndQuery(GL_TIME_ELAPSED);
         int time;
@@ -1070,16 +1073,6 @@ int main()  // its showtime
     glfwTerminate();
     std::cout << get_msg("INFO / OpenGL WINDOW") << "OpenGL window Closed." << std::endl;
     std::cout << get_msg("INFO / OpenGL") << "OpenGL content successfully terminated." << std::endl;
-
-    try
-    {
-        Schwarm::Client::shutdown_pathserver(&simu_running, sharedsimumem);
-    }
-    catch(const std::system_error& e)
-    {
-        std::cerr << get_msg("ERROR / SERVER") << "Runtime error occured while shutting down server." << std::endl;
-    }
-    std::cout << get_msg("INFO / SERVER") << "Stopped simulation server." << std::endl;
 
     event_handler.stop();
     event_handler.cleanup();

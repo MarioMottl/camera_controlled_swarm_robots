@@ -41,7 +41,7 @@ namespace Schwarm
     *       const std::vector<std::string>& args -> Readonly arguments of the command.
     */
 
-    static void on_command(const std::vector<std::string>& args, Schwarm::Client::SharedSimulationMemory* sharedsimumem)
+    static void on_command(const std::vector<std::string>& args, Schwarm::Client::SharedMemory* sharedsimumem)
     {   
         constexpr char simu_syntax[] = "Syntax: \n/simu\n/simu start|stop\n/simu generate <image-file> <vehicle id> <number of goals>\n/simu reset <vehicle id>";
         // Simu command
@@ -58,7 +58,7 @@ namespace Schwarm
                         std::cout << get_msg("ERROR / CLIENT") << simu_syntax << std::endl;
                         return;
                     }
-                    if(!Schwarm::simu_connected(sharedsimumem->client)) // Only send packet if the client is connected to the simulation server.
+                    if(!Schwarm::simu_connected(&sharedsimumem->client)) // Only send packet if the client is connected to the simulation server.
                     {
                         std::cout << get_msg("ERROR / CLIENT") << "You have to be in simulation mode to generate a path. (use: /simu)" << std::endl;
                         return;
@@ -86,7 +86,7 @@ namespace Schwarm
                     packet.encode();    // Encode packet.
 
                     std::cout << get_msg("INFO / CLIENT") << "Generating path from file \"" << args[2] << "\"..." << std::endl;
-                    sharedsimumem->client->get_socket().send(packet.rawdata(), packet.size(), 0);   // Send packet.
+                    sharedsimumem->client.send(packet.rawdata(), packet.size(), 0);   // Send packet.
                 }
                 else if(args[1] == "start")
                 {
@@ -95,7 +95,7 @@ namespace Schwarm
                         std::cout << get_msg("ERROR / CLIENT") << simu_syntax << std::endl;
                         return;
                     }
-                    if(!Schwarm::simu_connected(sharedsimumem->client)) // Only send packet if the client is connected to the simulation server.
+                    if(!Schwarm::simu_connected(&sharedsimumem->client)) // Only send packet if the client is connected to the simulation server.
                     {
                         std::cout << get_msg("ERROR / CLIENT") << "You have to be in simulation mode to start simulation. (use: /simu)" << std::endl;
                         return;
@@ -119,7 +119,7 @@ namespace Schwarm
                 }
                 else if(args[1] == "reset")
                 {
-                    if(!Schwarm::simu_connected(sharedsimumem->client)) // Only send packet if the client is connected to the simulation server.
+                    if(!Schwarm::simu_connected(&sharedsimumem->client)) // Only send packet if the client is connected to the simulation server.
                     {
                         std::cout << get_msg("ERROR / CLIENT") << "You have to be in simulation mode to to reset simulation. (use: /simu)" << std::endl;
                         return;
@@ -139,7 +139,7 @@ namespace Schwarm
                         packet.set_vehicle_id(idx);     
                         packet.allocate(packet.min_size() + packet.filepath_size());
                         packet.encode();
-                        sharedsimumem->client->get_socket().send(packet.rawdata(), packet.size(), 0);
+                        sharedsimumem->client.send(packet.rawdata(), packet.size(), 0);
                         std::cout << get_msg("INFO / CLIENT") << "Path resetted for vehicle: " << idx << "." << std::endl;
                     }
                 }
