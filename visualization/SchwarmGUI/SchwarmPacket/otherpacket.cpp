@@ -154,7 +154,7 @@ PathGeneratePacket::~PathGeneratePacket(void)
     this->free_fp();
 }
 
-void PathGeneratePacket::alloc_fp(size_t s)
+void PathGeneratePacket::alloc_fp(uint32_t s)
 {
     if(this->filepath == nullptr)
     {
@@ -179,8 +179,8 @@ packet_error PathGeneratePacket::encode(void)
     if(err == packet_error::PACKET_NONE)
     {
         uint8_t* const dataptr = this->internal_data_ptr();
-        const size_t remaining_size = this->size() - this->min_size();
-        const size_t fp_size = this->filepath_size();
+        const uint32_t remaining_size = this->size() - this->min_size();
+        const uint32_t fp_size = this->filepath_size();
         *((unsigned int*)(dataptr /* +0 */)) = this->num_goals;
         *((int*)(dataptr + SIZE_NUM_GOALS)) = this->vehicle_id;
         *((bool*)(dataptr + SIZE_NUM_GOALS + SIZE_VEHICLE_ID)) = this->invert;
@@ -197,7 +197,7 @@ packet_error PathGeneratePacket::decode(void)
     if(err == packet_error::PACKET_NONE)
     {
         uint8_t* dataptr = this->internal_data_ptr();
-        size_t remaining_size = this->size() - this->min_size();
+        uint32_t remaining_size = this->size() - this->min_size();
         this->num_goals = *((unsigned int*)(dataptr /* +0 */));
         this->vehicle_id = *((int*)(dataptr + SIZE_NUM_GOALS));
         this->invert = *((bool*)(dataptr + SIZE_NUM_GOALS + SIZE_VEHICLE_ID));
@@ -220,7 +220,7 @@ unsigned int PathGeneratePacket::get_num_goals(void) const noexcept
 
 void PathGeneratePacket::set_filepath(const char* path) noexcept
 {
-    const size_t s_path = strlen(path);
+    const uint32_t s_path = strlen(path);
     if(s_path >= this->fp_allocsize)
     {
         this->free_fp();
@@ -234,7 +234,7 @@ const char* PathGeneratePacket::get_filepath(void) const noexcept
     return this->filepath;
 }
 
-size_t PathGeneratePacket::filepath_size(void) const noexcept
+uint32_t PathGeneratePacket::filepath_size(void) const noexcept
 {
     return strlen(this->filepath) + 1;   // +1 for \0
 }
@@ -333,12 +333,12 @@ packet_error GoalReqPacket::decode(void)
     return err;
 }
 
-void GoalReqPacket::set_goal_index(size_t i) noexcept
+void GoalReqPacket::set_goal_index(uint32_t i) noexcept
 {
     this->goal_idx = i;
 }
 
-size_t GoalReqPacket::get_goal_index(void) const noexcept
+uint32_t GoalReqPacket::get_goal_index(void) const noexcept
 {
     return this->goal_idx;
 }

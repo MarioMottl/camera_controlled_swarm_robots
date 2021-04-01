@@ -25,7 +25,7 @@ Packet::~Packet(void)
     this->free();
 }
 
-void Packet::allocate(size_t s)
+void Packet::allocate(uint32_t s)
 {
     if(s >= Packet::min_size())
     {
@@ -49,7 +49,7 @@ void Packet::free(void)
     }
 }
 
-packet_error Packet::set(uint8_t* __data, size_t custom_size)
+packet_error Packet::set(uint8_t* __data, uint32_t custom_size)
 {
     if(this->__data == nullptr || __data == nullptr)
         return packet_error::PACKET_NULL;
@@ -75,7 +75,7 @@ packet_error Packet::internal_encode(void)
         return packet_error::PACKET_NULL;
 
     *(this->__data + 0) = this->id();
-    *((size_t*)(this->__data + SIZE_ID)) = this->data_size;
+    *((uint32_t*)(this->__data + SIZE_ID)) = this->data_size;
     return packet_error::PACKET_NONE;
 }
 
@@ -84,7 +84,7 @@ packet_error Packet::internal_decode(void)
     return (this->__data == nullptr) ? packet_error::PACKET_NULL : packet_error::PACKET_NONE;
 }
 
-size_t Packet::size(void) const noexcept
+uint32_t Packet::size(void) const noexcept
 {
     return this->data_size;
 }
@@ -110,12 +110,12 @@ const uint8_t* Packet::id_ptr(const uint8_t* data)
     return data;
 }
 
-const size_t* Packet::size_ptr(const uint8_t* data)
+const uint32_t* Packet::size_ptr(const uint8_t* data)
 {  
     if(data == nullptr)
         return nullptr;
 
-    return (size_t*)(data + SIZE_ID);
+    return (uint32_t*)(data + SIZE_ID);
 }
 
 const uint8_t* Packet::data_ptr(const uint8_t* data)

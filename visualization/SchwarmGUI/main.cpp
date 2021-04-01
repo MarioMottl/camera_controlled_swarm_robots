@@ -162,7 +162,7 @@ void create_text_shader(gl::Shader& shader)
 void init_event_handler(EventHandler& event_handler, Schwarm::Client::SharedMemory* mem)
 {
     TextInpListener* button_listener = new TextInpListener();
-    button_listener->set_sharedsimumem(mem);
+    button_listener->set_shared_memory(mem);
     event_handler.add_listener(button_listener);
     std::cout << get_msg("INFO / EVENT-HANDLER") << "Initialized Event-Handler." << std::endl;
 }
@@ -662,21 +662,22 @@ int main()  // its showtime
      * ----------------------------------------------------------------------------*/
 
     // setup socket collections
-    cppsock::tcp::socket_collection path_server_collection(Schwarm::Client::on_path_connect, Schwarm::Client::on_path_disconnect, Schwarm::Client::on_path_receive);
+    cppsock::tcp::socket_collection path_server_collection(Schwarm::Client::on_path_connect, Schwarm::Client::on_path_receive, Schwarm::Client::on_path_disconnect);
 
     // start simulation server
     std::cout << get_msg("INFO / SERVER") << "Started simulation server." << std::endl;
 
+    cppsock::tcp::client path_client;
     cppsock::utility_error_t err;
-    if ((err = shared_memory.client.connect(Schwarm::PATH_SERVER_ADDR, Schwarm::PATH_SERVER_PORT)) < 0)
+    if ((err = path_client.connect(Schwarm::PATH_SERVER_ADDR, Schwarm::PATH_SERVER_PORT)) < 0)
     {
         std::cout << get_msg("ERROR / PATH-SERVER") << "Failed to connect (Address: " << Schwarm::PATH_SERVER_ADDR << " Port : " << Schwarm::PATH_SERVER_PORT << ")" << std::endl;
         std::cout << get_msg("ERROR / PATH-SERVER") << "Path server may not be running!" << std::endl;
         return -1;
     }
     std::cout << "connect return: " << cppsock::utility_strerror(err) << std::endl;
-    path_server_collection.insert(shared_memory.client);
-    std::cout << get_msg("INFO / PATH-SERVER") << "Connected to simulation server (Address: " << shared_memory.client.sock().getpeername().get_addr() << " Port: " << shared_memory.client.sock().getpeername().get_port() << ")" << std::endl;
+    shared_memory.client = path_server_collection.insert(path_client, &shared_memory);
+    std::cout << get_msg("INFO / PATH-SERVER") << "Connected to simulation server (Address: " << shared_memory.client->sock().getpeername().get_addr() << " Port: " << shared_memory.client->sock().getpeername().get_port() << ")" << std::endl;
 
     /* -----------------------------------------------------------------------------
      * DECLARE WINDOW HANDLERS

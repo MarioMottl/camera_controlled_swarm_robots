@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 # add external include directories
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/../../library/cppsock"
-					"${CMAKE_CURRENT_SOURCE_DIR}/../../library/event_handler-1.3.1/include"
+					"${CMAKE_CURRENT_SOURCE_DIR}/../../library/event_handler-1.3.2/include"
 					"${CMAKE_CURRENT_SOURCE_DIR}/../../library/gl_shader-1.0.2/include"
 					"${CMAKE_CURRENT_SOURCE_DIR}/../../library/gl_string-2.1.0/include"
 					"${CMAKE_CURRENT_SOURCE_DIR}/../../library/glc-1.0.0"
@@ -20,7 +20,7 @@ include_directories("${CMAKE_CURRENT_SOURCE_DIR}/../../library/cppsock"
 					"${CMAKE_CURRENT_SOURCE_DIR}/../../library/OpenCL/NVIDIA GPU Computing SDK/OpenCL/common/inc"
 					"${CMAKE_CURRENT_SOURCE_DIR}/../../library/stb")
 
-link_directories("${CMAKE_CURRENT_SOURCE_DIR}/../../library/event_handler-1.3.1/lib"
+link_directories("${CMAKE_CURRENT_SOURCE_DIR}/../../library/event_handler-1.3.2/lib"
 				 "${CMAKE_CURRENT_SOURCE_DIR}/../../library/gl_shader-1.0.2/lib"
 				 "${CMAKE_CURRENT_SOURCE_DIR}/../../library/gl_string-2.1.0/lib"
 				 "${CMAKE_CURRENT_SOURCE_DIR}/../../library/glew-2.1.0/lib/Release/x64"

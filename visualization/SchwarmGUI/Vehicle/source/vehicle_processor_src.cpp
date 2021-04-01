@@ -72,15 +72,15 @@ void VehicleProcessor::process(VehicleProcessor* processor)
                         request.allocate(request.min_size());
                         request.encode();
                         // Send request for a goal.
-                        processor->sharedsimumem->client.send(request.rawdata(), request.size(), 0);
+                        processor->sharedsimumem->client->send(request.rawdata(), request.size(), 0);
 
                         // Wait until a packet is received (either a GoalPacket or an ErrorPacket).
                         // break the waiting if processor was stopped or simulation was stopped
-                        while(processor->running && processor->sharedsimumem->start && processor->sharedsimumem->recv_packed_id == -1);
-
+                        while (processor->running && processor->sharedsimumem->start && processor->sharedsimumem->recv_packed_id == -1) { std::this_thread::yield(); }
                         // Error case
                         if(processor->sharedsimumem->recv_packed_id == ErrorPacket::PACKET_ID)
                         {
+                            std::cout << "[SIMU]: error" << std::endl;
                             // Simulation is finished if client receives a PACKET_INVALID_GOAL
                             // Mutex requiered because .get_code() is not atomic.
                             processor->sharedsimumem->sync.lock();

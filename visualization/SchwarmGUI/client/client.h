@@ -22,7 +22,7 @@ namespace Schwarm
     {
         struct SharedMemory
         {
-            cppsock::tcp::client client;
+            std::shared_ptr<cppsock::tcp::socket> client;
             std::mutex sync;
 
             std::atomic_int recv_packed_id{-1};

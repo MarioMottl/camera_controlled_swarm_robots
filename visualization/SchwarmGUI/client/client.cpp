@@ -32,7 +32,7 @@ void Client::on_path_receive(std::shared_ptr<cppsock::tcp::socket> socket, cppso
     if (ret < 0)
         return;
 
-    const size_t* packet_size = Packet::size_ptr(buff1);    // Get size of the packet.
+    const uint32_t* packet_size = Packet::size_ptr(buff1);    // Get size of the packet.
 
     uint8_t buff2[*packet_size];                            // Create a second buffer with the size of the packet.
     /*
@@ -50,7 +50,7 @@ void Client::process_packet(uint8_t* buff, void** persistent)
     SharedMemory* mem = (SharedMemory*)*persistent;
 
     const uint8_t* id = Packet::id_ptr(buff);       // get id of packet
-    const size_t* size = Packet::size_ptr(buff);    // get size of packet
+    const uint32_t* size = Packet::size_ptr(buff);    // get size of packet
 
     if(*id == AcnPacket::PACKET_ID)
     {
@@ -113,13 +113,13 @@ void Client::shutdown_pathserver(std::atomic_bool* running, Client::SharedMemory
     exit.allocate(exit.min_size());
     exit.encode();
 
-    const std::string& remoteaddress = sharedsimumem.client.sock().getpeername().get_addr();
-    uint16_t remoteport = sharedsimumem.client.sock().getpeername().get_port();
+    const std::string& remoteaddress = sharedsimumem.client->sock().getpeername().get_addr();
+    uint16_t remoteport = sharedsimumem.client->sock().getpeername().get_port();
 
     // Send exit packet to pathserver.
-    sharedsimumem.client.send(exit.rawdata(), exit.size(), 0);
+    sharedsimumem.client->send(exit.rawdata(), exit.size(), 0);
     std::this_thread::sleep_for(std::chrono::milliseconds(20));
-    sharedsimumem.client.close();
+    sharedsimumem.client->close();
     // Wait until server is stopped.
     std::cout << "test" << std::endl;
     while (*running) { std::this_thread::yield(); }

@@ -1,9 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\GUI\\gui_source",
-    "\\out\\build"
+    "\\GUI\\gui_includes",
+    "\\GUI\\gui_source"
   ],
-  "SelectedNode": "\\client",
+  "SelectedNode": "\\CMakeLists.txt",
   "PreviewInSolutionExplorer": false
 }
