@@ -28,7 +28,7 @@ osStatus_t ring_pipe::init(size_t maxsize)
     return osOK;
 }
 
-osStatus_t ring_pipe::enaple_put(bool newstate)
+osStatus_t ring_pipe::enable_put(bool newstate)
 {
     this->_enable_put = newstate;
     return osOK;

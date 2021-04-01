@@ -12,13 +12,39 @@
 #pragma once
 
 #include "serial_interface.hpp"
+#include "USART.hpp"
+#include "string.h"
 
 namespace AT
 {
+    const char hostname[] = "ESP8266";
     class wrapper : public serial::interface
     {
     private:
-        serial::interface *_raw;
+        usart::usart *_interface;
+        osThreadId_t _handler;
+        /**
+         * @brief handle the communication with the ESP8266 module
+         * 
+         * @param this_void this ptr
+         */
+        static void handler(void *this_void);
+    protected:
+        /**
+         * @brief run a AT command
+         * 
+         * @param cmd command to run, does not need to include the end-of-command sequence
+         */
+        void run_cmd(const char *cmd);
+        /**
+         * @brief Get the AT response
+         * 
+         * @param resbuf pointer to the output buffer
+         * @param bufsize size of the output buffer
+         * @param timeout 
+         * @return osStatus_t 
+         */
+        osStatus_t get_response(char *resbuf, size_t bufsize, uint32_t timeout);
     public:
         /**
          * @brief initialise the AT command wrapper
@@ -27,7 +53,7 @@ namespace AT
          * @return true init successful
          * @return false init unsuccessful
          */
-        bool init(serial::interface &raw);
+        bool init(usart::usart &raw);
         /**
          * @brief get one byte from the TCP input
          * 

@@ -44,7 +44,7 @@ public:
      * @param newstate true: enable, flase: disbale
      * @return osStatus_t 
      */
-    osStatus_t enaple_put(bool newstate);
+    osStatus_t enable_put(bool newstate);
     /**
      * @brief put one byte into the queue
      * 
