@@ -90,6 +90,11 @@ void usart::usart::put_blocking(const void *data, size_t len)
     }
 }
 
+osStatus_t usart::usart::enable_recv(bool newstate)
+{
+    return this->recv_pipe->enable_put(newstate);
+}
+
 bool usart::usart::init(USART_TypeDef *usartn, uint32_t baud, size_t recv_pipe_size)
 {
     GPIO_InitTypeDef RX, TX;
