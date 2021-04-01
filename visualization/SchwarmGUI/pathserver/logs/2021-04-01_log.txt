@@ -1,0 +1,37 @@
+
+--------------------------------------------------
+[00:31:26] [INFO] Started socket-handler.
+[00:31:26] [INFO] Started server.
+[00:31:29] [INFO] Client connected.
+[00:31:29] [INFO] IP-Address / Hostname: 127.0.0.1:63936
+[00:31:34] [INFO] Client disconnected.
+[00:31:39] [INFO] Client connected.
+[00:31:39] [INFO] IP-Address / Hostname: 127.0.0.1:63940
+[00:31:43] [INFO] Client disconnected.
+[00:31:46] [INFO] Client connected.
+[00:31:46] [INFO] IP-Address / Hostname: 127.0.0.1:63941
+[00:31:48] [INFO] Client disconnected.
+[00:31:53] [INFO] Client connected.
+[00:31:53] [INFO] IP-Address / Hostname: 127.0.0.1:63942
+[00:32:08] [INFO] Client disconnected.
+[00:32:10] [INFO] Client connected.
+[00:32:10] [INFO] IP-Address / Hostname: 127.0.0.1:63946
+[00:32:36] [INFO] Client disconnected.
+[00:32:38] [INFO] Client connected.
+[00:32:38] [INFO] IP-Address / Hostname: 127.0.0.1:63949
+[00:33:18] [INFO] Client disconnected.
+[00:33:37] [INFO] Client connected.
+[00:33:37] [INFO] IP-Address / Hostname: 127.0.0.1:63957
+[00:36:16] [INFO] Client disconnected.
+[00:36:33] [INFO] Client connected.
+[00:36:33] [INFO] IP-Address / Hostname: 127.0.0.1:63978
+[00:38:07] [INFO] Client disconnected.
+[00:38:10] [INFO] Client connected.
+[00:38:10] [INFO] IP-Address / Hostname: 127.0.0.1:63993
+[00:38:56] [INFO] Client disconnected.
+[00:40:08] [INFO] Client connected.
+[00:40:08] [INFO] IP-Address / Hostname: 127.0.0.1:64022
+[00:40:13] [INFO] Client disconnected.
+[00:40:36] [INFO] Client connected.
+[00:40:36] [INFO] IP-Address / Hostname: 127.0.0.1:64025
+[00:40:40] [INFO] Client disconnected.

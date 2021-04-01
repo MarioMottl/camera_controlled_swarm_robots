@@ -147,7 +147,7 @@ namespace Schwarm
         std::atomic_bool running;
         std::mutex processor_mutex;
 
-        Schwarm::Client::SharedSimulationMemory* sharedsimumem;
+        Schwarm::Client::SharedMemory* sharedsimumem;
         std::chrono::milliseconds tickspeed;
 
         static void process(VehicleProcessor*);
@@ -178,7 +178,7 @@ namespace Schwarm
         }
 
     public:
-        VehicleProcessor(Schwarm::Client::SharedSimulationMemory* mem = nullptr);
+        VehicleProcessor(Schwarm::Client::SharedMemory* mem = nullptr);
 
         VehicleProcessor(const VehicleProcessor&) = delete;
         VehicleProcessor& operator=(const VehicleProcessor&) = delete;

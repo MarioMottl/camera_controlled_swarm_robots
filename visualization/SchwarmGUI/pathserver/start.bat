@@ -1,0 +1,1 @@
+path_server.exe "D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images"

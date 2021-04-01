@@ -12,7 +12,7 @@ using Schwarm::VehicleProcessor;
 
 /* CONSTRUCTORS */
 
-VehicleProcessor::VehicleProcessor(Schwarm::Client::SharedSimulationMemory* mem)
+VehicleProcessor::VehicleProcessor(Schwarm::Client::SharedMemory* mem)
 {
     this->running = false;
     this->sharedsimumem = mem;
@@ -72,7 +72,7 @@ void VehicleProcessor::process(VehicleProcessor* processor)
                         request.allocate(request.min_size());
                         request.encode();
                         // Send request for a goal.
-                        processor->sharedsimumem->client->get_socket().send(request.rawdata(), request.size(), 0);
+                        processor->sharedsimumem->client.send(request.rawdata(), request.size(), 0);
 
                         // Wait until a packet is received (either a GoalPacket or an ErrorPacket).
                         // break the waiting if processor was stopped or simulation was stopped

@@ -1,4 +1,5 @@
 #include "../vehicle.h"
+#define GLEW_STATIC
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
@@ -6,7 +7,9 @@
 
 Schwarm::VehicleBuffer::VehicleBuffer(cl_context& context, cl_command_queue& cmd_queue, gl::Model& model, bool dynamic_vehicles, size_t max_vehicles)
 {
-    static const size_t MODEL_STRIDE = sizeof(float) * (gl::Model::vertex_size() + gl::Model::texture_coord_size() + gl::Model::normal_size());
+    constexpr size_t MODEL_STRIDE = gl::Model::vertex_stride() + gl::Model::texcoord_stride() + gl::Model::normal_stride();
+    constexpr size_t TEXCOORD_STRIDE = gl::Model::vertex_stride();
+    constexpr size_t NORMAL_STRIDE = gl::Model::vertex_stride() + gl::Model::texcoord_stride();
     
     this->context = &context;
     this->cmd_queue = &cmd_queue;
@@ -14,19 +17,21 @@ Schwarm::VehicleBuffer::VehicleBuffer(cl_context& context, cl_command_queue& cmd
     this->dynamic_vehicles = dynamic_vehicles;
     this->max_vehicles = max_vehicles;
 
+    gl::Mesh mesh = model.meshes().at(0);
+
     glGenVertexArrays(1, &this->vao_vehicle);
     glGenBuffers(1, &this->vbo_vehicle);
     glGenBuffers(1, &this->vbo_vehicle_mat);
 
     glBindVertexArray(this->vao_vehicle);
     glBindBuffer(GL_ARRAY_BUFFER, this->vbo_vehicle);
-    glBufferData(GL_ARRAY_BUFFER, model.vertex_data().size() * sizeof(float), model.vertex_data().data(), GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, MODEL_STRIDE * mesh.count(), mesh.get_data(), GL_STATIC_DRAW);
     glEnableVertexAttribArray(0);
     glEnableVertexAttribArray(1);
     glEnableVertexAttribArray(2);
-    glVertexAttribPointer(0, gl::Model::vertex_size(),          GL_FLOAT, false, MODEL_STRIDE, (void*)(gl::Model::vertex_offset()));
-    glVertexAttribPointer(1, gl::Model::texture_coord_size(),   GL_FLOAT, false, MODEL_STRIDE, (void*)(gl::Model::texture_coord_offset()));
-    glVertexAttribPointer(2, gl::Model::normal_size(),          GL_FLOAT, false, MODEL_STRIDE, (void*)(gl::Model::normal_offset()));
+    glVertexAttribPointer(0, gl::Model::vertex_component(),     GL_FLOAT, false, MODEL_STRIDE, (const void*)(0));
+    glVertexAttribPointer(1, gl::Model::texcoord_component(),   GL_FLOAT, false, MODEL_STRIDE, (const void*)(TEXCOORD_STRIDE));
+    glVertexAttribPointer(2, gl::Model::normal_component(),     GL_FLOAT, false, MODEL_STRIDE, (const void*)(NORMAL_STRIDE));
 
     glBindBuffer(GL_ARRAY_BUFFER, this->vbo_vehicle_mat);
     glBufferData(GL_ARRAY_BUFFER, max_vehicles * sizeof(glm::mat4), NULL, GL_DYNAMIC_DRAW);

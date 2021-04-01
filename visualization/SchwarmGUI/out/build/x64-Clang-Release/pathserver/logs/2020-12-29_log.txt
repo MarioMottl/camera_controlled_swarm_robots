@@ -1,0 +1,182 @@
+
+--------------------------------------------------
+[13:41:57] [INFO] Started socket-handler.
+[13:41:57] [INFO] Started server.
+[13:42:21] [INFO] Client connected.
+[13:42:21] [INFO] IP-Address / Hostname: 127.0.0.1:64263
+[13:42:21] [INFO] Received stop command.
+[13:42:21] [INFO] Client disconnected.
+[13:42:21] [INFO] Stopped server.
+[13:42:21] [INFO] Stoppend socket-handler.
+[13:42:21] Exit code 0
+
+--------------------------------------------------
+[13:47:26] [INFO] Started socket-handler.
+
+--------------------------------------------------
+[14:00:14] [INFO] Started socket-handler.
+
+--------------------------------------------------
+[14:05:23] [INFO] Started socket-handler.
+[14:05:23] [INFO] Started server.
+[14:05:38] [INFO] Client connected.
+[14:05:38] [INFO] IP-Address / Hostname: 127.0.0.1:64578
+[14:05:38] [INFO] Received stop command.
+[14:05:38] [INFO] Client disconnected.
+[14:05:38] [INFO] Stopped server.
+[14:05:38] [INFO] Stoppend socket-handler.
+[14:05:38] Exit code 0
+
+--------------------------------------------------
+[14:07:53] [INFO] Started socket-handler.
+[14:07:53] [INFO] Started server.
+[14:08:01] [INFO] Client connected.
+[14:08:01] [INFO] IP-Address / Hostname: 127.0.0.1:64601
+[14:08:01] [INFO] Received stop command.
+[14:08:01] [INFO] Client disconnected.
+[14:08:01] [INFO] Stopped server.
+[14:08:01] [INFO] Stoppend socket-handler.
+[14:08:01] Exit code 0
+
+--------------------------------------------------
+[14:08:29] [INFO] Started socket-handler.
+[14:08:29] [INFO] Started server.
+[14:08:39] [INFO] Client connected.
+[14:08:39] [INFO] IP-Address / Hostname: 127.0.0.1:64606
+[14:08:39] [INFO] Received stop command.
+[14:08:39] [INFO] Client disconnected.
+[14:08:39] [INFO] Stopped server.
+[14:08:39] [INFO] Stoppend socket-handler.
+[14:08:39] Exit code 0
+
+--------------------------------------------------
+[14:09:29] [INFO] Started socket-handler.
+[14:09:29] [INFO] Started server.
+[14:09:34] [INFO] Client connected.
+[14:09:34] [INFO] IP-Address / Hostname: 127.0.0.1:64613
+[14:09:34] [INFO] Received stop command.
+[14:09:34] [INFO] Client disconnected.
+[14:09:34] [INFO] Stopped server.
+[14:09:34] [INFO] Stoppend socket-handler.
+[14:09:34] Exit code 0
+
+--------------------------------------------------
+[14:10:20] [INFO] Started socket-handler.
+[14:10:20] [INFO] Started server.
+[14:10:25] [INFO] Client connected.
+[14:10:25] [INFO] IP-Address / Hostname: 127.0.0.1:64622
+[14:10:25] [INFO] Received stop command.
+[14:10:25] [INFO] Client disconnected.
+[14:10:25] [INFO] Stopped server.
+[14:10:25] [INFO] Stoppend socket-handler.
+[14:10:25] Exit code 0
+
+--------------------------------------------------
+[14:11:02] [INFO] Started socket-handler.
+[14:11:02] [INFO] Started server.
+[14:11:09] [INFO] Client connected.
+[14:11:09] [INFO] IP-Address / Hostname: 127.0.0.1:64629
+[14:11:09] [INFO] Received stop command.
+[14:11:09] [INFO] Client disconnected.
+[14:11:09] [INFO] Stopped server.
+[14:11:09] [INFO] Stoppend socket-handler.
+[14:11:09] Exit code 0
+
+--------------------------------------------------
+[14:11:59] [INFO] Started socket-handler.
+[14:11:59] [INFO] Started server.
+[14:12:04] [INFO] Client connected.
+[14:12:04] [INFO] IP-Address / Hostname: 127.0.0.1:64644
+[14:12:04] [INFO] Received stop command.
+[14:12:04] [INFO] Client disconnected.
+[14:12:04] [INFO] Stopped server.
+[14:12:04] [INFO] Stoppend socket-handler.
+[14:12:04] Exit code 0
+
+--------------------------------------------------
+[14:12:17] [INFO] Started socket-handler.
+[14:12:17] [INFO] Started server.
+[14:12:20] [INFO] Client connected.
+[14:12:20] [INFO] IP-Address / Hostname: 127.0.0.1:64648
+[14:12:20] [INFO] Received stop command.
+[14:12:20] [INFO] Client disconnected.
+[14:12:20] [INFO] Stopped server.
+[14:12:20] [INFO] Stoppend socket-handler.
+[14:12:20] Exit code 0
+
+--------------------------------------------------
+[14:19:04] [INFO] Started socket-handler.
+[14:19:04] [INFO] Started server.
+[14:19:09] [INFO] Client connected.
+[14:19:09] [INFO] IP-Address / Hostname: 127.0.0.1:64743
+[14:19:09] [INFO] Received stop command.
+[14:19:09] [INFO] Client disconnected.
+[14:19:09] [INFO] Stopped server.
+[14:19:09] [INFO] Stoppend socket-handler.
+[14:19:09] Exit code 0
+
+--------------------------------------------------
+[14:22:20] [INFO] Started socket-handler.
+[14:22:20] [INFO] Started server.
+[14:22:25] [INFO] Client connected.
+[14:22:25] [INFO] IP-Address / Hostname: 127.0.0.1:64779
+[14:22:25] [INFO] Received stop command.
+[14:22:25] [INFO] Client disconnected.
+[14:22:25] [INFO] Stopped server.
+[14:22:25] [INFO] Stoppend socket-handler.
+[14:22:25] Exit code 0
+
+--------------------------------------------------
+[14:26:28] [INFO] Started socket-handler.
+[14:26:28] [INFO] Started server.
+[14:26:54] [INFO] Client connected.
+[14:26:54] [INFO] IP-Address / Hostname: 127.0.0.1:64824
+[14:26:54] [INFO] Received stop command.
+[14:26:54] [INFO] Client disconnected.
+[14:26:54] [INFO] Stopped server.
+[14:26:54] [INFO] Stoppend socket-handler.
+[14:26:54] Exit code 0
+
+--------------------------------------------------
+[14:27:14] [INFO] Started socket-handler.
+[14:27:14] [INFO] Started server.
+[14:27:18] [INFO] Client connected.
+[14:27:18] [INFO] IP-Address / Hostname: 127.0.0.1:64828
+[14:27:18] [INFO] Received stop command.
+[14:27:18] [INFO] Client disconnected.
+[14:27:18] [INFO] Stopped server.
+[14:27:18] [INFO] Stoppend socket-handler.
+[14:27:18] Exit code 0
+
+--------------------------------------------------
+[22:35:29] [INFO] Started socket-handler.
+[22:35:29] [INFO] Started server.
+[22:35:39] [INFO] Client connected.
+[22:35:39] [INFO] IP-Address / Hostname: 127.0.0.1:53918
+[22:35:39] [INFO] Received stop command.
+[22:35:39] [INFO] Client disconnected.
+[22:35:39] [INFO] Stopped server.
+[22:35:39] [INFO] Stoppend socket-handler.
+[22:35:39] Exit code 0
+
+--------------------------------------------------
+[22:37:16] [INFO] Started socket-handler.
+[22:37:16] [INFO] Started server.
+[22:37:54] [INFO] Client connected.
+[22:37:54] [INFO] IP-Address / Hostname: 127.0.0.1:53961
+[22:37:54] [INFO] Received stop command.
+[22:37:54] [INFO] Client disconnected.
+[22:37:54] [INFO] Stopped server.
+[22:37:54] [INFO] Stoppend socket-handler.
+[22:37:54] Exit code 0
+
+--------------------------------------------------
+[22:38:15] [INFO] Started socket-handler.
+[22:38:15] [INFO] Started server.
+[22:38:51] [INFO] Client connected.
+[22:38:51] [INFO] IP-Address / Hostname: 127.0.0.1:53985
+[22:38:51] [INFO] Received stop command.
+[22:38:51] [INFO] Client disconnected.
+[22:38:51] [INFO] Stopped server.
+[22:38:51] [INFO] Stoppend socket-handler.
+[22:38:51] Exit code 0

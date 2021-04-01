@@ -7,14 +7,14 @@
 
 # =============================================================================
 # Project: SchwarmGUI
-# Configurations: Debug
+# Configurations: RelWithDebInfo
 # =============================================================================
 # =============================================================================
 
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__object_module_Debug
+rule CXX_COMPILER__object_module_RelWithDebInfo
   depfile = $DEP_FILE
   deps = gcc
   command = C:\PROGRA~1\LLVM\bin\CLANG_~1.EXE $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -24,7 +24,7 @@ rule CXX_COMPILER__object_module_Debug
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__object_module_Debug
+rule CXX_STATIC_LIBRARY_LINKER__object_module_RelWithDebInfo
   command = cmd.exe /C "$PRE_LINK && "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E rm -f $TARGET_FILE && C:\PROGRA~1\LLVM\bin\llvm-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\PROGRA~1\LLVM\bin\LLVM-R~1.EXE $TARGET_FILE && $POST_BUILD"
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -33,7 +33,7 @@ rule CXX_STATIC_LIBRARY_LINKER__object_module_Debug
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__SchwarmGUI_Debug
+rule CXX_COMPILER__SchwarmGUI_RelWithDebInfo
   depfile = $DEP_FILE
   deps = gcc
   command = C:\PROGRA~1\LLVM\bin\CLANG_~1.EXE $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -43,7 +43,7 @@ rule CXX_COMPILER__SchwarmGUI_Debug
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__SchwarmGUI_Debug
+rule CXX_EXECUTABLE_LINKER__SchwarmGUI_RelWithDebInfo
   command = cmd.exe /C "$PRE_LINK && C:\PROGRA~1\LLVM\bin\CLANG_~1.EXE -fuse-ld=lld-link -nostartfiles -nostdlib $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Xlinker /implib:$TARGET_IMPLIB -Xlinker /pdb:$TARGET_PDB -Xlinker /version:0.0  $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT

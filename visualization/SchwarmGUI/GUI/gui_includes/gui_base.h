@@ -4,6 +4,7 @@
 #include <GL/glstr.h>
 #include <atomic>
 #include <vector>
+#define GLEW_STATIC
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 

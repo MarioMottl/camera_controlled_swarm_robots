@@ -14,21 +14,21 @@ private:
     atomic_float win_aspect = 1.0f, size_aspect = 1.0f;
 
 public:
-    WindowHandler(void) = delete;
-    WindowHandler(GLFWwindow* window)                           
+    WindowHandler(void)                   
     { 
-        this->init(0, 1); 
-        this->window = window; 
+        this->init(nullptr, 0, 1);
     }
 
-    WindowHandler(GLFWwindow* window, int width, int height) : WindowHandler(window)
+    WindowHandler(GLFWwindow* window, int width, int height)
     {
-        this->init(width, height);
+        this->init(window, width, height);
     }
     virtual ~WindowHandler(void)    {/*dtor*/}
 
-    void init(int width, int height) noexcept
+    void init(GLFWwindow* window, int width, int height) noexcept
     {
+        this->window = window;
+
         this->win_width = width;
         this->win_height = height;
         this->start_height = height;

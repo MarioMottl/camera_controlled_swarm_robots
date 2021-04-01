@@ -1,35 +1,26 @@
 #include "client.h"
-#include <cstdio>
 #include <iostream>
-#include <system_error>
 #include <sstream>
 #include "../includes/my_msg.h"
 #include "../SchwarmPacket/packet.h"
 
 using namespace Schwarm;
 
-void Client::on_pathsimu_connect(cppsock::socket* socket, void** persistent, error_t error)
+void Client::on_path_connect(std::shared_ptr<cppsock::tcp::socket> socket, cppsock::socketaddr_pair addr, void** persistent)
 {
-    // no error case
-    if(error == SH::error_code_t::HANDLER_NO_ERROR) 
-    {
-        std::cout << get_msg("INFO / CLIENT") << "Successfully connected." << std::endl;
-        std::cout << get_msg("INFO / CLIENT") << "Device-Address: " << socket->getsockname().get_addr() << ":" << socket->getsockname().get_port() << std::endl;
-        std::cout << get_msg("INFO / CLIENT") << "Remote-Address: " << socket->getpeername().get_addr() << ":" << socket->getsockname().get_port() << std::endl;
-    }
-    else    // error case
-    {
-        std::cout << get_msg("ERROR / CLIENT") << "Can't connect to server." << std::endl;
-        std::cout << get_msg("INFO / CLIENT") << "Errorcode: " << error << std::endl;
-    }
+    std::cout << get_msg("INFO / CLIENT") << "Successfully connected to Path-Server." << std::endl;
+    std::cout << get_msg("INFO / CLIENT") << "Device-Address: " << addr.local << std::endl;
+    std::cout << get_msg("INFO / CLIENT") << "Remote-Address: " << addr.remote << std::endl;
 }
 
-void Client::on_pathsimu_disconnect(cppsock::socket* socket, void** persistent)
+void Client::on_path_disconnect(std::shared_ptr<cppsock::tcp::socket> socket, cppsock::socketaddr_pair addr, void** persistent)
 {
-    std::cout << get_msg("INFO / CLIENT") << "Diconnected." << std::endl;
+    std::cout << get_msg("INFO / CLIENT") << "Path-Server disconnected." << std::endl;
+    std::cout << get_msg("INFO / CLIENT") << "Device-Address: " << addr.local << std::endl;
+    std::cout << get_msg("INFO / CLIENT") << "Remote-Address: " << addr.remote << std::endl;;
 }
 
-void Client::on_pathsimu_receive(cppsock::socket* socket, void** persistent, SH::data_channel channel)
+void Client::on_path_receive(std::shared_ptr<cppsock::tcp::socket> socket, cppsock::socketaddr_pair addr, void** persistent)
 {
     uint8_t buff1[5];
     /*
@@ -37,7 +28,10 @@ void Client::on_pathsimu_receive(cppsock::socket* socket, void** persistent, SH:
     *   Because of the peek flag those bytes bytes will not be deleted from the buffer.
     *   This is done to get the size of the whole packet without modifying the receive buffer.
     */
-    socket->recv(buff1, sizeof(buff1), channel | MSG_PEEK);
+    std::streamsize ret = socket->recv(buff1, sizeof(buff1), cppsock::peek);
+    if (ret < 0)
+        return;
+
     const size_t* packet_size = Packet::size_ptr(buff1);    // Get size of the packet.
 
     uint8_t buff2[*packet_size];                            // Create a second buffer with the size of the packet.
@@ -45,7 +39,7 @@ void Client::on_pathsimu_receive(cppsock::socket* socket, void** persistent, SH:
     *   Receive the second time with the full size of the packet and without peeking so that the
     *   buffer gets cleared after reading the data from it.
     */
-    socket->recv(buff2, sizeof(buff2), channel);
+    socket->recv(buff2, sizeof(buff2), cppsock::waitall); // internal compiler error: bug report
 
     // Process the packet...
     process_packet(buff2, persistent);
@@ -53,7 +47,7 @@ void Client::on_pathsimu_receive(cppsock::socket* socket, void** persistent, SH:
 
 void Client::process_packet(uint8_t* buff, void** persistent)
 {
-    SharedSimulationMemory* mem = (SharedSimulationMemory*)*persistent;
+    SharedMemory* mem = (SharedMemory*)*persistent;
 
     const uint8_t* id = Packet::id_ptr(buff);       // get id of packet
     const size_t* size = Packet::size_ptr(buff);    // get size of packet
@@ -98,7 +92,7 @@ void Client::run_pathserver(std::atomic_bool* running, const std::string* imgfol
     if((ret = std::system(cmd)) < 0)    // Start server
     {
         std::cout << get_msg("ERROR / SERVER") << "Server closed with code: " << ret << " / " << std::hex << ret << std::endl;
-        //throw std::system_error("Unfinished");  // System error if server is unable to start.
+        throw std::runtime_error("Cant start path server.");  // System error if server is unable to start.
     }
     *running = false;
 }
@@ -108,33 +102,26 @@ void Client::start_pathserver(std::atomic_bool* running, const std::string* imgf
     std::thread serverthread = std::thread(Client::run_pathserver, running, imgfolder);   
 
     serverthread.detach();
-    while(!*running);
+    while(!*running) { std::this_thread::yield(); }
     std::this_thread::sleep_for(std::chrono::milliseconds(10));
 }
 
-void Client::shutdown_pathserver(std::atomic_bool* running, Client::SharedSimulationMemory& sharedsimumem)
+void Client::shutdown_pathserver(std::atomic_bool* running, Client::SharedMemory& sharedsimumem)
 {
     // Compile exit packet.
     ExitPacket exit;
     exit.allocate(exit.min_size());
     exit.encode();
 
-    const std::string& remoteaddress = sharedsimumem.client->get_socket().getpeername().get_addr();
-    uint16_t remoteport = sharedsimumem.client->get_socket().getpeername().get_port();
-    
-    // If client is not connected to pathserver...
-    if(!(remoteaddress == Schwarm::SIMU_SERVER_ADDR && remoteport == Schwarm::SIMU_SERVER_PORT))
-    {
-        // Disconnect from current server.
-        sharedsimumem.client->disconnect();
-        // Connect to pathserver.
-        sharedsimumem.client->connect(Schwarm::SIMU_SERVER_ADDR, Schwarm::SIMU_SERVER_PORT);
-    }
+    const std::string& remoteaddress = sharedsimumem.client.sock().getpeername().get_addr();
+    uint16_t remoteport = sharedsimumem.client.sock().getpeername().get_port();
 
     // Send exit packet to pathserver.
-    sharedsimumem.client->get_socket().send(exit.rawdata(), exit.size(), 0);
+    sharedsimumem.client.send(exit.rawdata(), exit.size(), 0);
     std::this_thread::sleep_for(std::chrono::milliseconds(20));
-    sharedsimumem.client->disconnect();
+    sharedsimumem.client.close();
     // Wait until server is stopped.
-    while(*running);
+    std::cout << "test" << std::endl;
+    while (*running) { std::this_thread::yield(); }
+    std::cout << "test2" << std::endl;
 }   

@@ -2,7 +2,7 @@
 #define __my_utility_h__
 
 #include <string>
-#include "../client/my_msh.h"
+#include <cppsock.hpp>
 
 namespace Schwarm
 {
@@ -16,12 +16,12 @@ namespace Schwarm
         return true;
     }
 
-    inline bool simu_connected(SH::Client* client)
+    inline bool simu_connected(cppsock::tcp::socket* client)
     {
-        const std::string& serveraddr = client->get_socket().getpeername().get_addr();
-        uint16_t port = client->get_socket().getpeername().get_port();
+        const std::string& serveraddr = client->sock().getpeername().get_addr();
+        uint16_t port = client->sock().getpeername().get_port();
 
-        return (serveraddr == Schwarm::SIMU_SERVER_ADDR && port == Schwarm::SIMU_SERVER_PORT);
+        return (serveraddr == Schwarm::PATH_SERVER_ADDR && port == Schwarm::PATH_SERVER_PORT);
     }
 };
 
