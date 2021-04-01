@@ -1,6 +1,6 @@
 #ifndef __schwarm_packet_h__
 #define __schwarm_packet_h__
-
+#define _CRT_SECURE_NO_WARNINGS
 #include <cstdint>
 
 namespace Schwarm
