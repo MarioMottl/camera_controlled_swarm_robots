@@ -9,8 +9,7 @@ int main()
         return -1;
     }
 
-    swarm.createTBar();
-
+    swarm.createTBarHV();
     swarm.Detector();
 
     return 0;
