@@ -4,6 +4,8 @@
 #include <string>
 #include <cppsock.hpp>
 
+#include <iostream>
+
 namespace Schwarm
 {
     inline bool is_number(const std::string& str)
@@ -16,12 +18,17 @@ namespace Schwarm
         return true;
     }
 
-    inline bool simu_connected(cppsock::tcp::socket* client)
+    inline bool simu_connected(std::shared_ptr<cppsock::tcp::socket> client)
     {
+#if 1
         const std::string& serveraddr = client->sock().getpeername().get_addr();
         uint16_t port = client->sock().getpeername().get_port();
 
         return (serveraddr == Schwarm::PATH_SERVER_ADDR && port == Schwarm::PATH_SERVER_PORT);
+#else
+        int8_t indicator;
+        return (client->recv(&indicator, sizeof(int8_t), cppsock::peek) > 0);
+#endif
     }
 };
 
