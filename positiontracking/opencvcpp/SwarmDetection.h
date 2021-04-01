@@ -17,12 +17,12 @@
 */
 struct HueValues
 {
-    size_t l_h;
-    size_t l_s;
-    size_t l_v;
-    size_t u_h;
-    size_t u_s;
-    size_t u_v;
+    int l_h;
+    int l_s;
+    int l_v;
+    int u_h;
+    int u_s;
+    int u_v;
 };
 
 /**
@@ -163,5 +163,5 @@ public:
 
     static void startServer(SwarmDetection *p);
 
-    static void sendPacket(SwarmDetection *p);
+    static bool sendPacket(SwarmDetection *p);
 };

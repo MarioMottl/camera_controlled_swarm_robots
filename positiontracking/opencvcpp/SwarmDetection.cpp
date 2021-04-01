@@ -36,10 +36,8 @@ void SwarmDetection::Detector()
             detector->detect(mask,keyPoints);
         #endif
 
-        //printDimensions();
         simpleCarDetection(keyPoints);
-        //t1 = std::thread(drawKeyPoints,pic.frame, &keyPoints, this);
-        //t1.detach();
+
         drawKeyPoints(pic.frame, &keyPoints, this);
         showFrame("Keypoints", pic.frame);
 
@@ -49,8 +47,7 @@ void SwarmDetection::Detector()
             break;
         }
     }
-    listener.close();
-    connection.close();
+    std::cout << "[SERVER] Shutdown" << std::endl;
 }
 
 void SwarmDetection::drawKeyPoints(cv::Mat xframe, std::vector<cv::KeyPoint>* keyPoints,SwarmDetection *p)
@@ -66,12 +63,12 @@ void SwarmDetection::simpleCarDetection(std::vector<cv::KeyPoint> keyPoints)
         float x = 0, y = 0;
         getDimensions();
         std::vector<cv::KeyPoint>::const_iterator it = keyPoints.begin(), end = keyPoints.end();
-        std::cout << "Number of keypoints: " << keyPoints.size() << std::endl;
+        std::cout << "[DEBUG]Number of keypoints: " << keyPoints.size() << std::endl;
         if (keyPoints.size() == 3)
         {
-            std::cout<< "ABv = " << getDistance(keyPoints[0], keyPoints[1]) <<"Pixel" << std::endl;
-            std::cout << "BCv = " << getDistance(keyPoints[1], keyPoints[2]) << "Pixel" << std::endl;
-            std::cout << "ACv = " << getDistance(keyPoints[0], keyPoints[2]) << "Pixel" << std::endl;
+            std::cout << "[DEBUG]ABv = " << getDistance(keyPoints[0], keyPoints[1]) << "Pixel" << std::endl;
+            std::cout << "[DEBUG]BCv = " << getDistance(keyPoints[1], keyPoints[2]) << "Pixel" << std::endl;
+            std::cout << "[DEBUG]ACv = " << getDistance(keyPoints[0], keyPoints[2]) << "Pixel" << std::endl;
         }
         for (; it != end; ++it)
         {
@@ -80,7 +77,7 @@ void SwarmDetection::simpleCarDetection(std::vector<cv::KeyPoint> keyPoints)
         }
         x = (x / keyPoints.size()) / pic.width;
         y = (y / keyPoints.size()) / pic.height;
-        std::cout << "Median Xrel: " << x << " Median Yrel: " << y << std::endl;
+        std::cout << "[DEBUG]Median Xrel: " << x << " Median Yrel: " << y << std::endl;
         pkgReady = true;
         makePacket(x, y);
     }
@@ -95,7 +92,7 @@ void SwarmDetection::getDimensions()
 void SwarmDetection::printDimensions()
 {
     getDimensions();
-    std::cout << "Height: " << pic.height << " Width: " << pic.width << std::endl;
+    std::cout << " Width: " << pic.width << "Height: " << pic.height  <<std::endl;
 }
 
 void SwarmDetection::makePacket(float x, float y)
@@ -108,29 +105,37 @@ void SwarmDetection::makePacket(float x, float y)
 
 void SwarmDetection::startServer(SwarmDetection* p)
 {
+    bool running = true;
     cppsock::utility_error_t err = p->listener.setup(cppsock::make_any<cppsock::IPv4>(PORT), 1);
-    std::cout << "server status: " << cppsock::utility_strerror(err) << ", server address: " << p->listener.sock().getsockname() << std::endl;
+    std::cout << "[SERVER]server status: " << cppsock::utility_strerror(err) << ", server address: " << p->listener.sock().getsockname() << std::endl;
     if(err < 0)
     {
         throw std::logic_error("unable to setup server");
     }
-    p->listener.accept(p->connection);
-
-    //p->connection.send("Connected", 10, 0);
 
     for(;;)
     {
-        p->sendPacket(p);
+        p->listener.accept(p->connection);
+
+        std::cout << "[SERVER] Client connected" << std::endl;
+
+        while(running)
+        {
+            running = p->sendPacket(p);
+        }
+        std::cout << "[SERVER] Client disconnected" << std::endl;
     }
 }
 
-void SwarmDetection::sendPacket(SwarmDetection* p)
+bool SwarmDetection::sendPacket(SwarmDetection* p)
 {
     if (p->pkgReady)
     {
-        p->connection.send(p->packet.rawdata(), p->packet.min_size(), 0);
+        if(p->connection.send(p->packet.rawdata(), p->packet.min_size(), 0) < 0)
+            return false;
         std::this_thread::sleep_for(std::chrono::milliseconds(10));
     }
+    return true;
 }
 
 void SwarmDetection::carDetection(std::vector<cv::KeyPoint> *keyPoints)
@@ -170,7 +175,7 @@ float SwarmDetection::getDistance(cv::KeyPoint p1, cv::KeyPoint p2)
 
 int SwarmDetection::setupVideCapture(int deviceID)
 {
-    size_t apiID = cv::CAP_ANY;
+    int apiID = cv::CAP_ANY;
 
     cap.open(deviceID, apiID);
 
@@ -221,11 +226,11 @@ void SwarmDetection::printHueValues(HueValues& hvalues)
 {
     getTBarPosHV(hvalues);
     std::cout << "LH" << hvalues.l_h << std::endl
-        << "LS" << hvalues.l_s << std::endl
-        << "LV" << hvalues.l_v << std::endl
-        << "UH" << hvalues.u_h << std::endl
-        << "US" << hvalues.u_s << std::endl
-        << "UV" << hvalues.u_v;
+              << "LS" << hvalues.l_s << std::endl
+              << "LV" << hvalues.l_v << std::endl
+              << "UH" << hvalues.u_h << std::endl
+              << "US" << hvalues.u_s << std::endl
+              << "UV" << hvalues.u_v;
 }
 
 void SwarmDetection::setBlobParams(float minThreshhold, float maxThreshhold, bool filterByArea, float minArea, bool filterByCircularity, float minCircularity, bool filterByConvexity, float minConvexity, bool filterByInertia, float minInertiaRatio, cv::SimpleBlobDetector::Params &params)
