@@ -17,12 +17,12 @@
 */
 struct HueValues
 {
-    int l_h;
-    int l_s;
-    int l_v;
-    int u_h;
-    int u_s;
-    int u_v;
+    size_t l_h;
+    size_t l_s;
+    size_t l_v;
+    size_t u_h;
+    size_t u_s;
+    size_t u_v;
 };
 
 /**
@@ -38,8 +38,8 @@ struct PicData
 {
     cv::Mat frame;
     cv::Mat rFrame;
-    int width;
-    int height;
+    size_t width;
+    size_t height;
 };
 
 
@@ -83,13 +83,15 @@ public:
     /**
     * @brief Creates a Track bar for the lower and upper values of the pixels that need to be tracked
     */
-    void createTBar();
+    void createTBarHV();
+
 
     /**
     * @brief Reads out the Track bar positions and returns it.
     * @return @param hvalues -> struct of values of Track bar
     */
-    void getTBarPos(HueValues& hvalues);
+    void getTBarPosHV(HueValues& hvalues);
+
 
     /**
     * @brief Debug Output: Prints out the Hue values of the Track bar

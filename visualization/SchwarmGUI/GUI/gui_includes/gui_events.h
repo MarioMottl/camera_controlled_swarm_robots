@@ -32,6 +32,7 @@ private:
                 event->event_queue.push_back(info);
                 event->event_mutex.unlock();
             }
+            event->internal();
         }
     }
 protected:
@@ -76,6 +77,7 @@ private:
                 event->buttononly_event_queue.push_back(info);
                 event->event_mutex.unlock();
             }
+            event->internal();
         }
     }
 
@@ -198,6 +200,7 @@ private:
                 event->tionly_event_queue.push_back(info);
                 event->event_mutex.unlock();
             }
+            event->internal();
         }
     }
     

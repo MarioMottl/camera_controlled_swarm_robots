@@ -14,7 +14,7 @@ class TextInpListener : public Listener
 {
 private:
     TextBoxEnterEvent textboxenter;
-    inline static Schwarm::Client::SharedMemory* sharedsimumem;
+    inline static Schwarm::Client::SharedMemory* shared_memory;
 
 protected:
     virtual void init(void)
@@ -28,16 +28,16 @@ public:
         this->init();
     }
 
-    static void set_sharedsimumem(Schwarm::Client::SharedMemory* mem) 
+    static void set_shared_memory(Schwarm::Client::SharedMemory* mem) 
     {
-        sharedsimumem = mem;
+        shared_memory = mem;
     }
 
     static void on_textenter(TextBoxEnterEvent& event)
     {
         std::vector<std::string> args;
         if(Schwarm::decode_command(event.get_text_input().get_text_value(), args))
-            Schwarm::on_command(args, sharedsimumem);
+            Schwarm::on_command(args, shared_memory);
         else
             std::cout << get_msg("ERROR") << "A command has to begin with \'/\'." << std::endl;
         event.get_text_input().set_text_value("");

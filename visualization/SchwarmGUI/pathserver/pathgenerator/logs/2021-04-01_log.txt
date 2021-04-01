@@ -1,0 +1,38 @@
+
+-----------------------------------------------
+[12:43:40] [INFO] Reading image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png...
+[12:43:40] [INFO] Successfully loaded image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png
+[12:43:40] [INFO] Converting to grayscale...
+[12:43:40] [INFO] Successfully converted to grayscale.
+[12:43:40] [INFO] Generating path...
+[12:43:40] [INFO] Generated path.
+[12:43:40] [INFO] Generating goals...
+[12:43:40] [INFO] Generated goals.
+[12:43:40] [INFO] Printing goals to: goals.gol...
+[12:43:40] [INFO] Successfully printed goals to: goals.gol
+
+[12:43:40] [INFO] Reading image time: 31.427000ms
+[12:43:40] [INFO] Converting to grayscale time: 4.983000ms
+[12:43:40] [INFO] Gnerating path time: 16.955000ms
+[12:43:40] [INFO] Generating goals time: 0.000000ms
+[12:43:40] [INFO] Printing goals time: 4.987000ms
+[12:43:40] [INFO] Execution time: 58.352000ms
+
+-----------------------------------------------
+[12:45:08] [INFO] Reading image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png...
+[12:45:08] [INFO] Successfully loaded image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png
+[12:45:08] [INFO] Converting to grayscale...
+[12:45:08] [INFO] Successfully converted to grayscale.
+[12:45:08] [INFO] Generating path...
+[12:45:08] [INFO] Generated path.
+[12:45:08] [INFO] Generating goals...
+[12:45:08] [INFO] Generated goals.
+[12:45:08] [INFO] Printing goals to: goals.gol...
+[12:45:08] [INFO] Successfully printed goals to: goals.gol
+
+[12:45:08] [INFO] Reading image time: 10.970000ms
+[12:45:08] [INFO] Converting to grayscale time: 4.987000ms
+[12:45:08] [INFO] Gnerating path time: 14.960000ms
+[12:45:08] [INFO] Generating goals time: 0.000000ms
+[12:45:08] [INFO] Printing goals time: 2.006000ms
+[12:45:08] [INFO] Execution time: 32.923000ms
