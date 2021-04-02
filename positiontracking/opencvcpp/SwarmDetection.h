@@ -8,6 +8,7 @@
 #include <packet.h>
 #include <exception>
 #include "../../library/cppsock/cppsock.hpp"
+#include <fstream>
 
 #define PORT 10001
 #define N_CARS 1        //max amount of cars in frame       
@@ -56,9 +57,11 @@ private:
     cppsock::tcp::listener listener;
     cppsock::tcp::socket connection;
     std::atomic_bool pkgReady = false;
+    HueValues hvalues;
+
 public:
-    SwarmDetection() = default;
-    ~SwarmDetection() = default;
+    SwarmDetection();
+    ~SwarmDetection();
 
     /**
      * @brief Sets up the VideoCapture

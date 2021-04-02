@@ -2,7 +2,6 @@
 
 void SwarmDetection::Detector()
 {
-    HueValues hvalues;
     cv::SimpleBlobDetector::Params params;
     std::vector<cv::KeyPoint> keyPoints;
     cv::Mat hsvFrame;
@@ -58,29 +57,29 @@ void SwarmDetection::drawKeyPoints(cv::Mat xframe, std::vector<cv::KeyPoint>* ke
 
 void SwarmDetection::simpleCarDetection(std::vector<cv::KeyPoint> keyPoints)
 {
+    float x = 0.00f, y = 0.00f;
     if (keyPoints.size() > 2)
     {
-        float x = 0, y = 0;
         getDimensions();
         std::vector<cv::KeyPoint>::const_iterator it = keyPoints.begin(), end = keyPoints.end();
         std::cout << "[DEBUG]Number of keypoints: " << keyPoints.size() << std::endl;
-        if (keyPoints.size() == 3)
+        if (keyPoints.size() >= 3)
         {
             std::cout << "[DEBUG]ABv = " << getDistance(keyPoints[0], keyPoints[1]) << "Pixel" << std::endl;
             std::cout << "[DEBUG]BCv = " << getDistance(keyPoints[1], keyPoints[2]) << "Pixel" << std::endl;
             std::cout << "[DEBUG]ACv = " << getDistance(keyPoints[0], keyPoints[2]) << "Pixel" << std::endl;
-        }
-        for (; it != end; ++it)
-        {
-            x += it->pt.x;
-            y += it->pt.y;
-        }
+            for (; it != end; ++it)
+            {
+                x += it->pt.x;
+                y += it->pt.y;
+            }
         x = (x / keyPoints.size()) / pic.width;
         y = (y / keyPoints.size()) / pic.height;
         std::cout << "[DEBUG]Median Xrel: " << x << " Median Yrel: " << y << std::endl;
-        pkgReady = true;
-        makePacket(x, y);
+        }
     }
+    pkgReady = true;
+    makePacket(x, y);
 }
 
 void SwarmDetection::getDimensions()
@@ -124,6 +123,8 @@ void SwarmDetection::startServer(SwarmDetection* p)
             running = p->sendPacket(p);
         }
         std::cout << "[SERVER] Client disconnected" << std::endl;
+        p->listener.close();
+        exit(-1);
     }
 }
 
@@ -131,7 +132,8 @@ bool SwarmDetection::sendPacket(SwarmDetection* p)
 {
     if (p->pkgReady)
     {
-        if(p->connection.send(p->packet.rawdata(), p->packet.min_size(), 0) < 0)
+        p->connection.send("Hallo\n", sizeof("Hallo\n"), 0);
+        if(p->connection.send(p->packet.rawdata(), p->packet.min_size(), 0) <= 0)
             return false;
         std::this_thread::sleep_for(std::chrono::milliseconds(10));
     }
@@ -173,6 +175,28 @@ float SwarmDetection::getDistance(cv::KeyPoint p1, cv::KeyPoint p2)
     return sqrt(a*a+b*b);
 }
 
+SwarmDetection::SwarmDetection()
+{
+    std::ifstream f("log.txt");
+    if (f.is_open())
+    {
+        f >> hvalues.l_h >> hvalues.l_s >> hvalues.l_v >> hvalues.u_h >> hvalues.u_s >> hvalues.u_v;
+        f.close();
+    }
+    else
+    {
+        hvalues.l_h = hvalues.l_s = hvalues.l_v = hvalues.u_h = hvalues.u_s = hvalues.u_v = 0;
+    }
+}
+
+SwarmDetection::~SwarmDetection()
+{
+    std::ofstream f;
+    f.open("log.txt");
+    f << hvalues.l_h << "\n" << hvalues.l_s << "\n" <<hvalues.l_v << "\n" <<hvalues.u_h << "\n" << hvalues.u_s << "\n" << hvalues.u_v << "\n";
+    f.close();
+}
+
 int SwarmDetection::setupVideCapture(int deviceID)
 {
     int apiID = cv::CAP_ANY;
@@ -203,12 +227,12 @@ void SwarmDetection::showFrame(std::string windowName, cv::Mat xframe)
 void SwarmDetection::createTBarHV()
 {
     cv::namedWindow("Tracking");
-    cv::createTrackbar("LH", "Tracking", 0, 255);
-    cv::createTrackbar("LS", "Tracking", 0, 255);
-    cv::createTrackbar("LV", "Tracking", 0, 255);
-    cv::createTrackbar("UH", "Tracking", 0, 255);
-    cv::createTrackbar("US", "Tracking", 0, 255);
-    cv::createTrackbar("UV", "Tracking", 0, 255);
+    cv::createTrackbar("LH", "Tracking", &hvalues.l_h, 255);
+    cv::createTrackbar("LS", "Tracking", &hvalues.l_s, 255);
+    cv::createTrackbar("LV", "Tracking", &hvalues.l_v, 255);
+    cv::createTrackbar("UH", "Tracking", &hvalues.u_h, 255);
+    cv::createTrackbar("US", "Tracking", &hvalues.u_s, 255);
+    cv::createTrackbar("UV", "Tracking", &hvalues.u_v, 255);
     cv::moveWindow("Tracking", 20, 20);
 }
 
