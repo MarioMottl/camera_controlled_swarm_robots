@@ -4,7 +4,7 @@ int main()
 {
     SwarmDetection swarm;
 
-    if (swarm.setupVideCapture(0) == -1)
+    if (swarm.setupVideoCapture(0) == -1)
     {
         return -1;
     }
