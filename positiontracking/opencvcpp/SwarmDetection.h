@@ -68,7 +68,7 @@ public:
      * @param deviceID -> Hardware ID of the camera thats going to be used.
      * @return -> returns 0 for success -1 if an error occurred
      */
-    int setupVideCapture(int deviceID);
+    int setupVideoCapture(int deviceID);
 
     /**
     * @brief Reads out one frame and returns it
