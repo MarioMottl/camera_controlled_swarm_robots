@@ -14,7 +14,7 @@ namespace Schwarm
     constexpr uint16_t PATH_SERVER_PORT = 10000;
     constexpr char DETECTION_SERVER_ADDR[] = "10.212.134.5";
     constexpr uint16_t DETECTION_SERVER_PORT = 10001;
-    constexpr char CONTROL_SERVER_ADDR[] = "127.0.0.1";
+    constexpr char CONTROL_SERVER_ADDR[] = "10.212.134.5";
     constexpr uint16_t CONTROL_SERVER_PORT = 10002;
 
     namespace Client
