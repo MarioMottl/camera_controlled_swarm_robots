@@ -14,7 +14,7 @@ class TextInpListener : public Listener
 {
 private:
     TextBoxEnterEvent textboxenter;
-    inline static Schwarm::Client::SharedMemory* shared_memory;
+    inline static std::map<Schwarm::Client::ClientType, Schwarm::Client::SharedMemory>* shared_memory;
 
 protected:
     virtual void init(void)
@@ -28,7 +28,7 @@ public:
         this->init();
     }
 
-    static void set_shared_memory(Schwarm::Client::SharedMemory* mem) 
+    static void set_shared_memory(std::map<Schwarm::Client::ClientType, Schwarm::Client::SharedMemory>* mem)
     {
         shared_memory = mem;
     }

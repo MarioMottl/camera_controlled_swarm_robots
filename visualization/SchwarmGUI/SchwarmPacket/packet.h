@@ -258,8 +258,8 @@ namespace Schwarm
         virtual packet_error encode(void);
         virtual packet_error decode(void);
 
-        virtual inline uint8_t id(void) const noexcept      {return PACKET_ID;}
-        virtual inline uint32_t min_size(void) const noexcept {return SIZE_ID + SIZE_PACKET_LENGTH + SIZE_GOAL + SIZE_VEHICLE_ID;}
+        virtual inline uint8_t id(void) const noexcept          {return PACKET_ID;}
+        virtual inline uint32_t min_size(void) const noexcept   {return SIZE_ID + SIZE_PACKET_LENGTH + SIZE_GOAL + SIZE_VEHICLE_ID;}
 
         void    set_goal(float, float)  noexcept;
         float   get_goal_x(void)        const noexcept;
@@ -270,6 +270,47 @@ namespace Schwarm
 
         GoalPacket& operator=(const GoalPacket&);
         GoalPacket& operator=(GoalPacket&&);
+    };
+
+    /*  DATA STRUCTURE:
+    *       id | length | vehicle_id | winkel / rad (float) | length / m (float)   |
+    *       1B | 4B     | 4B         | 4B                   | 4B                   |
+    */
+    class VehicleCommandPacket : public Packet
+    {
+    private:
+        uint32_t vehicle_id;
+        float angle;
+        float length;
+
+    public:
+        static constexpr uint8_t PACKET_ID          = 6;
+        static constexpr uint32_t SIZE_VEHICLE_ID   = sizeof(uint32_t);
+        static constexpr uint32_t SIZE_ANGLE        = sizeof(float);
+        static constexpr uint32_t SIZE_LENGTH       = sizeof(float);
+
+        VehicleCommandPacket(void);
+        VehicleCommandPacket(const GoalPacket&);
+        VehicleCommandPacket(GoalPacket&&);
+        virtual ~VehicleCommandPacket(void) {/*dtor*/ }
+
+        virtual packet_error encode(void);
+        virtual packet_error decode(void);
+
+        virtual inline uint8_t id(void) const noexcept { return PACKET_ID; }
+        virtual inline uint32_t min_size(void) const noexcept { return SIZE_ID + SIZE_PACKET_LENGTH + SIZE_VEHICLE_ID + SIZE_ANGLE + SIZE_LENGTH; }
+
+        void     set_vehicle_id(uint32_t)   noexcept;
+        uint32_t get_vehicle_id(void)       const noexcept;
+
+        void  set_angle(float)              noexcept;
+        float get_angle(void)               const noexcept;
+
+        void  set_length(float)             noexcept;
+        float get_length(void)              const noexcept;
+
+        VehicleCommandPacket& operator=(const VehicleCommandPacket&);
+        VehicleCommandPacket& operator=(VehicleCommandPacket&&);
     };
 };
 

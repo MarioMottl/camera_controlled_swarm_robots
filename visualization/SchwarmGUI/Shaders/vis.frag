@@ -47,6 +47,7 @@ in VS_OUT
     vec3 fragPos;
     vec3 normalVec;
     vec4 fragPosLightSpace;
+    float forceOpacity;
 } fs_in;
 
 out vec4 resultColor;
@@ -156,7 +157,10 @@ void main()
         vec3 viewVec = normalize(camPos - fs_in.fragPos);
 
         vec3 resColor = directionalLight(worldLight, material, fs_in.normalVec, viewVec);
-        resultColor = vec4(resColor, opacity);
+        if(fs_in.forceOpacity >= 0.0f)
+            resultColor = vec4(resColor, fs_in.forceOpacity);
+        else
+            resultColor = vec4(resColor, opacity);
     }
     else
     {

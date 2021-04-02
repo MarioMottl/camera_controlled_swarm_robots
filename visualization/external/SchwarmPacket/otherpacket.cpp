@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "packet.h"
 #include <cstring>
+#include <algorithm>
 
 using namespace Schwarm;
 
@@ -464,5 +465,103 @@ GoalPacket& GoalPacket::operator=(GoalPacket&& other)
     this->vehicle_id = other.vehicle_id;
     other.vehicle_id = 0;
 
+    return *this;
+}
+
+/* VEHICLE COMMAND PACKET */
+
+VehicleCommandPacket::VehicleCommandPacket(void)
+{
+    this->vehicle_id = 0;
+    this->angle = 0.0f;
+    this->length = 0.0f;
+}
+
+VehicleCommandPacket::VehicleCommandPacket(const GoalPacket& other)
+{
+    *this = other;
+}
+
+VehicleCommandPacket::VehicleCommandPacket(GoalPacket&& other)
+{
+    *this = std::move(other);
+}
+
+packet_error VehicleCommandPacket::encode(void)
+{
+    packet_error err = internal_encode();
+    if (err == packet_error::PACKET_NONE)
+    {
+        uint8_t* data = internal_data_ptr();
+        *((uint32_t*)(data))                                = this->vehicle_id;
+        *((float*)(data + SIZE_VEHICLE_ID))                 = this->angle;
+        *((float*)(data + SIZE_VEHICLE_ID + SIZE_ANGLE))    = this->length;
+    }
+    return err;
+}
+
+packet_error VehicleCommandPacket::decode(void)
+{
+    packet_error err = internal_decode();
+    if (err == packet_error::PACKET_NONE)
+    {
+        uint8_t* data = internal_data_ptr();
+        this->vehicle_id    = *((uint32_t*)(data));
+        this->angle         = *((float*)(data + SIZE_VEHICLE_ID));
+        this->length        = *((float*)(data + SIZE_VEHICLE_ID + SIZE_ANGLE));
+    }
+    return err;
+}
+
+void VehicleCommandPacket::set_vehicle_id(uint32_t id) noexcept
+{
+    this->vehicle_id = id;
+}
+
+uint32_t VehicleCommandPacket::get_vehicle_id(void) const noexcept
+{
+    return this->vehicle_id;
+}
+
+void VehicleCommandPacket::set_angle(float angle) noexcept
+{
+    this->angle = angle;
+}
+
+float VehicleCommandPacket::get_angle(void) const noexcept
+{
+    return this->angle;
+}
+
+void VehicleCommandPacket::set_length(float length) noexcept
+{
+    this->length = length;
+}
+
+float VehicleCommandPacket::get_length(void) const noexcept
+{
+    return this->length;
+}
+
+VehicleCommandPacket& VehicleCommandPacket::operator=(const VehicleCommandPacket& other)
+{
+    Packet::operator=(other);
+    this->vehicle_id = other.vehicle_id;
+    this->angle = other.angle;
+    this->length = other.length;
+    return *this;
+}
+
+VehicleCommandPacket& VehicleCommandPacket::operator=(VehicleCommandPacket&& other)
+{
+    Packet::operator=(std::move(other));
+    this->vehicle_id = other.vehicle_id;
+    other.vehicle_id = 0;
+    
+    this->angle = other.angle;
+    other.angle = 0.0f;
+
+    this->length = other.length;
+    other.length = 0.0f;
     return *this;
 }

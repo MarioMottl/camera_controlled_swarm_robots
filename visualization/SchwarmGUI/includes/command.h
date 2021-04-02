@@ -7,6 +7,7 @@
 #include <string.h>
 #include <iostream>
 #include "my_utility.h"
+#include "../Vehicle/vehicle.h"
 
 namespace Schwarm
 {
@@ -41,7 +42,7 @@ namespace Schwarm
     *       const std::vector<std::string>& args -> Readonly arguments of the command.
     */
 
-    static void on_command(const std::vector<std::string>& args, Schwarm::Client::SharedMemory* sharedsimumem)
+    static void on_command(const std::vector<std::string>& args, std::map<Schwarm::Client::ClientType, Schwarm::Client::SharedMemory>* shared_memory)
     {   
         constexpr char simu_syntax[] = "Syntax: \n/simu\n/simu start|stop\n/simu generate <image-file> <vehicle id> <number of goals>\n/simu reset <vehicle id>";
         // Simu command
@@ -58,7 +59,7 @@ namespace Schwarm
                         std::cout << get_msg("ERROR / CLIENT") << simu_syntax << std::endl;
                         return;
                     }
-                    if(!Schwarm::simu_connected(sharedsimumem->client)) // Only send packet if the client is connected to the simulation server.
+                    if(!Schwarm::simu_connected((*shared_memory)[Schwarm::Client::PATH_SERVER].client)) // Only send packet if the client is connected to the simulation server.
                     {
                         std::cout << get_msg("ERROR / CLIENT") << "Path-Server is not running, start Path-Server and restart visualization." << std::endl;
                         return;
@@ -86,8 +87,7 @@ namespace Schwarm
                     packet.encode();    // Encode packet.
 
                     std::cout << get_msg("INFO / CLIENT") << "Generating path from file \"" << args[2] << "\"..." << std::endl;
-                    sharedsimumem->client->send(packet.rawdata(), packet.size(), 0);   // Send packet.
-                    return;
+                    (*shared_memory)[Schwarm::Client::PATH_SERVER].client->send(packet.rawdata(), packet.size(), 0);   // Send packet.
                 }
                 else if(args[1] == "start")
                 {
@@ -96,16 +96,15 @@ namespace Schwarm
                         std::cout << get_msg("ERROR / CLIENT") << simu_syntax << std::endl;
                         return;
                     }
-                    if(!Schwarm::simu_connected(sharedsimumem->client)) // Only send packet if the client is connected to the simulation server.
+                    if(!Schwarm::simu_connected((*shared_memory)[Schwarm::Client::PATH_SERVER].client)) // Only send packet if the client is connected to the simulation server.
                     {
                         std::cout << get_msg("ERROR / CLIENT") << "Path-Server is not running, start Path-Server and restart visualization." << std::endl;
                         return;
                     }
-                    if(sharedsimumem->start)
+                    if((*shared_memory)[Schwarm::Client::GENERAL].start)
                         std::cout << get_msg("ERROR / SIMU") << "Simulation is already running." << std::endl;
                     else
-                        sharedsimumem->start = true;
-                    return;
+                        (*shared_memory)[Schwarm::Client::GENERAL].start = true;
                 }
                 else if(args[1] == "stop")
                 {
@@ -114,15 +113,14 @@ namespace Schwarm
                         std::cout << get_msg("ERROR / CLIENT") << simu_syntax << std::endl;
                         return;
                     }
-                    if(!sharedsimumem->start)
+                    if(!(*shared_memory)[Schwarm::Client::GENERAL].start)
                         std::cout << get_msg("ERROR / SIMU") << "Simulation is not running." << std::endl;
                     else
-                        sharedsimumem->start = false;
-                    return;
+                        (*shared_memory)[Schwarm::Client::GENERAL].start = false;
                 }
                 else if(args[1] == "reset")
                 {
-                    if(!Schwarm::simu_connected(sharedsimumem->client)) // Only send packet if the client is connected to the simulation server.
+                    if(!Schwarm::simu_connected((*shared_memory)[Schwarm::Client::PATH_SERVER].client)) // Only send packet if the client is connected to the simulation server.
                     {
                         std::cout << get_msg("ERROR / CLIENT") << "Path-Server is not running, start Path-Server and restart visualization." << std::endl;
                         return;
@@ -142,21 +140,75 @@ namespace Schwarm
                         packet.set_vehicle_id(idx);     
                         packet.allocate(packet.min_size() + packet.filepath_size());
                         packet.encode();
-                        sharedsimumem->client->send(packet.rawdata(), packet.size(), 0);
+                        (*shared_memory)[Schwarm::Client::PATH_SERVER].client->send(packet.rawdata(), packet.size(), 0);
                         std::cout << get_msg("INFO / CLIENT") << "Path resetted for vehicle: " << idx << "." << std::endl;
                     }
-                    return;
                 }
                 else
                 {
                     std::cout << get_msg("ERROR / CLIENT") << "Invalid argument \"" << args[1] << "\"." << std::endl;
-                    return;
                 }
             }
-            std::cout << get_msg("ERROR / CLIENT") << simu_syntax << std::endl;                     // too few arguments
-            return;
+            else
+                std::cout << get_msg("ERROR / CLIENT") << simu_syntax << std::endl;                     // too few arguments
         }
-        if(args.size() > 0)
+        else if (args.size() > 0 && args[0] == "real")
+        {
+            if ((*shared_memory)[Schwarm::Client::GENERAL].start)
+            {
+                std::cout << "Can't toggle visualization mode while visualization process is running." << std::endl;
+                return;
+            }
+
+            Schwarm::VehicleBuffer* vehicles = (Schwarm::VehicleBuffer*)(*shared_memory)[Schwarm::Client::GENERAL].vehicles;
+
+            // toggle real-live and simulation
+            (*shared_memory)[Schwarm::Client::GENERAL].sync.lock();
+            bool* b = (bool*)&(*shared_memory)[Schwarm::Client::GENERAL].real;
+            *b = !*b;
+            (*shared_memory)[Schwarm::Client::GENERAL].sync.unlock();
+
+            // if real-life mode is active, enable secondary vehicles and set simulation (primary) vehicles transparent
+            if (*b)
+            {
+                for (size_t i = 0; i < vehicles->get_num_vehicles(); i++)
+                {
+                    // primary vehicle
+                    if (i % 2 == 0)
+                    {
+                        vehicles->get_vehicle(i)->set_opacity(0.5f);
+                        vehicles->update_vehicle(i);
+                    }
+                    else // secondary vehicle
+                    {
+                        vehicles->get_vehicle(i)->translate(0.0f, 0.015f, 0.0f);
+                        vehicles->get_vehicle(i)->calc();
+                        vehicles->update_vehicle(i);
+                    }
+                }
+            }
+            else // disable secondary vehicles and set simulation (primary) vehicles to non-transparent
+            {
+                for (size_t i = 0; i < vehicles->get_num_vehicles(); i++)
+                {
+                    // primary vehicle
+                    if (i % 2 == 0)
+                    {
+                        vehicles->get_vehicle(i)->set_opacity(-1.0f);
+                        vehicles->update_vehicle(i);
+                    }
+                    else // secondary vehicle
+                    {
+                        vehicles->get_vehicle(i)->translate(0.0f, -1000000.0f, 0.0f);
+                        vehicles->get_vehicle(i)->calc();
+                        vehicles->update_vehicle(i);
+                    }
+                }
+            }
+
+            std::cout << ((*b) ? "Visualization is now in real-life mode!" : "Visualization is now in simulation mode") << std::endl;
+        }
+        else if(args.size() > 0)
             std::cout << get_msg("ERROR / CLIENT") << "Unknown command: /" << args[0] << std::endl;
     }
 }

@@ -38,6 +38,7 @@ namespace Schwarm
         atomic_float dis;                               // view direction of the next target goal
         atomic_float old_targetangle, new_targetangle;  // View angle at the target, "new_targetangle" -> at the "next target goal"
         std::atomic_bool needs_goal;                    // indicator if vehicle needs a goal
+        atomic_float opacity;                           // the vehicles transparency
 
         inline static float to_float(const atomic_float& af)
         {
@@ -72,6 +73,9 @@ namespace Schwarm
 
         void  set_speed(float speed) noexcept                   {this->speed = speed;}
         float get_speed(void) const noexcept                    {return this->speed;}
+        
+        void  set_opacity(float opacity) noexcept               { this->opacity = opacity; }
+        float get_opacity(void) const noexcept                  { return this->opacity; }
 
         void  set_next_goal(float, float) noexcept;
         float get_next_goal_x(void) const noexcept              {return this->next_goal_x;}
@@ -101,7 +105,9 @@ namespace Schwarm
         unsigned int vao_vehicle;
         unsigned int vbo_vehicle;
         unsigned int vbo_vehicle_mat;
+        unsigned int vbo_vehicle_force_opacity;
         cl_mem cl_vbo_vehicle_mat;
+        cl_mem cl_vbo_vehicle_force_opacity;
 
         cl_context* context;
         cl_command_queue* cmd_queue;
@@ -147,7 +153,7 @@ namespace Schwarm
         std::atomic_bool running;
         std::mutex processor_mutex;
 
-        Schwarm::Client::SharedMemory* sharedsimumem;
+        std::map<Schwarm::Client::ClientType, Schwarm::Client::SharedMemory>* shared_memory;
         std::chrono::milliseconds tickspeed;
 
         static void process(VehicleProcessor*);
@@ -178,8 +184,8 @@ namespace Schwarm
         }
 
     public:
-        VehicleProcessor(Schwarm::Client::SharedMemory* mem = nullptr);
-
+        VehicleProcessor(std::map<Schwarm::Client::ClientType, Schwarm::Client::SharedMemory>* mem = nullptr);
+        
         VehicleProcessor(const VehicleProcessor&) = delete;
         VehicleProcessor& operator=(const VehicleProcessor&) = delete;
 

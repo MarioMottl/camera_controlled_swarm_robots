@@ -159,7 +159,7 @@ void create_text_shader(gl::Shader& shader)
         exit(-1);
 }
 
-void init_event_handler(EventHandler& event_handler, Schwarm::Client::SharedMemory* mem)
+void init_event_handler(EventHandler& event_handler, std::map<Schwarm::Client::ClientType, Schwarm::Client::SharedMemory>* mem)
 {
     TextInpListener* button_listener = new TextInpListener();
     button_listener->set_shared_memory(mem);
@@ -399,12 +399,14 @@ unsigned int gen_table_buffer(const gl::Mesh& mesh, unsigned int* vbos)
     constexpr size_t MODEL_STRIDE = gl::Model::vertex_stride() + gl::Model::texcoord_stride() + gl::Model::normal_stride();
     constexpr size_t TEXCOORD_STRIDE = gl::Model::vertex_stride();
     constexpr size_t NORMAL_STRIDE = gl::Model::vertex_stride() + gl::Model::texcoord_stride();
+    
+    float force_opacity = -1.0f;
 
     unsigned int vao;
     glGenVertexArrays(1, &vao);
     glBindVertexArray(vao);
 
-    glGenBuffers(2, vbos);
+    glGenBuffers(3, vbos);
     glBindBuffer(GL_ARRAY_BUFFER, vbos[0]);
     glBufferData(GL_ARRAY_BUFFER, MODEL_STRIDE * mesh.count(), mesh.get_data(), GL_STATIC_DRAW);
     glEnableVertexAttribArray(0);
@@ -428,6 +430,12 @@ unsigned int gen_table_buffer(const gl::Mesh& mesh, unsigned int* vbos)
     glVertexAttribDivisor(4, 1);
     glVertexAttribDivisor(5, 1);
     glVertexAttribDivisor(6, 1);
+
+    glBindBuffer(GL_ARRAY_BUFFER, vbos[2]);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(float), &force_opacity, GL_STATIC_DRAW);
+    glEnableVertexAttribArray(7);
+    glVertexAttribPointer(7, 1, GL_FLOAT, false, sizeof(float), 0);
+    glVertexAttribDivisor(7, 1);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
     return vao;
@@ -609,7 +617,11 @@ int main()  // its showtime
     constexpr unsigned int WORLDLIGHT_SHADOW_RESOLUTION = 2048;
     bool main_running = true;
 
-    Schwarm::Client::SharedMemory shared_memory;
+    std::map<Schwarm::Client::ClientType, Schwarm::Client::SharedMemory> shared_memory;
+    shared_memory[Schwarm::Client::PATH_SERVER].client      = nullptr;
+    shared_memory[Schwarm::Client::DETECTION_SERVER].client = nullptr;
+    shared_memory[Schwarm::Client::CONTROL_SERVER].client   = nullptr;
+    shared_memory[Schwarm::Client::GENERAL].client          = nullptr;
 
     /* -----------------------------------------------------------------------------
      * SHADER FILENAMES
@@ -662,11 +674,10 @@ int main()  // its showtime
      * ----------------------------------------------------------------------------*/
 
     // setup socket collections
-    cppsock::tcp::socket_collection path_server_collection(Schwarm::Client::on_path_connect, Schwarm::Client::on_path_receive, Schwarm::Client::on_path_disconnect);
+    cppsock::tcp::socket_collection path_server_collection(Schwarm::Client::on_connect, Schwarm::Client::on_path_receive, Schwarm::Client::on_disconnect);
+    cppsock::tcp::socket_collection detection_server_collection(Schwarm::Client::on_connect, Schwarm::Client::on_detection_receive, Schwarm::Client::on_disconnect);
 
-    // start simulation server
-    std::cout << get_msg("INFO / SERVER") << "Started simulation server." << std::endl;
-
+    // connect to path server
     cppsock::tcp::client path_client;
     cppsock::utility_error_t err;
     if ((err = path_client.connect(Schwarm::PATH_SERVER_ADDR, Schwarm::PATH_SERVER_PORT)) < 0)
@@ -675,9 +686,19 @@ int main()  // its showtime
         std::cout << get_msg("ERROR / PATH-SERVER") << "Path server may not be running!" << std::endl;
         return -1;
     }
-    std::cout << "connect return: " << cppsock::utility_strerror(err) << std::endl;
-    shared_memory.client = path_server_collection.insert(path_client, &shared_memory);
-    std::cout << get_msg("INFO / PATH-SERVER") << "Connected to simulation server (Address: " << shared_memory.client->sock().getpeername().get_addr() << " Port: " << shared_memory.client->sock().getpeername().get_port() << ")" << std::endl;
+    shared_memory[Schwarm::Client::PATH_SERVER].client = path_server_collection.insert(path_client, &shared_memory);
+    std::cout << get_msg("INFO / PATH-SERVER") << "Connected to path server!" << std::endl;
+
+    // connect to detection
+    cppsock::tcp::client detection_client;
+    //if ((err = detection_client.connect(Schwarm::DETECTION_SERVER_ADDR, Schwarm::DETECTION_SERVER_PORT)) < 0)
+   //{
+     //   std::cout << get_msg("ERROR / DETECTION-SERVER") << "Failed to connect (Address: " << Schwarm::DETECTION_SERVER_ADDR << " Port : " << Schwarm::DETECTION_SERVER_PORT << ")" << std::endl;
+       // std::cout << get_msg("ERROR / DETECTION-SERVER") << "Detection may not be running!" << std::endl;
+        //return -1;
+    //}
+    shared_memory[Schwarm::Client::DETECTION_SERVER].client = detection_server_collection.insert(detection_client, &shared_memory);
+    std::cout << get_msg("INFO / DETECTION-SERVER") << "Connected to detection!" << std::endl;
 
     /* -----------------------------------------------------------------------------
      * DECLARE WINDOW HANDLERS
@@ -786,7 +807,7 @@ int main()  // its showtime
     /* -----------------------------------------------------------------------------
      * CREATE BUFFER FOR TABLE
      * -----------------------------------------------------------------------------*/
-    unsigned int vbo_table[2];
+    unsigned int vbo_table[3];
     unsigned int vao_table = gen_table_buffer(table_mesh, vbo_table);
     std::cout << get_msg("INFO / OpenGL") << "Table created and loaded." << std::endl;
 
@@ -844,16 +865,16 @@ int main()  // its showtime
      * CREATE VEHICLES (BUFFERS)
      * -----------------------------------------------------------------------------*/
 
-    Schwarm::Vehicle vehicle1, vehicle2, vehicle3;  // initialize vehicles
-    vehicle1.translate(0.25f, 0.015f, 0.0f);
-    vehicle1.set_speed(0.2f);
-    vehicle2.translate(-0.25f, 0.015f, 0.25f);
-    vehicle2.set_speed(0.2f);
-    vehicle3.translate(-0.25, 0.015f, -0.25);
-    vehicle3.set_speed(0.5f);
-    vehicle1.calc();
-    vehicle2.calc();
-    vehicle3.calc();
+    Schwarm::Vehicle vehicle1_simu, vehicle1_real;  // initialize vehicles
+    vehicle1_simu.translate(0.0f, 0.015f, 0.0f);
+    vehicle1_simu.set_speed(0.2f);
+    vehicle1_simu.set_opacity(-1.0f);               
+    vehicle1_simu.calc();
+
+    vehicle1_real.translate(0.0f, -1000000.0f, 0.0f);
+    vehicle1_real.set_opacity(-1.0f);               // ignore opacity
+    vehicle1_real.calc();
+
     std::cout << get_msg("INFO / OpenGL") << "Vehicles created." << std::endl;
 
     /*
@@ -863,10 +884,11 @@ int main()  // its showtime
     *   The vehicle-buffer will also delete the allocated memory for the vehicles.
     */
     Schwarm::VehicleBuffer vehicle_buffer(context, cmd_queue, vehicle, false, 3);
-    vehicle_buffer.add_vehicle(&vehicle1);  // add vehicles to the buffer
-    //vehicle_buffer.add_vehicle(&vehicle2);
-    //vehicle_buffer.add_vehicle(&vehicle3);
+    vehicle_buffer.add_vehicle(&vehicle1_simu);  // add vehicles to the buffer
+    vehicle_buffer.add_vehicle(&vehicle1_real);  // add vehicles to the buffer
     std::cout << get_msg("INFO / OpenGL") << "Vehicles loaded." << std::endl;
+
+    shared_memory[Schwarm::Client::GENERAL].vehicles = &vehicle_buffer;
 
     // Start vehicle-processor.
     Schwarm::VehicleProcessor vehicle_processor(&shared_memory);

@@ -1,9 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\GUI\\gui_includes",
-    "\\GUI\\gui_source"
+    "\\client",
+    "\\includes",
+    "\\SchwarmPacket",
+    "\\Vehicle",
+    "\\Vehicle\\source"
   ],
-  "SelectedNode": "\\CMakeLists.txt",
+  "SelectedNode": "\\SchwarmPacket\\otherpacket.cpp",
   "PreviewInSolutionExplorer": false
 }

@@ -22,6 +22,7 @@ Schwarm::VehicleBuffer::VehicleBuffer(cl_context& context, cl_command_queue& cmd
     glGenVertexArrays(1, &this->vao_vehicle);
     glGenBuffers(1, &this->vbo_vehicle);
     glGenBuffers(1, &this->vbo_vehicle_mat);
+    glGenBuffers(1, &this->vbo_vehicle_force_opacity);
 
     glBindVertexArray(this->vao_vehicle);
     glBindBuffer(GL_ARRAY_BUFFER, this->vbo_vehicle);
@@ -47,10 +48,17 @@ Schwarm::VehicleBuffer::VehicleBuffer(cl_context& context, cl_command_queue& cmd
     glVertexAttribDivisor(4, 1);
     glVertexAttribDivisor(5, 1);
     glVertexAttribDivisor(6, 1);
+
+    glBindBuffer(GL_ARRAY_BUFFER, this->vbo_vehicle_force_opacity);
+    glBufferData(GL_ARRAY_BUFFER, max_vehicles * sizeof(float), NULL, GL_DYNAMIC_DRAW);
+    glEnableVertexAttribArray(7);
+    glVertexAttribPointer(7, 1, GL_FLOAT, false, sizeof(float), 0);
+    glVertexAttribDivisor(7, 1);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 
     this->cl_vbo_vehicle_mat = clCreateFromGLBuffer(context, CL_MEM_READ_WRITE, this->vbo_vehicle_mat, NULL);
+    this->cl_vbo_vehicle_force_opacity = clCreateFromGLBuffer(context, CL_MEM_READ_WRITE, this->vbo_vehicle_force_opacity, NULL);
 }
 
 Schwarm::VehicleBuffer::~VehicleBuffer(void)
@@ -90,8 +98,15 @@ void Schwarm::VehicleBuffer::update_vehicle(size_t idx)
     if(idx < this->vehicles.size())
     {
         const Vehicle* vehicle = this->vehicles.at(idx);
+        // update model matrix
         clEnqueueAcquireGLObjects(*this->cmd_queue, 1, &this->cl_vbo_vehicle_mat, 0, NULL, NULL);
         clEnqueueWriteBuffer(*this->cmd_queue, this->cl_vbo_vehicle_mat, true, idx * sizeof(glm::mat4), sizeof(glm::mat4), glm::value_ptr(vehicle->get_model_mat()), 0, NULL, NULL);
         clEnqueueReleaseGLObjects(*this->cmd_queue, 1, &this->cl_vbo_vehicle_mat, 0, NULL, NULL);
+
+        // update opacity
+        float opacity = vehicle->get_opacity();
+        clEnqueueAcquireGLObjects(*this->cmd_queue, 1, &this->cl_vbo_vehicle_force_opacity, 0, NULL, NULL);
+        clEnqueueWriteBuffer(*this->cmd_queue, this->cl_vbo_vehicle_force_opacity, true, idx * sizeof(float), sizeof(float), &opacity, 0, NULL, NULL);
+        clEnqueueReleaseGLObjects(*this->cmd_queue, 1, &this->cl_vbo_vehicle_force_opacity, 0, NULL, NULL);
     }
 }

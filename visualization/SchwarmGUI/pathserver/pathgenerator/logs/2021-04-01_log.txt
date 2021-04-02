@@ -36,3 +36,383 @@
 [12:45:08] [INFO] Generating goals time: 0.000000ms
 [12:45:08] [INFO] Printing goals time: 2.006000ms
 [12:45:08] [INFO] Execution time: 32.923000ms
+
+-----------------------------------------------
+[15:12:12] [INFO] Reading image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png...
+[15:12:12] [INFO] Successfully loaded image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png
+[15:12:12] [INFO] Converting to grayscale...
+[15:12:12] [INFO] Successfully converted to grayscale.
+[15:12:12] [INFO] Generating path...
+[15:12:12] [INFO] Generated path.
+[15:12:12] [INFO] Generating goals...
+[15:12:12] [INFO] Generated goals.
+[15:12:12] [INFO] Printing goals to: goals.gol...
+[15:12:12] [INFO] Successfully printed goals to: goals.gol
+
+[15:12:12] [INFO] Reading image time: 12.986000ms
+[15:12:12] [INFO] Converting to grayscale time: 4.994000ms
+[15:12:12] [INFO] Gnerating path time: 17.923000ms
+[15:12:12] [INFO] Generating goals time: 0.000000ms
+[15:12:12] [INFO] Printing goals time: 1.995000ms
+[15:12:12] [INFO] Execution time: 37.898000ms
+
+-----------------------------------------------
+[17:07:49] [INFO] Reading image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png...
+[17:07:49] [INFO] Successfully loaded image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png
+[17:07:49] [INFO] Converting to grayscale...
+[17:07:49] [INFO] Successfully converted to grayscale.
+[17:07:49] [INFO] Generating path...
+[17:07:49] [INFO] Generated path.
+[17:07:49] [INFO] Generating goals...
+[17:07:49] [INFO] Generated goals.
+[17:07:49] [INFO] Printing goals to: goals.gol...
+[17:07:49] [INFO] Successfully printed goals to: goals.gol
+
+[17:07:49] [INFO] Reading image time: 10.970000ms
+[17:07:49] [INFO] Converting to grayscale time: 4.987000ms
+[17:07:49] [INFO] Gnerating path time: 16.955000ms
+[17:07:49] [INFO] Generating goals time: 0.000000ms
+[17:07:49] [INFO] Printing goals time: 0.997000ms
+[17:07:49] [INFO] Execution time: 34.907000ms
+
+-----------------------------------------------
+[17:17:57] [INFO] Reading image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png...
+[17:17:57] [INFO] Successfully loaded image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png
+[17:17:57] [INFO] Converting to grayscale...
+[17:17:57] [INFO] Successfully converted to grayscale.
+[17:17:57] [INFO] Generating path...
+[17:17:57] [INFO] Generated path.
+[17:17:57] [INFO] Generating goals...
+[17:17:57] [INFO] Generated goals.
+[17:17:57] [INFO] Printing goals to: goals.gol...
+[17:17:57] [INFO] Successfully printed goals to: goals.gol
+
+[17:17:57] [INFO] Reading image time: 10.970000ms
+[17:17:57] [INFO] Converting to grayscale time: 5.984000ms
+[17:17:57] [INFO] Gnerating path time: 15.957000ms
+[17:17:57] [INFO] Generating goals time: 0.000000ms
+[17:17:57] [INFO] Printing goals time: 1.996000ms
+[17:17:57] [INFO] Execution time: 34.907000ms
+
+-----------------------------------------------
+[17:22:34] [INFO] Reading image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png...
+[17:22:34] [INFO] Successfully loaded image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png
+[17:22:34] [INFO] Converting to grayscale...
+[17:22:34] [INFO] Successfully converted to grayscale.
+[17:22:34] [INFO] Generating path...
+[17:22:34] [INFO] Generated path.
+[17:22:34] [INFO] Generating goals...
+[17:22:34] [INFO] Generated goals.
+[17:22:34] [INFO] Printing goals to: goals.gol...
+[17:22:34] [INFO] Successfully printed goals to: goals.gol
+
+[17:22:34] [INFO] Reading image time: 11.968000ms
+[17:22:34] [INFO] Converting to grayscale time: 4.985000ms
+[17:22:34] [INFO] Gnerating path time: 16.956000ms
+[17:22:34] [INFO] Generating goals time: 0.000000ms
+[17:22:34] [INFO] Printing goals time: 1.995000ms
+[17:22:34] [INFO] Execution time: 35.904000ms
+
+-----------------------------------------------
+[17:23:56] [INFO] Reading image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png...
+[17:23:56] [INFO] Successfully loaded image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png
+[17:23:56] [INFO] Converting to grayscale...
+[17:23:56] [INFO] Successfully converted to grayscale.
+[17:23:56] [INFO] Generating path...
+[17:23:56] [INFO] Generated path.
+[17:23:56] [INFO] Generating goals...
+[17:23:56] [INFO] Generated goals.
+[17:23:56] [INFO] Printing goals to: goals.gol...
+[17:23:56] [INFO] Successfully printed goals to: goals.gol
+
+[17:23:56] [INFO] Reading image time: 11.968000ms
+[17:23:56] [INFO] Converting to grayscale time: 4.987000ms
+[17:23:56] [INFO] Gnerating path time: 15.958000ms
+[17:23:56] [INFO] Generating goals time: 0.000000ms
+[17:23:56] [INFO] Printing goals time: 0.996000ms
+[17:23:56] [INFO] Execution time: 33.909000ms
+
+-----------------------------------------------
+[17:27:54] [INFO] Reading image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png...
+[17:27:54] [INFO] Successfully loaded image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png
+[17:27:54] [INFO] Converting to grayscale...
+[17:27:54] [INFO] Successfully converted to grayscale.
+[17:27:54] [INFO] Generating path...
+[17:27:54] [INFO] Generated path.
+[17:27:54] [INFO] Generating goals...
+[17:27:54] [INFO] Generated goals.
+[17:27:54] [INFO] Printing goals to: goals.gol...
+[17:27:54] [INFO] Successfully printed goals to: goals.gol
+
+[17:27:54] [INFO] Reading image time: 10.971000ms
+[17:27:54] [INFO] Converting to grayscale time: 4.987000ms
+[17:27:54] [INFO] Gnerating path time: 15.517000ms
+[17:27:54] [INFO] Generating goals time: 0.000000ms
+[17:27:54] [INFO] Printing goals time: 1.994000ms
+[17:27:54] [INFO] Execution time: 33.469000ms
+
+-----------------------------------------------
+[17:29:29] [INFO] Reading image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png...
+[17:29:29] [INFO] Successfully loaded image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png
+[17:29:29] [INFO] Converting to grayscale...
+[17:29:29] [INFO] Successfully converted to grayscale.
+[17:29:29] [INFO] Generating path...
+[17:29:29] [INFO] Generated path.
+[17:29:29] [INFO] Generating goals...
+[17:29:29] [INFO] Generated goals.
+[17:29:29] [INFO] Printing goals to: goals.gol...
+[17:29:29] [INFO] Successfully printed goals to: goals.gol
+
+[17:29:29] [INFO] Reading image time: 11.968000ms
+[17:29:29] [INFO] Converting to grayscale time: 4.986000ms
+[17:29:29] [INFO] Gnerating path time: 16.956000ms
+[17:29:29] [INFO] Generating goals time: 0.000000ms
+[17:29:29] [INFO] Printing goals time: 0.997000ms
+[17:29:29] [INFO] Execution time: 34.907000ms
+
+-----------------------------------------------
+[20:30:24] [INFO] Reading image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png...
+[20:30:24] [INFO] Successfully loaded image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png
+[20:30:24] [INFO] Converting to grayscale...
+[20:30:24] [INFO] Successfully converted to grayscale.
+[20:30:24] [INFO] Generating path...
+[20:30:24] [INFO] Generated path.
+[20:30:24] [INFO] Generating goals...
+[20:30:24] [INFO] Generated goals.
+[20:30:24] [INFO] Printing goals to: goals.gol...
+[20:30:24] [INFO] Successfully printed goals to: goals.gol
+
+[20:30:24] [INFO] Reading image time: 25.941000ms
+[20:30:24] [INFO] Converting to grayscale time: 4.976000ms
+[20:30:24] [INFO] Gnerating path time: 15.958000ms
+[20:30:24] [INFO] Generating goals time: 0.000000ms
+[20:30:24] [INFO] Printing goals time: 6.980000ms
+[20:30:24] [INFO] Execution time: 53.855000ms
+
+-----------------------------------------------
+[21:33:24] [INFO] Reading image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png...
+[21:33:24] [INFO] Successfully loaded image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png
+[21:33:24] [INFO] Converting to grayscale...
+[21:33:24] [INFO] Successfully converted to grayscale.
+[21:33:24] [INFO] Generating path...
+[21:33:24] [INFO] Generated path.
+[21:33:24] [INFO] Generating goals...
+[21:33:24] [INFO] Generated goals.
+[21:33:24] [INFO] Printing goals to: goals.gol...
+[21:33:24] [INFO] Successfully printed goals to: goals.gol
+
+[21:33:24] [INFO] Reading image time: 11.968000ms
+[21:33:24] [INFO] Converting to grayscale time: 4.987000ms
+[21:33:24] [INFO] Gnerating path time: 16.954000ms
+[21:33:24] [INFO] Generating goals time: 0.000000ms
+[21:33:24] [INFO] Printing goals time: 1.995000ms
+[21:33:24] [INFO] Execution time: 35.904000ms
+
+-----------------------------------------------
+[21:36:30] [INFO] Reading image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png...
+[21:36:30] [INFO] Successfully loaded image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png
+[21:36:30] [INFO] Converting to grayscale...
+[21:36:30] [INFO] Successfully converted to grayscale.
+[21:36:30] [INFO] Generating path...
+[21:36:30] [INFO] Generated path.
+[21:36:30] [INFO] Generating goals...
+[21:36:30] [INFO] Generated goals.
+[21:36:30] [INFO] Printing goals to: goals.gol...
+[21:36:30] [INFO] Successfully printed goals to: goals.gol
+
+[21:36:30] [INFO] Reading image time: 11.968000ms
+[21:36:30] [INFO] Converting to grayscale time: 3.990000ms
+[21:36:30] [INFO] Gnerating path time: 16.952000ms
+[21:36:30] [INFO] Generating goals time: 0.000000ms
+[21:36:30] [INFO] Printing goals time: 1.995000ms
+[21:36:30] [INFO] Execution time: 34.905000ms
+
+-----------------------------------------------
+[21:39:45] [INFO] Reading image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png...
+[21:39:45] [INFO] Successfully loaded image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png
+[21:39:45] [INFO] Converting to grayscale...
+[21:39:45] [INFO] Successfully converted to grayscale.
+[21:39:45] [INFO] Generating path...
+[21:39:45] [INFO] Generated path.
+[21:39:45] [INFO] Generating goals...
+[21:39:45] [INFO] Generated goals.
+[21:39:45] [INFO] Printing goals to: goals.gol...
+[21:39:45] [INFO] Successfully printed goals to: goals.gol
+
+[21:39:45] [INFO] Reading image time: 10.972000ms
+[21:39:45] [INFO] Converting to grayscale time: 4.987000ms
+[21:39:45] [INFO] Gnerating path time: 16.953000ms
+[21:39:45] [INFO] Generating goals time: 0.000000ms
+[21:39:45] [INFO] Printing goals time: 1.995000ms
+[21:39:45] [INFO] Execution time: 34.907000ms
+
+-----------------------------------------------
+[21:42:32] [INFO] Reading image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png...
+[21:42:32] [INFO] Successfully loaded image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png
+[21:42:32] [INFO] Converting to grayscale...
+[21:42:32] [INFO] Successfully converted to grayscale.
+[21:42:32] [INFO] Generating path...
+[21:42:32] [INFO] Generated path.
+[21:42:32] [INFO] Generating goals...
+[21:42:32] [INFO] Generated goals.
+[21:42:32] [INFO] Printing goals to: goals.gol...
+[21:42:32] [INFO] Successfully printed goals to: goals.gol
+
+[21:42:32] [INFO] Reading image time: 16.954000ms
+[21:42:32] [INFO] Converting to grayscale time: 11.968000ms
+[21:42:32] [INFO] Gnerating path time: 17.951000ms
+[21:42:32] [INFO] Generating goals time: 0.000000ms
+[21:42:32] [INFO] Printing goals time: 1.996000ms
+[21:42:32] [INFO] Execution time: 48.869000ms
+
+-----------------------------------------------
+[21:44:17] [INFO] Reading image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png...
+[21:44:17] [INFO] Successfully loaded image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png
+[21:44:17] [INFO] Converting to grayscale...
+[21:44:17] [INFO] Successfully converted to grayscale.
+[21:44:17] [INFO] Generating path...
+[21:44:17] [INFO] Generated path.
+[21:44:17] [INFO] Generating goals...
+[21:44:17] [INFO] Generated goals.
+[21:44:17] [INFO] Printing goals to: goals.gol...
+[21:44:17] [INFO] Successfully printed goals to: goals.gol
+
+[21:44:17] [INFO] Reading image time: 10.972000ms
+[21:44:17] [INFO] Converting to grayscale time: 4.986000ms
+[21:44:17] [INFO] Gnerating path time: 16.957000ms
+[21:44:17] [INFO] Generating goals time: 0.000000ms
+[21:44:17] [INFO] Printing goals time: 1.997000ms
+[21:44:17] [INFO] Execution time: 34.912000ms
+
+-----------------------------------------------
+[21:45:39] [INFO] Reading image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png...
+[21:45:39] [INFO] Successfully loaded image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png
+[21:45:39] [INFO] Converting to grayscale...
+[21:45:39] [INFO] Successfully converted to grayscale.
+[21:45:39] [INFO] Generating path...
+[21:45:39] [INFO] Generated path.
+[21:45:39] [INFO] Generating goals...
+[21:45:39] [INFO] Generated goals.
+[21:45:39] [INFO] Printing goals to: goals.gol...
+[21:45:39] [INFO] Successfully printed goals to: goals.gol
+
+[21:45:39] [INFO] Reading image time: 11.957000ms
+[21:45:39] [INFO] Converting to grayscale time: 4.987000ms
+[21:45:39] [INFO] Gnerating path time: 17.951000ms
+[21:45:39] [INFO] Generating goals time: 0.000000ms
+[21:45:39] [INFO] Printing goals time: 0.998000ms
+[21:45:39] [INFO] Execution time: 36.890000ms
+
+-----------------------------------------------
+[21:46:54] [INFO] Reading image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png...
+[21:46:54] [INFO] Successfully loaded image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png
+[21:46:54] [INFO] Converting to grayscale...
+[21:46:54] [INFO] Successfully converted to grayscale.
+[21:46:54] [INFO] Generating path...
+[21:46:54] [INFO] Generated path.
+[21:46:54] [INFO] Generating goals...
+[21:46:54] [INFO] Generated goals.
+[21:46:54] [INFO] Printing goals to: goals.gol...
+[21:46:54] [INFO] Successfully printed goals to: goals.gol
+
+[21:46:54] [INFO] Reading image time: 10.958000ms
+[21:46:54] [INFO] Converting to grayscale time: 4.985000ms
+[21:46:54] [INFO] Gnerating path time: 16.973000ms
+[21:46:54] [INFO] Generating goals time: 0.000000ms
+[21:46:54] [INFO] Printing goals time: 6.969000ms
+[21:46:54] [INFO] Execution time: 39.885000ms
+
+-----------------------------------------------
+[21:51:11] [INFO] Reading image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png...
+[21:51:11] [INFO] Successfully loaded image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png
+[21:51:11] [INFO] Converting to grayscale...
+[21:51:11] [INFO] Successfully converted to grayscale.
+[21:51:11] [INFO] Generating path...
+[21:51:11] [INFO] Generated path.
+[21:51:11] [INFO] Generating goals...
+[21:51:11] [INFO] Generated goals.
+[21:51:11] [INFO] Printing goals to: goals.gol...
+[21:51:11] [INFO] Successfully printed goals to: goals.gol
+
+[21:51:11] [INFO] Reading image time: 11.970000ms
+[21:51:11] [INFO] Converting to grayscale time: 4.986000ms
+[21:51:11] [INFO] Gnerating path time: 16.955000ms
+[21:51:11] [INFO] Generating goals time: 0.000000ms
+[21:51:11] [INFO] Printing goals time: 1.996000ms
+[21:51:11] [INFO] Execution time: 35.907000ms
+
+-----------------------------------------------
+[21:52:27] [INFO] Reading image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png...
+[21:52:27] [INFO] Successfully loaded image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png
+[21:52:27] [INFO] Converting to grayscale...
+[21:52:27] [INFO] Successfully converted to grayscale.
+[21:52:27] [INFO] Generating path...
+[21:52:27] [INFO] Generated path.
+[21:52:27] [INFO] Generating goals...
+[21:52:27] [INFO] Generated goals.
+[21:52:27] [INFO] Printing goals to: goals.gol...
+[21:52:27] [INFO] Successfully printed goals to: goals.gol
+
+[21:52:27] [INFO] Reading image time: 11.977000ms
+[21:52:27] [INFO] Converting to grayscale time: 4.976000ms
+[21:52:27] [INFO] Gnerating path time: 16.955000ms
+[21:52:27] [INFO] Generating goals time: 0.000000ms
+[21:52:27] [INFO] Printing goals time: 1.995000ms
+[21:52:27] [INFO] Execution time: 35.903000ms
+
+-----------------------------------------------
+[22:04:01] [INFO] Reading image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png...
+[22:04:01] [INFO] Successfully loaded image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png
+[22:04:01] [INFO] Converting to grayscale...
+[22:04:01] [INFO] Successfully converted to grayscale.
+[22:04:01] [INFO] Generating path...
+[22:04:01] [INFO] Generated path.
+[22:04:01] [INFO] Generating goals...
+[22:04:01] [INFO] Generated goals.
+[22:04:01] [INFO] Printing goals to: goals.gol...
+[22:04:01] [INFO] Successfully printed goals to: goals.gol
+
+[22:04:01] [INFO] Reading image time: 11.968000ms
+[22:04:01] [INFO] Converting to grayscale time: 5.984000ms
+[22:04:01] [INFO] Gnerating path time: 15.957000ms
+[22:04:01] [INFO] Generating goals time: 0.000000ms
+[22:04:01] [INFO] Printing goals time: 1.995000ms
+[22:04:01] [INFO] Execution time: 35.904000ms
+
+-----------------------------------------------
+[22:11:20] [INFO] Reading image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png...
+[22:11:20] [INFO] Successfully loaded image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png
+[22:11:20] [INFO] Converting to grayscale...
+[22:11:20] [INFO] Successfully converted to grayscale.
+[22:11:20] [INFO] Generating path...
+[22:11:20] [INFO] Generated path.
+[22:11:20] [INFO] Generating goals...
+[22:11:20] [INFO] Generated goals.
+[22:11:20] [INFO] Printing goals to: goals.gol...
+[22:11:20] [INFO] Successfully printed goals to: goals.gol
+
+[22:11:20] [INFO] Reading image time: 12.008000ms
+[22:11:20] [INFO] Converting to grayscale time: 4.946000ms
+[22:11:20] [INFO] Gnerating path time: 16.954000ms
+[22:11:20] [INFO] Generating goals time: 0.000000ms
+[22:11:20] [INFO] Printing goals time: 2.001000ms
+[22:11:20] [INFO] Execution time: 35.909000ms
+
+-----------------------------------------------
+[22:13:11] [INFO] Reading image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png...
+[22:13:11] [INFO] Successfully loaded image: D:/Michi/Programmieren/Diplomarbeit/camera_controlled_swarm_robots/visualization/SchwarmGUI/Images/test.png
+[22:13:11] [INFO] Converting to grayscale...
+[22:13:11] [INFO] Successfully converted to grayscale.
+[22:13:11] [INFO] Generating path...
+[22:13:11] [INFO] Generated path.
+[22:13:11] [INFO] Generating goals...
+[22:13:11] [INFO] Generated goals.
+[22:13:11] [INFO] Printing goals to: goals.gol...
+[22:13:11] [INFO] Successfully printed goals to: goals.gol
+
+[22:13:11] [INFO] Reading image time: 12.986000ms
+[22:13:11] [INFO] Converting to grayscale time: 4.966000ms
+[22:13:11] [INFO] Gnerating path time: 16.950000ms
+[22:13:11] [INFO] Generating goals time: 0.000000ms
+[22:13:11] [INFO] Printing goals time: 0.979000ms
+[22:13:11] [INFO] Execution time: 37.900000ms

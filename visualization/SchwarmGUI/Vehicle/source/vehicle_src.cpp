@@ -11,6 +11,7 @@ Schwarm::Vehicle::Vehicle(void)
     this->x_angle = 0.0f;
     this->y_angle = 0.0f;
     this->z_angle = 0.0f;
+    this->opacity = -1.0f;
 
     this->speed = 0.0f;
     this->needs_goal = false;
