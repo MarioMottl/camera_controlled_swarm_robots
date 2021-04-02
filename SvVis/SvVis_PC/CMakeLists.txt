@@ -11,7 +11,7 @@ set(CMAKE_CXX_EXTENSIONS ON)
 project ("SvVis_PC")
 
 # Add source to this project's executable.
-add_executable (SvVis_PC "SvVis_PC.cpp" "SvVis_PC.hpp")
+add_executable (SvVis_PC "main.cpp" "../../visualization/external/SchwarmPacket/packet.cpp" "../../visualization/external/SchwarmPacket/otherpacket.cpp" "SvVis_PC.hpp" "Packet_handler.hpp" "Packet_handler_working.hpp")
 
 # pthread
 set(THREADS_PREFER_PTHREAD_FLAG ON)

@@ -61,7 +61,7 @@ namespace SvVis
 		/**
 		 * @brief connect to a server to communicate with the µC counterpart
 		 */
-		cppsock::error_t connect(cppsock::socketaddr& addr)
+		cppsock::error_t connect(const cppsock::socketaddr& addr)
 		{
 			return this->sock.connect(addr);
 		}

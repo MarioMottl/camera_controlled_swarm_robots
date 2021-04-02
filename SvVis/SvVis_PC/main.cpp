@@ -1,5 +1,17 @@
 ﻿#include "SvVis_PC.hpp"
+#include "Packet_handler.hpp"
 
+#if 1
+
+int main()
+{
+	SwarmCommandHandler handler;
+	//std::system("python ./tcptocom.py --port 10010 --comports COM6");
+	handler.run(cppsock::make_any<cppsock::IPv4>(10002), cppsock::make_loopback<cppsock::IPv4>(10010), 1);
+	return 0;
+}
+
+#else
 void print_answers(SvVis::client* con, std::atomic_bool *running)
 {
 	SvVis::message_t msg;
@@ -36,3 +48,4 @@ int main()
 	_answer_handler.join();
 	return 0;
 }
+#endif

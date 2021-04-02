@@ -32,7 +32,7 @@ int main(void)
     if(osKernelInitialize() == osOK)
     {
         LED_init();     // initialise LED driver and start heartbeat thread
-        // USART Bauds are multiplied by 3 because the hardware needs that (idk why but it dos need it)
+        // USART Bauds are multiplied by 3 because the hardware needs that (idk why but it does need it)
         usart1.init(USART1, 9600 *3); // init DAP usart
         usart2.init(USART2, 9600 *3); // init HC06 USART
         usart3.init(USART3, 115200 *3); // init ESP8266 USART
