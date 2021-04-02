@@ -150,25 +150,9 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>61</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134237936</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>RTE\CMSIS\RTX_Config.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\RTX5_Delay\RTE/CMSIS/RTX_Config.c\61</Expression>
-        </Bp>
-        <Bp>
-          <Number>1</Number>
-          <Type>0</Type>
           <LineNumber>42</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134237908</Address>
+          <Address>134238440</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -180,52 +164,36 @@
           <Expression>\\RTX5_Delay\RTE/CMSIS/RTX_Config.c\42</Expression>
         </Bp>
         <Bp>
+          <Number>1</Number>
+          <Type>0</Type>
+          <LineNumber>29</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134237288</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>.\main.cpp</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\RTX5_Delay\main.cpp\29</Expression>
+        </Bp>
+        <Bp>
           <Number>2</Number>
           <Type>0</Type>
-          <LineNumber>27</LineNumber>
+          <LineNumber>79</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134236756</Address>
+          <Address>0</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
+          <BreakIfRCount>0</BreakIfRCount>
           <Filename>.\main.cpp</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\RTX5_Delay\main.cpp\27</Expression>
-        </Bp>
-        <Bp>
-          <Number>3</Number>
-          <Type>0</Type>
-          <LineNumber>58</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134234192</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>.\main.cpp</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\RTX5_Delay\main.cpp\58</Expression>
-        </Bp>
-        <Bp>
-          <Number>4</Number>
-          <Type>0</Type>
-          <LineNumber>66</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134234276</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>.\main.cpp</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\RTX5_Delay\main.cpp\66</Expression>
+          <Expression></Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -390,18 +358,6 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\USART.cpp</PathWithFileName>
       <FilenameWithoutPath>USART.cpp</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>1</GroupNumber>
-      <FileNumber>9</FileNumber>
-      <FileType>8</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>.\at_wrapper.cpp</PathWithFileName>
-      <FilenameWithoutPath>at_wrapper.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

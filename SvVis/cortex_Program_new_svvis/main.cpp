@@ -8,6 +8,7 @@
 #include "USART.hpp"
 #include "motor_driver.hpp"
 #include "LED_driver.h"
+//#include "at_wrapper.hpp"
 
 // main thread
 __NO_RETURN void main_thread_func(void *arg);
@@ -21,6 +22,7 @@ struct SvVis_collection // used for easier use in programming
 };
 
 usart::usart usart1, usart2, usart3; // USART handlers
+//AT::wrapper at_handler; // AT command handler
 
 // main
 int main(void)
@@ -32,11 +34,12 @@ int main(void)
         LED_init();     // initialise LED driver and start heartbeat thread
         // USART Bauds are multiplied by 3 because the hardware needs that (idk why but it dos need it)
         usart1.init(USART1, 9600 *3); // init DAP usart
-        usart2.init(USART2, 9600 *3);
-        usart3.init(USART3, 115200 *3);
+        usart2.init(USART2, 9600 *3); // init HC06 USART
+        usart3.init(USART3, 115200 *3); // init ESP8266 USART
+        //at_handler.init(usart3);
         tar.daplink.init(usart1); // initialise DAP handler
         tar.bluetooth.init(usart2); // initialise Bluetooth handler
-        //tar.wlan.init(USART3, USART_BAUD_115200); // initialise WLAN handler
+        //tar.wlan.init(at_handler); // initialise WLAN handler
 
         main_thread_handle = osThreadNew(main_thread_func, &tar, NULL);
         osKernelStart();

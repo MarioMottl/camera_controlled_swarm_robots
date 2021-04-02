@@ -8,6 +8,7 @@
 #include <packet.h>
 #include <exception>
 #include "../../library/cppsock/cppsock.hpp"
+#include <fstream>
 
 #define PORT 10001
 #define N_CARS 1        //max amount of cars in frame       
@@ -38,8 +39,8 @@ struct PicData
 {
     cv::Mat frame;
     cv::Mat rFrame;
-    int width;
-    int height;
+    size_t width;
+    size_t height;
 };
 
 
@@ -56,16 +57,18 @@ private:
     cppsock::tcp::listener listener;
     cppsock::tcp::socket connection;
     std::atomic_bool pkgReady = false;
+    HueValues hvalues;
+
 public:
-    SwarmDetection() = default;
-    ~SwarmDetection() = default;
+    SwarmDetection();
+    ~SwarmDetection();
 
     /**
      * @brief Sets up the VideoCapture
      * @param deviceID -> Hardware ID of the camera thats going to be used.
      * @return -> returns 0 for success -1 if an error occurred
      */
-    int setupVideCapture(int deviceID);
+    int setupVideoCapture(int deviceID);
 
     /**
     * @brief Reads out one frame and returns it
@@ -83,13 +86,15 @@ public:
     /**
     * @brief Creates a Track bar for the lower and upper values of the pixels that need to be tracked
     */
-    void createTBar();
+    void createTBarHV();
+
 
     /**
     * @brief Reads out the Track bar positions and returns it.
     * @return @param hvalues -> struct of values of Track bar
     */
-    void getTBarPos(HueValues& hvalues);
+    void getTBarPosHV(HueValues& hvalues);
+
 
     /**
     * @brief Debug Output: Prints out the Hue values of the Track bar
@@ -161,5 +166,5 @@ public:
 
     static void startServer(SwarmDetection *p);
 
-    static void sendPacket(SwarmDetection *p);
+    static bool sendPacket(SwarmDetection *p);
 };

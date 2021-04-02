@@ -41,6 +41,13 @@ namespace usart
          */
         bool init(USART_TypeDef *usartn, uint32_t baud, size_t recv_pipe_size = 64);
         /**
+         * @brief enable receiving data
+         * 
+         * @param newstate true to enable receiving
+         * @return osStatus_t 
+         */
+        osStatus_t enable_recv(bool newstate);
+        /**
          * @brief get one byte from the input queue
          * 
          * @param data where to put the data
