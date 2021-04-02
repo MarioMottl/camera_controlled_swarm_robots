@@ -700,6 +700,17 @@ int main()  // its showtime
     shared_memory[Schwarm::Client::DETECTION_SERVER].client = detection_server_collection.insert(detection_client, &shared_memory);
     std::cout << get_msg("INFO / DETECTION-SERVER") << "Connected to detection!" << std::endl;
 
+    // connect to swarm control server
+    std::shared_ptr<cppsock::tcp::client> control_client = std::make_shared<cppsock::tcp::client>();
+    if ((err = control_client->connect(Schwarm::CONTROL_SERVER_ADDR, Schwarm::CONTROL_SERVER_PORT)) < 0)
+    {
+        std::cout << get_msg("ERROR / CONTROL-SERVER") << "Failed to connect (Address: " << Schwarm::CONTROL_SERVER_ADDR << " Port : " << Schwarm::CONTROL_SERVER_PORT << ")" << std::endl;
+        std::cout << get_msg("ERROR / CONTROL-SERVER") << "Swarm control may not be running!" << std::endl;
+        return -1;
+    }
+    shared_memory[Schwarm::Client::CONTROL_SERVER].client = control_client;
+    std::cout << get_msg("INFO / DETECTION-SERVER") << "Connected to swarm control!" << std::endl;
+
     /* -----------------------------------------------------------------------------
      * DECLARE WINDOW HANDLERS
      * -----------------------------------------------------------------------------*/

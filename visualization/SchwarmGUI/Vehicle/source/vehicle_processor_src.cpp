@@ -154,6 +154,18 @@ void VehicleProcessor::process(VehicleProcessor* processor)
                             }
                             cur_vehicle->set_old_targetangle(alpha);
                             cur_vehicle->set_new_targetangle(beta);
+
+                            if (real)
+                            {
+                                // encode and send vehicle command packet
+                                Schwarm::VehicleCommandPacket command;
+                                command.set_vehicle_id(i / 2);
+                                command.set_angle(beta - alpha);
+                                command.set_length(cur_vehicle->get_distance());
+                                command.allocate(command.min_size());
+                                command.encode();
+                                (*processor->shared_memory)[Schwarm::Client::CONTROL_SERVER].client->send(command.rawdata(), command.size(), 0);
+                            }
                         }
                         (*processor->shared_memory)[Schwarm::Client::PATH_SERVER].recv_packed_id = -1;
                     }
