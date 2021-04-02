@@ -195,7 +195,7 @@ float SwarmDetection::getDistance(cv::KeyPoint p1, cv::KeyPoint p2)
 SwarmDetection::SwarmDetection()
 {
     //reads out the last values the user used
-    std::ifstream f("log.txt");
+    std::ifstream f("settings.txt");
     if (f.is_open())
     {
         f >> hvalues.l_h >> hvalues.l_s >> hvalues.l_v >> hvalues.u_h >> hvalues.u_s >> hvalues.u_v;
@@ -212,7 +212,7 @@ SwarmDetection::~SwarmDetection()
 {
     //saves the last settings the user put in
     std::ofstream f;
-    f.open("log.txt");
+    f.open("settings.txt");
     f << hvalues.l_h << "\n" << hvalues.l_s << "\n" <<hvalues.l_v << "\n" <<hvalues.u_h << "\n" << hvalues.u_s << "\n" << hvalues.u_v << "\n";
     f.close();
 }
