@@ -14,8 +14,8 @@ running = True;
 
 def initialisierung():
     if(len(sys.argv) != 5):
-        print("ERROR: no arguments given");
-        print("proper usage: %s <IP> <PORT> <COMPORT> <BAUDRATE>" % (sys.argv[0]));
+        print("[tcptocom] ERROR: no arguments given");
+        print("[tcptocom] proper usage: %s <IP> <PORT> <COMPORT> <BAUDRATE>" % (sys.argv[0]));
         sys.exit(-1);
     else:
         IP = sys.argv[1];
@@ -25,20 +25,20 @@ def initialisierung():
     try:
         serielle = serial.Serial(COMPORT, BAUDRATE, timeout = 0);
     except serial.SerialException as exception:
-        print("========== Opening Serial Port failed ==========");
+        print("[tcptocom] ========== Opening Serial Port failed ==========");
         print(type(exception));
         print(exception.args[0]);
         exit(-1);
         pass
-    print("Opening COM Port");
+    print("[tcptocom] Opening COM Port");
     if not serielle.isOpen():
         serielle.open();
     s = socket.socket();
     s.bind((IP,PORT));
-    print("Waiting for connection on %s %d" % (IP, PORT) );
+    print("[tcptocom] Waiting for connection on %s %d" % (IP, PORT) );
     s.listen();
     conn,addr = s.accept();
-    print("Verbunden mit ",addr);
+    print("[tcptocom] connected with ",addr);
     return serielle,conn;
 
 def tcptoserial(conn,serielle):
@@ -46,7 +46,7 @@ def tcptoserial(conn,serielle):
     while running:
         data = conn.recv(1024);
         if data:
-            print("Data from tcp to serial = ",data);
+            print("[tcptocom] Data from tcp to serial = ",data);
             serielle.write(data);
         else:
             # tcp socket was closed, shutting program down
@@ -58,7 +58,7 @@ def serialtotcp(conn,serielle):
     while running:
         data = serielle.readline(1024);
         if data:
-            print("Data from serial to tcp = ",data);
+            print("[tcptocom] Data from serial to tcp = ",data);
             conn.send(data);
 
 def main():
