@@ -20,10 +20,13 @@ public:
 		Schwarm::VehicleCommandPacket command;
 		std::stringstream ss;
 		std::streamsize len;
+		std::chrono::system_clock::time_point last_packet;
+		std::chrono::system_clock::duration time_last_packet;
 
 		this->conv_server = conv_server;
 		std::cout << "[SERVER]: connecting to conversion server at " << conv_server << std::endl;
 		this->vehicles.resize(num_vehicles);
+		recv_buf.resize(command.min_size());
 		for (std::shared_ptr<SvVis::client> &vehicle : vehicles)
 		{
 			vehicle = std::make_shared<SvVis::client>();
@@ -38,10 +41,10 @@ public:
 		std::cout << "[SERVER]: started listening on " << this->listener.sock().getsockname() << std::endl;
 		this->listener.accept(this->visualisation);
 		std::cout << "[SERVER]: visualisation connected" << std::endl;
-		std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 
 		errno = 0;
-		recv_buf.resize(command.min_size());
+		last_packet = std::chrono::system_clock::now();
+		time_last_packet = std::chrono::milliseconds(10);
 		while ( (len=this->visualisation.recv(recv_buf.data(), command.min_size(), cppsock::msg_waitall)) > 0)
 		{
 			std::cout << "data received (" << len << " bytes)" << std::endl;
@@ -50,6 +53,19 @@ public:
 			command.decode();
 
 			std::cout << "[SERVER]: Command recived: " << command.get_length() << "m , " << command.get_angle() << "rad" << std::endl;
+			// send angle
+			ss.str("");
+			ss.clear();
+			if (command.get_angle() < 0)
+				ss << "rr " << int(command.get_angle() * (-180 / M_PI));
+			else if (command.get_angle() > 0)
+				ss << "rl " << int(command.get_angle() * (+180 / M_PI));
+			else
+				ss << "stop";
+			std::cout << "[SERVER / SvVis]: Command to send: " << ss.str() << std::endl;
+			this->vehicles.at(command.get_vehicle_id())->send_str(ss.str());
+			// sleep for half the time between the last packets, 500ms maximum
+			std::this_thread::sleep_for(std::min<std::chrono::milliseconds>(std::chrono::duration_cast<std::chrono::milliseconds>(time_last_packet / 2), std::chrono::milliseconds(500)));
 			// send length
 			ss.str("");
 			ss.clear();
@@ -57,19 +73,20 @@ public:
 				ss << "bw " << int(command.get_length() * -100);
 			else if (command.get_length() > 0)
 				ss << "fw " << int(command.get_length() * 100);
-			std::cout << "[SERVER / SvVis]: Command to send: " << ss.str() << std::endl;
-			this->vehicles.at(command.get_vehicle_id())->send_str(ss.str());
-			// send angle
-			ss.str("");
-			ss.clear();
-			if (command.get_angle() < 0)
-				ss << "rr " << int(command.get_angle() * (-180 / M_PI));
 			else
-				ss << "rl " << int(command.get_angle() * (+180 / M_PI));
+				ss << "stop";
 			std::cout << "[SERVER / SvVis]: Command to send: " << ss.str() << std::endl;
 			this->vehicles.at(command.get_vehicle_id())->send_str(ss.str());
+
+			time_last_packet = std::chrono::system_clock::now() - last_packet;
+			std::cout << "[SERVER]: time since last packet: " << std::chrono::duration_cast<std::chrono::milliseconds>(time_last_packet).count() << "ms" << std::endl;
+			last_packet = std::chrono::system_clock::now();
 		}
 		visualisation.close();
+		for (std::shared_ptr<SvVis::client> &vehicle : vehicles)
+		{
+			vehicle->close();
+		}
 		std::cout << "recv call indicated disconnect (return code " << len << ") (errno: " << errno << ") " << strerror(errno) << std::endl;
 	}
 };
