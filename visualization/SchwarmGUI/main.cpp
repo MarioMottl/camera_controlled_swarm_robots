@@ -689,6 +689,7 @@ int main()  // its showtime
     shared_memory[Schwarm::Client::PATH_SERVER].client = path_server_collection.insert(path_client, &shared_memory);
     std::cout << get_msg("INFO / PATH-SERVER") << "Connected to path server!" << std::endl;
 
+#if 0
     // connect to detection
     cppsock::tcp::client detection_client;
     if ((err = detection_client.connect(Schwarm::DETECTION_SERVER_ADDR, Schwarm::DETECTION_SERVER_PORT)) < 0)
@@ -710,6 +711,7 @@ int main()  // its showtime
     }
     shared_memory[Schwarm::Client::CONTROL_SERVER].client = control_client;
     std::cout << get_msg("INFO / DETECTION-SERVER") << "Connected to swarm control!" << std::endl;
+#endif
 
     /* -----------------------------------------------------------------------------
      * DECLARE WINDOW HANDLERS
@@ -874,6 +876,16 @@ int main()  // its showtime
     vehicle1_real.set_opacity(-1.0f);               // ignore opacity
     vehicle1_real.calc();
 
+    Schwarm::Vehicle vehicle2_simu, vehicle2_real;  // initialize vehicles
+    vehicle2_simu.translate(0.3f, 0.015f, 0.1f);
+    vehicle2_simu.set_speed(0.18f);
+    vehicle2_simu.set_opacity(0.5f);
+    vehicle2_simu.calc();
+
+    vehicle2_real.translate(0.0f, -1000000.0f, 0.0f);
+    vehicle2_real.set_opacity(-1.0f);               // ignore opacity
+    vehicle2_real.calc();
+
     std::cout << get_msg("INFO / OpenGL") << "Vehicles created." << std::endl;
 
     /*
@@ -882,9 +894,12 @@ int main()  // its showtime
     *   For vehicles allocated dynamically set the "dynamic_vehicles" parameter to true.
     *   The vehicle-buffer will also delete the allocated memory for the vehicles.
     */
-    Schwarm::VehicleBuffer vehicle_buffer(context, cmd_queue, vehicle, false, 3);
-    vehicle_buffer.add_vehicle(&vehicle1_simu);  // add vehicles to the buffer
-    vehicle_buffer.add_vehicle(&vehicle1_real);  // add vehicles to the buffer
+    Schwarm::VehicleBuffer vehicle_buffer(context, cmd_queue, vehicle, false, 4);
+    // the vehicles MUST always be added in pairs
+    vehicle_buffer.add_vehicle(&vehicle1_simu);
+    vehicle_buffer.add_vehicle(&vehicle1_real); 
+    vehicle_buffer.add_vehicle(&vehicle2_simu);
+    vehicle_buffer.add_vehicle(&vehicle2_real);
     std::cout << get_msg("INFO / OpenGL") << "Vehicles loaded." << std::endl;
 
     shared_memory[Schwarm::Client::GENERAL].vehicles = &vehicle_buffer;
@@ -1097,8 +1112,8 @@ int main()  // its showtime
     std::cout << get_msg("INFO / OpenGL") << "OpenGL content successfully terminated." << std::endl;
 
     path_server_collection.clear();
-    detection_server_collection.clear();
-    control_client->close();
+    //detection_server_collection.clear();
+    //control_client->close();
 
     event_handler.stop();
     event_handler.cleanup();

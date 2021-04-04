@@ -107,13 +107,16 @@ namespace Schwarm
                         (*shared_memory)[Schwarm::Client::GENERAL].start = true;
 
                     // swarm control needs packet to initialize
-                    Schwarm::VehicleCommandPacket command;
-                    command.allocate(command.min_size());
-                    command.set_vehicle_id(0);
-                    command.set_angle(0.0f);
-                    command.set_length(0.0f);
-                    command.encode();
-                    (*shared_memory)[Schwarm::Client::CONTROL_SERVER].client->send(command.rawdata(), command.size(), 0);
+                    if ((*shared_memory)[Schwarm::Client::GENERAL].real)
+                    {
+                        Schwarm::VehicleCommandPacket command;
+                        command.allocate(command.min_size());
+                        command.set_vehicle_id(0);
+                        command.set_angle(0.0f);
+                        command.set_length(0.0f);
+                        command.encode();
+                        (*shared_memory)[Schwarm::Client::CONTROL_SERVER].client->send(command.rawdata(), command.size(), 0);
+                    }
                 }
                 else if(args[1] == "stop")
                 {
