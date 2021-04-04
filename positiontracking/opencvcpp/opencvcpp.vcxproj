@@ -81,12 +81,12 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\opencv\build\include;C:\Users\Mario\Desktop\camera_controlled_swarm_robots\visualization\external\SchwarmPacket;C:\Users\Mario\Desktop\camera_controlled_swarm_robots\library\asio-1.18.1\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\opencv\build\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\opencv\build\x64\vc15\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\opencv\build\include;C:\Users\Mario\Desktop\camera_controlled_swarm_robots\visualization\external\SchwarmPacket;C:\Users\Mario\Desktop\camera_controlled_swarm_robots\library\asio-1.18.1\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\opencv\build\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\opencv\build\x64\vc15\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

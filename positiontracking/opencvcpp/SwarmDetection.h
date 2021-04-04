@@ -5,7 +5,7 @@
 #include <thread>
 #include <chrono>
 #include <atomic>
-#include <packet.h>
+#include "../../visualization/external/SchwarmPacket/packet.h"
 #include <exception>
 #include "../../library/cppsock/cppsock.hpp"
 #include <fstream>
