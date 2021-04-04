@@ -25,7 +25,7 @@ def getArgs():
         _global_port = int(port)
         print(port)
     else:
-        print("No TCP Port specified")
+        print("[tcptocom] No TCP Port specified")
         exit(-1)
     if args.ip:
         ip = args.ip
@@ -40,7 +40,7 @@ def getArgs():
             _global_comports.append(open_com(comPort, baudrate))
 
 def open_com(comport, baudrate):
-    print("opening COM port %s with baudrate %d" % (comport, baudrate))
+    print("[tcptocom] opening COM port %s with baudrate %d" % (comport, baudrate))
     try:
         serielle = serial.Serial(comport, baudrate, timeout = 0)
     except serial.SerialException as exception:
@@ -49,7 +49,7 @@ def open_com(comport, baudrate):
         print(exception.args[0])
         exit(-1)
         pass
-    print("comport %s opened with baud rate %d" % (comport, baudrate) )
+    print("[tcptocom] comport %s opened with baud rate %d" % (comport, baudrate) )
     return serielle
 
 def tcptoserial(tcp,serielle):
@@ -57,7 +57,7 @@ def tcptoserial(tcp,serielle):
     while running:
         data = tcp.recv(1024)
         if data:
-            print("Data from tcp to serial = ",data)
+            print("[tcptocom] Data from tcp to serial = ",data)
             serielle.write(data);
         else:
             # tcp socket was closed, shutting program down
@@ -69,13 +69,13 @@ def serialtotcp(tcp,serielle):
     while running:
         data = serielle.readline(1024)
         if data:
-            print("Data from serial to tcp = ",data)
+            print("[tcptocom] Data from serial to tcp = ",data)
             tcp.send(data)
 
 def match_connection(sock):
     global _global_comports
 
-    print("connecting client with comport")
+    print("[tcptocom] connecting client with comport")
     serial = _global_comports.pop(0)
     tcptos = threading.Thread(target = tcptoserial, args = (sock, serial))
     stotcp = threading.Thread(target = serialtotcp, args = (sock, serial))
@@ -93,15 +93,15 @@ def main():
     listener = socket.socket(socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_TCP)
     listener.bind((_global_ip, _global_port))
     listener.listen()
-    print("TCP server listening at %s %d" % (_global_ip, _global_port) )
+    print("[tcptocom] TCP server listening at %s %d" % (_global_ip, _global_port) )
     while (len(_global_comports) > 0):
         con, addr = listener.accept()
-        print("client connected: ", addr)
+        print("[tcptocom] client connected: ", addr)
         _thread = threading.Thread(target=match_connection, args = (con) )
-        print("matching thread started")
+        print("[tcptocom] matching thread started")
         _matcher_threads.append( _thread )
 
-    print("closing server and program...")
+    print("[tcptocom] closing server and program...")
     listener.close();
 
     for _thread in _matcher_threads:

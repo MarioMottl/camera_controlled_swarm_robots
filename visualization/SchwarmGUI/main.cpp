@@ -691,12 +691,12 @@ int main()  // its showtime
 
     // connect to detection
     cppsock::tcp::client detection_client;
-    //if ((err = detection_client.connect(Schwarm::DETECTION_SERVER_ADDR, Schwarm::DETECTION_SERVER_PORT)) < 0)
-   //{
-     //   std::cout << get_msg("ERROR / DETECTION-SERVER") << "Failed to connect (Address: " << Schwarm::DETECTION_SERVER_ADDR << " Port : " << Schwarm::DETECTION_SERVER_PORT << ")" << std::endl;
-       // std::cout << get_msg("ERROR / DETECTION-SERVER") << "Detection may not be running!" << std::endl;
-        //return -1;
-    //}
+    if ((err = detection_client.connect(Schwarm::DETECTION_SERVER_ADDR, Schwarm::DETECTION_SERVER_PORT)) < 0)
+    {
+        std::cout << get_msg("ERROR / DETECTION-SERVER") << "Failed to connect (Address: " << Schwarm::DETECTION_SERVER_ADDR << " Port : " << Schwarm::DETECTION_SERVER_PORT << ")" << std::endl;
+        std::cout << get_msg("ERROR / DETECTION-SERVER") << "Detection may not be running!" << std::endl;
+        return -1;
+    }
     shared_memory[Schwarm::Client::DETECTION_SERVER].client = detection_server_collection.insert(detection_client, &shared_memory);
     std::cout << get_msg("INFO / DETECTION-SERVER") << "Connected to detection!" << std::endl;
 
@@ -747,9 +747,9 @@ int main()  // its showtime
     Main::transform_lightpos(wl_pos, 3.5f);
     Main::worldlight_position() = wl_pos;
 
-    Main::set_vis_pos(1.0f, 0.85f);
+    Main::set_vis_pos(1.0f, 1.0f);
     Main::set_vis_width(2.0f);
-    Main::set_vis_height(1.75f);
+    Main::set_vis_height(1.9f);
     vis_window_handler.init(main_window, gl::convert::to_pixels_size(Main::get_vis_width(), main_window_handler.get_width()), 
                                     gl::convert::to_pixels_size(Main::get_vis_height(), main_window_handler.get_height()));
 
@@ -828,17 +828,6 @@ int main()  // its showtime
     // set font for elements
     std::cout << get_msg("INFO / GUI") << "Initializing GUI..." << std::endl;
     GUI::Element::set_font(&element_font);
-
-    /* CREATE BUTTONS */
-    std::cout << get_msg("INFO / GUI") << "Creating buttons..." << std::endl;
-    GUI::Button stop_button(main_window, main_window_handler.get_width_ptr(), main_window_handler.get_height_ptr(), main_window_handler.get_aspect_ptr());
-    stop_button.set_pos(-0.975f, 0.875f);
-    stop_button.set_size(0.2f, 0.1f);
-    stop_button.set_button_color(Main::BUTTON_STD_COLOR);
-    stop_button.set_text_value("STOP");
-    stop_button.set_font_size(0.075f);
-    stop_button.set_text_color(Main::BUTTON_TEXT_COLOR);
-    std::cout << get_msg("INFO / GUI") << "Buttons created." << std::endl;
     
     /* CREATE TEXTBOXES */
     std::cout << get_msg("INFO / GUI") << "Creating textboxes..." << std::endl;
@@ -855,7 +844,6 @@ int main()  // its showtime
      * INIT ELEMENT HANDLER
      * -----------------------------------------------------------------------------*/
     GUI::ElementHandler element_handler(main_window);
-    element_handler.attach_element(stop_button);
     element_handler.attach_element(cmd_line);
     element_handler.start(std::chrono::milliseconds(5));
     std::cout << get_msg("INFO / GUI") << "Started Element-Handler." << std::endl;
@@ -878,7 +866,7 @@ int main()  // its showtime
 
     Schwarm::Vehicle vehicle1_simu, vehicle1_real;  // initialize vehicles
     vehicle1_simu.translate(0.0f, 0.015f, 0.0f);
-    vehicle1_simu.set_speed(0.2f);
+    vehicle1_simu.set_speed(0.18f);
     vehicle1_simu.set_opacity(-1.0f);               
     vehicle1_simu.calc();
 
@@ -1107,6 +1095,10 @@ int main()  // its showtime
     glfwTerminate();
     std::cout << get_msg("INFO / OpenGL WINDOW") << "OpenGL window Closed." << std::endl;
     std::cout << get_msg("INFO / OpenGL") << "OpenGL content successfully terminated." << std::endl;
+
+    path_server_collection.clear();
+    detection_server_collection.clear();
+    control_client->close();
 
     event_handler.stop();
     event_handler.cleanup();

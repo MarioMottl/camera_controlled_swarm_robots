@@ -1,2 +1,6 @@
-./obj
-./SchwarmGUI.exe
+.vs
+out
+pathserver/logs
+pathserver/pathgenerator/debug
+pathserver/pathgenerator/logs
+pathserver/pathgenerator/goals.gol

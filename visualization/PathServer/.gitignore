@@ -1,3 +1,11 @@
-./path_client.exe
-./path_server.exe
-./obj
+path_client.exe
+path_server.exe
+obj
+client_obj
+.vscode
+logs
+versions
+images
+pathgenerator/debug
+pathgenerator/logs
+pathgenerator/goals.gol
