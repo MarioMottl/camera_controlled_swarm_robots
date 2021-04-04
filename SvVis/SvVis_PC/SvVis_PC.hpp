@@ -61,21 +61,21 @@ namespace SvVis
 		/**
 		 * @brief connect to a server to communicate with the µC counterpart
 		 */
-		cppsock::error_t connect(const cppsock::socketaddr& addr)
+		cppsock::utility_error_t connect(const cppsock::socketaddr& addr)
 		{
 			return this->sock.connect(addr);
 		}
 		/**
 		 * @brief connect to a server to communicate with the µC counterpart
 		 */
-		cppsock::error_t connect(const char* hostname, const char* service)
+		cppsock::utility_error_t connect(const char* hostname, const char* service)
 		{
 			return this->sock.connect(hostname, service);
 		}
 		/**
 		 * @brief connect to a server to communicate with the µC counterpart
 		 */
-		cppsock::error_t connect(const char* hostname, uint16_t port)
+		cppsock::utility_error_t connect(const char* hostname, uint16_t port)
 		{
 			return this->sock.connect(hostname, port);
 		}

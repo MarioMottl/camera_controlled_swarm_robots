@@ -45,7 +45,7 @@ public:
 		errno = 0;
 		last_packet = std::chrono::system_clock::now();
 		time_last_packet = std::chrono::milliseconds(10);
-		while ( (len=this->visualisation.recv(recv_buf.data(), command.min_size(), cppsock::msg_waitall)) > 0)
+		while ( (len=this->visualisation.recv(recv_buf.data(), command.min_size(), cppsock::waitall)) > 0)
 		{
 			std::cout << "data received (" << len << " bytes)" << std::endl;
 			command.allocate(command.min_size());
