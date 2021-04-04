@@ -1,4 +1,0 @@
-
------------------------------------------------
-[16:04:16] [INFO] Reading image: images/testimg.png...
-[16:04:16] [ERROR] Failed to read image: images/testimg.png

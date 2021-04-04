@@ -48,15 +48,15 @@ void VehicleProcessor::process(VehicleProcessor* processor)
 
             bool* simu_states = new bool[vehicle_buffer->get_num_vehicles() / 2];
             // Initializes the all states to true.
-            for(size_t i=0; i < vehicle_buffer->get_num_vehicles(); i=+2)
+            for(size_t i=0; i < vehicle_buffer->get_num_vehicles(); i+=2)
             {
-                simu_states[i] = true;
+                simu_states[i / 2] = true;
                 vehicle_buffer->get_vehicle(i)->set_goal_needed(true);
             }
 
             uint32_t* goal_indices = new uint32_t[vehicle_buffer->get_num_vehicles() / 2];
             for(size_t i=0; i < vehicle_buffer->get_num_vehicles(); i+=2)
-                goal_indices[i] = 0;
+                goal_indices[i / 2] = 0;
 
             std::chrono::time_point tstart = std::chrono::high_resolution_clock::now();
             do
@@ -67,6 +67,7 @@ void VehicleProcessor::process(VehicleProcessor* processor)
                 {
                     Vehicle* cur_vehicle = vehicle_buffer->get_vehicle(i);
                     Vehicle* cur_vehicle_real = vehicle_buffer->get_vehicle(i + 1);
+
                     // Get goal if vehicles hasn't got one.
                     if (simu_states[i/2] && cur_vehicle->goal_needed())
                     {
@@ -213,6 +214,7 @@ void VehicleProcessor::process(VehicleProcessor* processor)
                             cur_vehicle->rotate(0.0f, cur_vehicle->get_new_targetangle(), 0.0f);
                             cur_vehicle->set_goal_needed(true);
                         }
+
                         cur_vehicle->calc();
                         vehicle_buffer->update_vehicle(i);
 
