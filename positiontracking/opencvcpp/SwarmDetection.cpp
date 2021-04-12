@@ -21,13 +21,14 @@ void SwarmDetection::Detector()
         cv::Mat xframe = readFromCamera();
 
         cv::Mat imWithKeypoints;
-
+        //Get the Trackbar positions of the sliders
         getTBarPosHV(hvalues);
 
         //Transform the fram into the HSV colour spectrum
         cv::cvtColor(xframe, hsvFrame, cv::COLOR_BGR2HSV);
         
         //Applies a mask onto the frame with the values the user selected
+        //Applies the mask in steps 
         cv::inRange(hsvFrame, cv::Scalar(hvalues.l_h,hvalues.l_s,hvalues.l_v),cv::Scalar(hvalues.u_h,hvalues.u_s,hvalues.u_v),mask);
 
         //Detect all Keypoints on different versions of openCV
