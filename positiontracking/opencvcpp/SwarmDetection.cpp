@@ -65,7 +65,7 @@ void SwarmDetection::drawKeyPoints(cv::Mat xframe, std::vector<cv::KeyPoint>* ke
 
 void SwarmDetection::simpleCarDetection(std::vector<cv::KeyPoint> keyPoints)
 {
-    float x = 0.00f, y = 0.00f;
+    auto x = 0.00f, y = 0.00f;
     if (keyPoints.size() > 2)
     {
         //gets the dimensions of the frame
@@ -187,9 +187,8 @@ void SwarmDetection::carDetection(std::vector<cv::KeyPoint> *keyPoints)
 float SwarmDetection::getDistance(cv::KeyPoint p1, cv::KeyPoint p2)
 {
     //Returns the distance between the two provided keypoints
-    float a, b;
-    a = p2.pt.x - p1.pt.x;
-    b = p2.pt.y - p1.pt.y;
+    const auto a =  p2.pt.x - p1.pt.x;
+    const auto b = p2.pt.y - p1.pt.y;
     return sqrt(a*a+b*b);
 }
 
