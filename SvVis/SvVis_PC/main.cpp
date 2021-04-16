@@ -3,7 +3,7 @@
 
 #if 1
 
-#define CONTINUUS
+//#define CONTINUUS
 
 int main()
 {
@@ -13,7 +13,7 @@ int main()
 #endif
 		SwarmCommandHandler handler;
 		//if(std::system("python ../../../tcptocom.py --port 10010 --comports COM6") == 0)
-		std::thread python(std::system, "python.exe \"../../../tcptocom (old).py\" 0.0.0.0 10010 COM6 9600");
+		std::thread python(std::system, "python.exe \"../../../tcptocom (old).py\" 0.0.0.0 10010 COM11 9600");
 		handler.run(cppsock::make_any<cppsock::IPv4>(10002), cppsock::make_loopback<cppsock::IPv4>(10010), 1);
 		python.join();
 #ifdef CONTINUUS
