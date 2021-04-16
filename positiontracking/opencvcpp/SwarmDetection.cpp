@@ -21,13 +21,14 @@ void SwarmDetection::Detector()
         cv::Mat xframe = readFromCamera();
 
         cv::Mat imWithKeypoints;
-
+        //Get the Trackbar positions of the sliders
         getTBarPosHV(hvalues);
 
         //Transform the fram into the HSV colour spectrum
         cv::cvtColor(xframe, hsvFrame, cv::COLOR_BGR2HSV);
         
         //Applies a mask onto the frame with the values the user selected
+        //Applies the mask in steps 
         cv::inRange(hsvFrame, cv::Scalar(hvalues.l_h,hvalues.l_s,hvalues.l_v),cv::Scalar(hvalues.u_h,hvalues.u_s,hvalues.u_v),mask);
 
         //Detect all Keypoints on different versions of openCV
@@ -39,6 +40,10 @@ void SwarmDetection::Detector()
             detector->detect(mask,keyPoints);
         #endif
 
+        //Advanced Car Detection
+        //setCarDimensions(100.0, 150.0, 150.0);
+        //carDetection(keyPoints);
+    	
         //Extract keypoints
         simpleCarDetection(keyPoints);
 
@@ -64,7 +69,7 @@ void SwarmDetection::drawKeyPoints(cv::Mat xframe, std::vector<cv::KeyPoint>* ke
 
 void SwarmDetection::simpleCarDetection(std::vector<cv::KeyPoint> keyPoints)
 {
-    float x = 0.00f, y = 0.00f;
+    auto x = 0.00f, y = 0.00f;
     if (keyPoints.size() > 2)
     {
         //gets the dimensions of the frame
@@ -156,28 +161,50 @@ bool SwarmDetection::sendPacket(SwarmDetection* p)
     return true;
 }
 
-void SwarmDetection::carDetection(std::vector<cv::KeyPoint> *keyPoints)
+void SwarmDetection::setCarDimensions(float vAB, float vAC, float vBC)
 {
-    if (keyPoints->size() > 2)
+    cdim.vAB = vAB;
+    cdim.vAC = vAB;
+    cdim.vBC = vBC;
+}
+
+void SwarmDetection::getCarMidPoint(int id)
+{
+    getDimensions();
+    cars.at(id).x = ((cars.at(id).apos[0] + cars.at(id).bpos[0] + cars.at(id).cpos[0]) / 3) / pic.width;
+    cars.at(id).y = ((cars.at(id).apos[1] + cars.at(id).bpos[1] + cars.at(id).cpos[1]) / 3) / pic.height;
+}
+
+void SwarmDetection::carDetection(std::vector<cv::KeyPoint> keyPoints)
+{
+    int cnumber = 0;
+    for (size_t i = 0; i < keyPoints.size()-2; i++)
     {
-        for (size_t i = 0; i < keyPoints->size()-1; i++)
+        for (size_t j = 0; j < keyPoints.size()-1; j++)
         {
-            for (size_t j = 0; j < keyPoints->size(); j++)
+            if (getDistance(keyPoints.at(i), keyPoints.at(j)) <= cdim.vAB+10 && getDistance(keyPoints.at(i), keyPoints.at(j)) >= cdim.vAB - 10)
             {
-                if (getDistance(keyPoints->at(i), keyPoints->at(j)) <= 100.0f && getDistance(keyPoints->at(i), keyPoints->at(j)) >= 90.0f)
-                {
-                    for (size_t k = 0; k < keyPoints->size(); k++)
-                    {
-                        if (k != (i) &&  k!= (j))
+                cars.at(cnumber).apos[0] = keyPoints.at(i).pt.x;
+                cars.at(cnumber).apos[1] = keyPoints.at(i).pt.y;
+                cars.at(cnumber).bpos[0] = keyPoints.at(j).pt.x;
+                cars.at(cnumber).bpos[1] = keyPoints.at(j).pt.y;
+            	for (size_t k = 0; k < keyPoints.size(); k++)
+            	{
+            		if(getDistance(keyPoints.at(i), keyPoints.at(k)) <= cdim.vAC +10 && getDistance(keyPoints.at(i), keyPoints.at(k)) >= cdim.vAC - 10)
+            		{
+                        if (getDistance(keyPoints.at(j), keyPoints.at(k)) <= cdim.vAC + 10 && getDistance(keyPoints.at(j), keyPoints.at(k)) >= cdim.vAC - 10)
                         {
-                            if(getDistance(keyPoints->at(k), keyPoints->at(i)) && getDistance(keyPoints->at(j), keyPoints->at(k)) <=400.0f)
-                                if (getDistance(keyPoints->at(k), keyPoints->at(i)) && getDistance(keyPoints->at(k), keyPoints->at(j)) >= 370.0f)
-                                {
-                                    std::cout << "Car Found";
-                                }
+                            std::cout << "Car Found" << std::endl;
+                            cars.at(cnumber).cpos[0] = keyPoints.at(k).pt.x;
+                            cars.at(cnumber).cpos[1] = keyPoints.at(k).pt.y;
+                            if (cnumber < N_CARS-1)
+                            {
+                                cnumber++;
+                            }
+                        	
                         }
-                    }
-                }
+            		}
+            	}
             }
         }
     }
@@ -186,15 +213,15 @@ void SwarmDetection::carDetection(std::vector<cv::KeyPoint> *keyPoints)
 float SwarmDetection::getDistance(cv::KeyPoint p1, cv::KeyPoint p2)
 {
     //Returns the distance between the two provided keypoints
-    float a, b;
-    a = p2.pt.x - p1.pt.x;
-    b = p2.pt.y - p1.pt.y;
+    const auto a =  p2.pt.x - p1.pt.x;
+    const auto b = p2.pt.y - p1.pt.y;
     return sqrt(a*a+b*b);
 }
 
 SwarmDetection::SwarmDetection()
 {
     //reads out the last values the user used
+    cars.reserve(N_CARS);
     std::ifstream f("settings.cfg");
     if (f.is_open())
     {
