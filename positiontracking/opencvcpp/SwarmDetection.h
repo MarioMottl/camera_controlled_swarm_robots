@@ -26,11 +26,21 @@ struct HueValues
     int u_v;
 };
 
+struct CarDimensions
+{
+    float vAB;
+    float vAC;
+    float vBC;
+};
+
 /**
 * @brief Car implementation
 */
 struct Car
 {
+    float apos[2];
+    float bpos[2];
+	float cpos[2];
     float x, y;
     float rotation;
 };
@@ -52,12 +62,13 @@ class SwarmDetection
 private:
     PicData pic;
     cv::VideoCapture cap;
-    std::vector <Car> cars[N_CARS];
+    std::vector <Car> cars;
     Schwarm::GoalPacket packet;
     cppsock::tcp::listener listener;
     cppsock::tcp::socket connection;
     std::atomic_bool pkgReady = false;
     HueValues hvalues;
+    CarDimensions cdim;
 
 public:
     SwarmDetection();
@@ -121,7 +132,7 @@ public:
     * @brief Looks for valid cars indication points in the keyPoints vector
     * @param keyPoints -> keypoints that have been retracted from the frame
     */
-    static void carDetection(std::vector <cv::KeyPoint> *keyPoints);
+    void carDetection( std::vector <cv::KeyPoint> keyPoints);
     
     /**
     * @brief Returns the distance between to KeyPoints
@@ -167,4 +178,8 @@ public:
     static void startServer(SwarmDetection *p);
 
     static bool sendPacket(SwarmDetection *p);
+
+    void setCarDimensions(float vAB, float vAC, float vBC);
+
+    void getCarMidPoint(int id);
 };

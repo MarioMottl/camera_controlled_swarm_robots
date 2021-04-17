@@ -15,8 +15,8 @@
     </g>
     <g text-rendering="geometricPrecision" stroke-miterlimit="1.45" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-6,34)" stroke-linecap="butt">
       <rect fill="none" x="21" width="74" height="143" y="-18.5" clip-path="url(#clipPath2)"/>
-      <text x="43.6621" xml:space="preserve" y="43.0127" clip-path="url(#clipPath2)" font-family="sans-serif" stroke="none">serial</text>
-      <text x="34.9873" xml:space="preserve" y="57.7139" clip-path="url(#clipPath2)" font-family="sans-serif" stroke="none">interface</text>
+      <text x="37.665" xml:space="preserve" y="43.0127" clip-path="url(#clipPath2)" font-family="sans-serif" stroke="none">USART</text>
+      <text x="37.3311" xml:space="preserve" y="57.7139" clip-path="url(#clipPath2)" font-family="sans-serif" stroke="none">/ WLAN</text>
       <text x="48.3291" xml:space="preserve" y="72.415" clip-path="url(#clipPath2)" font-family="sans-serif" stroke="none">API</text>
       <ellipse rx="45.5" fill="none" ry="27" clip-path="url(#clipPath2)" cx="195.5" cy="8.5"/>
       <text x="173.8174" xml:space="preserve" y="5.8633" clip-path="url(#clipPath2)" font-family="sans-serif" stroke="none">decoder</text>
