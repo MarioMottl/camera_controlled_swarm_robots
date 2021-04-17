@@ -186,6 +186,8 @@ void VehicleProcessor::process(VehicleProcessor* processor)
                             detec_pos_y = processor->tableorigin_y + processor->tablesize_y * detec_ntc_y;
 
                             cur_vehicle_real->translate(detec_pos_x, 0.015f, detec_pos_y);
+
+                            //std::cout << "X: " << detec_ntc_x << " Y: " << detec_ntc_y << std::endl;
                         }
 
                         // calculate move distance

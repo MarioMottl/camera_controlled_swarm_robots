@@ -34,6 +34,9 @@ void Client::on_path_receive(std::shared_ptr<cppsock::tcp::socket> socket, cppso
 
     const uint32_t* packet_size = Packet::size_ptr(buff1);    // Get size of the packet.
 
+    if (*packet_size > 100)
+        return;
+
     uint8_t buff2[*packet_size];                            // Create a second buffer with the size of the packet.
     /*
     *   Receive the second time with the full size of the packet and without peeking so that the
@@ -60,6 +63,9 @@ void Client::on_detection_receive(std::shared_ptr<cppsock::tcp::socket> socket, 
         return;
 
     const uint32_t* packet_size = Packet::size_ptr(buff1);      // Get size of the packet.
+
+    if (*packet_size > 100)
+        return;
 
     uint8_t buff2[*packet_size];                                // Create a second buffer with the size of the packet.
     /*

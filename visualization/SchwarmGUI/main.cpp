@@ -394,13 +394,23 @@ unsigned int gen_buffer_fb_scene(float** map, size_t data_size, unsigned int& vb
     return vao_fb;
 }
 
-unsigned int gen_table_buffer(const gl::Mesh& mesh, unsigned int* vbos)
+unsigned int gen_table_buffer(gl::Mesh& mesh, unsigned int* vbos)
 {
     constexpr size_t MODEL_STRIDE = gl::Model::vertex_stride() + gl::Model::texcoord_stride() + gl::Model::normal_stride();
     constexpr size_t TEXCOORD_STRIDE = gl::Model::vertex_stride();
     constexpr size_t NORMAL_STRIDE = gl::Model::vertex_stride() + gl::Model::texcoord_stride();
+    constexpr size_t COMPONENT_COUNT = 3 + 2 + 3;
+    constexpr size_t TEX_COORD_OFFSET = 3;
     
     float force_opacity = -1.0f;
+
+    float* data = const_cast<float*>(mesh.get_data());
+    for (size_t i = 0; i < mesh.count(); i++)
+    {
+        size_t tex_coord_pos = i * COMPONENT_COUNT + TEX_COORD_OFFSET;
+        float cur_pos = *(data + tex_coord_pos + 1);
+        *(data + tex_coord_pos + 1) = 1.0f - cur_pos;
+    }
 
     unsigned int vao;
     glGenVertexArrays(1, &vao);
@@ -656,10 +666,10 @@ int main()  // its showtime
     {
         std::cout << get_msg("INFO / MODEL") << "Failed to load table." << std::endl;
         return -1;
-     }
+    }
 
     gl::Model vehicle("../../../Models/vehicle.obj");
-    model_error = vehicle.load(gl::Model::CMP_PRIMITIVE_MODEL | gl::Model::DATA_COMBINED | gl::Model::TEXTURE_FLIP_UV);
+    model_error = vehicle.load(gl::Model::CMP_PRIMITIVE_MODEL | gl::Model::DATA_COMBINED);
     if (model_error != gl::model_error_t::MODEL_ERROR_NONE)
     {
         std::cout << get_msg("INFO / MODEL") << "Failed to load vehicle." << std::endl;
@@ -689,7 +699,6 @@ int main()  // its showtime
     shared_memory[Schwarm::Client::PATH_SERVER].client = path_server_collection.insert(path_client, &shared_memory);
     std::cout << get_msg("INFO / PATH-SERVER") << "Connected to path server!" << std::endl;
 
-#if 0
     // connect to detection
     cppsock::tcp::client detection_client;
     if ((err = detection_client.connect(Schwarm::DETECTION_SERVER_ADDR, Schwarm::DETECTION_SERVER_PORT)) < 0)
@@ -701,6 +710,7 @@ int main()  // its showtime
     shared_memory[Schwarm::Client::DETECTION_SERVER].client = detection_server_collection.insert(detection_client, &shared_memory);
     std::cout << get_msg("INFO / DETECTION-SERVER") << "Connected to detection!" << std::endl;
 
+#if 1
     // connect to swarm control server
     std::shared_ptr<cppsock::tcp::client> control_client = std::make_shared<cppsock::tcp::client>();
     if ((err = control_client->connect(Schwarm::CONTROL_SERVER_ADDR, Schwarm::CONTROL_SERVER_PORT)) < 0)
@@ -876,6 +886,7 @@ int main()  // its showtime
     vehicle1_real.set_opacity(-1.0f);               // ignore opacity
     vehicle1_real.calc();
 
+#if 0
     Schwarm::Vehicle vehicle2_simu, vehicle2_real;  // initialize vehicles
     vehicle2_simu.translate(0.3f, 0.015f, 0.1f);
     vehicle2_simu.set_speed(0.18f);
@@ -885,6 +896,7 @@ int main()  // its showtime
     vehicle2_real.translate(0.0f, -1000000.0f, 0.0f);
     vehicle2_real.set_opacity(-1.0f);               // ignore opacity
     vehicle2_real.calc();
+#endif
 
     std::cout << get_msg("INFO / OpenGL") << "Vehicles created." << std::endl;
 
@@ -898,8 +910,8 @@ int main()  // its showtime
     // the vehicles MUST always be added in pairs
     vehicle_buffer.add_vehicle(&vehicle1_simu);
     vehicle_buffer.add_vehicle(&vehicle1_real); 
-    vehicle_buffer.add_vehicle(&vehicle2_simu);
-    vehicle_buffer.add_vehicle(&vehicle2_real);
+    //vehicle_buffer.add_vehicle(&vehicle2_simu);
+    //vehicle_buffer.add_vehicle(&vehicle2_real);
     std::cout << get_msg("INFO / OpenGL") << "Vehicles loaded." << std::endl;
 
     shared_memory[Schwarm::Client::GENERAL].vehicles = &vehicle_buffer;
