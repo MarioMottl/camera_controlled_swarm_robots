@@ -699,6 +699,7 @@ int main()  // its showtime
     shared_memory[Schwarm::Client::PATH_SERVER].client = path_server_collection.insert(path_client, &shared_memory);
     std::cout << get_msg("INFO / PATH-SERVER") << "Connected to path server!" << std::endl;
 
+#if 0
     // connect to detection
     cppsock::tcp::client detection_client;
     if ((err = detection_client.connect(Schwarm::DETECTION_SERVER_ADDR, Schwarm::DETECTION_SERVER_PORT)) < 0)
@@ -710,7 +711,6 @@ int main()  // its showtime
     shared_memory[Schwarm::Client::DETECTION_SERVER].client = detection_server_collection.insert(detection_client, &shared_memory);
     std::cout << get_msg("INFO / DETECTION-SERVER") << "Connected to detection!" << std::endl;
 
-#if 1
     // connect to swarm control server
     std::shared_ptr<cppsock::tcp::client> control_client = std::make_shared<cppsock::tcp::client>();
     if ((err = control_client->connect(Schwarm::CONTROL_SERVER_ADDR, Schwarm::CONTROL_SERVER_PORT)) < 0)
