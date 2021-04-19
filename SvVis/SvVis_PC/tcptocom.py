@@ -64,7 +64,7 @@ def tcptoserial(tcp,serielle):
     while running:
         data = tcp.recv(1024)
         if data:
-            print("[tcptocom] Data from tcp to serial = ",data)
+            print("[tcptocom] Data from tcp (", tcp.getpeername(),") to serial = ",data)
             serielle.write(data);
         else:
             # tcp socket was closed, shutting program down
@@ -77,7 +77,7 @@ def serialtotcp(tcp,serielle):
     while running:
         data = serielle.readline(1024)
         if data:
-            print("[tcptocom] Data from serial to tcp = ",data)
+            print("[tcptocom] Data from serial to tcp (", tcp.getpeername(),") = ",data)
             tcp.send(data)
 
 def match_connection(sock):
