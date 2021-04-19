@@ -12,13 +12,13 @@ def getArgs():
     global _global_ip
     global _global_port
     global _global_comports
-    baudrate = 9600
+    baudrates = [9600]
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--port', help = "Port")
     parser.add_argument('--ip', help = "IP - Address")
-    parser.add_argument('--comports',help = "Com-Ports")
-    parser.add_argument('--baudrate', help= "COM BAudrate")
+    parser.add_argument('--comports',help = "Com-Ports, comma-seperated")
+    parser.add_argument('--baudrates', help= "COM Baudrates camma-seperated")
     args = parser.parse_args()
     if args.port:
         port = args.port
@@ -30,16 +30,23 @@ def getArgs():
     if args.ip:
         ip = args.ip
         _global_ip = ip
-        print(ip)
-    if args.baudrate:
-        baudrate = args.baudrate;
+        print("listener TCP Port: ", ip)
+    if args.baudrates:
+        baudrates = args.baudrates.split(",");
+        print("Baudrates: ", baudrates)
     if args.comports:
         comPorts = args.comports.split(",");
-        print (comPorts)
-        for comPort in comPorts:
-            _global_comports.append(open_com(comPort, baudrate))
+        print ("COM-Ports: ", comPorts)
+
+    # check parameter settings
+    if len(comPorts) != len(baudrates):
+        print("ERROR: Number of COM-Ports and Baud-Rates is different (%d COM-Ports with %d Baudrates)" % (len(comPorts), len(baudrates)) )
+        exit()
+    for i in range(len(comPorts)):
+        _global_comports.append(open_com(comPorts[i], baudrates[i]))
 
 def open_com(comport, baudrate):
+    baudrate = int(baudrate)
     print("[tcptocom] opening COM port %s with baudrate %d" % (comport, baudrate))
     try:
         serielle = serial.Serial(comport, baudrate, timeout = 0)
@@ -53,7 +60,7 @@ def open_com(comport, baudrate):
     return serielle
 
 def tcptoserial(tcp,serielle):
-    running = true
+    running = True
     while running:
         data = tcp.recv(1024)
         if data:
@@ -62,10 +69,11 @@ def tcptoserial(tcp,serielle):
         else:
             # tcp socket was closed, shutting program down
             running = False
-    tcp.shutdown()
+    print("[tcptocom] Socket disconnected ", tcp.getpeername() )
+    tcp.shutdown(socket.SHUT_RDWR)
 
 def serialtotcp(tcp,serielle):
-    running = true
+    running = True
     while running:
         data = serielle.readline(1024)
         if data:
@@ -80,8 +88,13 @@ def match_connection(sock):
     tcptos = threading.Thread(target = tcptoserial, args = (sock, serial))
     stotcp = threading.Thread(target = serialtotcp, args = (sock, serial))
 
-    tcptos.join();
-    stotcp.join();
+    tcptos.start()
+    stotcp.start()
+
+    tcptos.join()
+    stotcp.join()
+    print("[tcptocom] handling for connection ", sock.getpeername(), " done")
+    sock.close()
 
 def main():
     global _global_comports
@@ -97,14 +110,15 @@ def main():
     while (len(_global_comports) > 0):
         con, addr = listener.accept()
         print("[tcptocom] client connected: ", addr)
-        _thread = threading.Thread(target=match_connection, args = (con) )
+        _thread = threading.Thread(target=match_connection, args = (con,) )
+        _thread.start()
         print("[tcptocom] matching thread started")
         _matcher_threads.append( _thread )
 
-    print("[tcptocom] closing server and program...")
+    print("[tcptocom] all COM-Ports matched, closing listener socket...")
     listener.close();
 
     for _thread in _matcher_threads:
-        _thread.join();
+        _thread.join()
 
 main()
