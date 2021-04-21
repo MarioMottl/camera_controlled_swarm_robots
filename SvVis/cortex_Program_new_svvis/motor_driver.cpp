@@ -13,6 +13,9 @@
  *      PB1         (PWM Signal)
  *      PA0, PA1    (direction control signals)
  *      PB8, PB9    (Rotary Encoder Signals)
+ *
+ *  TIM3 CH3, CH4: PWM Generators
+ *  TIM5 IRQ: Regulation
  */
 
 #include "motor_driver.hpp"
@@ -23,6 +26,7 @@ double _base_speed_left = 0.1, _base_speed_right = 0.1;
 volatile uint32_t _counter_right = 0, _counter_left = 0;
 int64_t _counter_ttd = 0; // counter time to drive
 const uint16_t _timer_period = 4096;
+bool motor_running = false;
 osThreadId_t _os_thread_regulation;
 
 extern "C" void EXTI9_5_IRQHandler(void)
@@ -43,10 +47,28 @@ extern "C" void EXTI15_10_IRQHandler(void)
     }
 }
 
+extern "C" void TIM5_IRQHandler(void)
+{
+    TIM_ClearITPendingBit(TIM5, TIM_IT_Update); // clear ISR bit
+    if(motor_running)
+    {
+        _base_speed_left = 0.1;
+        _base_speed_right = (_base_speed_left * _counter_left) / _counter_right;
+
+        _counter_ttd -= (_counter_left + _counter_right) / 2;
+        if(_counter_ttd <= 0) motor_stop();
+
+        _counter_left = 1;
+        _counter_right = 1;
+        motor_update_speed();
+    }
+}
+
 void motor_stop(void)
 {
     _counter_ttd = 0;
     _base_speed_left = _base_speed_right = 10.0;
+    motor_running = false;
     GPIO_ResetBits(GPIOA, GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_6 | GPIO_Pin_7);
     motor_update_speed();
     osDelay(2);
@@ -63,9 +85,11 @@ void timer_init(void)
     TIM_TimeBaseInitTypeDef timer;
     TIM_OCInitTypeDef outputcompare;
     GPIO_InitTypeDef gpio;
+    NVIC_InitTypeDef nvic;
 
     // set PB0, PB1 as output for motor enable signals
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE); // enable clock for gpiob
+    memset(&gpio, 0, sizeof(gpio));
     gpio.GPIO_Mode = GPIO_Mode_AF_PP; // Alternate function output (Output compare output)
     gpio.GPIO_Speed = GPIO_Speed_50MHz;
     gpio.GPIO_Pin = GPIO_Pin_0; // PB0
@@ -74,10 +98,11 @@ void timer_init(void)
     GPIO_Init(GPIOB, &gpio);
 
     RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE); // enable clock for timer
+    memset(&timer, 0, sizeof(timer));
     timer.TIM_RepetitionCounter = 0; // infinite repetition
     timer.TIM_CounterMode = TIM_CounterMode_Up; // count upwards
     timer.TIM_ClockDivision = TIM_CKD_DIV1; // no clock division
-    timer.TIM_Prescaler = 256; // prescaler
+    timer.TIM_Prescaler = 16; // prescaler
     timer.TIM_Period = _timer_period; // autoreload
     TIM_TimeBaseInit(TIM3, &timer);
 
@@ -87,36 +112,30 @@ void timer_init(void)
     outputcompare.TIM_Pulse = timer.TIM_Period * _base_speed_left * _speed_mult;
     TIM_OC3Init(TIM3, &outputcompare);
     TIM_ITConfig(TIM3, TIM_IT_CC3, ENABLE);
-
     outputcompare.TIM_Pulse = timer.TIM_Period * _base_speed_right * _speed_mult;
     TIM_OC4Init(TIM3, &outputcompare);
     TIM_ITConfig(TIM3, TIM_IT_CC4, ENABLE);
 
+    RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM5, ENABLE);
+    memset(&timer, 0, sizeof(timer));
+    timer.TIM_RepetitionCounter = 0;
+    timer.TIM_CounterMode = TIM_CounterMode_Up;
+    timer.TIM_ClockDivision = TIM_CKD_DIV1;
+    timer.TIM_Prescaler = 1024;
+    timer.TIM_Period = 1024;
+    TIM_TimeBaseInit(TIM5, &timer);
+
+    memset(&nvic, 0, sizeof(nvic));
+    nvic.NVIC_IRQChannel = TIM5_IRQn;
+    nvic.NVIC_IRQChannelCmd = ENABLE;
+    nvic.NVIC_IRQChannelPreemptionPriority = 1;
+    nvic.NVIC_IRQChannelSubPriority = 1;
+    NVIC_Init(&nvic);
+
+    TIM_ITConfig(TIM5, TIM_IT_Update, ENABLE);
+
     TIM_Cmd(TIM3, ENABLE);
-}
-
-/**
- * @brief handle motor feedback signals
- * HERE IS ROOM FOR IMPROVEMENT
- * 
- * @param arg unused
- * @return __NO_RETURN 
- */
-__NO_RETURN void motor_feedback_handler(void *arg)
-{
-    for(;;)
-    {
-        _base_speed_left = 0.1;
-        _base_speed_right = (_base_speed_left * _counter_left) / _counter_right;
-
-        _counter_ttd -= (_counter_left + _counter_right) / 2;
-        if(_counter_ttd <= 0) motor_stop();
-
-        _counter_left = 1;
-        _counter_right = 1;
-        motor_update_speed();
-        osDelay(5);
-    }
+    TIM_Cmd(TIM5, ENABLE);
 }
 
 void motor_init(void)
@@ -173,7 +192,11 @@ void motor_init(void)
     // init PWM generators
     timer_init();
 
-    _os_thread_regulation = osThreadNew(motor_feedback_handler, nullptr, nullptr);
+    osThreadAttr_t attr;
+    memset(&attr, 0, sizeof(attr));
+    attr.priority = osPriorityAboveNormal;
+
+    //_os_thread_regulation = osThreadNew(motor_feedback_handler, nullptr, &attr);
 }
 
 void motor_update_speed(void)
@@ -184,10 +207,10 @@ void motor_update_speed(void)
     memset(&outputcompare, 0, sizeof(outputcompare));
     outputcompare.TIM_OCMode = TIM_OCMode_PWM1;
     outputcompare.TIM_OutputState = TIM_OutputState_Enable;
-    outputcompare.TIM_Pulse = _timer_period * _base_speed_left * _speed_mult;
+    outputcompare.TIM_Pulse = motor_running ? _timer_period * _base_speed_left * _speed_mult : _timer_period;
     TIM_OC3Init(TIM3, &outputcompare); // PB0 PWM Signal
 
-    outputcompare.TIM_Pulse = _timer_period * _base_speed_right * _speed_mult;
+    outputcompare.TIM_Pulse = motor_running ? _timer_period * _base_speed_right * _speed_mult : _timer_period;
     TIM_OC4Init(TIM3, &outputcompare); // PB1 PWM Signal
 }
 
@@ -242,9 +265,9 @@ bool motor_cmd_str(const char* cmd, SvVis::SvVis *src)
             motor_set_speed(time / 128.0);
         }
     }
-    /*else if( strncmp(cmd, "cntr", 4) == 0 )
+    else if( strncmp(cmd, "cntr", 4) == 0 )
     {
-        char msg[SvVIS_DATA_MAX_LEN];
+        char msg[::SvVis::data_max_len];
         // "l: %12d"
         // "r: %12d"
         strncpy(msg, "l: ", 3);
@@ -259,7 +282,7 @@ bool motor_cmd_str(const char* cmd, SvVis::SvVis *src)
         strncpy(msg, "s_r: ", 5);
         ul_to_string(msg+5, sizeof(msg)-3, _base_speed_right*1000);
         src->send_str(msg);
-    }*/
+    }
     else // unrecognized command, stopping
     {
         motor_cmd_bin(MOTOR_CMD_STOP, osWaitForever);
@@ -280,21 +303,33 @@ bool motor_cmd_bin(motor_cmd_bin_t cmd, uint32_t time)
         _counter_ttd = time * 256;
         GPIO_SetBits(GPIOA, GPIO_Pin_0 | GPIO_Pin_6);
         GPIO_ResetBits(GPIOA, GPIO_Pin_1 | GPIO_Pin_7);
+        _counter_left = _counter_right = 1;
+        motor_running = true;
+        motor_update_speed();
         break;
     case MOTOR_CMD_BW:
         _counter_ttd = time * 256;
         GPIO_SetBits(GPIOA, GPIO_Pin_1 | GPIO_Pin_7);
         GPIO_ResetBits(GPIOA, GPIO_Pin_0 | GPIO_Pin_6);
+        _counter_left = _counter_right = 1;
+        motor_running = true;
+        motor_update_speed();
         break;
     case MOTOR_CMD_RR:
-        _counter_ttd = time * 15;
+        _counter_ttd = time * 30;
         GPIO_SetBits(GPIOA, GPIO_Pin_1 | GPIO_Pin_6);
         GPIO_ResetBits(GPIOA, GPIO_Pin_0 | GPIO_Pin_7);
+        _counter_left = _counter_right = 1;
+        motor_running = true;
+        motor_update_speed();
         break;
     case MOTOR_CMD_RL:
-        _counter_ttd = time * 15;
+        _counter_ttd = time * 30;
         GPIO_SetBits(GPIOA, GPIO_Pin_0 | GPIO_Pin_7);
         GPIO_ResetBits(GPIOA, GPIO_Pin_1 | GPIO_Pin_6);
+        _counter_left = _counter_right = 1;
+        motor_running = true;
+        motor_update_speed();
         break;
 
     default: // unrecognized command, stopping

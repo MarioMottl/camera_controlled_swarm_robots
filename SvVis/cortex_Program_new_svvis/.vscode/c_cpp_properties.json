@@ -7,7 +7,8 @@
                 "C:\\Keil_v5\\ARM\\PACK\\ARM\\CMSIS\\5.0.1\\CMSIS\\Include",
                 "C:\\Keil_v5\\ARM\\PACK\\Keil\\STM32F1xx_DFP\\2.3.0\\Device\\Include",
                 "C:\\Keil_v5\\ARM\\PACK\\Keil\\STM32F1xx_DFP\\2.3.0\\Device\\StdPeriph_Driver\\inc",
-                "C:\\Keil_v5/ARM/PACK/ARM/CMSIS/5.0.1/CMSIS/RTOS2/Include"
+                "C:\\Keil_v5/ARM/PACK/ARM/CMSIS/5.0.1/CMSIS/RTOS2/Include",
+                "C:\\Keil_v5\\ARM\\ARMCC\\include"
             ],
             "defines": [
                 "_DEBUG",
@@ -15,10 +16,10 @@
                 "_UNICODE",
                 "STM32F10X_HD"
             ],
-            "compilerPath": "C:\\cygwin64\\bin\\gcc.exe",
+            "compilerPath": "gcc",
             "cStandard": "c11",
             "cppStandard": "c++17",
-            "intelliSenseMode": "clang-x64"
+            "intelliSenseMode": "clang-arm"
         }
     ],
     "version": 4
