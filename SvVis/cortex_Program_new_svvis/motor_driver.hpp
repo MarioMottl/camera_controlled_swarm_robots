@@ -65,6 +65,11 @@ void motor_update_speed(void);
  * @param new_speed 
  */
 void motor_set_speed(float new_speed);
+/**
+ * @brief stop the motors
+ * 
+ */
+void motor_stop(void);
 
 #ifdef __cplusplus
 }
