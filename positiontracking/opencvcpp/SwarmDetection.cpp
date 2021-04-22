@@ -183,7 +183,7 @@ void SwarmDetection::carDetection(std::vector<cv::KeyPoint> keyPoints)
         for (size_t j = 0; j < keyPoints.size()-1; j++)
         {
         	//Search for the A & B Points of the Triangle
-            if (getDistance(keyPoints.at(i), keyPoints.at(j)) <= cdim.vAB+10 && getDistance(keyPoints.at(i), keyPoints.at(j)) >= cdim.vAB - 10)
+            if (getDistance(keyPoints.at(i), keyPoints.at(j)) <= cdim.vAB + 2 && getDistance(keyPoints.at(i), keyPoints.at(j)) >= cdim.vAB - 2)
             {
                 cars.at(cnumber).apos[0] = keyPoints.at(i).pt.x;
                 cars.at(cnumber).apos[1] = keyPoints.at(i).pt.y;
@@ -192,13 +192,14 @@ void SwarmDetection::carDetection(std::vector<cv::KeyPoint> keyPoints)
             	for (size_t k = 0; k < keyPoints.size(); k++)
             	{
             		//Search for the C Point
-            		if(getDistance(keyPoints.at(i), keyPoints.at(k)) <= cdim.vAC +10 && getDistance(keyPoints.at(i), keyPoints.at(k)) >= cdim.vAC - 10)
+            		if(getDistance(keyPoints.at(i), keyPoints.at(k)) <= cdim.vAC + 2 && getDistance(keyPoints.at(i), keyPoints.at(k)) >= cdim.vAC - 2)
             		{
-                        if (getDistance(keyPoints.at(j), keyPoints.at(k)) <= cdim.vAC + 10 && getDistance(keyPoints.at(j), keyPoints.at(k)) >= cdim.vAC - 10)
+                        if (getDistance(keyPoints.at(j), keyPoints.at(k)) <= cdim.vAC + 2 && getDistance(keyPoints.at(j), keyPoints.at(k)) >= cdim.vAC - 2)
                         {
-                            std::cout << "Car Found" << std::endl;
                             cars.at(cnumber).cpos[0] = keyPoints.at(k).pt.x;
                             cars.at(cnumber).cpos[1] = keyPoints.at(k).pt.y;
+                            getCarMidPoint(cnumber);
+                            std::cout << "Car Found @ " << cars.at(cnumber).x << " " << cars.at(cnumber).y <<  std::endl;
                             if (cnumber < N_CARS-1)
                             {
                                 cnumber++;
