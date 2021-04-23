@@ -90,11 +90,12 @@ void SwarmDetection::simpleCarDetection(std::vector<cv::KeyPoint> keyPoints)
         x = (x / keyPoints.size()) / pic.width;
         y = (y / keyPoints.size()) / pic.height;
         std::cout << "[DEBUG]Median Xrel: " << x << " Median Yrel: " << y << std::endl;
+        pkgReady = true;
+        makePacket(x, y, 0);
+        pkgReady = false;
         }
     }
     //Signifies that a packed is ready and packs it
-    pkgReady = true;
-    makePacket(x, y,0);
 }
 
 void SwarmDetection::getDimensions()
@@ -205,6 +206,9 @@ void SwarmDetection::carDetection(std::vector<cv::KeyPoint> keyPoints)
                                 cnumber++;
                             }
                         	//If a car is found the loop can stop and the function can return
+                            pkgReady = true;
+                            makePacket(cars.at(cnumber).x, cars.at(cnumber).y, cnumber);
+                            pkgReady = false;
                             return;
                         }
             		}

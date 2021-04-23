@@ -173,7 +173,7 @@ public:
     */
     void printDimensions();
 
-    void makePacket(float x, float y);
+    void makePacket(float x, float y, int id);
 
     static void startServer(SwarmDetection *p);
 

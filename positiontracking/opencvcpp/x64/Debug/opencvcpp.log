@@ -1,12 +1,4 @@
-﻿  otherpacket.cpp
-C:\Users\Mario\Desktop\camera_controlled_swarm_robots\visualization\external\SchwarmPacket\otherpacket.cpp(224,41): warning C4267: "Initialisierung": Konvertierung von "size_t" nach "uint32_t", Datenverlust möglich
-C:\Users\Mario\Desktop\camera_controlled_swarm_robots\visualization\external\SchwarmPacket\otherpacket.cpp(224,41): warning C4267: "Initialisierung": Konvertierung von "size_t" nach "const uint32_t", Datenverlust möglich
-C:\Users\Mario\Desktop\camera_controlled_swarm_robots\visualization\external\SchwarmPacket\otherpacket.cpp(240,38): warning C4267: "return": Konvertierung von "size_t" nach "uint32_t", Datenverlust möglich
-  packet.cpp
-  SwarmDetection.cpp
+﻿  SwarmDetection.cpp
   main.cpp
   Code wird generiert...
-C:\Users\Mario\Desktop\camera_controlled_swarm_robots\visualization\external\SchwarmPacket\otherpacket.cpp(483): warning C4717: "Schwarm::VehicleCommandPacket::VehicleCommandPacket": Rekursiv für alle Steuerelementpfade. Die Funktion verursacht einen Stapelüberlauf zur Laufzeit.
-C:\Users\Mario\Desktop\camera_controlled_swarm_robots\visualization\external\SchwarmPacket\otherpacket.cpp(488): warning C4717: "Schwarm::VehicleCommandPacket::VehicleCommandPacket": Rekursiv für alle Steuerelementpfade. Die Funktion verursacht einen Stapelüberlauf zur Laufzeit.
-  LINK : C:\Users\Mario\Desktop\camera_controlled_swarm_robots\positiontracking\x64\Debug\opencvcpp.exe wurde nicht gefunden oder beim letzten inkrementellen Linkvorgang nicht erstellt; vollständiger Link wird durchgeführt.
   opencvcpp.vcxproj -> C:\Users\Mario\Desktop\camera_controlled_swarm_robots\positiontracking\x64\Debug\opencvcpp.exe
