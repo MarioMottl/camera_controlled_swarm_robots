@@ -94,7 +94,7 @@ void SwarmDetection::simpleCarDetection(std::vector<cv::KeyPoint> keyPoints)
     }
     //Signifies that a packed is ready and packs it
     pkgReady = true;
-    makePacket(x, y);
+    makePacket(x, y,0);
 }
 
 void SwarmDetection::getDimensions()
@@ -111,11 +111,11 @@ void SwarmDetection::printDimensions()
     std::cout << " Width: " << pic.width << "Height: " << pic.height  <<std::endl;
 }
 
-void SwarmDetection::makePacket(float x, float y)
+void SwarmDetection::makePacket(float x, float y, int id)
 {
     //Uses the SchwarmPacket to make a packet for easier encoding and decoding
     packet.set_goal(x, y);
-    packet.set_vehicle_id(0);
+    packet.set_vehicle_id(id);
     packet.allocate(packet.min_size());
     packet.encode();
 }
