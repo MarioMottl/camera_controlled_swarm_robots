@@ -52,8 +52,18 @@ extern "C" void TIM5_IRQHandler(void)
     TIM_ClearITPendingBit(TIM5, TIM_IT_Update); // clear ISR bit
     if(motor_running)
     {
-        _base_speed_left = 0.1;
-        _base_speed_right = (_base_speed_left * _counter_left) / _counter_right;
+        /*_base_speed_left = 0.1;
+        _base_speed_right = (_base_speed_left * _counter_left) / _counter_right;*/
+        if(_counter_right > _counter_left)
+        {
+            _base_speed_left += ( ((double)_counter_right / (double)_counter_left) + 1.0 ) * 0.00001;
+            _base_speed_right = 0.1;
+        }
+        else
+        {
+            _base_speed_right += ( ((double)_counter_left / (double)_counter_right) + 1.0 ) * 0.00001;
+            _base_speed_left = 0.1;
+        }
 
         _counter_ttd -= (_counter_left + _counter_right) / 2;
         if(_counter_ttd <= 0) motor_stop();
