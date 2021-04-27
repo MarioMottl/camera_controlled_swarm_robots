@@ -34,7 +34,7 @@ int main(void)
         LED_init();     // initialise LED driver and start heartbeat thread
         // USART Bauds are multiplied by 3 because the hardware needs that (idk why but it does need it)
         usart1.init(USART1, 9600 *3); // init DAP usart
-        usart2.init(USART2, 9600 *3); // init HC06 USART
+        usart2.init(USART2, 115200 *3); // init HC06 USART
         usart3.init(USART3, 115200 *3); // init ESP8266 USART
         at_handler.init(usart3);
         tar.daplink.init(usart1); // initialise DAP handler
@@ -114,6 +114,10 @@ void main_thread_func(void *arg)
                     sender->send_str("rl <p grd> Rotate Left");
                     sender->send_str("speed <n>  Set speed factor");
                     sender->send_str("           default: 128");
+                    sender->send_str("out m      enable motor");
+                    sender->send_str("           speed output");
+                    sender->send_str("out m off  disable motor");
+                    sender->send_str("           speed output");
                     sender->send_str(" ");
                     sender->send_str("<t> indicates that it is");
                     sender->send_str(" possible to run a command for");

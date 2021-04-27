@@ -29,6 +29,10 @@ const uint16_t _timer_period = 4096;
 bool motor_running = false;
 osThreadId_t _os_thread_regulation;
 
+uint32_t motor_verbose_output_counter;
+const uint32_t motor_verbose_output_period = 1;
+SvVis::SvVis *motor_verbose_next_com = nullptr;
+
 extern "C" void EXTI9_5_IRQHandler(void)
 {
     if(EXTI_GetITStatus(EXTI_Line8) != RESET) // MOTOR A
@@ -68,10 +72,21 @@ extern "C" void TIM5_IRQHandler(void)
         _counter_ttd -= (_counter_left + _counter_right) / 2;
         if(_counter_ttd <= 0) motor_stop();
 
-        _counter_left = 1;
-        _counter_right = 1;
         motor_update_speed();
     }
+    // motor verbose output
+    if(motor_verbose_next_com != nullptr)
+    {
+        if(motor_verbose_output_counter != 0) motor_verbose_output_counter--;
+        else
+        {
+            motor_verbose_next_com->send_i16(0, _counter_left / 32, 0);
+            motor_verbose_next_com->send_i16(1, _counter_right / 32, 0);
+            motor_verbose_output_counter = motor_verbose_output_period;
+        }
+    }
+    _counter_left = 1;
+    _counter_right = 1;
 }
 
 void motor_stop(void)
@@ -84,6 +99,7 @@ void motor_stop(void)
     osDelay(2);
     _base_speed_left = _base_speed_right = 0.1;
     motor_update_speed();
+    _counter_left = _counter_right = 1;
 }
 
 void timer_init(void)
@@ -259,7 +275,7 @@ bool motor_cmd_str(const char* cmd, SvVis::SvVis *src)
         time = strtoul(cmd+3, NULL, 0); // "rl %d"
         motor_cmd_bin(MOTOR_CMD_RL, time);
     }
-    else if( strncmp(cmd, "speed", 5) == 0 )
+    else if( strncmp(cmd, "speed", 5) == 0 ) // set speed
     {
         if(strlen(cmd) == 5)
         {
@@ -275,7 +291,17 @@ bool motor_cmd_str(const char* cmd, SvVis::SvVis *src)
             motor_set_speed(time / 128.0);
         }
     }
-    else if( strncmp(cmd, "cntr", 4) == 0 )
+    else if( strncmp(cmd, "out m off", 17) == 0 ) // reset debug output interface
+    {
+        src->send_str("reset motor output");
+        motor_verbose_next_com = nullptr;
+    }
+    else if( strncmp(cmd, "out m", 13) == 0 ) // set debug output interface
+    {
+        motor_verbose_next_com = src;
+        src->send_str("set motor output");
+    }
+    else if( strncmp(cmd, "cntr", 4) == 0 ) // print cpunter values
     {
         char msg[::SvVis::data_max_len];
         // "l: %12d"
@@ -293,9 +319,8 @@ bool motor_cmd_str(const char* cmd, SvVis::SvVis *src)
         ul_to_string(msg+5, sizeof(msg)-3, _base_speed_right*1000);
         src->send_str(msg);
     }
-    else // unrecognized command, stopping
+    else // unrecognized command, return false to indicate unsuccessful command execution
     {
-        motor_cmd_bin(MOTOR_CMD_STOP, osWaitForever);
         return false; // return false if an unknown command was used
     }
     return true; // return true if a valid command was received
