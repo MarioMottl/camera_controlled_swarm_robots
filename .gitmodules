@@ -1,6 +1,6 @@
 [submodule "library/stb"]
-	path = library/stb
+	path = Software/library/stb
 	url = https://github.com/nothings/stb
 [submodule "library/cppsock"]
-	path = library/cppsock
+	path = Software/library/cppsock
 	url = https://github.com/PrugClem/cppsock.git

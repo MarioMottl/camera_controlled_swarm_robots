@@ -1,3 +1,0 @@
-mingwstdthread
-stb
-glm
